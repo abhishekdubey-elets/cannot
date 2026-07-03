@@ -90,3 +90,36 @@ class MockLLM(LLM):
 def logprob_to_prob(logprob: float) -> float:
     """Squash mean logprob into (0,1) as a crude pre-calibration score."""
     return 1.0 / (1.0 + math.exp(-(logprob + 2.0) * 2.0))
+
+
+class AnthropicLLM(LLM):
+    """Real backend adapter (Phase 1). Requires `pip install anthropic` and an
+    API key. Kept behind a lazy import so the offline harness never needs it.
+
+    Note: chat APIs do not expose per-token logprobs, so the intrinsic
+    confidence signal (§5.5) is weak here — the ConfidenceEstimator leans on
+    self-consistency + verifier signals instead, exactly as the report argues
+    for post-RLHF models whose logits are miscalibrated (§1.21).
+    """
+
+    def __init__(self, model: str = "claude-sonnet-5", api_key: str | None = None,
+                 max_tokens: int = 1024):
+        try:
+            import anthropic  # noqa: F401
+        except ImportError as e:  # pragma: no cover - env-dependent
+            raise ImportError("pip install anthropic to use AnthropicLLM") from e
+        import anthropic
+        self._client = anthropic.Anthropic(api_key=api_key)
+        self.model = model
+        self.max_tokens = max_tokens
+
+    def generate(self, prompt: str, temperature: float = 0.7) -> LLMResponse:  # pragma: no cover
+        msg = self._client.messages.create(
+            model=self.model, max_tokens=self.max_tokens, temperature=temperature,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        text = "".join(b.text for b in msg.content if getattr(b, "type", "") == "text")
+        # No logprobs from the chat API -> flag as unknown (-1.0); confidence
+        # is then driven by consistency + verifier (§5.5).
+        return LLMResponse(text.strip(), logprob=-1.0,
+                           meta={"usage": getattr(msg, "usage", None)})

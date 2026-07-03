@@ -30,10 +30,42 @@ runs offline; swap in `AnthropicLLM`/`OpenAILLM`-style adapters for real inferen
 
 ```bash
 cd cantor
-python demo.py
+python demo.py          # the CANTOR agent: routing, memory, consolidation
+python run_phase0.py    # continual-learning harness (EXPERIMENT_PLAN.md, Phase 0)
 ```
 
-No dependencies beyond the Python 3.10+ standard library.
+No dependencies beyond the Python 3.10+ standard library for the offline paths.
+
+## Phase 0 continual-learning harness
+
+[`run_phase0.py`](run_phase0.py) + [`cantor/continual/`](cantor/continual/)
+implement Phase 0 of [`EXPERIMENT_PLAN.md`](EXPERIMENT_PLAN.md): the S-CTRL
+controlled stream, retention sets, a general-capability probe, per-night
+consolidation, and the CL metrics (ACC / BWT / FWT / NIST / GCR / cost). It
+validates the evaluation pipeline and passes the stability gate (B0/B2
+reproduce across seeds), and exhibits the qualitative H2/H3 patterns the real
+study must show:
+
+| module | role |
+|---|---|
+| [`continual/streams.py`](cantor/continual/streams.py) | S-CTRL generator: schemas, novel/repeat retention, `G` probe |
+| [`continual/learner.py`](cantor/continual/learner.py) | parametric arm: `NoOp` / `SimulatedLoRA` / `RealLoRA` (Phase-1 stub) behind one interface |
+| [`continual/solver.py`](cantor/continual/solver.py) | task → (correct, cost, route); drives REAL memory for the non-parametric arm |
+| [`continual/metrics.py`](cantor/continual/metrics.py) | ACC/BWT/FWT/NIST/GCR/cost from the accuracy matrix |
+| [`continual/evaluator.py`](cantor/continual/evaluator.py) | the stream → night → eval loop |
+| [`continual/methods.py`](cantor/continual/methods.py) | B0/B2/B3/B7 (+ Phase-1 configs) as points in the design space |
+
+**Offline scope (important):** the non-parametric arm runs the *real* CANTOR
+memory code (episodic write → `sleep()` → semantic cache); the parametric arm
+uses a *simulated* learner that models LoRA's two effects (schema skill transfer
+and general-capability drift). This validates the harness and metrics — it is
+**not** a scientific result. Phase 1 swaps in [`AnthropicLLM`](cantor/cantor/llm.py)
++ a real `RealLoRALearner` behind the same interfaces; no evaluator change.
+
+**Known/expected harness artifact:** FWT ≈ 0 on S-CTRL because its schemas are
+independent (no shared substructure to transfer). That is *correct* for this
+controlled stream; the realistic benchmarks (AppWorld/τ-bench) are where FWT > 0
+becomes a meaningful signal.
 
 ## What the demo shows
 
