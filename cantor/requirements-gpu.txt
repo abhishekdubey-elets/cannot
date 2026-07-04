@@ -1,0 +1,8 @@
+# GPU deps for the `--real` path (HFTrainableLM QLoRA). NOT needed for the
+# offline harness (run_phase0/1/2.py run on the stdlib alone).
+# Sized for a single 16 GB T4 (4-bit NF4 QLoRA, fp16 compute).
+torch>=2.2
+transformers>=4.44
+peft>=0.12
+bitsandbytes>=0.43
+accelerate>=0.33

@@ -43,11 +43,21 @@ def _acc(solver: Solver, tasks) -> float:
     return sum(solver.solve(t, train=False).correct for t in tasks) / len(tasks)
 
 
-def evaluate(config: MethodConfig, stream: Stream, seed: int) -> ContinualResult:
-    agent = CantorAgent(MockLLM())              # REAL memory stores for the mem arm
-    learner = config.make_learner()
-    solver = Solver(agent, learner, stream.base_success,
-                    config.use_memory, config.use_parametric)
+def evaluate(config: MethodConfig, stream: Stream, seed: int,
+             solver=None, learner=None, consolidate_every: int = 1) -> ContinualResult:
+    """Run one method over the stream.
+
+    Phase 0 (default): builds the simulated `Solver` + the config's learner.
+    Phase 1: inject a `RolloutSolver` + `RealLoRALearner` and the same loop runs
+    unchanged — this is the whole point of the shared interface.
+    """
+    if solver is None:
+        agent = CantorAgent(MockLLM())          # REAL memory stores for the mem arm
+        learner = learner or config.make_learner()
+        solver = Solver(agent, learner, stream.base_success,
+                        config.use_memory, config.use_parametric)
+    elif learner is None:
+        learner = config.make_learner()
     fams = stream.families
     N = len(fams)
 
@@ -66,19 +76,17 @@ def evaluate(config: MethodConfig, stream: Stream, seed: int) -> ContinualResult
 
     for i, fam in enumerate(fams, start=1):
         # --- online phase: solve this family's stream (plasticity + memory writes)
-        success_counts: Counter = Counter()
         for t in fam.train:
             out = solver.solve(t, train=True)
             online_cost += out.cost
             routes[out.route] += 1
             if out.correct:
-                success_counts[t.schema] += 1
+                learner.observe(t.prompt, out.completion, t.schema)
 
-        # --- NIGHT: consolidate both stores
-        if config.use_memory:
-            agent.sleep()                        # REAL: episodic -> semantic/procedural
-        if config.use_parametric:
-            learner.consolidate(dict(success_counts))   # weight-update effect
+        # --- NIGHT: consolidate both stores (every `consolidate_every` families; A8)
+        if i % consolidate_every == 0 or i == N:
+            solver.night()      # REAL non-parametric: episodic -> semantic/procedural
+            learner.consolidate()   # parametric weight update (no-op for NoOpLearner)
 
         # --- eval all families + general probe after this night
         eval_night(i)

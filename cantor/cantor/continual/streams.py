@@ -109,3 +109,53 @@ def make_stream(seed: int, n_families: int = 6, n_train: int = 8,
         general.append(Task(t.id, t.schema, t.prompt, t.answer, t.solvability,
                             "general", is_general=True))
     return Stream(families, general)
+
+
+# --------------------------------------------------------------------------- #
+# S-TOOL — realistic-style stream with SHARED PRIMITIVE SKILLS (Phase 2, §4).
+#
+# Each family is a short composition of tool primitives (search/filter/aggregate/
+# format/auth). Consecutive families overlap by one primitive, so mastering an
+# early family's primitives partially solves a later family BEFORE it is trained
+# -> forward transfer (FWT > 0), the signal a controlled independent-schema
+# stream cannot produce. The prompt encodes the primitives as `[Fk|pi+pj]` so the
+# competence double (ToolFakeLM) can score partial mastery.
+# --------------------------------------------------------------------------- #
+
+_PRIMS = ["search", "filter", "aggregate", "format", "auth"]
+
+
+def _mk_tool(rng: random.Random, schema: str, prims: list[str], kind: str,
+             idx: int) -> Task:
+    a, b, c = rng.randint(2, 12), rng.randint(1, 9), rng.randint(2, 9)
+    tag = f"{schema}|{'+'.join(prims)}"
+    prompt = f"[{tag}] tool-task {a},{b},{c}"
+    return Task(id=f"{schema}-{kind}-{idx}", schema=schema, prompt=prompt,
+                answer=str(a + b + c), solvability=rng.random(), kind=kind)
+
+
+def make_tool_stream(seed: int, n_families: int = 6, n_train: int = 8,
+                     n_novel: int = 30, n_repeat: int = 12,
+                     n_general: int = 80) -> Stream:
+    rng = random.Random(seed)
+    families: list[Family] = []
+    for k in range(n_families):
+        schema = f"F{k}"
+        prims = [_PRIMS[k % len(_PRIMS)], _PRIMS[(k + 1) % len(_PRIMS)]]  # overlap by 1
+        base = round(rng.uniform(0.15, 0.30), 3)
+        train = [_mk_tool(rng, schema, prims, "train", i) for i in range(n_train)]
+        novel = [_mk_tool(rng, schema, prims, "novel", i) for i in range(n_novel)]
+        repeat = []
+        for i in range(n_repeat):
+            src = rng.choice(train)
+            repeat.append(Task(f"{schema}-repeat-{i}", schema, src.prompt, src.answer,
+                               rng.random(), "repeat"))
+        families.append(Family(schema, base, train, novel, repeat))
+
+    general = []
+    for i in range(n_general):
+        a, b, c = rng.randint(2, 12), rng.randint(1, 9), rng.randint(2, 9)
+        general.append(Task(f"G-general-{i}", "G",
+                            f"[G] add {a} and {b} and {c}. total?", str(a + b + c),
+                            rng.random(), "general", is_general=True))
+    return Stream(families, general)

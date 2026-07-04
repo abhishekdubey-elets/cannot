@@ -35,6 +35,7 @@ class Outcome:
     correct: bool
     cost: float
     route: str
+    completion: str = ""      # model output text (real rollouts); "" for simulated
 
 
 class Solver:
@@ -80,3 +81,9 @@ class Solver:
         if train and out.correct and self.use_memory:
             self._remember(task)
         return out
+
+    def night(self) -> None:
+        """Non-parametric consolidation (REAL agent.sleep); parametric handled
+        by the learner in the evaluator."""
+        if self.use_memory:
+            self.agent.sleep()
