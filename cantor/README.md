@@ -178,6 +178,24 @@ set so measurement noise < `eps` made the interaction separate cleanly.
 | 1 | locus experiment: real rollouts + eval-gated LoRA control flow | ✅ smoke GO (measured result needs `--real` GPU backend) |
 | 2 | realistic-domain replication + forward transfer | ✅ gate PASS (offline; real adapters stubbed) |
 | 3 | ablations + replay×gate interaction + A8/A9 curves | ✅ gate PASS (offline; 32B scale check needs A100-class GPU) |
+| **real** | Qwen2.5-3B on Kaggle T4: bring-up → sweep → locus → replication → **trilemma → seeded locus** | ✅ backend · ⚠️ **narrow/unreliable result** — [`PAPER.md`](PAPER.md), [`EXPERIMENT_PLAN.md` §11](EXPERIMENT_PLAN.md) |
+
+> **The real-model story is written up in [`PAPER.md`](PAPER.md).** Headline:
+> **self-generated replay cannot bootstrap skill acquisition; demonstration-seeded replay can,
+> for single-step skills, when the update survives the eval-gate** — narrow and unreliable,
+> not general self-improvement.
+>
+> Chain of measured results: (1) below ~24 examples/schema, LoRA updates are *harmful* — the
+> loop damaged itself nightly; a **no-regression floor** fixed it. (2) Fixed, the single-seed
+> locus looked positive (+0.188) but **did not replicate** across 3 seeds (`+0.167 ± 0.270`,
+> negative on one) — the task had no headroom. (3) A **trilemma**: headroom, bootstrap, and
+> closability are mutually exclusive, so *no self-generated task* can show skill acquisition;
+> and LoRA distils single-step rules but **not multi-step procedures** at 3B. (4) Seeding the
+> buffer with demonstrations — the trilemma's only exit — gives near-perfect novel-instance
+> transfer (0.00 → ~1.0) on **2/3 seeds**, the third rolled back on real forgetting.
+>
+> Four single-seed claims were retracted along the way; the offline harness passed every gate
+> and predicted none of it. Simulation validates *pipelines*, not *effect sizes*.
 
 The **measured** Phases 1–2 (real models/benchmarks) require the `--real` /
 adapter backends (GPU + `torch transformers peft`); the offline runs validate the

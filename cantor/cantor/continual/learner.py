@@ -111,7 +111,16 @@ class RealLoRALearner(ParametricLearner):
                  gate_threshold: int = 2, eps: float = 0.03,
                  steps: int = 20, lr: float = 1e-4,
                  prioritized: bool = True, batch_budget: int = 6,
-                 buffer_cap: int = 500, seed: int = 0):
+                 buffer_cap: int = 500, seed: int = 0, verbose: bool = False,
+                 min_examples: int = 0):
+        self.verbose = verbose
+        # NO-REGRESSION FLOOR (EXPERIMENT_PLAN §11.9). A schema may only be trained
+        # once its buffer holds >= min_examples examples. Below that threshold a LoRA
+        # update is *strictly harmful*: on Qwen2.5-3B, 6 examples drove schema skill
+        # from 0.500 (untrained) down to 0.25, while 24 examples reached 1.000.
+        # Default 0 = inert (preserves the offline harness, whose simulated learner
+        # masters after 2 exposures). Real-model runs must pass ~24.
+        self.min_examples = min_examples
         self.lm = lm
         self.generative_replay = generative_replay
         self.eval_gate = eval_gate
@@ -155,22 +164,41 @@ class RealLoRALearner(ParametricLearner):
             self._buffer.pop(0)                     # evict oldest (recency policy)
 
     def _sample_batch(self):
-        """Pick this night's training examples from the PERSISTENT buffer."""
+        """Pick this night's training examples from the PERSISTENT buffer.
+        The budget is never smaller than the no-regression floor, or an eligible
+        schema could never get enough examples into the batch to be trained."""
+        budget = max(self.batch_budget, self.min_examples)
         if self.prioritized:
-            return self._buffer[-self.batch_budget:]           # recency-prioritized
-        k = min(self.batch_budget, len(self._buffer))
+            return self._buffer[-budget:]                      # recency-prioritized
+        k = min(budget, len(self._buffer))
         return self._rng.sample(self._buffer, k)               # uniform (A5 ablation)
+
+    def _log(self, msg: str) -> None:
+        if self.verbose:
+            print(f"    [consolidate] {msg}", flush=True)
 
     def consolidate(self) -> int:
         if not self._buffer:
+            self._log("buffer EMPTY -> no update  (REPLAY STARVATION)")
             return 0
         counts = Counter(s for _, _, s in self._buffer)
-        need = self.gate_threshold if self.eval_gate else 1
-        eligible = {s for s, c in counts.items() if c >= need}      # data-side gate
+        # A schema needs enough examples both to clear the data-side gate AND to sit
+        # above the no-regression floor (§11.9): below it, training makes things worse.
+        need = max(self.gate_threshold if self.eval_gate else 1, self.min_examples)
+        eligible = {s for s, c in counts.items() if c >= need}
         chosen = self._sample_batch()
         target = {s for (_, _, s) in chosen if s in eligible and s not in self._mastered}
         train = [(p, c) for (p, c, s) in chosen if s in eligible]
+        self._log(f"buffer={len(self._buffer)} counts={dict(counts)} need>={need} "
+                  f"(floor={self.min_examples}) eligible={sorted(eligible)} "
+                  f"chosen={len(chosen)} train={len(train)} target={sorted(target)}")
         if not train:
+            self._log("no eligible train examples -> no update  (REPLAY STARVATION / "
+                      "below no-regression floor)")
+            return 0
+        if len(train) < self.min_examples:
+            self._log(f"train={len(train)} < floor={self.min_examples} -> SKIP update "
+                      f"(would be strictly harmful)")
             return 0
         batch = train + (list(self.anchors) if self.generative_replay else [])
 
@@ -185,15 +213,28 @@ class RealLoRALearner(ParametricLearner):
             # generative replay already anchors general, and decisive when not.
             # eps MUST be < the per-update drift or the gate cannot detect the
             # damage it exists to reject (that was the Phase-3 bring-up bug).
-            if self._general_acc() < gen_before - self.eps:
+            # It must ALSO be > the probe-set measurement noise (1/len(gen_probes)),
+            # or single-probe jitter rejects every good update.
+            gen_after = self._general_acc()
+            noise = 1.0 / max(1, len(self.gen_probes))
+            if gen_after < gen_before - self.eps:
                 self.lm.restore(snap)
+                self._log(f"GATE REJECT -> ROLLBACK: general {gen_before:.3f}->{gen_after:.3f} "
+                          f"(drop {gen_before-gen_after:.3f} > eps {self.eps}); "
+                          f"probe noise floor={noise:.3f} on {len(self.gen_probes)} probes")
                 return 0
             for s in list(target):
-                if self._schema_acc(s) > 0.5:
+                sa = self._schema_acc(s)
+                ok = sa > 0.5
+                self._log(f"schema {s}: probe acc={sa:.2f} -> {'PROMOTED' if ok else 'not promoted'}")
+                if ok:
                     self._mastered.add(s); promoted += 1
+            self._log(f"GATE ACCEPT: general {gen_before:.3f}->{gen_after:.3f}, "
+                      f"promoted={promoted} (noise floor={noise:.3f})")
         else:
             for s in target:
                 self._mastered.add(s); promoted += 1
+            self._log(f"no gate: promoted={promoted}")
         return promoted
 
     def has_mastered(self, schema): return schema in self._mastered

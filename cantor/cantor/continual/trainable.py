@@ -183,7 +183,8 @@ class HFTrainableLM(TrainableLM):  # pragma: no cover - needs GPU + torch/peft
 
     def __init__(self, model_name: str = "Qwen/Qwen2.5-3B-Instruct",
                  lora_rank: int = 16, lora_alpha: int = 32,
-                 load_in_4bit: bool = True, max_new_tokens: int = 8):
+                 load_in_4bit: bool = True, max_new_tokens: int = 8,
+                 allow_cpu: bool = False):
         import os
         try:
             import torch
@@ -196,18 +197,24 @@ class HFTrainableLM(TrainableLM):  # pragma: no cover - needs GPU + torch/peft
                               "accelerate for HFTrainableLM") from e
 
         n_gpu = torch.cuda.device_count()
-        if n_gpu == 0:
+        if n_gpu == 0 and not allow_cpu:
             raise RuntimeError(
                 "HFTrainableLM requires a CUDA GPU, but torch sees none. If your "
                 "traceback path is C:\\Users\\... you are running on your local "
-                "machine, NOT the GPU server — SSH into the VM and run there.")
+                "machine, NOT the GPU server — SSH into the VM and run there. "
+                "(Pass allow_cpu=True only for deliberate small-model smoke runs.)")
+        cpu_mode = n_gpu == 0
 
         self._torch = torch
         self.max_new_tokens = max_new_tokens
-        # T4 (Turing) has no bf16; auto-pick the supported compute dtype.
-        self._dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
-        # Env override lets big GPUs (H100/A100) skip quantization: CANTOR_4BIT=0
-        load_in_4bit = load_in_4bit and os.environ.get("CANTOR_4BIT", "1") != "0"
+        if cpu_mode:
+            self._dtype = torch.float32          # CPU: full precision, no quant
+            load_in_4bit = False
+        else:
+            # T4 (Turing) has no bf16; auto-pick the supported compute dtype.
+            self._dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+            # Env override lets big GPUs (H100/A100) skip quantization: CANTOR_4BIT=0
+            load_in_4bit = load_in_4bit and os.environ.get("CANTOR_4BIT", "1") != "0"
 
         self.tok = AutoTokenizer.from_pretrained(model_name)
         if self.tok.pad_token is None:
@@ -221,7 +228,7 @@ class HFTrainableLM(TrainableLM):  # pragma: no cover - needs GPU + torch/peft
         # to CPU/disk when VRAM is tight, and bitsandbytes 4-bit then aborts with
         # "Some modules are dispatched on the CPU or the disk". Single-GPU pin
         # avoids that; multi-GPU (e.g. a 32B shard) falls back to 'auto'.
-        device_map = {"": 0} if n_gpu == 1 else "auto"
+        device_map = "cpu" if cpu_mode else ({"": 0} if n_gpu == 1 else "auto")
         load_kw = dict(quantization_config=quant, device_map=device_map)
         try:                                        # transformers renamed torch_dtype -> dtype
             base = AutoModelForCausalLM.from_pretrained(model_name, dtype=self._dtype, **load_kw)
@@ -232,6 +239,21 @@ class HFTrainableLM(TrainableLM):  # pragma: no cover - needs GPU + torch/peft
         else:                                       # full-precision path (no bitsandbytes)
             base.gradient_checkpointing_enable()
             base.enable_input_require_grads()
+
+        # Some images (e.g. Kaggle 2026-07) pair peft>=0.19 with torchao 0.10;
+        # peft's LoRA dispatcher then RAISES ImportError on version check instead
+        # of skipping torchao. If the check itself raises, neuter it.
+        try:
+            import peft.import_utils as _piu
+            _piu.is_torchao_available()
+        except ImportError:
+            import peft.import_utils as _piu
+            _piu.is_torchao_available = lambda: False
+            try:
+                import peft.tuners.lora.torchao as _plt   # direct-import site
+                _plt.is_torchao_available = lambda: False
+            except Exception:
+                pass
         cfg = LoraConfig(
             r=lora_rank, lora_alpha=lora_alpha, lora_dropout=0.05, bias="none",
             task_type="CAUSAL_LM",
@@ -255,7 +277,8 @@ class HFTrainableLM(TrainableLM):  # pragma: no cover - needs GPU + torch/peft
         self.model.config.use_cache = True
         text = self._render(prompt, deliberate)
         ids = self.tok(text, return_tensors="pt").to(self.model.device)
-        budget = (self.max_new_tokens * 24) if deliberate else self.max_new_tokens
+        mult = getattr(self, "deliberate_multiplier", 24)
+        budget = (self.max_new_tokens * mult) if deliberate else self.max_new_tokens
         with torch.no_grad():
             out = self.model.generate(**ids, max_new_tokens=budget, do_sample=False,
                                       pad_token_id=self.tok.pad_token_id)

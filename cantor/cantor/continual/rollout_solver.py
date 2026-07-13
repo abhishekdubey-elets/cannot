@@ -29,11 +29,20 @@ def parse_answer(text: str) -> str | None:
 
 class RolloutSolver:
     def __init__(self, lm: TrainableLM, agent: CantorAgent,
-                 use_memory: bool, use_parametric: bool, salience_gate: bool = True):
+                 use_memory: bool, use_parametric: bool, salience_gate: bool = True,
+                 replay_raw_completion: bool = False):
         self.lm = lm
         self.agent = agent
         self.use_memory = use_memory
         self.use_parametric = use_parametric   # LoRA effect enters via `lm`
+        # Replay target format. Online solves run DELIBERATE (verbose reasoning),
+        # but train_lora renders the TERSE prompt and the fast path is evaluated
+        # terse. Storing the raw verbose generation therefore teaches
+        # "terse prompt -> rambling answer" and degrades the model. Store the
+        # PARSED answer instead: self-distil what deliberation concluded, not how
+        # it rambled. `replay_raw_completion=True` reproduces the old (buggy)
+        # behaviour for A/B comparison.
+        self.replay_raw_completion = replay_raw_completion
         # A7 knob. NOTE (honest): offline this changes what the episodic store
         # keeps, but correctness here flows through the EXACT semantic cache, not
         # retrieval — so it does not move the offline metrics. Its effect appears
@@ -57,7 +66,8 @@ class RolloutSolver:
         correct = pred is not None and pred == str(task.answer)
         cost = COST["system2"] if train else COST["system1"]
         route = "deliberate" if train else "generate"
-        out = Outcome(correct, cost, route, text)
+        replay_target = text if self.replay_raw_completion else (pred or "")
+        out = Outcome(correct, cost, route, replay_target)
 
         if train and correct and self.use_memory:
             self.agent.episodic.write(Episode(
