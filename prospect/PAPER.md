@@ -1,18 +1,21 @@
-# PROSPECT: Uncertainty-Gated Latent Mental Simulation for Language Agents
+# PROSPECT: Latent Mental Simulation for Language Agents — What Works, What Doesn't, and How We Know
 
 **Predictive Rollouts in Self-supervised Embeddings for Counterfactual Thinking**
 
-*Draft for NeurIPS/ICML submission.*
+*Draft for NeurIPS/ICML submission. A measured study: one confirmed prediction, one
+mechanistically-explained self-refutation, and an adequately-powered null.*
 
-> **Epistemic status — read first.** This document separates three tiers, and never blurs them:
-> * **[IMPLEMENTED]** — code in this repository, executed and measured (§10 pilot).
-> * **[PROPOSED]** — designed, mathematically specified, not yet run.
-> * **[HYPOTHETICAL]** — expected results. **Not measured. Not evidence.** Included to
->   specify the evaluation, per the reviewer convention that predictions be stated in advance.
+> **Epistemic status — read first.** This document separates two tiers, and never blurs them:
+> * **[MEASURED]** — executed on real hardware and reported as data: the world-model pilot
+>   (§10.1), the latent-vs-linguistic comparison (§10.2), the power analysis (§10.3), and the
+>   powered re-run (§10.4). Numbers come from `training/` and named Kaggle kernels.
+> * **[PROPOSED]** — designed and mathematically specified but not evaluated: the Latent
+>   Trajectory Token LLM interface (§3.8) and latent counterfactuals (§3.9) are implemented and
+>   CPU-smoke-tested but never measured against a real LM; DreamerV3/MuZero/GPT-4 are **NOT
+>   RUN** (§10.2) and are never assigned invented numbers.
 >
-> §10.1 reports **real measured numbers** from a pilot on a self-contained environment.
-> §10.2 is **entirely hypothetical** and is marked on every row. A reviewer should treat §10.2
-> as a pre-registration, not a result.
+> Nothing in this paper is a fabricated result. Where we could not run a baseline, the cell
+> reads "NOT RUN" with the reason, not a placeholder value.
 
 ---
 
@@ -51,11 +54,18 @@ stable is the one that destroys ensemble-disagreement as an uncertainty signal.*
 contradicts standard practice in pessimistic model-based RL, where ensemble disagreement is the
 default epistemic proxy.
 
-We report this rather than the result we designed for. The planning claim itself we mark
-**untested**, not supported: the pilot's sparse reward yields a flat value landscape in which
-*every* condition — including a fully collapsed encoder — plans at chance, so the environment
-cannot resolve it. We do **not** claim parity with DreamerV3 or MuZero; §10.2's comparison table
-is marked hypothetical throughout and is a pre-registration, not evidence.
+We report this rather than the result we designed for. On the central hypothesis — latent
+simulation beats reasoning-in-language for planning — we conducted a properly powered test.
+After an *a-priori* power analysis (§10.3) fixed a benchmark with a well-defined 0.25 null and
+80% power to detect a 0.15 effect, latent planning was **statistically indistinguishable from
+Chain-of-Thought and from chance** (§10.4). This is a *valid null*, not an inconclusive one: the
+effect, if any, is $<0.15$. The single replicated positive is a **7.7–31× latency advantage**
+over CoT/ToT — a real property, but not a planning result, since no method plans above chance
+here. We do **not** claim parity with DreamerV3 or MuZero (not run; a same-day reimplementation
+would be a strawman). A methodological thread runs through the work: across two studies we three
+times designed a mechanism before verifying the measurement could detect it, and once got it
+right — we treat computing the null and required sample size *before* running as the transferable
+lesson.
 
 ---
 
@@ -99,8 +109,12 @@ that object.
    is the LLM↔world-model bridge that MuZero/Dreamer lack and CoT approximates in text.
 4. **Latent counterfactuals** [PROPOSED, §3.9]. `do(a_k := a')` applied to a latent trajectory,
    giving counterfactual contrasts without natural-language generation.
-5. **A measured pilot and an honest evaluation protocol** [IMPLEMENTED, §10.1]. We run what our
-   compute permits, report it, and mark the rest as prediction.
+5. **A powered evaluation and its methodology** [MEASURED, §10.1–10.4]. We validate AC-JEPA,
+   refute the gate, and — after an *a-priori power analysis* (§10.3) that our pilot's design
+   lacked — report an adequately-powered **null** on the central hypothesis: latent planning is
+   indistinguishable from CoT and from chance at 7×7/3B. The contribution is not the null but the
+   power analysis that makes it *valid* rather than *inconclusive* — a distinction we get wrong
+   three times and right once across two studies.
 
 ---
 
@@ -499,28 +513,145 @@ cannot resolve whether latent planning works. This is the same failure our compa
 #### 10.1.1 What a reviewer should take from §10.1
 * AC-JEPA + VICReg: **validated** — accurate, stable, non-collapsed.
 * Uncertainty-gated horizon: **refuted, with a mechanism** (§C2.1).
-* Latent planning, LTTs, latent counterfactuals: **untested** — not "unsupported", untested.
+* Latent planning: **untestable on this pilot** (flat $J$); tested under proper power in §10.4,
+  where it is a valid null. LTTs and latent counterfactuals: **untested** (implemented,
+  CPU-smoke-tested, never evaluated against a real LM).
 * Required next: a **dense-reward** environment (e.g. distance-shaped, or MiniGrid with shaped
   returns) where $J$ has gradient. Task admissibility must be established *before* the planning
   claim can be evaluated at all.
 
-### 10.2 Full evaluation — HYPOTHETICAL [NOT MEASURED]
+### 10.2 Latent vs linguistic simulation — MEASURED PILOT [IMPLEMENTED]
 
-> ⚠️ **Every number below is invented.** It specifies what we expect, not what we observed.
-> Reviewers: treat as pre-registration. Authors: do not cite these as evidence.
+The paper's central hypothesis — latent simulation beats reasoning-in-language for planning —
+is exactly PROSPECT vs Chain-of-Thought / Tree-of-Thoughts / direct LLM. We ran that
+comparison on Qwen2.5-3B (T4), identical grids, identical metric (chosen first move on *a*
+shortest path; ties counted), reward densified with potential-based shaping (Ng et al., 1999;
+preserves the optimal policy) after §10.1 showed the sparse reward flattens $J(\tau)$.
 
-| Method | Plan. acc ↑ | Success ↑ | 10-step pred err ↓ | Latency ↓ | Sample eff ↑ |
-|---|---|---|---|---|---|
-| LLM direct | 0.31 | 0.28 | — | **1×** | — |
-| CoT | 0.44 | 0.41 | — | 6× | — |
-| Tree-of-Thoughts | 0.55 | 0.49 | — | 40× | — |
-| ReAct | 0.52 | 0.53 | — | 12× | — |
-| DreamerV3 | 0.71 | 0.74 | 0.22 | 3× | 0.62 |
-| MuZero | 0.76 | 0.78 | 0.19 | 8× | 0.55 |
-| JEPA-noaction | 0.38 | 0.33 | 0.41 | 2× | 0.30 |
-| **PROSPECT** | **0.79** | **0.80** | **0.14** | 3× | **0.71** |
+**We present this as a PILOT / sanity check, not as a test of the hypothesis, because it is
+statistically underpowered — see §10.2.1.**
 
-*(hypothetical, hypothetical, hypothetical — see §10.1 for what was actually measured)*
+| method | plan acc | ±sd | latency/decision | rel. latency |
+|---|---|---|---|---|
+| random | **0.444** | 0.064 | 0.000 s | — |
+| LLM direct | 0.333 | 0.072 | 0.484 s | 1.0× |
+| Chain-of-Thought | 0.375 | 0.150 | 0.498 s | 1.0× |
+| Tree-of-Thoughts (k=3) | 0.389 | 0.173 | 1.985 s | 4.1× |
+| **PROSPECT (latent CEM)** | 0.389 | 0.158 | **0.065 s** | **0.13×** |
+| DreamerV3 | NOT RUN | — | — | faithful reimpl. = weeks; same-day = strawman |
+| MuZero | NOT RUN | — | — | same |
+| GPT-4 | NOT RUN | — | — | no API access |
+
+**Two readings, one valid.**
+* *Accuracy* (invalid — see §10.2.1): every method, PROSPECT and all three LLM baselines,
+  is statistically indistinguishable from random (0.444). **No method demonstrates planning
+  ability on this benchmark.** When a coin flip ties every method, the benchmark — not the
+  methods — is what failed.
+* *Latency* (valid): PROSPECT is **7.6× cheaper than CoT and 30× cheaper than ToT** per
+  decision, and this gap is large relative to its variance. The architecture's cost argument
+  holds; but cost is only interesting conditional on accuracy, which no method here establishes.
+
+### 10.2.1 Why §10.2 is underpowered (and what a defensible version requires)
+
+The benchmark cannot detect the effect it was built to measure. Three compounding causes:
+
+1. **The null is high, not 0.25.** Counting ties (a fairness fix) raised chance from 0.25 to
+   the empirical **0.444**: on 7×7 grids with 15% walls, a random state has on average ~1.8 of
+   4 moves on some shortest path. The "improvement room" above chance is only ~0.56, and much
+   of it is unreachable.
+2. **Per-condition variance is large.** With $n=24$ grids × 3 seeds, a Bernoulli proportion at
+   $p\approx0.4$ has SE $=\sqrt{p(1-p)/n}\approx0.10$ per seed. The observed sd (0.06–0.17)
+   swamps every between-method gap (all within 0.11 of each other).
+3. **No a-priori power analysis.** We sized the experiment by convenience (24×3), not by the
+   sample needed to detect a plausible effect at the true null — the direct cause of (1)–(2).
+
+**This is the third instance in our two studies of designing a mechanism before verifying the
+measurement can see it** (cf. the companion CANTOR study, where the base model already solved
+33–50% of items; and §10.1, where sparse reward flattened $J$). We treat the pattern itself as
+a finding: *for planning/agentic evaluations, the null distribution and required sample size
+must be computed before any method is run.* §10.3 does this; §10.4 re-runs on a benchmark
+designed to the resulting spec.
+
+### 10.3 Formal power analysis [MEASURED — `training/power.py`]
+
+Run *before* any method is re-run. We (a) measured the empirical random-policy null on five
+candidate benchmark designs, (b) selected one whose null is low and *well-defined*, and (c)
+computed the required sample size via the two-proportion normal approximation, cross-checked
+against a Monte-Carlo simulation (analytic $n$ reproduces 0.80 MC power — the calculation is
+self-validating).
+
+**(a) Null accuracy by design.** The pilot's flaw is visible in row 1: ties raise chance to
+0.379. Filtering to states with **exactly one** optimal move fixes chance at 0.25 *by
+construction*, verified empirically.
+
+| design | random null | usable % | mean optimal moves |
+|---|---|---|---|
+| 7×7, w=0.15, ties kept (pilot) | 0.379 | 100% | 1.49 |
+| 7×7, w=0.15, **unique-opt only** | **0.250** | 52% | 1.49 |
+| **7×7, w=0.25, unique-opt only** | **0.250** | **65%** | 1.36 |
+| 9×9, w=0.20, unique-opt only | 0.257 | 56% | 1.46 |
+| 11×11, w=0.22, unique-opt only | 0.262 | 57% | 1.45 |
+
+**(b) Chosen design:** 7×7, wall density 0.25, unique-optimal-move filter — null $p_0 = 0.250$,
+65% grid yield.
+
+**(c) Sample size** ($\alpha=0.05$ one-sided, power $=0.80$):
+
+| target effect $\delta$ | $n$ (analytic) | MC power @ $n$ |
+|---|---|---|
+| +0.10 | 259 | 0.79 |
+| **+0.15** | **120** | 0.80 |
+| +0.20 | 70 | 0.79 |
+| +0.25 | 46 | 0.82 |
+
+**Pre-registered design:** to detect $\delta = +0.15$ (0.25 → 0.40), use **120 eval states =
+40/seed × 3 seeds** at null 0.250. Contrast the pilot: 24/seed at null 0.444, per-seed
+SE $\approx 0.10$ — undetectable by construction. A null result on the powered benchmark then
+means *"no effect $\ge 0.15$,"* not *"the benchmark could not tell."*
+
+### 10.4 Re-run on the powered benchmark [MEASURED]
+
+Same five methods, §10.3 design (7×7, w=0.25, unique-optimal filter, 40 states × 3 seeds,
+null $p_0=0.25$, 80% power to detect $\delta=0.15$). Random landed at 0.233 — confirming the
+designed null.
+
+| method | plan acc | 95% CI | latency/decision | rel. latency |
+|---|---|---|---|---|
+| random | 0.233 | ±0.114 | 0.000 s | — |
+| LLM direct | 0.300 | ±0.075 | 0.483 s | 1.0× |
+| Chain-of-Thought | 0.200 | ±0.049 | 0.495 s | 1.0× |
+| Tree-of-Thoughts (k=3) | 0.200 | ±0.049 | 2.009 s | 4.2× |
+| **PROSPECT (latent CEM)** | 0.250 | ±0.085 | **0.064 s** | **0.13×** |
+| DreamerV3 / MuZero / GPT-4 | NOT RUN | — | — | (see §10.2) |
+
+**Pre-registered verdict.** PROSPECT beats the null by $\Delta = +0.000$; the best LLM baseline
+by $\Delta = +0.050$ — **neither reaches the $\delta=0.15$ detectable threshold.** PROSPECT and
+CoT have overlapping CIs (indistinguishable). Every method sits within its CI of chance.
+
+**This is a valid null result.** On a benchmark *designed a priori* to have 80% power to detect
+a 0.15 effect at a well-defined 0.25 null, **no method — latent simulation or linguistic
+reasoning — demonstrates a planning effect** on 7×7 gridworld at 3B scale. The conclusion is
+"the effect, if any, is $<0.15$," not "the benchmark could not distinguish the methods" (the
+pilot's fate, §10.2.1). We regard the *difference between these two statements* — and the power
+analysis that separates them — as the section's methodological contribution.
+
+**The one replicated positive signal is latency**, not accuracy: PROSPECT plans **7.7× faster
+than CoT and 31× faster than ToT** (both the pilot and powered runs agree, tight variance),
+consistent with §1's cost argument for dynamical over linguistic simulation. But latency is an
+advantage only conditional on accuracy, which no method establishes here; a fast method
+indistinguishable from chance is not a useful planner. We therefore make **no accuracy claim**
+for PROSPECT and report the cost result as a property, not a win.
+
+### 10.5 What the measured evaluation establishes (and does not)
+* **Establishes:** AC-JEPA is an accurate, stable, non-collapsing world model (§10.1); the
+  uncertainty gate is refuted with mechanism (§10.1/C2.1); latent rollouts are ~8–30× cheaper
+  than linguistic reasoning (§10.4); and on a properly powered 7×7 benchmark, latent planning
+  is statistically indistinguishable from CoT and from chance.
+* **Does not establish:** anything about PROSPECT vs DreamerV3/MuZero (not run), about larger
+  or richer environments, or about whether the null is *task-specific* (7×7 may be too simple
+  to separate a learned latent planner from chance) or *architecture-specific*. §14 lists the
+  environments (dense-reward continuous control; longer-horizon partial observability) where a
+  powered test could still find an effect the gridworld cannot.
 
 ---
 
@@ -616,19 +747,29 @@ stable also collapse the ensemble onto a common attractor. *Stability and uncert
 in tension by construction* — a caution for any pessimistic model-based method that gates on
 disagreement.
 
-**The planning claim remains untested.** Our gridworld's sparse reward flattens $J(\tau)$ so
-completely that a fully collapsed encoder plans as well as a healthy one; we eliminated an
-untrained value head, the pessimism weight, and the horizon in turn, and chance persisted. That
-is a statement about the environment, not the method — and it echoes our companion study, where
-a task the base model already half-solved could not resolve its hypothesis either. **Task
-admissibility must be established before a claim is testable; twice now we designed the
-mechanism before checking the measurement could see it.**
+**The planning claim was hard to test, and testing it honestly took three tries.** The pilot's
+sparse reward flattened $J(\tau)$ so completely that a collapsed encoder planned as well as a
+healthy one (§10.1); densifying the reward removed that confound but left a benchmark whose
+tie-counted null was 0.44, larger than any between-method gap (§10.2); only an *a-priori power
+analysis* (§10.3) produced a benchmark — unique-optimal-move states, null 0.25, 40 states × 3
+seeds — with the power to detect a 0.15 effect. **Task admissibility and statistical power must
+be established before a claim is testable; across two studies we designed the mechanism before
+checking the measurement could see it three times, and computed the power first only once.**
 
-We therefore make no claim of parity with DreamerV3 or MuZero, and mark §10.2 hypothetical
-throughout. What we offer is a specified, implemented architecture; one confirmed prediction;
-one mechanistically-explained refutation of our own headline contribution; and an explicit
-account of what would have to be true — a dense-reward environment — before the central
-hypothesis of latent-over-linguistic simulation could even be put to the test.
+We therefore make no claim of parity with DreamerV3 or MuZero (not run), and we now report the
+central-hypothesis comparison as **measured**: on a benchmark designed *a priori* — via a formal
+power analysis (§10.3) — to have 80% power to detect a 0.15 effect at a well-defined 0.25 null,
+latent planning is **statistically indistinguishable from Chain-of-Thought and from chance**
+(§10.4). This is a valid null, not an inconclusive one: the distinction rests entirely on the
+power analysis, which is why we foreground it. The one replicated positive is a 7.7–31× latency
+advantage — a real property, but not a planning result, since no method here plans above chance.
+
+What we offer, then, is a specified and implemented architecture; one confirmed prediction
+(anti-collapse); one mechanistically-explained self-refutation (the stability/uncertainty
+tension); a measured, adequately-powered null on the central hypothesis at 7×7/3B scale; and a
+running methodological thesis — repeated across two studies — that in agentic evaluation *the
+null distribution and required sample size must be computed before the method is run*. We got
+this wrong three times and right once; the paper is stronger for reporting both.
 
 ---
 

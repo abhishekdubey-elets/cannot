@@ -28,39 +28,80 @@ from prospect.world_model.rollout import cem_plan                         # noqa
 from prospect.world_model.trainer import train_acjepa                     # noqa: E402
 
 SEEDS = [0, 1, 2]
-N_EVAL = 24
 CFG = dict(d=64, k=5, n_actions=N_ACTIONS, lr=1e-3, steps=1500, batch=128,
            horizon=8, lam=0.9, tau=0.996, gamma_v=1.0, a_var=25.0, a_cov=1.0,
            a_rew=1.0, a_val=1.0, gamma=0.99, tf_anneal=0.5,
            use_vicreg=True, use_reward=True, residual=True)
 
+# --powered => §10.3 spec: unique-optimal-move filter (null=0.25) + n from power analysis.
+POWERED = "--powered" in sys.argv
+N_EVAL = 40 if POWERED else 24
+WALL_P = 0.25 if POWERED else 0.15
+UNIQUE_ONLY = POWERED             # exactly one optimal move -> chance = 0.25 by construction
+NULL_P0 = 0.25 if POWERED else 0.44
+DELTA = 0.15                      # pre-registered detectable effect
+
 
 def eval_grids(seed, n=N_EVAL, grid=7):
+    """Powered mode keeps only states with EXACTLY ONE optimal move (well-defined 0.25 null)."""
     out = []
     i = 0
-    while len(out) < n:
-        env = GridWorld(n=grid, seed=seed * 7907 + i + 10_000)
+    while len(out) < n and i < n * 200:
+        env = GridWorld(n=grid, wall_p=WALL_P, seed=seed * 7907 + i + 10_000)
         i += 1
-        if env.optimal_actions():
+        opt = env.optimal_actions()
+        if opt and (not UNIQUE_ONLY or len(opt) == 1):
             out.append(env)
     return out
 
 
-def find_model():
+class Tee:
+    """Kaggle did not capture this script's stdout on a prior run (0-byte log) while
+    output FILES downloaded fine. Write results to a file as the source of truth.
+
+    Two bugs were fixed here: (1) it must accept print's kwargs (flush=, sep=, end=)
+    since it replaces the global print; (2) it must call builtins.print, not the
+    module-global print -- which is itself once patched (infinite recursion).
+    """
+
+    def __init__(self, path="/kaggle/working/results.txt"):
+        import builtins
+        self._print = builtins.print
+        self.f = open(path, "w", encoding="utf-8") if os.path.isdir("/kaggle/working") else None
+
+    def __call__(self, *a, **kw):
+        msg = kw.get("sep", " ").join(str(x) for x in a)
+        self._print(msg, flush=True)
+        if self.f:
+            self.f.write(msg + kw.get("end", "\n")); self.f.flush()
+
+
+def find_model(log=print):
+    """Locate a mounted causal-LM. Prior run silently found nothing and skipped every
+    LLM baseline; now we log the mounts and fail loudly instead."""
+    cands = []
     for dp, dns, fns in os.walk("/kaggle/input"):
-        if "config.json" in fns and any(f.startswith("model") and
-                                        f.endswith((".safetensors", ".bin")) for f in fns):
-            if "3b-instruct" in dp.lower():
-                return dp
-    return None
+        if "config.json" in fns and any(f.endswith((".safetensors", ".bin")) for f in fns):
+            cands.append(dp)
+    log(f"model candidates: {cands}")
+    for c in cands:
+        if "3b-instruct" in c.lower():
+            return c
+    return cands[0] if cands else None
 
 
 def main():
+    P = Tee()
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    print(f"device={device}", flush=True)
-    mp = find_model()
-    print(f"qwen: {mp}", flush=True)
+    P(f"device={device}")
+    P(f"mounts={os.listdir('/kaggle/input') if os.path.isdir('/kaggle/input') else 'none'}")
+    mp = find_model(P)
+    P(f"qwen: {mp}")
+    if mp is None:
+        P("!! NO MODEL MOUNTED -> LLM baselines will be SKIPPED (this is why the prior "
+          "run finished in 8 min). Check model_sources in kernel-metadata.json.")
     lm = QwenLM(mp, device=device) if mp else None
+    globals()["print"] = P          # route the rest of the report into the file too
 
     rows = {m: [] for m in ["random", "direct", "cot", "tot", "prospect"]}
     lat = {m: [] for m in rows}
@@ -111,9 +152,10 @@ def main():
 
     # ------------------------------ report ------------------------------------
     print("\n" + "=" * 78)
-    print("TABLE §10.2 — MEASURED: latent vs linguistic simulation")
-    print(f"(Qwen2.5-3B-Instruct, 7x7 gridworld, {N_EVAL} states x {len(SEEDS)} seeds,")
-    print(" metric = chosen first move lies on a shortest path; ties counted)")
+    tag = "§10.4 POWERED" if POWERED else "§10.2 PILOT (underpowered)"
+    print(f"TABLE {tag} — MEASURED: latent vs linguistic simulation")
+    print(f"(Qwen2.5-3B, 7x7 w={WALL_P}{' UNIQUE-opt' if UNIQUE_ONLY else ' ties-kept'}, "
+          f"{N_EVAL} states x {len(SEEDS)} seeds, null p0={NULL_P0:.2f})")
     print("=" * 78)
     print(f"{'method':<12}{'plan acc':>12}{'±sd':>8}{'latency/dec':>14}{'rel. lat':>10}")
     base_lat = stats.mean(lat["direct"]) if lat["direct"] else 1.0
@@ -129,16 +171,32 @@ def main():
     print(f"{'MuZero':<12}{'NOT RUN':>12}   same")
     print(f"{'GPT-4':<12}{'NOT RUN':>12}   no API access")
 
+    def ci(vals):
+        mu = stats.mean(vals)
+        se = (stats.stdev(vals) / len(vals) ** 0.5) if len(vals) > 1 else 0.0
+        return mu, 1.96 * se
+
     if rows["cot"] and rows["prospect"]:
-        p, c = stats.mean(rows["prospect"]), stats.mean(rows["cot"])
-        r = stats.mean(rows["random"])
-        print("\nVERDICT (pre-registered):")
-        print(f"  PROSPECT > random?  {'YES' if p > r + 0.10 else 'NO'}  ({p:.3f} vs {r:.3f})")
-        print(f"  PROSPECT > CoT?     {'YES' if p > c + 0.10 else 'NO'}  ({p:.3f} vs {c:.3f})")
-        print(f"  CoT > random?       {'YES' if c > r + 0.10 else 'NO'}  ({c:.3f} vs {r:.3f})")
-        if p <= r + 0.10:
-            print("  -> central hypothesis NOT supported: latent planning fails to beat chance,")
-            print("     so it cannot be claimed superior to linguistic reasoning.")
+        p, pe = ci(rows["prospect"]); c, ce = ci(rows["cot"]); r, re_ = ci(rows["random"])
+        d, de = ci(rows["direct"]); t, te = ci(rows["tot"])
+        print(f"\n95% CIs:  random {r:.3f}±{re_:.3f}  direct {d:.3f}±{de:.3f}  "
+              f"cot {c:.3f}±{ce:.3f}  tot {t:.3f}±{te:.3f}  prospect {p:.3f}±{pe:.3f}")
+        print(f"\nVERDICT (pre-registered, null={NULL_P0:.2f}, detectable delta={DELTA:.2f}):")
+        best_llm = max(c, d, t)
+        print(f"  PROSPECT beats null by >= {DELTA}?  "
+              f"{'YES' if p - NULL_P0 >= DELTA else 'NO'}  (Δ={p-NULL_P0:+.3f})")
+        print(f"  best-LLM beats null by >= {DELTA}?  "
+              f"{'YES' if best_llm - NULL_P0 >= DELTA else 'NO'}  (Δ={best_llm-NULL_P0:+.3f})")
+        print(f"  PROSPECT vs CoT CIs overlap?      "
+              f"{'YES (indistinguishable)' if abs(p-c) < pe+ce else 'NO'}")
+        if not POWERED:
+            print("  NOTE: pilot is UNDERPOWERED (§10.2.1); accuracy verdicts are not valid here.")
+        elif p - NULL_P0 < DELTA and best_llm - NULL_P0 < DELTA:
+            print("  -> On a PROPERLY POWERED benchmark, NO method (latent or linguistic) shows a")
+            print("     detectable planning effect. This is a valid null: the effect, if any, is")
+            print("     < 0.15 — not a measurement artifact.")
+        elif p - NULL_P0 >= DELTA and p - c > pe + ce:
+            print("  -> central hypothesis SUPPORTED: latent planning beats null AND CoT, powered.")
 
 
 if __name__ == "__main__":
