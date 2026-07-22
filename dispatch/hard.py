@@ -81,10 +81,14 @@ def make_hard(seed: int, n_per_type: int):
 
 
 def check(q: Query, out: str) -> bool:
-    if q.qtype == "factual":
-        return q.answer.lower() in out.strip().lower()
+    # answer-type-aware: string answers (capital names, KB values like 'Vantis37')
+    # are graded by substring; integer answers by last-integer match. This is robust
+    # to workloads whose non-'factual' types nonetheless have string answers.
+    ans = q.answer.strip()
+    if not re.fullmatch(r"-?\d+", ans):
+        return ans.lower() in out.strip().lower()
     nums = re.findall(r"-?\d+", out)
-    return bool(nums) and nums[-1] == q.answer
+    return bool(nums) and nums[-1] == ans
 
 
 # --------------------------------------------------------------------- tool eval
@@ -143,7 +147,11 @@ def m_cot(lm, q, kb):
 
 
 def m_tool(lm, q, kb):
-    mt = re.search(r"(-?\d+(?:\s*[*+\-]\s*\d+)+)", q.prompt)
+    # normalize natural-language operators so the calculator handles "X times Y" too
+    text = re.sub(r"\s+times\s+", " * ", q.prompt.lower())
+    text = re.sub(r"\s+plus\s+", " + ", text)
+    text = re.sub(r"\s+minus\s+", " - ", text)
+    mt = re.search(r"(-?\d+(?:\s*[*+\-]\s*\d+)+)", text)
     if mt:
         v = _safe_eval(mt.group(1).replace(" ", ""))
         if v is not None:
