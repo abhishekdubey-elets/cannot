@@ -81,6 +81,42 @@ seeds** — the model never recognizes it does not know a fact, so it never disp
 retrieval. It routes by surface form flawlessly (3/4 types) but cannot introspect on its own
 knowledge (0/4 on known-vs-unknown).
 
+## Gate 4 — the calibration-signal lever: the bound is liftable (`dispatch-lever`)
+
+Two-stage controller: stage 1 = coarse type classification (unchanged); stage 2 = for
+fact-like queries only, a metacognitive probe decides known (→cot) vs unknown (→retrieve).
+
+| method | accuracy | 95% CI | captured |
+|---|---|---|---|
+| best-fixed (cot) | 0.500 | 0.000 | — |
+| baseline (Gate 3b) | 0.750 | 0.000 | 50% |
+| **self-ask** ("do you know this?") | 0.847 | 0.036 | 69% |
+| **consistency** (3 samples @ T=1.0; disagree ⇒ unknown) | **1.000** | 0.000 | **100%** |
+| oracle | 1.000 | 0.000 | 100% |
+
+Routing accuracy by type:
+
+| type | baseline | self-ask | consistency |
+|---|---|---|---|
+| known_fact | 1.000 | **0.389** | 1.000 |
+| unknown_fact | **0.000** | 1.000 | **1.000** |
+| easy_calc | 1.000 | 1.000 | 1.000 |
+| hard_calc | 1.000 | 1.000 | 1.000 |
+
+**Consistency lifts the bound entirely** — unknown-fact routing 0.000 → 1.000 with known-fact
+routing preserved at 1.000; the controller reaches the oracle (captured 100%).
+
+**Self-report fails degenerately.** It also hits 1.000 on unknown_fact, but by claiming
+ignorance almost everywhere: known_fact routing collapses to 0.389, sending real capitals to a
+KB that lacks them. This is precisely why the pre-registration required *discrimination*
+(`known ≥ 0.75`) and not just `unknown ≥ 0.50` — on the unknown-fact metric alone, self-ask
+would have looked like a partial success.
+
+> **Behavioural calibration works where introspective calibration fails.** A 3B model cannot
+> *report* whether it knows a fact, but it reliably *exhibits* it: sampled three times it names
+> the same real capital every time and a different invented capital each time. Three 12-token
+> samples recover the full 50% of dispatch gain the classifier forfeited.
+
 ## The law (fully confirmed; no retraction)
 
 > **Modular dispatch helps iff the task distribution demands disjoint capabilities** (Gate 1

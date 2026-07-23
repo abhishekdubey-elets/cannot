@@ -125,14 +125,20 @@ class QwenLM:
             self.m = AutoModelForCausalLM.from_pretrained(path, torch_dtype=dt, **kw)
         self.m.eval()
 
-    def gen(self, system, user, max_new_tokens=16):
+    def gen(self, system, user, max_new_tokens=16, temperature: float = 0.0):
+        """temperature=0 -> greedy (deterministic; all prior gates used this).
+        temperature>0 -> sampling, used by the consistency calibration probe."""
         torch = self._t
         msgs = [{"role": "system", "content": system}, {"role": "user", "content": user}]
         text = self.tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
         ids = self.tok(text, return_tensors="pt").to(self.m.device)
+        kw = dict(max_new_tokens=max_new_tokens, pad_token_id=self.tok.pad_token_id)
+        if temperature > 0:
+            kw.update(do_sample=True, temperature=temperature, top_p=0.95)
+        else:
+            kw.update(do_sample=False)
         with torch.no_grad():
-            out = self.m.generate(**ids, max_new_tokens=max_new_tokens, do_sample=False,
-                                  pad_token_id=self.tok.pad_token_id)
+            out = self.m.generate(**ids, **kw)
         return self.tok.decode(out[0][ids["input_ids"].shape[1]:], skip_special_tokens=True)
 
 

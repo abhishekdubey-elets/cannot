@@ -26,8 +26,12 @@ it routes *unknown* facts to reasoning instead of retrieval **0% of the time** �
 never recognizes that it does not know something.
 
 The binding constraint on mechanism dispatch is therefore **metacognitive**, not
-architectural: a small model routes by surface form perfectly but cannot introspect on its own
-knowledge. We state this as a measured *when-and-how-well* law and bound its scope explicitly.
+architectural. **(4)** But it is not intrinsic: replacing the router's *self-report* with a
+*behavioural* calibration signal — sample the answer three times and check whether the samples
+agree — restores unknown-fact routing to **1.000** and lifts the controller to the **oracle
+(100% captured)**. Asked "do you know this?", the model is uninformative (it claims ignorance
+everywhere, collapsing known-fact routing to 0.389); *watched* answering, it is perfectly
+discriminative. Self-knowledge the model cannot report, it nonetheless exhibits.
 
 ---
 
@@ -229,11 +233,37 @@ perfectly. The hard part is **metacognition**: a controller that knows *when it 
 so it can dispatch to retrieval. The measured 0.000 unknown-fact routing is a concrete target:
 turning it positive is worth exactly the 50% of the dispatch gain it currently forfeits.
 
-**The lever experiment (pre-registered).** Give the controller a calibration signal — the
-model's own answer-confidence, or a dedicated "do I know this?" probe — and re-run Gate 3b.
-Hypothesis: unknown-fact routing rises from 0.000 and the captured fraction moves from 50%
-toward 100%. This turns the metacognitive bound from a limit into a design lever, and is the
-natural continuation of this study.
+**The lever experiment — MEASURED (Gate 4).** We pre-registered and ran it. A two-stage
+controller keeps stage-1 type classification and adds, for fact-like queries only, a
+metacognitive probe deciding known (→cot) vs unknown (→retrieve). Two cheap signals:
+
+| method | accuracy | captured | known_fact routing | unknown_fact routing |
+|---|---|---|---|---|
+| baseline (Gate 3b) | 0.750 | 50% | 1.000 | **0.000** |
+| self-ask ("do you know this?") | 0.847 | 69% | **0.389** | 1.000 |
+| **consistency** (3 samples @ T=1.0) | **1.000** | **100%** | **1.000** | **1.000** |
+| oracle | 1.000 | 100% | — | — |
+
+**The bound is liftable.** The consistency probe recovers unknown-fact routing entirely
+(0.000 → 1.000) *without* damaging known-fact routing, and the controller reaches the oracle:
+the full +0.50 dispatch gain, captured.
+
+**But self-report fails degenerately**, and the manner of failure is the finding. It also
+reaches 1.000 on unknown_fact — by claiming ignorance nearly everywhere, collapsing known_fact
+routing to 0.389 and sending real capitals to a KB that does not contain them. Our
+pre-registration required *discrimination* (`known ≥ 0.75`), not merely `unknown ≥ 0.50`,
+precisely so this could not be scored as success; on the unknown-fact metric alone it would
+have appeared to work.
+
+> **Behavioural calibration succeeds where introspective calibration fails.** A 3B model cannot
+> *report* whether it knows a fact — asked directly, it is uninformative — but it reliably
+> *exhibits* the distinction: sampled three times it returns the same real capital every time,
+> and a different invented capital each time. Self-knowledge the model cannot articulate is
+> nonetheless recoverable from its behaviour, at a cost of three 12-token samples.
+
+This upgrades the law's final clause: the metacognitive bound of §6.3 is **not** intrinsic to
+the scale — it is a property of *how the controller is asked*. Routing on self-report leaves
+half the dispatch gain on the table; routing on behavioural consistency captures all of it.
 
 **Generalization.** More mechanisms, ambiguous *natural* queries (not a crisp 4-way taxonomy),
 larger models, and a non-idealized retriever are all needed before the law generalizes beyond
@@ -250,8 +280,13 @@ yields a sharp law: cooperation is overhead when one mechanism spans the tasks, 
 full capability gap when they are disjoint, and capturable in full only when the router can
 recognize which capability each query needs. At 3B, the last condition fails on the one
 recognition that matters most — knowing what you don't know — which caps modular dispatch at
-half its potential on ambiguous workloads. The frontier of cognitive architectures is therefore
-metacognitive calibration, not module design.
+half its potential on ambiguous workloads.
+
+That cap, however, is a property of *how the router is interrogated*, not of the scale. Asking
+the model to introspect fails; observing whether it answers consistently succeeds completely,
+restoring the full dispatch gain for the cost of three short samples. The frontier of cognitive
+architectures is therefore metacognitive calibration — and the practical lesson is that such
+calibration should be read from a model's **behaviour**, not solicited from its **self-report**.
 
 ---
 
