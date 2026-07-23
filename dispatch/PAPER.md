@@ -26,12 +26,26 @@ it routes *unknown* facts to reasoning instead of retrieval **0% of the time** �
 never recognizes that it does not know something.
 
 The binding constraint on mechanism dispatch is therefore **metacognitive**, not
-architectural. **(4)** But it is not intrinsic: replacing the router's *self-report* with a
-*behavioural* calibration signal — sample the answer three times and check whether the samples
-agree — restores unknown-fact routing to **1.000** and lifts the controller to the **oracle
-(100% captured)**. Asked "do you know this?", the model is uninformative (it claims ignorance
-everywhere, collapsing known-fact routing to 0.389); *watched* answering, it is perfectly
-discriminative. Self-knowledge the model cannot report, it nonetheless exhibits.
+architectural. **(4)** On this workload the bound is liftable: replacing the router's
+*self-report* with a *response-consistency* signal — sample the answer three times, check
+whether the samples agree — restores unknown-fact routing from 0.000 to **1.000 (36/36 items,
+3 seeds)** and lifts the controller to the oracle. The self-report probe, by contrast, reaches
+1.000 on unknown facts only by claiming ignorance almost everywhere, collapsing known-fact
+routing to 0.389.
+
+**(5)** A follow-up estimator comparison (§8.2) then *refuted* the natural reading of (4). We
+had inferred that the model cannot report its own knowledge. It can: replacing the binary
+YES/NO self-report with a **numeric 0-100 confidence and a held-out-fitted threshold** yields
+perfect discrimination (balanced accuracy 1.000) in a *single* call. A token-level
+**log-probability** margin does the same. Response consistency, meanwhile, needs 2-5 samples
+for equal or worse accuracy (0.986 at k=2). The corrected claim is therefore neither
+"behavioural beats introspective" nor "the model cannot introspect", but:
+
+> **Metacognitive state is readily recoverable at 3B from several cheap signals — token
+> confidence, response consistency, and well-elicited self-report alike. What failed was one
+> particular elicitation (a categorical YES/NO), not introspection itself. A metacognition
+> engine should read a *graded* signal; the cheapest graded signals (1 call) match the most
+> expensive (5 calls).**
 
 ---
 
@@ -160,7 +174,7 @@ nothing like a registry lookup):
 | **controller** | **0.990** | ±0.010 |
 | oracle | 0.990 | ±0.010 |
 
-**Routing accuracy 1.000** on all seeds. The controller *is* the oracle: it captures **100%**
+**Routing accuracy 1.000 on this benchmark** (144 queries, 3 seeds). The controller *is* the oracle: it captures **100%**
 of the +0.50 gain. When query types differ in surface form, a 3B model routes flawlessly.
 
 ### 6.2 Surface-ambiguous queries: the bound appears
@@ -255,15 +269,54 @@ pre-registration required *discrimination* (`known ≥ 0.75`), not merely `unkno
 precisely so this could not be scored as success; on the unknown-fact metric alone it would
 have appeared to work.
 
-> **Behavioural calibration succeeds where introspective calibration fails.** A 3B model cannot
-> *report* whether it knows a fact — asked directly, it is uninformative — but it reliably
-> *exhibits* the distinction: sampled three times it returns the same real capital every time,
-> and a different invented capital each time. Self-knowledge the model cannot articulate is
-> nonetheless recoverable from its behaviour, at a cost of three 12-token samples.
+> **For this workload, response consistency was a more informative routing signal than
+> explicit self-assessment.** Sampled three times, the model returns the same real capital
+> every time and a different invented capital each time; asked directly whether it knows, its
+> answer does not discriminate. Cost: three 12-token samples.
 
-This upgrades the law's final clause: the metacognitive bound of §6.3 is **not** intrinsic to
-the scale — it is a property of *how the controller is asked*. Routing on self-report leaves
-half the dispatch gain on the table; routing on behavioural consistency captures all of it.
+**What this does and does not establish.** It shows the §6.3 bound is not intrinsic to the
+scale — *some* cheap signal recovers the routing the classifier could not. It does **not**
+establish that behavioural signals generally beat introspective ones. §8.2 tested that
+directly and found they do not.
+
+### 8.2 Estimator comparison — the hypothesis, tested (and the reading corrected)
+
+Thresholds for the graded estimators were fitted on a **separate calibration seed** and applied
+unchanged to the evaluation seeds; no threshold was selected on evaluation data. Discrimination
+requires known >= 0.75 AND unknown >= 0.50 (36 known + 36 unknown items, 3 seeds).
+
+| estimator | kind | known | unknown | balanced | calls | discriminates |
+|---|---|---|---|---|---|---|
+| self-ask YES/NO | introspective | 0.389 | 1.000 | 0.694 | 1 | no |
+| **self-ask 0-100 confidence** | introspective | 1.000 | 1.000 | **1.000** | **1** | **yes** |
+| consistency k=2 | behavioural | 1.000 | 0.972 | 0.986 | 2 | yes |
+| consistency k=3 | behavioural | 1.000 | 0.972 | 0.986 | 3 | yes |
+| consistency k=5 | behavioural | 1.000 | 1.000 | 1.000 | 5 | yes |
+| **log-probability margin** | behavioural | 1.000 | 1.000 | **1.000** | **1** | **yes** |
+
+**Three findings.** (i) *Scaling:* consistency at k=2 already reaches 0.986; the extra samples
+buy 0.014. (ii) *Class vs instance:* a second, independent behavioural estimator (log-prob,
+one forward pass, no resampling) discriminates perfectly — the signal is not specific to
+consistency. (iii) *The confound was real:* a fairly-elicited introspective probe attains 1.000.
+**The earlier self-report failure was prompt sensitivity, not an inability to introspect** —
+which retracts the "the model cannot report what it knows" reading of §8.
+
+**Practical consequence.** The estimator this study was built around (consistency) is the one
+*not* to deploy: it costs 2-5x more calls for equal or worse accuracy than either 1-call graded
+probe. Prefer log-probability margin or numeric self-confidence.
+
+### 8.1 The open hypothesis: behavioural metacognition
+
+The result motivates a broader question than dispatch: **can metacognitive state be estimated
+from a model's behaviour rather than requested explicitly?** Consistency is one estimator;
+others are readily available and untested here — predictive entropy, log-probability margin,
+verifier disagreement, retrieval-score confidence, embedding novelty, activation statistics,
+world-model uncertainty. If several independent behavioural estimators discriminate where
+self-report does not, the class claim is supported; if only consistency does, the finding is
+about consistency specifically. **Distinguishing these is the next experiment, not a
+conclusion of this one.** The architecture implied is a *metacognition engine* that fuses
+multiple behavioural estimators into a confidence signal a dispatch policy consumes — of which
+our consistency probe is the first and simplest instance.
 
 **Generalization.** More mechanisms, ambiguous *natural* queries (not a crisp 4-way taxonomy),
 larger models, and a non-idealized retriever are all needed before the law generalizes beyond

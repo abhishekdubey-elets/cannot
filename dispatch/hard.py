@@ -175,3 +175,29 @@ def m_retrieve(lm, q, kb):
 
 
 MECH_FN = {"fast": m_fast, "cot": m_cot, "tool": m_tool, "retrieve": m_retrieve}
+
+
+def gen_with_confidence(lm, system, user, max_new_tokens=12):
+    """Greedy generation + mean token probability of the emitted answer.
+
+    A SECOND behavioural estimator, independent of response consistency: it reads the
+    model's own token-level certainty rather than resampling. Used to test whether the
+    useful signal is 'behaviour' as a class or 'consistency' specifically.
+    """
+    torch = lm._t
+    msgs = [{"role": "system", "content": system}, {"role": "user", "content": user}]
+    text = lm.tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
+    ids = lm.tok(text, return_tensors="pt").to(lm.m.device)
+    with torch.no_grad():
+        out = lm.m.generate(**ids, max_new_tokens=max_new_tokens, do_sample=False,
+                            return_dict_in_generate=True, output_scores=True,
+                            pad_token_id=lm.tok.pad_token_id)
+    seq = out.sequences[0][ids["input_ids"].shape[1]:]
+    probs = []
+    for i, score in enumerate(out.scores):
+        if i >= len(seq):
+            break
+        p = torch.softmax(score[0].float(), dim=-1)
+        probs.append(float(p[seq[i]]))
+    return (lm.tok.decode(seq, skip_special_tokens=True),
+            sum(probs) / len(probs) if probs else 0.0)
