@@ -94,6 +94,44 @@ def mutual_info(signal, labels, bins=5):
     return max(0.0, mi)
 
 
+def _rankdata(x):
+    """Ranks with ties averaged (needed for Spearman on heavily-tied signals)."""
+    n = len(x)
+    order = sorted(range(n), key=lambda i: x[i])
+    ranks = [0.0] * n
+    i = 0
+    while i < n:
+        j = i
+        while j + 1 < n and x[order[j + 1]] == x[order[i]]:
+            j += 1
+        avg = (i + j) / 2.0 + 1.0
+        for k in range(i, j + 1):
+            ranks[order[k]] = avg
+        i = j + 1
+    return ranks
+
+
+def spearman(x, y):
+    """Rank correlation. THE key statistic for 'does confidence track difficulty?'.
+    Returns 0.0 when either variable is constant (no dynamic range -> no correlation)."""
+    rx, ry = _rankdata(x), _rankdata(y)
+    n = len(rx)
+    mx, my = sum(rx) / n, sum(ry) / n
+    num = sum((a - mx) * (b - my) for a, b in zip(rx, ry))
+    dx = math.sqrt(sum((a - mx) ** 2 for a in rx))
+    dy = math.sqrt(sum((b - my) ** 2 for b in ry))
+    return 0.0 if dx == 0 or dy == 0 else num / (dx * dy)
+
+
+def dynamic_range(x):
+    """Does a signal vary at all? (min, max, sd, n_unique). A constant signal has AUROC
+    exactly 0.5 by tie-breaking -- this distinguishes 'uninformative' from 'constant'."""
+    n = len(x)
+    m = sum(x) / n
+    sd = math.sqrt(sum((v - m) ** 2 for v in x) / n)
+    return dict(mean=m, sd=sd, lo=min(x), hi=max(x), n_unique=len(set(round(v, 4) for v in x)))
+
+
 def bootstrap_ci(fn, scores, labels, reps=300, seed=0):
     """Percentile bootstrap 95% CI of a metric fn(scores, labels)."""
     rng = random.Random(seed)
@@ -158,7 +196,16 @@ def _selftest():
     rnd = [rng.random() for _ in range(400)]
     rlab = [rng.randrange(2) for _ in range(400)]
     assert mutual_info(rnd, rlab, bins=5) < 0.05          # independent -> ~0
-    print("stats self-test PASSED (auroc, auprc, brier, ece, mutual_info)")
+    # Spearman: perfect monotone = 1, reversed = -1, CONSTANT = 0 (the arithmetic case)
+    assert abs(spearman([1, 2, 3, 4], [10, 20, 30, 40]) - 1.0) < 1e-9
+    assert abs(spearman([1, 2, 3, 4], [40, 30, 20, 10]) + 1.0) < 1e-9
+    assert spearman([1, 2, 3, 4], [7, 7, 7, 7]) == 0.0     # flat confidence -> zero correlation
+    assert abs(spearman([1, 2, 3, 4], [10, 10, 30, 30]) - 0.894) < 0.01   # ties handled
+    dr = dynamic_range([0.9, 0.9, 0.9])
+    assert dr["sd"] == 0.0 and dr["n_unique"] == 1        # constant signal detected
+    # a CONSTANT signal must give AUROC exactly 0.5 (the arithmetic=0.500 signature)
+    assert auroc([0.9] * 6, [1, 1, 1, 0, 0, 0]) == 0.5
+    print("stats self-test PASSED (auroc, auprc, brier, ece, mutual_info, spearman, dyn_range)")
 
 
 if __name__ == "__main__":
