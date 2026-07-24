@@ -152,12 +152,46 @@ catches ambiguity that selfconf misses; selfconf never false-alarms where consis
 single estimator dominates: the precondition for an evidence-fusion study.
 
 > **Confidence estimators are informative but bounded, and the bound is categorical.** They
-> separate correct from incorrect on ambiguity and missing-knowledge (AUROC ~0.9). But on
-> *confidently-held stale knowledge* (`outdated`), self-report and log-probability stay near
-> baseline while accuracy halves — they are blind to it; consistency only partially detects it
-> (0.76) and unreliably. No confidence signal is sufficient for this failure mode, because the
-> error is not uncertainty. Catching it requires an **independent evidence channel** (retrieval,
-> a knowledge-cutoff check, a verifier), not better-calibrated introspection.
+> separate correct from incorrect on ambiguity and missing-knowledge (AUROC ~0.9). On
+> *confidently-held stale knowledge* (`outdated`) the category-MEAN confidence stays high while
+> accuracy halves — which reads as "confidently wrong." **But Gate 7 shows this framing is
+> misleading:** within the category, internal signals still rank-order correct vs wrong at
+> AUROC 0.83 (the model is measurably shakier on the stale facts it gets wrong). High confidence
+> *level* is not the same as poor *rank separation*. Internal evidence is degraded on stale
+> knowledge, not blind to it.
+
+## Gate 7 — internal vs external evidence: the "information-theoretic wall" REFUTED (`dispatch-evidence`)
+
+Hypothesis (pre-registered, and **wrong**): internal evidence (log-prob, consistency,
+self-confidence, entropy) is a function of the model's belief, so it cannot distinguish
+confident-right from confident-wrong; only an *external* signal (a knowledge-freshness flag from
+an out-of-band change-log) can recover the stale row. Fusion weights fit on a calibration seed,
+applied to eval seeds (72 items, 3 seeds). AUROC for correctness:
+
+| evidence source | overall | outdated (within-category) |
+|---|---|---|
+| self-confidence (best single internal) | 0.944 | 0.833 |
+| fused internal (4 signals) | 0.925 | 0.827 |
+| external only (freshness flag) | 0.567 | **0.500** |
+| **internal + external** | **0.988** | 0.827 |
+
+**Refuted, three ways.** (i) *Internal evidence is NOT blind to stale knowledge* — fused
+internal AUROC on `outdated` is **0.827**, not the predicted ~0.5. The model's confidence
+rank-orders its own stale errors. (ii) *The freshness flag has zero within-category
+discrimination* (0.500 on outdated) — it is constant across all relocated countries, so it
+flags the *category*, not which item is wrong; the metric (AUROC within a category) is blind to
+a category-level signal. (iii) *Fusing internal signals HURT*: 0.925 < 0.944 (best single),
+because a logistic combiner fit on 24 items overfits when fed a false-alarming signal
+(consistency).
+
+**What survives (weakly).** internal + external (0.988) beats the best single internal (0.944)
+*overall* — external evidence helps, but by **down-weighting an unreliable category**, not by
+detecting stale errors within it. Evidence integration is beneficial; the "external rescues what
+internal cannot see" mechanism is not what happens.
+
+**Caveat.** Fusion AUROCs are single pooled estimates on 72 items with weights fit on 24; treat
+the 0.988 vs 0.944 gap as suggestive, not established. The clean claim is the *refutation* — the
+information-theoretic wall does not hold empirically for this model.
 
 ## The law (fully confirmed; no retraction)
 
