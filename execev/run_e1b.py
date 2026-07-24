@@ -170,7 +170,9 @@ def main():
     P("OBJECTIVE 6 — DOES CONFIDENCE TRACK DIFFICULTY? (accuracy vs signals, by tier)")
     P("=" * 96)
     for d in DOMAINS:
-        P(f"\n[{d}]  tier   n   accuracy | selfconf  logprob  consist  entropy")
+        # header MUST be derived from INTERNAL, not hand-written -- a hand-written header
+        # in the E1b run disagreed with the print order and mislabelled every column.
+        P(f"\n[{d}]  tier   n   accuracy |" + "".join(f"{s:>9}" for s in INTERNAL))
         for t in TIERS:
             rs = sub(domain=d, tier=t)
             if not rs:
