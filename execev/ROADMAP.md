@@ -17,7 +17,8 @@ synthetic validation can validate a scientific hypothesis.
 | Phase | Question | Precondition it establishes | Status |
 |---|---|---|---|
 | **E1** | Q1 — how much correctness-information does each internal signal carry, **and does it generalise across domains**? | that the signals are worth decomposing at all, and whether findings are domain-specific | **THIS PHASE** |
-| E2 | Q2 — redundancy vs synergy among signals (PID / interaction information) | which signals are worth combining | gated on E1 |
+| ~~E2~~ | ~~Q2 — PID~~ | **CANCELLED as scoped** — a free input feature dominates every internal signal on arithmetic (0.928 vs ≤0.687); a PID would decompose a benchmark artifact. See RESULTS_E2pre.md | **closed** |
+| **E2'** | Does internal confidence beat a *legitimate* free-feature baseline, per domain? | the precondition for crediting any signal with information | **new mandatory gate** |
 | E3 | Q3 — disagreement-maximising multi-domain benchmark (expanded) | a non-saturating testbed | seeded by E1's benchmark |
 | E4 | Q5 — marginal information gain of each external source, added one at a time | whether external evidence pays its cost | gated on E2 |
 | E5 | Q4 — learned evidence weighting vs fixed rules (logistic / bandit / accumulator) | the controller, **only after** the evidence is characterised | gated on E4 |
@@ -59,6 +60,18 @@ a shuffled control.
 anti/random ranker; MI of a deterministic vs independent signal; ECE of a perfectly-calibrated
 predictor) *before* any GPU run, and a **shuffled-label control** signal is included in every
 run — its MI/AUROC must land at the null, or the pipeline is untrusted.
+
+## Mandatory gate added after E2pre (applies to every future domain)
+
+Before any internal signal is credited with information, a **legitimate free-feature baseline**
+— computable from the input alone, using no ground-truth annotation — must be measured on that
+domain. E1 and E1b both credited consistency without this check; E2pre showed that on
+arithmetic the free baseline (operand digit count, AUROC 0.928) dominates every internal signal
+(≤0.687), and that no signal retains unique information after conditioning on it.
+
+Working regularity (narrow, falsifiable): **internal confidence earns its cost only where task
+difficulty is not computable from the input.** Predicts failure of internal signals to add
+unique information wherever a cheap input feature correlates with difficulty.
 
 ## Success criterion
 

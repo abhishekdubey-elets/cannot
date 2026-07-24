@@ -132,6 +132,28 @@ def dynamic_range(x):
     return dict(mean=m, sd=sd, lo=min(x), hi=max(x), n_unique=len(set(round(v, 4) for v in x)))
 
 
+def conditional_mutual_info(signal, labels, cond, bins=3):
+    """I(signal ; label | cond) in nats -- the E2 precondition statistic.
+
+    If a free feature (e.g. operand digit count) already explains a signal's apparent
+    predictive power, then conditioning on it drives this to ~0 and the signal carries NO
+    unique information worth decomposing. Always compare against the same statistic computed
+    on a shuffled control, since the plug-in estimator is positively biased on small strata.
+    """
+    n = len(signal)
+    total = 0.0
+    for z in set(cond):
+        idx = [i for i in range(n) if cond[i] == z]
+        if len(idx) < 2:
+            continue
+        ys = [labels[i] for i in idx]
+        if len(set(ys)) < 2:          # stratum has one label -> contributes no information
+            continue
+        total += (len(idx) / n) * mutual_info([signal[i] for i in idx], ys,
+                                              bins=min(bins, max(2, len(idx) // 4)))
+    return total
+
+
 def bootstrap_ci(fn, scores, labels, reps=300, seed=0):
     """Percentile bootstrap 95% CI of a metric fn(scores, labels)."""
     rng = random.Random(seed)
