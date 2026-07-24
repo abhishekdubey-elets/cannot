@@ -117,6 +117,45 @@ would have looked like a partial success.
 > the same real capital every time and a different invented capital each time. Three 12-token
 > samples recover the full 50% of dispatch gain the classifier forfeited.
 
+## Gate 6 — the divergence benchmark: where confidence fails (`dispatch-diverge`)
+
+The estimator comparison (Gate 5) saturated — numeric-confidence, log-prob, and consistency
+all reached balanced accuracy 1.000 on the binary known/unknown split, so it could no longer
+separate them. This benchmark breaks saturation with a graded workload (72 items, 3 seeds,
+capitals-only for gradeability) and shifts the metric to **AUROC for predicting correctness**.
+
+| category | n | accuracy | logprob | consistency | selfconf |
+|---|---|---|---|---|---|
+| common (well-known) | 18 | 1.000 | 0.998 | 1.000 | 1.000 |
+| ambiguous (several valid capitals) | 18 | 1.000 | 0.950 | **0.867** | 1.000 |
+| **outdated** (capital moved) | 18 | **0.500** | 0.931 | 0.756 | **0.950** |
+| fictional (needs retrieval) | 18 | 0.000 | 0.790 | 0.289 | 0.000 |
+
+**AUROC (correctness):** selfconf 0.944, logprob 0.936, consistency 0.916 — **all < 1.000, so
+the benchmark is no longer saturated**; excluding the fictional control, 0.83 / 0.82 / 0.76.
+
+**Two divergences, both predicted, both observed:**
+1. **`ambiguous` — consistency false-alarms.** Accuracy 1.000 but consistency drops to 0.867
+   (vs 1.000 on common): the sampler returns *Pretoria* and *Cape Town*, both correct, so
+   consistency *underrates* a right answer. This is why consistency has the lowest AUROC.
+2. **`outdated` — confidently wrong (the dangerous mode).** Accuracy collapses to **0.500**
+   while self-confidence stays at **0.950** and log-prob at 0.931 (the model gave the *stale*
+   capital outright on 33% of items — e.g. "Almaty" for Kazakhstan). **No confidence signal
+   detects this**, because the error is stale knowledge, not uncertainty.
+
+**Signals now genuinely disagree** (log-prob vs selfconf: 22% of items on opposite sides of
+their medians; consistency vs selfconf: 24%) and in *different directions* — consistency
+catches ambiguity that selfconf misses; selfconf never false-alarms where consistency does. No
+single estimator dominates: the precondition for an evidence-fusion study.
+
+> **Confidence estimators are informative but bounded, and the bound is categorical.** They
+> separate correct from incorrect on ambiguity and missing-knowledge (AUROC ~0.9), but they are
+> jointly blind to *confidently-held stale knowledge*: on the `outdated` category all three
+> signals stay high while accuracy halves. Fusion of confidence signals can arbitrate the cases
+> where they disagree; it cannot recover the case where they agree and are wrong. That failure
+> mode requires an **independent evidence channel** (retrieval, a knowledge-cutoff check, a
+> verifier), not better-calibrated introspection.
+
 ## The law (fully confirmed; no retraction)
 
 > **Modular dispatch helps iff the task distribution demands disjoint capabilities** (Gate 1
