@@ -156,11 +156,19 @@ def main():
           f"-> {'consistency FALSE-ALARMS: right answers, depressed consistency' if fa else 'no false alarm'}")
     if out:
         acc = stats.mean(float(r[1]) for r in out)
-        # confidently wrong = low accuracy while EVERY signal stays near its common baseline
-        near = all(stats.mean(r[3][s] for r in out) >= base.get(s, 1.0) - 0.15 for s in SIGS)
+        om = {s: stats.mean(r[3][s] for r in out) for s in SIGS}
+        # confidently wrong = accuracy collapses while the INTROSPECTIVE/token signals stay
+        # near baseline. Consistency is scored separately: it can partially detect stale
+        # memory because a shaky recollection is emitted less consistently than a solid fact.
+        blind = [s for s in ("selfconf", "logprob") if om[s] >= base.get(s, 1.0) - 0.10]
+        cons_drop = base.get("consistency", 1.0) - om["consistency"]
         P(f"  outdated:  accuracy {acc:.3f}; signals "
-          + ", ".join(f"{s}={stats.mean(r[3][s] for r in out):.2f}" for s in SIGS)
-          + f" -> {'CONFIDENTLY WRONG: accuracy collapses while every confidence signal stays high (no signal detects it)' if acc < 0.7 and near else 'signals track the errors'}")
+          + ", ".join(f"{s}={om[s]:.2f}" for s in SIGS))
+        if acc < 0.7 and blind:
+            P(f"    -> CONFIDENTLY WRONG on {'+'.join(blind)} (near baseline while accuracy "
+              f"halves); consistency partially detects it (dropped {cons_drop:.2f}) but weakly")
+        else:
+            P("    -> signals track the errors")
     P("\n  If any AUROC < 1.0, the benchmark is no longer saturated and the signals are "
       "separable -- which is the precondition for studying evidence FUSION.")
 

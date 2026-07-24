@@ -139,9 +139,12 @@ the benchmark is no longer saturated**; excluding the fictional control, 0.83 / 
    (vs 1.000 on common): the sampler returns *Pretoria* and *Cape Town*, both correct, so
    consistency *underrates* a right answer. This is why consistency has the lowest AUROC.
 2. **`outdated` — confidently wrong (the dangerous mode).** Accuracy collapses to **0.500**
-   while self-confidence stays at **0.950** and log-prob at 0.931 (the model gave the *stale*
-   capital outright on 33% of items — e.g. "Almaty" for Kazakhstan). **No confidence signal
-   detects this**, because the error is stale knowledge, not uncertainty.
+   while **self-confidence stays at 0.950 and log-prob at 0.931** — both near their common
+   baseline (the model gave the *stale* capital outright on 33% of items, e.g. "Almaty" for
+   Kazakhstan). The **introspective and token-confidence signals are blind** to this: the error
+   is stale knowledge, not uncertainty. **Consistency partially detects it** (dropped to 0.756
+   from 1.000) — a shaky stale memory is emitted less consistently than a solid fact — but only
+   weakly, and at the cost of its ambiguity false-alarms (hence its lowest overall AUROC).
 
 **Signals now genuinely disagree** (log-prob vs selfconf: 22% of items on opposite sides of
 their medians; consistency vs selfconf: 24%) and in *different directions* — consistency
@@ -149,12 +152,12 @@ catches ambiguity that selfconf misses; selfconf never false-alarms where consis
 single estimator dominates: the precondition for an evidence-fusion study.
 
 > **Confidence estimators are informative but bounded, and the bound is categorical.** They
-> separate correct from incorrect on ambiguity and missing-knowledge (AUROC ~0.9), but they are
-> jointly blind to *confidently-held stale knowledge*: on the `outdated` category all three
-> signals stay high while accuracy halves. Fusion of confidence signals can arbitrate the cases
-> where they disagree; it cannot recover the case where they agree and are wrong. That failure
-> mode requires an **independent evidence channel** (retrieval, a knowledge-cutoff check, a
-> verifier), not better-calibrated introspection.
+> separate correct from incorrect on ambiguity and missing-knowledge (AUROC ~0.9). But on
+> *confidently-held stale knowledge* (`outdated`), self-report and log-probability stay near
+> baseline while accuracy halves — they are blind to it; consistency only partially detects it
+> (0.76) and unreliably. No confidence signal is sufficient for this failure mode, because the
+> error is not uncertainty. Catching it requires an **independent evidence channel** (retrieval,
+> a knowledge-cutoff check, a verifier), not better-calibrated introspection.
 
 ## The law (fully confirmed; no retraction)
 
