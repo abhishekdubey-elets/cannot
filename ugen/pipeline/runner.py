@@ -81,7 +81,7 @@ class LM:
         torch = self.torch
         torch.manual_seed(seed)
         texts = [self._encode_chat(p) for p in prompts]
-        enc = self.tok(texts, return_tensors="pt", padding=True).to(self.m.device)
+        enc = self.tok(texts, return_tensors="pt", padding=True, add_special_tokens=False).to(self.m.device)
         t0 = time.time()
         with torch.no_grad():
             out = self.m.generate(
@@ -125,7 +125,7 @@ class LM:
         torch = self.torch
         torch.manual_seed(seed)
         text = self._encode_chat(prompt)
-        enc = self.tok([text], return_tensors="pt", padding=True).to(self.m.device)
+        enc = self.tok([text], return_tensors="pt", padding=True, add_special_tokens=False).to(self.m.device)
         with torch.no_grad():
             out = self.m.generate(
                 **enc, max_new_tokens=MAX_NEW, do_sample=True, temperature=SAMPLE_TEMP,
@@ -139,7 +139,7 @@ class LM:
         torch = self.torch
         torch.manual_seed(seed)
         text = self._encode_chat(prompt, assistant=answer_text, follow_up=ELICITATION)
-        enc = self.tok([text], return_tensors="pt", padding=True).to(self.m.device)
+        enc = self.tok([text], return_tensors="pt", padding=True, add_special_tokens=False).to(self.m.device)
         with torch.no_grad():
             out = self.m.generate(**enc, max_new_tokens=CONF_MAX_NEW, do_sample=False,
                                   pad_token_id=self.tok.pad_token_id)
