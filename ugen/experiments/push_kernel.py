@@ -30,6 +30,12 @@ USER = "abhishekakgec"
 SRC_DS = f"{USER}/ugen-src"
 DATA_DS = f"{USER}/ugen-data"
 
+# The current Kaggle default image ships a torch build without sm_75 (T4) kernels
+# ("no kernel image is available for execution on the device"). Pin the image the
+# execev kernels ran on successfully (July 2026, T4 + Qwen2.5-3B).
+DOCKER_IMAGE = ("gcr.io/kaggle-private-byod/python@sha256:"
+                "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461")
+
 MODELS = {
     # run: (kernel suffix, model_source, path hint, model column name)
     "m1": ("qwen25-3b", "qwen-lm/qwen2.5/Transformers/3b-instruct/1", "3b-instruct",
@@ -147,7 +153,8 @@ def push_run(run, limit=None, resume_from=None, suffix=""):
             enable_gpu=True, enable_tpu=False, enable_internet=False,
             dataset_sources=[SRC_DS, DATA_DS],
             kernel_sources=[resume_from] if resume_from else [],
-            competition_sources=[], model_sources=[model_source])
+            competition_sources=[], model_sources=[model_source],
+            docker_image=DOCKER_IMAGE, machine_shape="NvidiaTeslaT4")
         (Path(td) / "kernel-metadata.json").write_text(json.dumps(meta, indent=1),
                                                        encoding="utf-8")
         sh("kaggle", "kernels", "push", "-p", td)
