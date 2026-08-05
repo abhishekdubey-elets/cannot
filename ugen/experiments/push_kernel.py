@@ -143,6 +143,27 @@ def push_run(run, limit=None, resume_from=None, suffix=""):
     return slug
 
 
+def push_probe(run):
+    """CPU-only kernel that just lists the attached model — verifies consent/attachability
+    for M2-M4 without spending GPU quota."""
+    kname, model_source, hint, model_name = MODELS[run]
+    slug = f"ugen-probe-{kname}"
+    script = ("import os\n"
+              "for dp, dns, fns in os.walk('/kaggle/input'):\n"
+              "    print(dp, fns[:6])\n")
+    with tempfile.TemporaryDirectory() as td:
+        (Path(td) / f"{slug}.py").write_text(script, encoding="utf-8")
+        meta = dict(id=f"{USER}/{slug}", title=slug, code_file=f"{slug}.py",
+                    language="python", kernel_type="script", is_private=True,
+                    enable_gpu=False, enable_tpu=False, enable_internet=False,
+                    dataset_sources=[], kernel_sources=[], competition_sources=[],
+                    model_sources=[model_source])
+        (Path(td) / "kernel-metadata.json").write_text(json.dumps(meta, indent=1),
+                                                       encoding="utf-8")
+        sh("kaggle", "kernels", "push", "-p", td, check=False)
+    return slug
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd")
@@ -166,6 +187,8 @@ def main():
         push_run("m3", resume_from=a.resume_from)
     elif a.cmd == "g4":
         push_run("m4", resume_from=a.resume_from)
+    elif a.cmd == "probe":
+        push_probe(a.arg)
     elif a.cmd == "status":
         sh("kaggle", "kernels", "status", f"{USER}/{a.arg}")
     elif a.cmd == "fetch":
