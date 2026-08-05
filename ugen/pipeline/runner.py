@@ -292,12 +292,21 @@ def run_benchmark(lm, items, model_name, seed, work_dir, prev_done, limit=None):
             rows.append(dict(prev_done[key]))
         else:
             todo.append(it)
-    print(f"[{bench}] {len(todo)} to run, {len(rows)} restored", flush=True)
+    log(f"[{bench}] {len(todo)} to run, {len(rows)} restored")
     partial = Path(work_dir) / f"rows_{model_name}_{bench}.partial.csv"
 
     for start in range(0, len(todo), GREEDY_BATCH):
         batch = todo[start:start + GREEDY_BATCH]
-        greedy = lm.greedy_with_stats([it["prompt"] for it in batch], seed)
+        try:
+            greedy = lm.greedy_with_stats([it["prompt"] for it in batch], seed)
+        except RuntimeError as e:            # GPU OOM -> retry item-by-item (PLAN 6)
+            if "out of memory" not in str(e).lower():
+                raise
+            log(f"[{bench}] OOM at batch {start}; retrying singly")
+            lm.torch.cuda.empty_cache()
+            greedy = []
+            for it in batch:
+                greedy += lm.greedy_with_stats([it["prompt"]], seed)
         for it, res in zip(batch, greedy):
             text = res["text"]
             g = grading.grade(text, it)
@@ -331,14 +340,14 @@ def run_benchmark(lm, items, model_name, seed, work_dir, prev_done, limit=None):
                      ent_answer_dist)
         if (start // GREEDY_BATCH) % (PARTIAL_EVERY // GREEDY_BATCH or 1) == 0:
             write_rows(partial, rows)
-            print(f"[{bench}] {len(rows)} rows (partial saved)", flush=True)
+            log(f"[{bench}] {len(rows)} rows (partial saved)")
 
     final = Path(work_dir) / f"rows_{model_name}_{bench}.csv"
     write_rows(final, rows)
     if partial.exists():
         partial.unlink()
     acc = sum(int(r["correct"]) for r in rows) / max(1, len(rows))
-    print(f"[{bench}] DONE n={len(rows)} acc={acc:.3f}", flush=True)
+    log(f"[{bench}] DONE n={len(rows)} acc={acc:.3f}")
     return rows
 
 
@@ -351,23 +360,51 @@ def _sidecar(work_dir, model_name, bench, sample_id, seed, samples, ent_answer_d
                             ensure_ascii=False) + "\n")
 
 
+_LOGF = None
+
+
+def log(msg):
+    """Print AND append to /kaggle/working/run.log — kernel stdout logs are sometimes lost
+    on hard container errors, but files in the working dir survive."""
+    print(msg, flush=True)
+    if _LOGF is not None:
+        _LOGF.write(msg + "\n")
+        _LOGF.flush()
+
+
 def main(model_hint, model_name, benchmarks, data_dir, work_dir="/kaggle/working",
          seed=0, limit=None):
+    global _LOGF
+    _LOGF = open(Path(work_dir) / "run.log", "a", encoding="utf-8")
+    try:
+        _main(model_hint, model_name, benchmarks, data_dir, work_dir, seed, limit)
+    except BaseException:
+        import traceback
+        tb = traceback.format_exc()
+        log(tb)
+        (Path(work_dir) / "traceback.txt").write_text(tb, encoding="utf-8")
+        raise
+
+
+def _main(model_hint, model_name, benchmarks, data_dir, work_dir, seed, limit):
     from ugen.pipeline.tests import test_stats  # stats must self-verify before any GPU row
     for k, fn in sorted(vars(test_stats).items()):
         if k.startswith("test_"):
             fn()
-    print("stats self-test passed in-kernel", flush=True)
+    log("stats self-test passed in-kernel")
 
-    lm = LM(find_model_dir(model_hint), model_name)
+    mdir = find_model_dir(model_hint)
+    log(f"loading model from {mdir}")
+    lm = LM(mdir, model_name)
+    log("model loaded")
     prev = done_ids_from_previous(work_dir, model_name)
-    print(f"restored {len(prev)} previously-completed rows", flush=True)
+    log(f"restored {len(prev)} previously-completed rows")
     all_rows = []
     for bench in benchmarks:
         items = load_items(data_dir, bench)
         if not items:
-            print(f"[{bench}] no frozen data — skipped", flush=True)
+            log(f"[{bench}] no frozen data — skipped")
             continue
         all_rows += run_benchmark(lm, items, model_name, seed, work_dir, prev, limit=limit)
     write_rows(Path(work_dir) / f"rows_{model_name}_ALL.csv", all_rows)
-    print(f"TOTAL rows: {len(all_rows)}", flush=True)
+    log(f"TOTAL rows: {len(all_rows)}")
