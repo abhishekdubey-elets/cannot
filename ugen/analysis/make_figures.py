@@ -21,7 +21,7 @@ sys.path.insert(0, str(PROJECT.parent))
 from ugen.analysis.analyze import SIGNALS, load_rows  # noqa: E402
 from ugen.pipeline import stats as S  # noqa: E402
 
-FIG = PROJECT / "figures"
+FIG = PROJECT / "figures"          # overridable via --figdir (dry-runs must not land here)
 DOMAIN_ORDER = ["knowledge", "arithmetic", "commonsense", "reasoning", "coding"]
 
 plt.rcParams.update({"figure.dpi": 110, "savefig.dpi": 300, "font.size": 9,
@@ -160,7 +160,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--outputs", default=str(PROJECT / "outputs"))
     ap.add_argument("--tables", default=str(PROJECT / "tables"))
+    ap.add_argument("--figdir", default=None)
     a = ap.parse_args()
+    if a.figdir:
+        global FIG
+        FIG = Path(a.figdir)
     df = load_rows(a.outputs)
     rq1_f = Path(a.tables) / "rq1_signal_benchmark.csv"
     if rq1_f.exists():
