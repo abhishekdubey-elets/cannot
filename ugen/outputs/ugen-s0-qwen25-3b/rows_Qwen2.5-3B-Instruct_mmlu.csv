@@ -1,0 +1,73 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+mmlu:39,mmlu,knowledge,abstract_algebra,,Qwen2.5-3B-Instruct,"Statement 1 | Every permutation is a cycle. Statement 2 | Every cycle is a permutation.
+
+Options:
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.2927016398095531,-0.09360487175581393,0.6640128781929896,0.2785844298584455,0.667761027299967,0.9702863019020831,0.8,305,29.928549766540527,0,1,1,5,
+mmlu:54,mmlu,knowledge,abstract_algebra,,Qwen2.5-3B-Instruct,"Find the degree for the given field extension Q(sqrt(2)) over Q.
+
+Options:
+A. 0
+B. 2
+C. 1
+D. 3
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.12776228166866924,-0.00975244163601019,0.28282340612020795,0.0559116887461523,0.8479166920296848,0.9898178529692814,0.6,512,29.928549766540527,0,1,1,3,
+mmlu:64,mmlu,knowledge,abstract_algebra,,Qwen2.5-3B-Instruct,"How many homomorphisms are there of Z into Z_2?
+
+Options:
+A. 1
+B. 2
+C. infinitely many
+D. 0
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.14091865931917516,nan,0.310310485756335,nan,0.8429963248490822,0.988863367238082,0.4,512,29.928549766540527,0,0,1,4,
+mmlu:86,mmlu,knowledge,abstract_algebra,,Qwen2.5-3B-Instruct,"Statement 1 | If H and K are subgroups of a group G, then |HK| = |H||K|/|H intersection K|. Statement 2 | A group of order 2p where p is an odd prime is cyclic or isomorphic to D_p.
+
+Options:
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",None,A,0,1.0,-0.27099636094871044,nan,0.5953892641280586,nan,0.735917942263768,0.9629109432571568,0.4,512,29.928549766540527,0,0,1,3,
+mmlu:213,mmlu,knowledge,anatomy,,Qwen2.5-3B-Instruct,"Which of the following allows gas exchange in the lungs?
+
+Options:
+A. Alveoli
+B. Bronchi
+C. Bronchioles
+D. Capillaries
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.3293227575199335,-0.10875927937316021,0.7612742225566701,0.3292684131210753,0.6571461655696234,0.9579906323220995,1.0,225,20.685057163238525,0,1,1,5,
+mmlu:318,mmlu,knowledge,astronomy,,Qwen2.5-3B-Instruct,"How do scientists know that the majority of meteorites come from the asteroid belt?
+
+Options:
+A. The spectra of some meteorites are similar to the spectra of asteroids in the asteroid belt.
+B. The asteroid belt is the only possible source of meteorites therefore they must originate there.
+C. Collisions are common in the asteroid belt and we can track the fragments from their source asteroid to the Earth where they become meteorites.
+D. High levels of Iridum have been detected in both asteroids and meteorites therefore meteorites come from the asteroid belt.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,A,0,1.0,-0.3945096616031351,-0.07565153455107065,0.9011738512952868,0.19051305364983287,0.6568255257836089,0.9268533202797867,1.0,344,20.685057163238525,0,1,1,5,
+mmlu:334,mmlu,knowledge,astronomy,,Qwen2.5-3B-Instruct,"The constellation ... is a bright W-shaped constellation in the northern sky.
+
+Options:
+A. Centaurus
+B. Cygnus
+C. Cassiopeia
+D. Cepheus
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.4839512489289598,-0.13456838457564876,1.0684301054339016,0.2722034792504047,0.5602231923982782,0.9192356104558369,0.6,212,20.685057163238525,0,1,1,5,
+mmlu:530,mmlu,knowledge,clinical_knowledge,,Qwen2.5-3B-Instruct,"How much toothpaste is recommended for cleaning teeth?
+
+Options:
+A. A smear.
+B. A pea-sized amount.
+C. The length of the toothbrush.
+D. Half an inch.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.49618351430643504,-0.022894900559396802,1.0945558499090875,0.103291073957763,0.5700963027072403,0.9168951667423518,1.0,212,20.685057163238525,0,1,1,5,

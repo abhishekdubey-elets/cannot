@@ -1,0 +1,25 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+multiarith:0,multiarith,arithmetic,,,Qwen2.5-3B-Instruct,"Paige had 11 songs on her mp3 player. If she deleted 9 old songs from it and then added 8 new songs, how many songs does she have on her mp3 player?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",10.0,10.0,1,1.0,-0.13467865127909134,-0.012893720180726653,0.29460758798922715,0.04894073345062372,0.824824716753632,0.9941383882333305,1.0,131,9.300568222999573,0,1,1,5,
+multiarith:1,multiarith,arithmetic,,,Qwen2.5-3B-Instruct,"There were 39 girls and 4 boys trying out for the schools basketball team. If only 26 of them got called back, how many students didn't make the cut?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",17.0,17.0,1,1.0,-0.15433449829776286,-0.014142885856927023,0.3134907161670786,0.051229079334235095,0.8054954350925982,0.9934796180576086,1.0,160,9.300568222999573,0,1,1,5,
+multiarith:2,multiarith,arithmetic,,,Qwen2.5-3B-Instruct,"Faye had 34 coloring books. If she gave away 3 of them, but then bought 48 more, how many would she have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",79.0,79.0,1,1.0,-0.13755243742333673,-0.010551419663883621,0.29615055183296335,0.048060017510567876,0.8249926182316311,0.9941333661328501,1.0,134,9.300568222999573,0,1,1,5,
+multiarith:3,multiarith,arithmetic,,,Qwen2.5-3B-Instruct,"The school cafeteria had 23 apples. If they used 20 to make lunch for the students and then bought 6 more, how many apples would they have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,1.0,-0.1269729597159049,-0.027244190255065144,0.30486748554511994,0.09511403474344401,0.8314303192827437,0.9943671582473649,1.0,144,9.300568222999573,0,1,1,5,
+multiarith:4,multiarith,arithmetic,,,Qwen2.5-3B-Instruct,"In a video game, each enemy defeated gives you 9 points. If a level has 11 enemies total and you destroy all but 3 of them, how many points would you earn?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",72.0,72.0,1,1.0,-0.14972017730175366,-0.026205487527473537,0.32004906743978073,0.09135705284689344,0.8131944984197617,0.9927113996678262,1.0,199,11.511719405651093,0,1,1,5,
+multiarith:5,multiarith,arithmetic,,,Qwen2.5-3B-Instruct,"Megan earned 8 points for each bag of cans she recycled. If she had 14 bags, but didn't recycle 5 of them, how many points would she have earned?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",72.0,72.0,1,1.0,-0.13659534687708297,-0.05999911017897741,0.29875810071576686,0.14291775979647403,0.8283597966752101,0.9936502609670776,1.0,194,11.511719405651093,0,1,1,5,
+multiarith:6,multiarith,arithmetic,,,Qwen2.5-3B-Instruct,"April's discount flowers was having a sale where each rose was 4 dollars. If April started with 13 roses and had 4 roses left, how much money did she earn?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",36.0,36.0,1,1.0,-0.13981898761205622,-0.025476646718743723,0.31917388915246686,0.06820913450491362,0.8249626643683788,0.991532885245163,1.0,137,11.511719405651093,0,1,1,5,
+multiarith:7,multiarith,arithmetic,,,Qwen2.5-3B-Instruct,"Ned had to wash 9 short sleeve shirts and 21 long sleeve shirts before school. If he had only washed 29 of them by the time school started, how many did he not wash?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,1.0,-0.10778054890105494,-0.05634321245694147,0.23798601020712845,0.18659752645518374,0.8510263334721961,0.9969363983007188,1.0,188,11.511719405651093,0,1,1,5,

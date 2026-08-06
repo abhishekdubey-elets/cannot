@@ -1,0 +1,25 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+svamp:1,svamp,arithmetic,Subtraction,,Qwen2.5-3B-Instruct,"Paige raised 7 goldfish and 12 catfish in the pond but stray cats loved eating them. Now she has 15 left. How many fishes disappeared?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,1.0,-0.16410561460508538,-0.009991123248514302,0.3724288964080881,0.04221639768175172,0.8041551255468112,0.9899326932074418,1.0,134,13.51257860660553,0,1,1,5,
+svamp:2,svamp,arithmetic,Addition,,Qwen2.5-3B-Instruct,"Marco and his dad went strawberry picking. Together they collected strawberries that weighed 22 pounds. On the way back Marco ' dad found 30 more pounds of strawberries. Marco's strawberries now weighed 36 pounds. How much did his dad's strawberries weigh now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",16.0,16.0,1,1.0,-0.17630355481569654,-0.03585902623292636,0.40821719823490565,0.10902094588429634,0.7790336289458512,0.9884887647233616,0.8,181,13.51257860660553,0,1,1,5,
+svamp:3,svamp,arithmetic,Common-Division,,Qwen2.5-3B-Instruct,"Debby bought 200 water bottles and 256 soda bottles when they were on sale. If she drank 312 water bottles and 4 soda bottles a day How many days would the soda bottles last?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",64.0,64.0,1,1.0,-0.16707704463068818,-0.0703301089352486,0.38128738719604033,0.2184727768693886,0.7947047072879517,0.9893245160250373,1.0,181,13.51257860660553,0,1,1,5,
+svamp:4,svamp,arithmetic,Subtraction,,Qwen2.5-3B-Instruct,"There were 106 dollars in Olivia's wallet. After she visited a supermarket and a showroom there were 26 dollars left. If she spent 49 dollars at the showroom How much did she spend at the supermarket?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",31.0,31.0,1,1.0,-0.18323194098331985,-0.04771119391077061,0.4132755472959146,0.143886537967453,0.788852044062697,0.9849177008067375,0.8,231,13.51257860660553,0,1,1,5,
+svamp:5,svamp,arithmetic,Multiplication,,Qwen2.5-3B-Instruct,"Faye was placing her pencils and crayons into 30 rows with 71 crayons and 24 pencils in each row. How many pencils does she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",720.0,720.0,1,1.0,-0.07735664308295734,nan,0.1726354608427904,nan,0.8982385962408305,0.9956917864741481,1.0,263,20.262137949466705,0,0,1,5,
+svamp:6,svamp,arithmetic,Addition,,Qwen2.5-3B-Instruct,"Ed had 10 more marbles than Doug. Doug lost 11 of his marbles at the playground. If Ed had 45 marbles How many more marbles did Ed have than Doug then?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",21.0,21.0,1,1.0,-0.12280027071730178,-0.02098676997385862,0.27011658906951236,0.09170602368251046,0.8601797355257946,0.9902826148530711,1.0,345,20.262137949466705,0,1,1,5,
+svamp:10,svamp,arithmetic,Common-Division,,Qwen2.5-3B-Instruct,"An industrial machine made 9 shirts yesterday and 44 shirts today. It can make 3 shirts a minute. How many minutes did the machine work yesterday?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,1.0,-0.10643573198538081,-0.07236568925335567,0.2318471524979416,0.19657736883086077,0.8553833778340386,0.9955915417440138,1.0,227,20.262137949466705,0,1,1,5,
+svamp:11,svamp,arithmetic,Multiplication,,Qwen2.5-3B-Instruct,"Bryan took a look at his books and magazines. If he has 9 books and 46 magazines in each of his 10 bookshelves How many magazines does he have in total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",460.0,460.0,1,1.0,-0.10903500222169843,-0.027199409954643587,0.24236382462308353,0.07512681032702101,0.8537624533529635,0.9956368226328014,1.0,162,20.262137949466705,0,1,1,5,
