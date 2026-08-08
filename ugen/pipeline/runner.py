@@ -22,8 +22,11 @@ SAMPLE_TEMP = 0.7
 SAMPLE_TOP_P = 0.9
 MAX_NEW = 512
 CONF_MAX_NEW = 12
-GREEDY_BATCH = 8          # greedy score chunks are freed as computed -> can afford 8
-SAMPLE_ITEMS = 2          # items per sampled-generate call (2 x K=5 -> 10 sequences)
+# G1 v1 measured ~200 ms/generation-step regardless of batch (Python/HF overhead-bound,
+# not compute-bound on T4) -> bigger batches are near-free. Score storage is the memory
+# ceiling: 512 steps x B x 152k vocab fp32 = ~0.3 GB per batch element.
+GREEDY_BATCH = 12         # ~3.7 GB scores + 6.2 GB weights on 16 GB T4
+SAMPLE_ITEMS = 4          # items per sampled-generate call (4 x K=5 -> 20 sequences)
 PARTIAL_EVERY = 25
 
 ELICITATION = ("How confident are you that your final answer is correct? "
@@ -60,12 +63,18 @@ class LM:
         if self.tok.pad_token is None:
             self.tok.pad_token = self.tok.eos_token
         dt = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
-        try:
-            self.m = AutoModelForCausalLM.from_pretrained(
-                path, dtype=dt, device_map={"": 0}, trust_remote_code=True)
-        except TypeError:
-            self.m = AutoModelForCausalLM.from_pretrained(
-                path, torch_dtype=dt, device_map={"": 0}, trust_remote_code=True)
+        kw = dict(device_map={"": 0}, trust_remote_code=True)
+        self.m = None
+        for extra in (dict(dtype=dt, attn_implementation="sdpa"),
+                      dict(torch_dtype=dt, attn_implementation="sdpa"),
+                      dict(dtype=dt), dict(torch_dtype=dt)):
+            try:
+                self.m = AutoModelForCausalLM.from_pretrained(path, **kw, **extra)
+                break
+            except (TypeError, ValueError):
+                continue
+        if self.m is None:
+            raise RuntimeError("model load failed under all dtype/attn signatures")
         self.m.eval()
         self.tok.padding_side = "left"
 
@@ -100,8 +109,8 @@ class LM:
         mar_tok = torch.empty(B, T)
         top5_tok = torch.empty(B, T)
         with torch.no_grad():
-            for c0 in range(0, T, 64):                             # chunk over steps
-                chunk = torch.stack(out.scores[c0:c0 + 64], dim=1).float()  # [B, t, V]
+            for c0 in range(0, T, 32):                             # chunk over steps
+                chunk = torch.stack(out.scores[c0:c0 + 32], dim=1).float()  # [B, t, V]
                 lp = torch.log_softmax(chunk, dim=-1)
                 p = lp.exp()
                 ids_c = gen_ids[:, c0:c0 + chunk.shape[1]].unsqueeze(-1)
@@ -308,6 +317,21 @@ def write_rows(path, rows):
             w.writerow({k: r.get(k, "") for k in COLUMNS})
 
 
+def _greedy_with_oom_ladder(lm, batch, seed, bench):
+    """Greedy pass; on GPU OOM halve the batch and recurse (PLAN 6) — never collapses
+    straight to singles, which would forfeit the batching throughput."""
+    try:
+        return lm.greedy_with_stats([it["prompt"] for it in batch], seed)
+    except RuntimeError as e:
+        if "out of memory" not in str(e).lower() or len(batch) == 1:
+            raise
+        lm.torch.cuda.empty_cache()
+        mid = len(batch) // 2
+        log(f"[{bench}] OOM at batch of {len(batch)}; splitting")
+        return (_greedy_with_oom_ladder(lm, batch[:mid], seed, bench) +
+                _greedy_with_oom_ladder(lm, batch[mid:], seed, bench))
+
+
 def run_benchmark(lm, items, model_name, seed, work_dir, prev_done, limit=None):
     bench = items[0]["benchmark"]
     rows = []
@@ -323,16 +347,7 @@ def run_benchmark(lm, items, model_name, seed, work_dir, prev_done, limit=None):
 
     for start in range(0, len(todo), GREEDY_BATCH):
         batch = todo[start:start + GREEDY_BATCH]
-        try:
-            greedy = lm.greedy_with_stats([it["prompt"] for it in batch], seed)
-        except RuntimeError as e:            # GPU OOM -> retry item-by-item (PLAN 6)
-            if "out of memory" not in str(e).lower():
-                raise
-            log(f"[{bench}] OOM at batch {start}; retrying singly")
-            lm.torch.cuda.empty_cache()
-            greedy = []
-            for it in batch:
-                greedy += lm.greedy_with_stats([it["prompt"]], seed)
+        greedy = _greedy_with_oom_ladder(lm, batch, seed, bench)
         # sampled passes: SAMPLE_ITEMS items x K sequences per generate() call
         all_samples = []
         for s0 in range(0, len(batch), SAMPLE_ITEMS):

@@ -189,7 +189,10 @@ def main():
     ap.add_argument("arg", nargs="?")
     ap.add_argument("--resume-from")
     ap.add_argument("--limit", type=int)
+    ap.add_argument("--suffix", default="")
     a = ap.parse_args()
+    if a.resume_from and not a.suffix:
+        a.suffix = "-r2"          # a kernel cannot attach its own output — new slug
     if a.cmd == "src":
         upload_src()
     elif a.cmd == "data":
@@ -197,15 +200,15 @@ def main():
     elif a.cmd == "s0":
         push_run("m1", limit=a.limit or 8)
     elif a.cmd in MODELS:
-        push_run(a.cmd, limit=a.limit, resume_from=a.resume_from)
+        push_run(a.cmd, limit=a.limit, resume_from=a.resume_from, suffix=a.suffix)
     elif a.cmd == "g1":
-        push_run("m1", resume_from=a.resume_from)
+        push_run("m1", resume_from=a.resume_from, suffix=a.suffix)
     elif a.cmd == "g2":
-        push_run("m2", resume_from=a.resume_from)
+        push_run("m2", resume_from=a.resume_from, suffix=a.suffix)
     elif a.cmd == "g3":
-        push_run("m3", resume_from=a.resume_from)
+        push_run("m3", resume_from=a.resume_from, suffix=a.suffix)
     elif a.cmd == "g4":
-        push_run("m4", resume_from=a.resume_from)
+        push_run("m4", resume_from=a.resume_from, suffix=a.suffix)
     elif a.cmd == "probe":
         push_probe(a.arg)
     elif a.cmd == "status":
