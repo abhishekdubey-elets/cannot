@@ -29,6 +29,7 @@ USER = "abhishekakgec"
 
 SRC_DS = f"{USER}/ugen-src"
 DATA_DS = f"{USER}/ugen-data"
+PREV_DS = f"{USER}/ugen-prev"
 
 # The current Kaggle default image ships a torch build without sm_75 (T4) kernels
 # ("no kernel image is available for execution on the device"). Pin the image the
@@ -116,6 +117,31 @@ def upload_src():
         _create_or_version(td, SRC_DS, "src update")
 
 
+def upload_prev():
+    """Carry completed rows forward as a DATASET — kernel-source attachment only exposes
+    successfully-completed versions, so cancelled sessions (the 12 h cap) cannot be resumed
+    that way. The runner's resume scan finds rows_*.csv anywhere under /kaggle/input."""
+    rows = {}
+    for f in sorted((PROJECT / "outputs").rglob("rows_*.csv")):
+        if "ugen-s0-" in str(f) or f.name.endswith("_ALL.csv"):
+            continue              # smoke runs (8-row files) never carry forward
+        n = sum(1 for _ in open(f, encoding="utf-8")) - 1
+        if f.name not in rows or n > rows[f.name][0]:
+            rows[f.name] = (n, f)    # keep the fullest version of each benchmark
+    rows = {name: f for name, (n, f) in rows.items()}
+    if not rows:
+        raise SystemExit("no rows CSVs under outputs/")
+    with tempfile.TemporaryDirectory() as td:
+        dst = Path(td) / "prev_rows"
+        dst.mkdir()
+        for name, f in rows.items():
+            shutil.copy(f, dst / name)
+        meta = dict(title="ugen-prev", id=PREV_DS, licenses=[dict(name="CC0-1.0")])
+        (Path(td) / "dataset-metadata.json").write_text(json.dumps(meta), encoding="utf-8")
+        _create_or_version(td, PREV_DS, "completed rows carry-forward")
+    print(f"carried forward: {sorted(rows)}")
+
+
 def upload_data():
     with tempfile.TemporaryDirectory() as td:
         dst = Path(td) / "datasets"
@@ -151,8 +177,8 @@ def push_run(run, limit=None, resume_from=None, suffix=""):
             id=f"{USER}/{slug}", title=slug, code_file=f"{slug}.py",
             language="python", kernel_type="script", is_private=True,
             enable_gpu=True, enable_tpu=False, enable_internet=False,
-            dataset_sources=[SRC_DS, DATA_DS],
-            kernel_sources=[resume_from] if resume_from else [],
+            dataset_sources=[SRC_DS, DATA_DS] + ([PREV_DS] if resume_from else []),
+            kernel_sources=[],
             competition_sources=[], model_sources=[model_source],
             docker_image=DOCKER_IMAGE, machine_shape="NvidiaTeslaT4")
         (Path(td) / "kernel-metadata.json").write_text(json.dumps(meta, indent=1),
@@ -193,7 +219,9 @@ def main():
     a = ap.parse_args()
     if a.resume_from and not a.suffix:
         a.suffix = "-r2"          # a kernel cannot attach its own output — new slug
-    if a.cmd == "src":
+    if a.cmd == "prev":
+        upload_prev()
+    elif a.cmd == "src":
         upload_src()
     elif a.cmd == "data":
         upload_data()
