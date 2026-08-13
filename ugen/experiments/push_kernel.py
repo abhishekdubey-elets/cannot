@@ -31,11 +31,17 @@ SRC_DS = f"{USER}/ugen-src"
 DATA_DS = f"{USER}/ugen-data"
 PREV_DS = f"{USER}/ugen-prev"
 
-# The current Kaggle default image ships a torch build without sm_75 (T4) kernels
-# ("no kernel image is available for execution on the device"). Pin the image the
-# execev kernels ran on successfully (July 2026, T4 + Qwen2.5-3B).
+# NOTE (2026-08-14): kaggle CLI 1.7.4.5 (latest) silently DROPS both "docker_image" and
+# "machine_shape" from kernel-metadata.json — KernelPushRequest has neither field. Every
+# run so far therefore used the DEFAULT image, whose torch supports sm_70..sm_120 only:
+# works on T4 (sm_75), crashes on P100 (sm_60) with "no kernel image is available for
+# execution on the device" (that is what killed G1-r5 — Kaggle assigned a P100).
+# GPU type is selectable ONLY in the web UI: kernel editor -> Settings -> Accelerator ->
+# "GPU T4 x2", then Save & Run All. The setting sticks to the kernel slug across UI
+# re-runs, so resumes should re-run the SAME slug from the UI (resume data flows through
+# the ugen-prev dataset, never through kernel-output attachment).
 DOCKER_IMAGE = ("gcr.io/kaggle-private-byod/python@sha256:"
-                "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461")
+                "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461")  # kept for the record; ignored by the CLI
 
 MODELS = {
     # run: (kernel suffix, model_source, path hint, model column name)
