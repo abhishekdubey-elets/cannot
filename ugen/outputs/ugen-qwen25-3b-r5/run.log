@@ -1,7 +1,7 @@
 stats self-test passed in-kernel
 loading model from /kaggle/input/models/qwen-lm/qwen2.5/transformers/3b-instruct/1
 model loaded
-restored 1864 previously-completed rows
+restored 2472 previously-completed rows
 [mmlu] 0 to run, 200 restored
 [mmlu] DONE n=200 acc=0.660
 [mmlu_pro] 0 to run, 200 restored
@@ -21,37 +21,15 @@ restored 1864 previously-completed rows
 [arc_challenge] DONE n=200 acc=0.870
 [strategyqa] 0 to run, 200 restored
 [strategyqa] DONE n=200 acc=0.640
-[bbh] 114 to run, 84 restored
-[bbh] 96 rows (partial saved)
-[bbh] 120 rows (partial saved)
-[bbh] 144 rows (partial saved)
-[bbh] 168 rows (partial saved)
-[bbh] 192 rows (partial saved)
+[bbh] 0 to run, 198 restored
 [bbh] DONE n=198 acc=0.525
-[musr] 198 to run, 0 restored
-[musr] 12 rows (partial saved)
-[musr] 36 rows (partial saved)
-[musr] 60 rows (partial saved)
-[musr] 84 rows (partial saved)
-[musr] 108 rows (partial saved)
-[musr] 132 rows (partial saved)
-[musr] 156 rows (partial saved)
-[musr] 180 rows (partial saved)
-[musr] 198 rows (partial saved)
+[musr] 0 to run, 198 restored
 [musr] DONE n=198 acc=0.475
-[humaneval] 164 to run, 0 restored
-[humaneval] 12 rows (partial saved)
-[humaneval] 36 rows (partial saved)
-[humaneval] 60 rows (partial saved)
-[humaneval] 84 rows (partial saved)
-[humaneval] 108 rows (partial saved)
-[humaneval] 132 rows (partial saved)
-[humaneval] 156 rows (partial saved)
+[humaneval] 0 to run, 164 restored
 [humaneval] DONE n=164 acc=0.738
-[mbpp] 200 to run, 0 restored
-[mbpp] 12 rows (partial saved)
-[mbpp] 36 rows (partial saved)
-[mbpp] 60 rows (partial saved)
-[mbpp] 84 rows (partial saved)
-[mbpp] 108 rows (partial saved)
-[mbpp] 132 rows (partial saved)
+[mbpp] 68 to run, 132 restored
+[mbpp] 144 rows (partial saved)
+[mbpp] 168 rows (partial saved)
+[mbpp] 192 rows (partial saved)
+[mbpp] DONE n=200 acc=0.680
+TOTAL rows: 2540

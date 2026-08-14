@@ -3173,3 +3173,1643 @@ Think about the problem if needed, then output the complete solution as a single
         return a 
     else: 
         return b ",1,1.0,-0.0958853976832429,nan,0.21685860406016985,nan,0.8792611014630113,0.9969129519803184,1.0,28,12.607071300347647,0,1,1,5,ok
+mbpp:170,mbpp,coding,310,,Qwen2.5-3B-Instruct,"Write a function to convert a given string to a tuple of characters.
+
+Your code should pass these tests:
+```python
+assert string_to_tuple(""python 3.0"")==('p', 'y', 't', 'h', 'o', 'n', '3', '.', '0')
+assert string_to_tuple(""item1"")==('i', 't', 'e', 'm', '1')
+assert string_to_tuple(""15.10"")==('1', '5', '.', '1', '0')
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def string_to_tuple(s):
+    # Convert the string to a list of characters and then to a tuple
+    return tuple(s)
+
+# Test cases to verify the correctness of the function
+assert string_to_tuple(""python 3.0"") == ('p', 'y', 't', 'h', 'o', 'n', '3', '.', '0')
+assert string_to_tuple(""item1"") == ('i', 't', 'e', 'm', '1')
+assert string_to_tuple(""15.10"") == ('1', '5', '.', '1', '0')","def string_to_tuple(str1):
+    result = tuple(x for x in str1 if not x.isspace()) 
+    return result",0,1.0,-0.14497500467120547,nan,0.33416121127942466,nan,0.8447131870269049,0.9813040894706074,0.0,164,11.443239013353983,0,1,1,0,AssertionError
+mbpp:171,mbpp,coding,311,,Qwen2.5-3B-Instruct,"Write a python function to set the left most unset bit.
+
+Your code should pass these tests:
+```python
+assert set_left_most_unset_bit(10) == 14
+assert set_left_most_unset_bit(12) == 14
+assert set_left_most_unset_bit(15) == 15
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def set_left_most_unset_bit(num):
+    # Find the rightmost set bit (1)
+    rightmost_set_bit = num & -num
+    
+    # XOR the number with its rightmost set bit to unset that bit
+    # Then add the rightmost set bit to it to set the leftmost unset bit
+    return num ^ rightmost_set_bit + rightmost_set_bit
+
+# Test cases
+print(set_left_most_unset_bit(10))  # Expected output: 14
+print(set_left_most_uns","def set_left_most_unset_bit(n): 
+    if not (n & (n + 1)): 
+        return n 
+    pos, temp, count = 0, n, 0 
+    while temp: 
+        if not (temp & 1): 
+            pos = count      
+        count += 1; temp>>=1
+    return (n | (1 << (pos))) ",0,1.0,-0.12905393577232885,nan,0.3057900134499975,nan,0.8577773102398576,0.9861130315681984,0.2,145,11.443239013353983,0,1,1,2,AssertionError
+mbpp:172,mbpp,coding,312,,Qwen2.5-3B-Instruct,"Write a function to find the volume of a cone.
+
+Your code should pass these tests:
+```python
+assert math.isclose(volume_cone(5,12), 314.15926535897927, rel_tol=0.001)
+assert math.isclose(volume_cone(10,15), 1570.7963267948965, rel_tol=0.001)
+assert math.isclose(volume_cone(19,17), 6426.651371693521, rel_tol=0.001)
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","import math
+
+def volume_cone(radius, height):
+    # Calculate the volume of a cone using the formula (1/3)πr^2h
+    volume = (math.pi * radius**2 * height) / 3
+    return volume
+
+# Test cases
+assert math.isclose(volume_cone(5,12), 314.15926535897927, rel_tol=0.001)
+assert math.isclose(volume_cone(10,15), 1570.7963267948965, rel_tol=0.001)
+assert math.isclose(volume_cone(19,17), 6426.651371693521, ","import math
+def volume_cone(r,h):
+  volume = (1.0/3) * math.pi * r * r * h
+  return volume",1,1.0,-0.026937686968542464,nan,0.05825457847480532,nan,0.9576954291055076,0.9997286956561239,nan,190,11.443239013353983,0,1,1,0,ok
+mbpp:173,mbpp,coding,388,,Qwen2.5-3B-Instruct,"Write a python function to find the highest power of 2 that is less than or equal to n.
+
+Your code should pass these tests:
+```python
+assert highest_Power_of_2(10) == 8
+assert highest_Power_of_2(19) == 16
+assert highest_Power_of_2(32) == 32
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def highest_Power_of_2(n):
+    # Initialize the power of 2 to 1
+    power = 1
+    # Loop until the power of 2 exceeds n
+    while power * 2 <= n:
+        power *= 2
+    return power
+
+# Test cases
+assert highest_Power_of_2(10) == 8
+assert highest_Power_of_2(19) == 16
+assert highest_Power_of_2(32) == 32","def highest_Power_of_2(n): 
+    res = 0 
+    for i in range(n, 0, -1): 
+        if ((i & (i - 1)) == 0): 
+            res = i 
+            break 
+    return res ",1,1.0,-0.0677475967153169,nan,0.1647627641838836,nan,0.9122968300392753,0.9939312140146891,1.0,114,11.443239013353983,0,1,1,5,ok
+mbpp:174,mbpp,coding,389,,Qwen2.5-3B-Instruct,"Write a function to find the n'th lucas number.
+
+Your code should pass these tests:
+```python
+assert find_lucas(9) == 76
+assert find_lucas(4) == 7
+assert find_lucas(3) == 4
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def find_lucas(n):
+    # Base cases for the first two Lucas numbers
+    if n == 0:
+        return 2
+    elif n == 1:
+        return 1
+    
+    # Initialize the first two Lucas numbers
+    lucas_0 = 2
+    lucas_1 = 1
+    
+    # Compute the nth Lucas number iteratively
+    for _ in range(2, n + 1):
+        lucas_next = lucas_0 + lucas_1
+        lucas_0, lucas_1 = lucas_1, lucas_next
+    
+    return ","def find_lucas(n): 
+	if (n == 0): 
+		return 2
+	if (n == 1): 
+		return 1
+	return find_lucas(n - 1) + find_lucas(n - 2) ",1,1.0,-0.050416748918843866,nan,0.12193913623315114,nan,0.9281300358812917,0.9983495629646562,1.0,176,11.443239013353983,0,1,1,5,ok
+mbpp:176,mbpp,coding,391,,Qwen2.5-3B-Instruct,"Write a function to convert more than one list to nested dictionary.
+
+Your code should pass these tests:
+```python
+assert convert_list_dictionary([""S001"", ""S002"", ""S003"", ""S004""],[""Adina Park"", ""Leyton Marsh"", ""Duncan Boyle"", ""Saim Richards""] ,[85, 98, 89, 92])==[{'S001': {'Adina Park': 85}}, {'S002': {'Leyton Marsh': 98}}, {'S003': {'Duncan Boyle': 89}}, {'S004': {'Saim Richards': 92}}]
+assert convert_list_dictionary([""abc"",""def"",""ghi"",""jkl""],[""python"",""program"",""language"",""programs""],[100,200,300,400])==[{'abc':{'python':100}},{'def':{'program':200}},{'ghi':{'language':300}},{'jkl':{'programs':400}}]
+assert convert_list_dictionary([""A1"",""A2"",""A3"",""A4""],[""java"",""C"",""C++"",""DBMS""],[10,20,30,40])==[{'A1':{'java':10}},{'A2':{'C':20}},{'A3':{'C++':30}},{'A4':{'DBMS':40}}]
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def convert_list_dictionary(keys, values, counts):
+    # Initialize an empty dictionary
+    result = {}
+    
+    # Iterate over the keys and values simultaneously
+    for key, value in zip(keys, values):
+        # Create a new dictionary with the current key-value pair
+        temp_dict = {key: {value: counts[counts.index(count)]}}
+        # Update the main dictionary with the new inner dictionary","def convert_list_dictionary(l1, l2, l3):
+     result = [{x: {y: z}} for (x, y, z) in zip(l1, l2, l3)]
+     return result",0,1.0,-0.06039971405001897,nan,0.14790074031821174,nan,0.925965381777229,0.9940334155363737,0.4,414,11.443239013353983,0,1,1,2,NameError: name 'count' is not defined. Did you mean: 'counts'?
+mbpp:177,mbpp,coding,392,,Qwen2.5-3B-Instruct,"Write a function to find the maximum sum possible by using the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n).
+
+Your code should pass these tests:
+```python
+assert get_max_sum(60) == 106
+assert get_max_sum(10) == 12
+assert get_max_sum(2) == 2
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def get_max_sum(n):
+    # Initialize memoization table with -1 to indicate uncomputed values
+    memo = [-1] * (n + 1)
+    
+    def helper(x):
+        # Base case: if x is less than or equal to 1, return x itself
+        if x <= 1:
+            return x
+        # If the value is already computed, return it
+        if memo[x] != -1:
+            return memo[x]
+        
+        # Compute the maximum s","def get_max_sum (n):
+	res = list()
+	res.append(0)
+	res.append(1)
+	i = 2
+	while i<n + 1:
+		res.append(max(i, (res[int(i / 2)] 
+						+ res[int(i / 3)] +
+							res[int(i / 4)]
+						+ res[int(i / 5)])))
+		i = i + 1
+	return res[n]",1,1.0,-0.18925576346568576,nan,0.4313031517195552,nan,0.790452835317567,0.9823011269243501,0.2,278,11.443239013353983,0,1,1,2,ok
+mbpp:178,mbpp,coding,393,,Qwen2.5-3B-Instruct,"Write a function to find the list with maximum length.
+
+Your code should pass these tests:
+```python
+assert max_length_list([[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]])==(3, [13, 15, 17])
+assert max_length_list([[1,2,3,4,5],[1,2,3,4],[1,2,3],[1,2],[1]])==(5,[1,2,3,4,5])
+assert max_length_list([[3,4,5],[6,7,8,9],[10,11,12]])==(4,[6,7,8,9])
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def max_length_list(lists):
+    # Find the list with the maximum length
+    max_length = max(len(lst) for lst in lists)
+    # Return the length and the corresponding list
+    return max_length, [lst for lst in lists if len(lst) == max_length][0]
+
+# Test cases
+print(max_length_list([[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]]))  # Expected: (3, [13, 15, 17])
+print(max_length_list([[1,2,3,4,5],[1,2,","def max_length_list(input_list):
+    max_length = max(len(x) for x in input_list )   
+    max_list = max(input_list, key = lambda i: len(i))    
+    return(max_length, max_list)",1,1.0,-0.048793827525174055,nan,0.10245528835844595,nan,0.9337082007645511,0.9985481395595399,0.8,227,11.443239013353983,0,1,1,4,ok
+mbpp:179,mbpp,coding,394,,Qwen2.5-3B-Instruct,"Write a function to check if given tuple contains no duplicates.
+
+Your code should pass these tests:
+```python
+assert check_distinct((1, 4, 5, 6, 1, 4)) == False
+assert check_distinct((1, 4, 5, 6)) == True
+assert check_distinct((2, 3, 4, 5, 6)) == True
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def check_distinct(test_tuple):
+    # Convert the tuple to a set to remove duplicates and compare its length with the original tuple's length
+    return len(test_tuple) == len(set(test_tuple))
+
+# Test cases to verify the correctness of the function
+assert check_distinct((1, 4, 5, 6, 1, 4)) == False
+assert check_distinct((1, 4, 5, 6)) == True
+assert check_distinct((2, 3, 4, 5, 6)) == True","def check_distinct(test_tup):
+  res = True
+  temp = set()
+  for ele in test_tup:
+    if ele in temp:
+      res = False
+      break
+    temp.add(ele)
+  return res ",1,1.0,-0.05498811484520946,nan,0.11691683679074098,nan,0.9183361978550267,0.9988342698027448,1.0,123,11.443239013353983,0,1,1,5,ok
+mbpp:181,mbpp,coding,396,,Qwen2.5-3B-Instruct,"Write a function to check whether the given string starts and ends with the same character or not.
+
+Your code should pass these tests:
+```python
+assert check_char(""abba"") == ""Valid""
+assert check_char(""a"") == ""Valid""
+assert check_char(""abcd"") == ""Invalid""
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def check_char(s):
+    # Check if the string is empty
+    if not s:
+        return ""Invalid""
+    
+    # Get the first and last character of the string
+    first_char = s[0]
+    last_char = s[-1]
+    
+    # Check if the first and last characters are the same
+    if first_char == last_char:
+        return ""Valid""
+    else:
+        return ""Invalid""
+
+# Test cases to verify the solution
+assert check_ch","import re  
+regex = r'^[a-z]$|^([a-z]).*\1$'
+def check_char(string): 
+	if(re.search(regex, string)): 
+		return ""Valid"" 
+	else: 
+		return ""Invalid"" ",1,1.0,-0.10169783325078023,nan,0.2314431176765345,nan,0.8624541083047557,0.9946349401806676,1.0,215,11.443239013353983,0,1,1,5,ok
+mbpp:182,mbpp,coding,397,,Qwen2.5-3B-Instruct,"Write a function to find the median of three numbers.
+
+Your code should pass these tests:
+```python
+assert median_numbers(25,55,65)==55.0
+assert median_numbers(20,10,30)==20.0
+assert median_numbers(15,45,75)==45.0
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def median_numbers(num1, num2, num3):
+    # Sort the numbers to find the median easily
+    sorted_nums = sorted([num1, num2, num3])
+    # The median for an odd number of elements is the middle element
+    return sorted_nums[1]
+
+# Test cases
+assert median_numbers(25, 55, 65) == 55.0
+assert median_numbers(20, 10, 30) == 20.0
+assert median_numbers(15, 45, 75) == 45.0","def median_numbers(a,b,c):
+ if a > b:
+    if a < c:
+        median = a
+    elif b > c:
+        median = b
+    else:
+        median = c
+ else:
+    if a > c:
+        median = a
+    elif b < c:
+        median = b
+    else:
+        median = c
+ return median",1,1.0,-0.16164198191147877,nan,0.3797306537243204,nan,0.8040644839996158,0.9864903378604662,0.6,202,11.443239013353983,0,1,1,5,ok
+mbpp:183,mbpp,coding,398,,Qwen2.5-3B-Instruct,"Write a function to compute the sum of digits of each number of a given list.
+
+Your code should pass these tests:
+```python
+assert sum_of_digits([10,2,56])==14
+assert sum_of_digits([[10,20,4,5,'b',70,'a']])==19
+assert sum_of_digits([10,20,-4,5,-70])==19
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def sum_of_digits(numbers):
+    # Initialize an empty list to store the sum of digits for each number
+    sums = []
+    
+    # Iterate through each number in the input list
+    for num in numbers:
+        # If the number is a list, convert it to a string and iterate over its characters (digits)
+        if isinstance(num, list):
+            digit_sum = 0
+            for char in str(num):
+          ","def sum_of_digits(nums):
+    return sum(int(el) for n in nums for el in str(n) if el.isdigit())",0,1.0,-0.08178019756333156,nan,0.18465745493144783,nan,0.8965604858686081,0.9955289862049159,0.0,402,11.443239013353983,0,1,1,0,AssertionError
+mbpp:184,mbpp,coding,399,,Qwen2.5-3B-Instruct,"Write a function to perform the mathematical bitwise xor operation across the given tuples.
+
+Your code should pass these tests:
+```python
+assert bitwise_xor((10, 4, 6, 9), (5, 2, 3, 3)) == (15, 6, 5, 10)
+assert bitwise_xor((11, 5, 7, 10), (6, 3, 4, 4)) == (13, 6, 3, 14)
+assert bitwise_xor((12, 6, 8, 11), (7, 4, 5, 6)) == (11, 2, 13, 13)
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def bitwise_xor(tup1, tup2):
+    # Use list comprehension to apply the XOR operation element-wise and convert back to tuple
+    result = tuple(a ^ b for a, b in zip(tup1, tup2))
+    return result
+
+# Test cases to verify the solution
+assert bitwise_xor((10, 4, 6, 9), (5, 2, 3, 3)) == (15, 6, 5, 10)
+assert bitwise_xor((11, 5, 7, 10), (6, 3, 4, 4)) == (13, 6, 3, 14)
+assert bitwise_xor((12, 6, 8, 11),","def bitwise_xor(test_tup1, test_tup2):
+  res = tuple(ele1 ^ ele2 for ele1, ele2 in zip(test_tup1, test_tup2))
+  return (res) ",1,1.0,-0.1202554558456245,nan,0.264118413727239,nan,0.8533299385903272,0.9929060503391917,1.0,299,12.18206105629603,0,1,1,5,ok
+mbpp:185,mbpp,coding,400,,Qwen2.5-3B-Instruct,"Write a function to extract the number of unique tuples in the given list.
+
+Your code should pass these tests:
+```python
+assert extract_freq([(3, 4), (1, 2), (4, 3), (5, 6)] ) == 3
+assert extract_freq([(4, 15), (2, 3), (5, 4), (6, 7)] ) == 4
+assert extract_freq([(5, 16), (2, 3), (6, 5), (6, 9)] ) == 4
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","from collections import Counter
+
+def extract_freq(tuples_list):
+    # Flatten the list of tuples into individual elements and count unique elements
+    unique_elements = set(sum(tuples_list, ()))
+    # Return the count of unique elements
+    return len(unique_elements)
+
+# Test cases to verify the correctness of the function
+assert extract_freq([(3, 4), (1, 2), (4, 3), (5, 6)]) == 3
+assert extract_","def extract_freq(test_list):
+  res = len(list(set(tuple(sorted(sub)) for sub in test_list)))
+  return (res)",0,1.0,-0.17500154257669961,nan,0.38386183230416954,nan,0.8206635135743353,0.9772995829582214,0.4,225,12.18206105629603,0,1,1,3,AssertionError
+mbpp:187,mbpp,coding,404,,Qwen2.5-3B-Instruct,"Write a python function to find the minimum of two numbers.
+
+Your code should pass these tests:
+```python
+assert minimum(1,2) == 1
+assert minimum(-5,-4) == -5
+assert minimum(0,0) == 0
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def minimum(a, b):
+    # Return the smaller of the two numbers
+    return min(a, b)","def minimum(a,b):   
+    if a <= b: 
+        return a 
+    else: 
+        return b ",1,1.0,-0.06348957197289831,nan,0.1606894379717984,nan,0.9103156083396503,0.9948956604514804,1.0,28,12.18206105629603,0,1,1,5,ok
+mbpp:188,mbpp,coding,405,,Qwen2.5-3B-Instruct,"Write a function to check whether an element exists within a tuple.
+
+Your code should pass these tests:
+```python
+assert check_tuplex((""w"", 3, ""r"", ""e"", ""s"", ""o"", ""u"", ""r"", ""c"", ""e""),'r')==True
+assert check_tuplex((""w"", 3, ""r"", ""e"", ""s"", ""o"", ""u"", ""r"", ""c"", ""e""),'5')==False
+assert check_tuplex((""w"", 3, ""r"", ""e"", ""s"", ""o"", ""u"", ""r"", ""c"",""e""),3)==True
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def check_tuplex(tuplex, element):
+    # Check if the element is in the tuple
+    return element in tuplex
+
+# Test cases to verify the solution
+assert check_tuplex((""w"", 3, ""r"", ""e"", ""s"", ""o"", ""u"", ""r"", ""c"", ""e""), 'r') == True
+assert check_tuplex((""w"", 3, ""r"", ""e"", ""s"", ""o"", ""u"", ""r"", ""c"", ""e""), '5') == False
+assert check_tuplex((""w"", 3, ""r"", ""e"", ""s"", ""o"", ""u"", ""r"", ""c', 'e""), 3) == True","def check_tuplex(tuplex,tuple1): 
+  if tuple1 in tuplex:
+    return True
+  else:
+     return False",1,1.0,-0.019307390815780916,nan,0.05184008204942966,nan,0.9685716399640748,0.9996460018735943,1.0,165,12.18206105629603,0,1,1,5,ok
+mbpp:189,mbpp,coding,406,,Qwen2.5-3B-Instruct,"Write a python function to find whether the parity of a given number is odd.
+
+Your code should pass these tests:
+```python
+assert find_Parity(12) == False
+assert find_Parity(7) == True
+assert find_Parity(10) == False
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def find_Parity(n):
+    # Check if the number is even or odd using bitwise AND operation with 1
+    return n & 1 == 0
+
+# Test cases to verify the correctness of the function
+assert find_Parity(12) == False, ""Test case 1 failed""
+assert find_Parity(7) == True, ""Test case 2 failed""
+assert find_Parity(10) == False, ""Test case 3 failed""","def find_Parity(x): 
+    y = x ^ (x >> 1); 
+    y = y ^ (y >> 2); 
+    y = y ^ (y >> 4); 
+    y = y ^ (y >> 8); 
+    y = y ^ (y >> 16); 
+    if (y & 1): 
+        return True
+    return False",0,1.0,-0.08117032167029216,nan,0.16072911249055377,nan,0.8895143808670414,0.9992572022873221,0.8,103,12.18206105629603,0,1,1,4,AssertionError: Test case 1 failed
+mbpp:190,mbpp,coding,407,,Qwen2.5-3B-Instruct,"Write a function to create the next bigger number by rearranging the digits of a given number.
+
+Your code should pass these tests:
+```python
+assert rearrange_bigger(12)==21
+assert rearrange_bigger(10)==False
+assert rearrange_bigger(102)==120
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def rearrange_bigger(n):
+    # Convert the number to a list of its digits
+    digits = [int(d) for d in str(n)]
+    
+    # If the number is less than or equal to 1, no bigger permutation is possible
+    if n <= 1:
+        return False
+    
+    # Find the first digit that can be swapped to make the number bigger
+    i = len(digits) - 2
+    while i >= 0 and digits[i] >= digits[i + 1]:
+        i -= 1","def rearrange_bigger(n):
+    nums = list(str(n))
+    for i in range(len(nums)-2,-1,-1):
+        if nums[i] < nums[i+1]:
+            z = nums[i:]
+            y = min(filter(lambda x: x > z[0], z))
+            z.remove(y)
+            z.sort()
+            nums[i:] = [y] + z
+            return int("""".join(nums))
+    return False",1,1.0,-0.13494012121285562,nan,0.31070680318187843,nan,0.8362354512978586,0.9897048667419789,0.8,387,12.18206105629603,0,1,1,4,ok
+mbpp:191,mbpp,coding,408,,Qwen2.5-3B-Instruct,"Write a function to find k number of smallest pairs which consist of one element from the first array and one element from the second array.
+
+Your code should pass these tests:
+```python
+assert k_smallest_pairs([1,3,7],[2,4,6],2)==[[1, 2], [1, 4]]
+assert k_smallest_pairs([1,3,7],[2,4,6],1)==[[1, 2]]
+assert k_smallest_pairs([1,3,7],[2,4,6],7)==[[1, 2], [1, 4], [3, 2], [1, 6], [3, 4], [3, 6], [7, 2]]
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","import heapq
+
+def k_smallest_pairs(nums1, nums2, k):
+    # If either array is empty or k is zero, return an empty list
+    if not nums1 or not nums2 or k == 0:
+        return []
+    
+    # Initialize a min heap with pairs from the first two elements of both arrays
+    min_heap = [(nums1[0] + nums2[0], 0, 0)]
+    visited = set((0, 0))
+    
+    result = []
+    
+    while k > 0 and min_heap:
+        ","import heapq
+def k_smallest_pairs(nums1, nums2, k):
+   queue = []
+   def push(i, j):
+       if i < len(nums1) and j < len(nums2):
+           heapq.heappush(queue, [nums1[i] + nums2[j], i, j])
+   push(0, 0)
+   pairs = []
+   while queue and len(pairs) < k:
+       _, i, j = heapq.heappop(queue)
+       pairs.append([nums1[i], nums2[j]])
+       push(i, j + 1)
+       if j == 0:
+           push(i + 1, 0)",1,1.0,-0.07452443710192841,nan,0.16068740931044648,nan,0.9099611280167975,0.9947017595138888,0.4,451,12.18206105629603,0,1,1,2,ok
+mbpp:192,mbpp,coding,409,,Qwen2.5-3B-Instruct,"Write a function to find the minimum product from the pairs of tuples within a given list.
+
+Your code should pass these tests:
+```python
+assert min_product_tuple([(2, 7), (2, 6), (1, 8), (4, 9)] )==8
+assert min_product_tuple([(10,20), (15,2), (5,10)] )==30
+assert min_product_tuple([(11,44), (10,15), (20,5), (12, 9)] )==100
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def min_product_tuple(tuples_list):
+    # Calculate the product for each tuple and return the minimum product
+    return min(a * b for a, b in tuples_list)
+
+# Test cases to verify the correctness of the function
+assert min_product_tuple([(2, 7), (2, 6), (1, 8), (4, 9)]) == 8
+assert min_product_tuple([(10,20), (15,2), (5,10)]) == 30
+assert min_product_tuple([(11,44), (10,15), (20,5), (12, 9)]) == 1","def min_product_tuple(list1):
+    result_min = min([abs(x * y) for x, y in list1] )
+    return result_min",1,1.0,-0.037169911776392374,nan,0.09581782916452154,nan,0.9417465749202959,0.999070234746741,1.0,149,12.18206105629603,0,1,1,5,ok
+mbpp:194,mbpp,coding,411,,Qwen2.5-3B-Instruct,"Write a function to convert the given snake case string to camel case string.
+
+Your code should pass these tests:
+```python
+assert snake_to_camel('android_tv') == 'AndroidTv'
+assert snake_to_camel('google_pixel') == 'GooglePixel'
+assert snake_to_camel('apple_watch') == 'AppleWatch'
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def snake_to_camel(snake_str):
+    # Split the string into words based on underscores and capitalize each word.
+    # Then join them together without any separators.
+    return ''.join(word.capitalize() or '_' for word in snake_str.split('_'))
+
+# Test the function with the provided test cases
+assert snake_to_camel('android_tv') == 'AndroidTv'
+assert snake_to_camel('google_pixel') == 'GooglePixel'
+","import re
+def snake_to_camel(word):
+  return ''.join(x.capitalize() or '_' for x in word.split('_'))",1,1.0,-0.18120175419082687,nan,0.40668214353624543,nan,0.787572808743675,0.9846609767508392,0.8,207,12.18206105629603,0,1,1,4,ok
+mbpp:195,mbpp,coding,412,,Qwen2.5-3B-Instruct,"Write a python function to remove odd numbers from a given list.
+
+Your code should pass these tests:
+```python
+assert remove_odd([1,2,3]) == [2]
+assert remove_odd([2,4,6]) == [2,4,6]
+assert remove_odd([10,20,3]) == [10,20]
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def remove_odd(numbers):
+    # Use list comprehension to filter out odd numbers
+    return [num for num in numbers if num % 2 == 0]
+
+# Test cases to verify the correctness of the function
+assert remove_odd([1,2,3]) == [2]
+assert remove_odd([2,4,6]) == [2,4,6]
+assert remove_odd([10,20,3]) == [10,20]","def remove_odd(l):
+    for i in l:
+        if i % 2 != 0:
+            l.remove(i)
+    return l",1,1.0,-0.030835694601663303,nan,0.07784897020403936,nan,0.9556088503634576,0.9994673569603721,1.0,101,12.18206105629603,0,1,1,5,ok
+mbpp:196,mbpp,coding,413,,Qwen2.5-3B-Instruct,"Write a function to extract the nth element from a given list of tuples.
+
+Your code should pass these tests:
+```python
+assert extract_nth_element([('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)] ,0)==['Greyson Fulton', 'Brady Kent', 'Wyatt Knott', 'Beau Turnbull']
+assert extract_nth_element([('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)] ,2)==[99, 96, 94, 98]
+assert extract_nth_element([('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)],1)==[98, 97, 91, 94]
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def extract_nth_element(tuples_list, n):
+    # Extracting the nth element from each tuple in the list
+    nth_elements = [t[n] for t in tuples_list]
+    return nth_elements
+
+# Test cases to verify the correctness of the function
+assert extract_nth_element([('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)], 0) == ['Greyson Fulton', 'Brady Kent',","def extract_nth_element(list1, n):
+    result = [x[n] for x in list1]
+    return result",1,1.0,-0.020955173506457217,nan,0.05332298274734456,nan,0.9711885788908037,0.9990436050582961,1.0,301,12.18206105629603,0,1,1,5,ok
+mbpp:198,mbpp,coding,415,,Qwen2.5-3B-Instruct,"Write a python function to find a pair with highest product from a given array of integers.
+
+Your code should pass these tests:
+```python
+assert max_Product([1,2,3,4,7,0,8,4]) == (7,8)
+assert max_Product([0,-1,-2,-4,5,0,-6]) == (-4,-6)
+assert max_Product([1,2,3]) == (2,3)
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def max_Product(nums):
+    # Initialize variables to store the maximum product and its indices
+    max_product = float('-inf')
+    first_index, second_index = -1, -1
+    
+    # Iterate through each number in the list
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            # Calculate the product of the current pair
+            product = nums[i] * nums[j]
+            
+   ","def max_Product(arr): 
+    arr_len = len(arr) 
+    if (arr_len < 2): 
+        return (""No pairs exists"")           
+    x = arr[0]; y = arr[1]      
+    for i in range(0,arr_len): 
+        for j in range(i + 1,arr_len): 
+            if (arr[i] * arr[j] > x * y): 
+                x = arr[i]; y = arr[j] 
+    return x,y    ",1,1.0,-0.08068637701054401,nan,0.18237437023904934,nan,0.8901478035367413,0.9968026414578095,0.2,231,12.18206105629603,0,1,1,2,ok
+mbpp:199,mbpp,coding,417,,Qwen2.5-3B-Instruct,"Write a function to find common first element in given list of tuple.
+
+Your code should pass these tests:
+```python
+assert group_tuples([('x', 'y'), ('x', 'z'), ('w', 't')]) == [('x', 'y', 'z'), ('w', 't')]
+assert group_tuples([('a', 'b'), ('a', 'c'), ('d', 'e')]) == [('a', 'b', 'c'), ('d', 'e')]
+assert group_tuples([('f', 'g'), ('f', 'g'), ('h', 'i')]) == [('f', 'g', 'g'), ('h', 'i')]
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def group_tuples(tuples_list):
+    # Extract the first elements from each tuple in the list
+    first_elements = {t[0] for t in tuples_list}
+    # Filter the original list to keep only those tuples that have a first element in the set
+    filtered_tuples = [t for t in tuples_list if t[0] in first_elements]
+    # Group the filtered tuples by their first element and return the result
+    grouped_tup","def group_tuples(Input): 
+	out = {} 
+	for elem in Input: 
+		try: 
+			out[elem[0]].extend(elem[1:]) 
+		except KeyError: 
+			out[elem[0]] = list(elem) 
+	return [tuple(values) for values in out.values()] ",0,1.0,-0.13459855271752277,nan,0.2827146243932173,nan,0.8544253530640771,0.9863200877595135,0.2,254,11.526735623677572,0,1,1,3,AssertionError
+mbpp:201,mbpp,coding,419,,Qwen2.5-3B-Instruct,"Write a function to round every number of a given list of numbers and print the total sum multiplied by the length of the list.
+
+Your code should pass these tests:
+```python
+assert round_and_sum([22.4, 4.0, -16.22, -9.10, 11.00, -12.22, 14.20, -5.20, 17.50])==243
+assert round_and_sum([5,2,9,24.3,29])==345
+assert round_and_sum([25.0,56.7,89.2])==513
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def round_and_sum(numbers):
+    # Round each number in the list
+    rounded_numbers = [round(num) for num in numbers]
+    
+    # Calculate the sum of the rounded numbers
+    total_sum = sum(rounded_numbers)
+    
+    # Multiply the sum by the length of the list
+    result = total_sum * len(numbers)
+    
+    return result
+
+# Test cases to verify the correctness of the function
+assert round_and_sum([","def round_and_sum(list1):
+  lenght=len(list1)
+  round_and_sum=sum(list(map(round,list1))* lenght)
+  return round_and_sum",1,1.0,-0.03034699663700462,nan,0.06144746271266378,nan,0.9520366505064346,0.9998605179565924,1.0,216,11.526735623677572,0,1,1,5,ok
+mbpp:202,mbpp,coding,420,,Qwen2.5-3B-Instruct,"Write a python function to find the cube sum of first n even natural numbers.
+
+Your code should pass these tests:
+```python
+assert cube_Sum(2) == 72
+assert cube_Sum(3) == 288
+assert cube_Sum(4) == 800
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def cube_Sum(n):
+    # Calculate the sum of cubes of first n even natural numbers
+    return (n * (n + 1) // 2)**2
+
+# Test cases
+assert cube_Sum(2) == 72
+assert cube_Sum(3) == 288
+assert cube_Sums(4) == 800","def cube_Sum(n): 
+    sum = 0
+    for i in range(1,n + 1): 
+        sum += (2*i)*(2*i)*(2*i) 
+    return sum",0,1.0,-0.08243200623586783,nan,0.19963026182054544,nan,0.8826364122685932,0.995736035562697,0.2,84,11.526735623677572,0,1,1,1,AssertionError
+mbpp:203,mbpp,coding,421,,Qwen2.5-3B-Instruct,"Write a function to concatenate each element of tuple by the delimiter.
+
+Your code should pass these tests:
+```python
+assert concatenate_tuple((""ID"", ""is"", 4, ""UTS"") ) == 'ID-is-4-UTS'
+assert concatenate_tuple((""QWE"", ""is"", 4, ""RTY"") ) == 'QWE-is-4-RTY'
+assert concatenate_tuple((""ZEN"", ""is"", 4, ""OP"") ) == 'ZEN-is-4-OP'
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def concatenate_tuple(test_tuple):
+    # Joining elements of the tuple with a hyphen as the separator
+    result = '-'.join(map(str, test_tuple))
+    return result
+
+# Test cases to verify the correctness of the function
+assert concatenate_tuple((""ID"", ""is"", 4, ""UTS"")) == 'ID-is-4-UTS'
+assert concatenate_tuple((""QWE"", ""is"", 4, ""RTY"")) == 'QWE-is-4-RTY'
+assert concatenate_tuple((""ZEN"", ""is"", 4, ""OP""","def concatenate_tuple(test_tup):
+    delim = ""-""
+    res = ''.join([str(ele) + delim for ele in test_tup])
+    res = res[ : len(res) - len(delim)]
+    return (str(res)) ",1,1.0,-0.07029851923114848,nan,0.15213046401231842,nan,0.9096969368297663,0.9980257825175328,0.8,134,11.526735623677572,0,1,1,4,ok
+mbpp:205,mbpp,coding,424,,Qwen2.5-3B-Instruct,"Write a function to extract only the rear index element of each string in the given tuple.
+
+Your code should pass these tests:
+```python
+assert extract_rear(('Mers', 'for', 'Vers') ) == ['s', 'r', 's']
+assert extract_rear(('Avenge', 'for', 'People') ) == ['e', 'r', 'e']
+assert extract_rear(('Gotta', 'get', 'go') ) == ['a', 't', 'o']
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def extract_rear(test_tuple):
+    # Extracting the last character of each string in the tuple
+    rear_elements = [string[-1] for string in test_tuple]
+    return rear_elements
+
+# Test cases to verify the correctness of the function
+assert extract_rear(('Mers', 'for', 'Vers')) == ['s', 'r', 's']
+assert extract_rear(('Avenge', 'for', 'People')) == ['e', 'r', 'e']
+assert extract_rear(('Gotta', 'get'","def extract_rear(test_tuple):
+  res = list(sub[len(sub) - 1] for sub in test_tuple)
+  return (res) ",1,1.0,-0.13064796502941045,nan,0.28260899250098453,nan,0.8390640066413397,0.9916453636094426,1.0,178,11.526735623677572,0,1,1,5,ok
+mbpp:206,mbpp,coding,425,,Qwen2.5-3B-Instruct,"Write a function to count the number of sublists containing a particular element.
+
+Your code should pass these tests:
+```python
+assert count_element_in_list([[1, 3], [5, 7], [1, 11], [1, 15, 7]],1)==3
+assert count_element_in_list([['A', 'B'], ['A', 'C'], ['A', 'D', 'E'], ['B', 'C', 'D']],'A')==3
+assert count_element_in_list([['A', 'B'], ['A', 'C'], ['A', 'D', 'E'], ['B', 'C', 'D']],'E')==1
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def count_element_in_list(lst, element):
+    # Initialize a counter for the occurrences
+    count = 0
+    
+    # Iterate through each sublist in the main list
+    for sublist in lst:
+        # Check if the current element is in the sublist
+        if element in sublist:
+            # Increment the counter if the element is found
+            count += 1
+            
+    return count
+
+# Test cases to","def count_element_in_list(list1, x): 
+    ctr = 0
+    for i in range(len(list1)): 
+        if x in list1[i]: 
+            ctr+= 1          
+    return ctr",1,1.0,-0.106766451749611,nan,0.2414636150801865,nan,0.8591027492305258,0.9947852183043752,1.0,291,11.526735623677572,0,1,1,5,ok
+mbpp:208,mbpp,coding,427,,Qwen2.5-3B-Instruct,"Write a function to convert a date of yyyy-mm-dd format to dd-mm-yyyy format.
+
+Your code should pass these tests:
+```python
+assert change_date_format(""2026-01-02"") == '02-01-2026'
+assert change_date_format(""2020-11-13"") == '13-11-2020'
+assert change_date_format(""2021-04-26"") == '26-04-2021'
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def change_date_format(date_str):
+    # Split the input string into year, month, and day parts
+    year_month_day = date_str.split('-')
+    # Reformat the date to dd-mm-yyyy format
+    new_date_format = f""{year_month_day[2]}-{year_month_day[1]}-{year_month_day[0]}""
+    return new_date_format
+
+# Test cases to verify the correctness of the function
+assert change_date_format(""2026-01-02"") == '02-01-2","import re
+def change_date_format(dt):
+        return re.sub(r'(\d{4})-(\d{1,2})-(\d{1,2})', '\\3-\\2-\\1', dt)",1,1.0,-0.0722770253884106,nan,0.14050836308461814,nan,0.9015345316794183,0.9981933620240954,0.4,180,11.526735623677572,0,1,1,2,ok
+mbpp:209,mbpp,coding,428,,Qwen2.5-3B-Instruct,"Write a function to sort the given array by using shell sort.
+
+Your code should pass these tests:
+```python
+assert shell_sort([12, 23, 4, 5, 3, 2, 12, 81, 56, 95]) == [2, 3, 4, 5, 12, 12, 23, 56, 81, 95]
+assert shell_sort([24, 22, 39, 34, 87, 73, 68]) == [22, 24, 34, 39, 68, 73, 87]
+assert shell_sort([32, 30, 16, 96, 82, 83, 74]) == [16, 30, 32, 74, 82, 83, 96]
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def shell_sort(arr):
+    n = len(arr)
+    gap = n // 2
+    
+    while gap > 0:
+        for i in range(gap, n):
+            temp = arr[i]
+            j = i
+            while j >= gap and arr[j - gap] > temp:
+                arr[j] = arr[j - gap]
+                j -= gap
+            arr[j] = temp
+        gap //= 2
+    
+    return arr
+
+# Test cases
+assert shell_sort([12, 23, 4, 5, 3, 2, 12, 81, 56, 9","def shell_sort(my_list):
+    gap = len(my_list) // 2
+    while gap > 0:
+        for i in range(gap, len(my_list)):
+            current_item = my_list[i]
+            j = i
+            while j >= gap and my_list[j - gap] > current_item:
+                my_list[j] = my_list[j - gap]
+                j -= gap
+            my_list[j] = current_item
+        gap //= 2
+
+    return my_list",1,1.0,-0.011796061359406413,nan,0.026424631787341845,nan,0.9824854874570897,0.9999295661113407,1.0,298,11.526735623677572,0,1,1,5,ok
+mbpp:210,mbpp,coding,429,,Qwen2.5-3B-Instruct,"Write a function to extract the elementwise and tuples from the given two tuples.
+
+Your code should pass these tests:
+```python
+assert and_tuples((10, 4, 6, 9), (5, 2, 3, 3)) == (0, 0, 2, 1)
+assert and_tuples((1, 2, 3, 4), (5, 6, 7, 8)) == (1, 2, 3, 0)
+assert and_tuples((8, 9, 11, 12), (7, 13, 14, 17)) == (0, 9, 10, 0)
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def and_tuples(tup1, tup2):
+    # Use a generator expression to compute the bitwise AND of corresponding elements
+    result = tuple(x & y for x, y in zip(tup1, tup2))
+    return result
+
+# Test the function with the provided test cases
+assert and_tuples((10, 4, 6, 9), (5, 2, 3, 3)) == (0, 0, 2, 1)
+assert and_tuples((1, 2, 3, 4), (5, 6, 7, 8)) == (1, 2, 3, 0)
+assert and_tuples((8, 9, 11, 12), (7, 1","def and_tuples(test_tup1, test_tup2):
+  res = tuple(ele1 & ele2 for ele1, ele2 in zip(test_tup1, test_tup2))
+  return (res) ",1,1.0,-0.04902041157907386,nan,0.09682168003221754,nan,0.9414127477644626,0.9982551376857058,1.0,191,11.526735623677572,0,1,1,5,ok
+mbpp:211,mbpp,coding,430,,Qwen2.5-3B-Instruct,"Write a function to find the directrix of a parabola.
+
+Your code should pass these tests:
+```python
+assert parabola_directrix(5,3,2)==-198
+assert parabola_directrix(9,8,4)==-2336
+assert parabola_directrix(2,4,6)==-130
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def parabola_directrix(x1, y1, x2, y2):
+    # Calculate the vertex (h, k)
+    h = (x1 + x2) / 2
+    k = (y1 + y2) / 2
+    
+    # Calculate p using the distance formula
+    p = ((x2 - h)**2 + (y2 - k)**2) / (4 * (y1 - k))
+    
+    # Directrix is at y = k - p
+    directrix_y = k - p
+    
+    return directrix_y
+
+# Test cases
+assert parabola_directrix(5,3,2)==-198
+assert parabola_directrix(9,8,4)==-23","def parabola_directrix(a, b, c): 
+  directrix=((int)(c - ((b * b) + 1) * 4 * a ))
+  return directrix",0,1.0,-0.1711901753880946,nan,0.37499081550795016,nan,0.8067837788566062,0.9853749751500344,0.2,438,11.526735623677572,0,1,1,3,TypeError: parabola_directrix() missing 1 required positional argument: 'y2'
+mbpp:213,mbpp,coding,432,,Qwen2.5-3B-Instruct,"Write a function to find the median length of a trapezium.
+
+Your code should pass these tests:
+```python
+assert median_trapezium(15,25,35)==20
+assert median_trapezium(10,20,30)==15
+assert median_trapezium(6,9,4)==7.5
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def median_trapezium(a, b):
+    # The median length of a trapezium is the average of the lengths of its two parallel sides.
+    return (a + b) / 2
+
+# Test cases
+assert median_trapezium(15, 25) == 20
+assert median_trapezium(10, 20) == 15
+assert median_trapezium(6, 9) == 7.5","def median_trapezium(base1,base2,height):
+ median = 0.5 * (base1+ base2)
+ return median",0,1.0,-0.16908950246619064,nan,0.33268310687214014,nan,0.7846754963199297,0.992768186579148,0.2,240,11.526735623677572,0,1,1,2,TypeError: median_trapezium() takes 2 positional arguments but 3 were given
+mbpp:214,mbpp,coding,433,,Qwen2.5-3B-Instruct,"Write a function to check whether the entered number is greater than the elements of the given array.
+
+Your code should pass these tests:
+```python
+assert check_greater([1, 2, 3, 4, 5], 4) == False
+assert check_greater([2, 3, 4, 5, 6], 8) == True
+assert check_greater([9, 7, 4, 8, 6, 1], 11) == True
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def check_greater(arr, num):
+    # Check if the number is greater than all elements in the array
+    return all(num > x for x in arr)
+
+# Test cases
+assert check_greater([1, 2, 3, 4, 5], 4) == False
+assert check_greater([2, 3, 4, 5, 6], 8) == True
+assert check_greater([9, 7, 4, 8, 6, 1], 11) == True","def check_greater(arr, number):
+  arr.sort()
+  return number > arr[-1]",1,1.0,-0.12097664658292445,nan,0.25383446274793525,nan,0.8543263899380934,0.9926956802107102,1.0,179,11.526735623677572,0,1,1,5,ok
+mbpp:216,mbpp,coding,435,,Qwen2.5-3B-Instruct,"Write a python function to find the last digit of a given number.
+
+Your code should pass these tests:
+```python
+assert last_Digit(123) == 3
+assert last_Digit(25) == 5
+assert last_Digit(30) == 0
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def last_Digit(number):
+    # The last digit of a number can be found by taking the number modulo 10
+    return number % 10
+
+# Test cases to verify the correctness of the function
+assert last_Digit(123) == 3
+assert last_Digit(25) == 5
+assert last_Digit(30) == 0","def last_Digit(n) :
+    return (n % 10) ",1,1.0,-0.059028911282240006,nan,0.13415485072423475,nan,0.911859424977467,0.998529461608536,1.0,87,10.58659291267395,0,1,1,5,ok
+mbpp:218,mbpp,coding,437,,Qwen2.5-3B-Instruct,"Write a function to remove odd characters in a string.
+
+Your code should pass these tests:
+```python
+assert remove_odd(""python"")==(""yhn"")
+assert remove_odd(""program"")==(""rga"")
+assert remove_odd(""language"")==(""agae"")
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def remove_odd(s):
+    # Initialize an empty string to store the result
+    result = """"
+    # Iterate through each character in the input string
+    for i in range(len(s)):
+        # Check if the index is even (0-based index)
+        if i % 2 == 0:
+            # Append the character at the current index to the result
+            result += s[i]
+    return result
+
+# Test cases to verify the correctn","def remove_odd(str1):
+ str2 = ''
+ for i in range(1, len(str1) + 1):
+    if(i % 2 == 0):
+        str2 = str2 + str1[i - 1]
+ return str2",0,1.0,-0.08438341466064678,nan,0.20311774796350424,nan,0.8798167616573732,0.9962632473724992,0.2,134,10.58659291267395,0,1,1,1,AssertionError
+mbpp:219,mbpp,coding,438,,Qwen2.5-3B-Instruct,"Write a function to count bidirectional tuple pairs.
+
+Your code should pass these tests:
+```python
+assert count_bidirectional([(5, 6), (1, 2), (6, 5), (9, 1), (6, 5), (2, 1)] ) == 3
+assert count_bidirectional([(5, 6), (1, 3), (6, 5), (9, 1), (6, 5), (2, 1)] ) == 2
+assert count_bidirectional([(5, 6), (1, 2), (6, 5), (9, 2), (6, 5), (2, 1)] ) == 4
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","from collections import defaultdict
+
+def count_bidirectional(tuples_list):
+    # Create a dictionary to store the frequency of each element in the tuples
+    freq_dict = defaultdict(int)
+    
+    # Populate the dictionary with the elements from the tuples
+    for tup in tuples_list:
+        for item in tup:
+            freq_dict[item] += 1
+    
+    # Initialize the bidirectional pair counter
+    b","def count_bidirectional(test_list):
+  res = 0
+  for idx in range(0, len(test_list)):
+    for iidx in range(idx + 1, len(test_list)):
+      if test_list[iidx][0] == test_list[idx][1] and test_list[idx][1] == test_list[iidx][0]:
+        res += 1
+  return res",0,1.0,-0.12852823896956045,nan,0.2773507206895453,nan,0.8530638966751233,0.9895638142074092,0.2,356,10.58659291267395,0,1,1,3,AssertionError
+mbpp:220,mbpp,coding,439,,Qwen2.5-3B-Instruct,"Write a function to join a list of multiple integers into a single integer.
+
+Your code should pass these tests:
+```python
+assert multiple_to_single([11, 33, 50])==113350
+assert multiple_to_single([-1,2,3,4,5,6])==-123456
+assert multiple_to_single([10,15,20,25])==10152025
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def multiple_to_single(int_list):
+    # Join all elements in the list into a single string, then convert it to an integer
+    result = int(''.join(map(str, int_list)))
+    return result
+
+# Test cases to verify the correctness of the solution
+assert multiple_to_single([11, 33, 50]) == 113350
+assert multiple_to_single([-1, 2, 3, 4, 5, 6]) == -123456
+assert multiple_to_single([10, 15, 20, 25]) == 101","def multiple_to_single(L):
+  x = int("""".join(map(str, L)))
+  return x",1,1.0,-0.0616647978464825,nan,0.1375612229938133,nan,0.9216215735187336,0.9960937873035872,1.0,147,10.58659291267395,0,1,1,5,ok
+mbpp:221,mbpp,coding,440,,Qwen2.5-3B-Instruct,"Write a function to find the first adverb and their positions in a given sentence.
+
+Your code should pass these tests:
+```python
+assert find_adverb_position(""clearly!! we can see the sky"")==(0, 7, 'clearly')
+assert find_adverb_position(""seriously!! there are many roses"")==(0, 9, 'seriously')
+assert find_adverb_position(""unfortunately!! sita is going to home"")==(0, 13, 'unfortunately')
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","import re
+
+def find_adverb_position(sentence):
+    # Define the regex pattern for adverbs (words ending with -ly)
+    adverb_pattern = r'\b(\w+ly)\b'
+    
+    # Search for the first occurrence of an adverb in the sentence
+    match = re.search(adverb_pattern, sentence)
+    
+    # If a match is found, return the start and end positions of the match along with the matched word
+    if match:
+        ","import re
+def find_adverb_position(text):
+ for m in re.finditer(r""\w+ly"", text):
+    return (m.start(), m.end(), m.group(0))",0,1.0,-0.15705824228954554,nan,0.3494527046877121,nan,0.807946892841807,0.9892422764931085,0.6,318,10.58659291267395,0,1,1,3,AssertionError
+mbpp:222,mbpp,coding,441,,Qwen2.5-3B-Instruct,"Write a function to find the surface area of a cube of a given size.
+
+Your code should pass these tests:
+```python
+assert surfacearea_cube(5)==150
+assert surfacearea_cube(3)==54
+assert surfacearea_cube(10)==600
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def surfacearea_cube(size):
+    # Calculate the surface area of a cube
+    return 6 * size * size
+
+# Test cases
+assert surfacearea_cube(5) == 150
+assert surfacearea_cube(3) == 54
+assert surfacearea_cube(10) == 600","def surfacearea_cube(l):
+  surfacearea= 6*l*l
+  return surfacearea",1,1.0,-0.14021221769522438,nan,0.28642796219638106,nan,0.8341189975451145,0.9939449291144099,1.0,112,10.58659291267395,0,1,1,5,ok
+mbpp:224,mbpp,coding,443,,Qwen2.5-3B-Instruct,"Write a python function to find the largest negative number from the given list.
+
+Your code should pass these tests:
+```python
+assert largest_neg([1,2,3,-4,-6]) == -6
+assert largest_neg([1,2,3,-8,-9]) == -9
+assert largest_neg([1,2,3,4,-1]) == -1
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def largest_neg(numbers):
+    # Initialize the largest negative number to a very small value
+    largest = float('-inf')
+    
+    # Iterate through the list to find the largest negative number
+    for num in numbers:
+        if num < 0 and num > largest:
+            largest = num
+            
+    return largest
+
+# Test cases to verify the correctness of the function
+assert largest_neg([1,2,3,-4,-6","def largest_neg(list1): 
+    max = list1[0] 
+    for x in list1: 
+        if x < max : 
+             max = x  
+    return max",0,1.0,-0.06365137877775584,nan,0.14292243295042983,nan,0.9122607182573389,0.998764451344808,0.0,135,10.58659291267395,0,1,1,0,AssertionError
+mbpp:225,mbpp,coding,444,,Qwen2.5-3B-Instruct,"Write a function to trim each tuple by k in the given tuple list.
+
+Your code should pass these tests:
+```python
+assert trim_tuple([(5, 3, 2, 1, 4), (3, 4, 9, 2, 1),(9, 1, 2, 3, 5), (4, 8, 2, 1, 7)], 2) == '[(2,), (9,), (2,), (2,)]'
+assert trim_tuple([(5, 3, 2, 1, 4), (3, 4, 9, 2, 1), (9, 1, 2, 3, 5), (4, 8, 2, 1, 7)], 1) == '[(3, 2, 1), (4, 9, 2), (1, 2, 3), (8, 2, 1)]'
+assert trim_tuple([(7, 8, 4, 9), (11, 8, 12, 4),(4, 1, 7, 8), (3, 6, 9, 7)], 1) == '[(8, 4), (8, 12), (1, 7), (6, 9)]'
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def trim_tuple(tuples_list, k):
+    # Trim each tuple by removing the first k elements
+    trimmed_tuples = [tuple(t[k:]) for t in tuples_list]
+    return str(trimmed_tuples)
+
+# Test cases to verify the correctness of the function
+print(trim_tuple([(5, 3, 2, 1, 4), (3, 4, 9, 2, 1),(9, 1, 2, 3, 5), (4, 8, 2, 1, 7)], 2))  # Expected: '[(2,), (9,), (2,), (2,)]'
+print(trim_tuple([(5, 3, 2, 1, 4), (3, ","def trim_tuple(test_list, K):
+  res = []
+  for ele in test_list:
+    N = len(ele)
+    res.append(tuple(list(ele)[K: N - K]))
+  return (str(res)) ",0,1.0,-0.028136231527489754,nan,0.0702098795476861,nan,0.9611396462786446,0.9982809779905778,0.4,337,10.58659291267395,0,1,1,3,AssertionError
+mbpp:226,mbpp,coding,445,,Qwen2.5-3B-Instruct,"Write a function to perform index wise multiplication of tuple elements in the given two tuples.
+
+Your code should pass these tests:
+```python
+assert index_multiplication(((1, 3), (4, 5), (2, 9), (1, 10)),((6, 7), (3, 9), (1, 1), (7, 3)) ) == ((6, 21), (12, 45), (2, 9), (7, 30))
+assert index_multiplication(((2, 4), (5, 6), (3, 10), (2, 11)),((7, 8), (4, 10), (2, 2), (8, 4)) ) == ((14, 32), (20, 60), (6, 20), (16, 44))
+assert index_multiplication(((3, 5), (6, 7), (4, 11), (3, 12)),((8, 9), (5, 11), (3, 3), (9, 5)) ) == ((24, 45), (30, 77), (12, 33), (27, 60))
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def index_multiplication(tup1, tup2):
+    # Initialize an empty list to store the result
+    result = []
+    
+    # Iterate through each pair of tuples from both input tuples
+    for i in range(len(tup1)):
+        # Multiply corresponding elements at the same index and append the result as a tuple to the result list
+        result.append((tup1[i][0] * tup2[i][0], tup1[i][1] * tup2[i][1]))
+    
+   ","def index_multiplication(test_tup1, test_tup2):
+  res = tuple(tuple(a * b for a, b in zip(tup1, tup2))
+   for tup1, tup2 in zip(test_tup1, test_tup2))
+  return (res) ",0,1.0,-0.04066258357192421,nan,0.08706595271650192,nan,0.9461808220602513,0.9983870506909124,0.6,383,10.58659291267395,0,1,1,4,AssertionError
+mbpp:227,mbpp,coding,446,,Qwen2.5-3B-Instruct,"Write a python function to count the occurence of all elements of list in a tuple.
+
+Your code should pass these tests:
+```python
+assert count_Occurrence(('a', 'a', 'c', 'b', 'd'),['a', 'b'] ) == 3
+assert count_Occurrence((1, 2, 3, 1, 4, 6, 7, 1, 4),[1, 4, 7]) == 6
+assert count_Occurrence((1,2,3,4,5,6),[1,2]) == 2
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def count_Occurrence(tup, lst):
+    # Convert the tuple to a list for easier manipulation
+    tup_list = list(tup)
+    # Initialize a dictionary to keep track of occurrences
+    occurrence_dict = {item: 0 for item in lst}
+    
+    # Count occurrences of each element in the list within the tuple
+    for item in tup_list:
+        if item in occurrence_dict:
+            occurrence_dict[item] += 1
+   ","from collections import Counter 
+def count_Occurrence(tup, lst): 
+    count = 0
+    for item in tup: 
+        if item in lst: 
+            count+= 1 
+    return count  ",0,1.0,-0.07685131630190102,nan,0.18149841268839828,nan,0.9010240788070055,0.9951052810137089,0.8,260,10.58659291267395,0,1,1,4,AssertionError
+mbpp:229,mbpp,coding,448,,Qwen2.5-3B-Instruct,"Write a function to calculate the sum of perrin numbers.
+
+Your code should pass these tests:
+```python
+assert cal_sum(9) == 49
+assert cal_sum(10) == 66
+assert cal_sum(11) == 88
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def cal_sum(n):
+    # Initialize the first three Perrin numbers
+    a, b, c = 3, 0, 2
+    
+    # Calculate the sum of the first n Perrin numbers
+    sum_perrin = a + b + c
+    
+    # Loop to calculate subsequent Perrin numbers and update the sum
+    for i in range(3, n):
+        a, b, c = b, c, a + b
+        sum_perrin += c
+    
+    return sum_perrin
+
+# Test cases
+assert cal_sum(9) == 49
+assert ca","def cal_sum(n): 
+	a = 3
+	b = 0
+	c = 2
+	if (n == 0): 
+		return 3
+	if (n == 1): 
+		return 3
+	if (n == 2): 
+		return 5
+	sum = 5
+	while (n > 2): 
+		d = a + b 
+		sum = sum + d 
+		a = b 
+		b = c 
+		c = d 
+		n = n-1
+	return sum",0,1.0,-0.09872832244740314,nan,0.21674299448691747,nan,0.8783786740976495,0.9941517575220629,0.2,154,10.58659291267395,0,1,1,2,AssertionError
+mbpp:230,mbpp,coding,450,,Qwen2.5-3B-Instruct,"Write a function to extract specified size of strings from a given list of string values.
+
+Your code should pass these tests:
+```python
+assert extract_string(['Python', 'list', 'exercises', 'practice', 'solution'] ,8)==['practice', 'solution']
+assert extract_string(['Python', 'list', 'exercises', 'practice', 'solution'] ,6)==['Python']
+assert extract_string(['Python', 'list', 'exercises', 'practice', 'solution'] ,9)==['exercises']
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def extract_string(lst, size):
+    # Use list comprehension to filter strings that have the exact length specified
+    result = [s for s in lst if len(s) == size]
+    return result
+
+# Test cases to verify the correctness of the function
+assert extract_string(['Python', 'list', 'exercises', 'practice', 'solution'], 8) == ['practice', 'solution']
+assert extract_string(['Python', 'list', 'exercises',","def extract_string(str, l):
+    result = [e for e in str if len(e) == l] 
+    return result",1,1.0,-0.12909479251152778,nan,0.29348207711826024,nan,0.8385680810466332,0.9920307891974177,1.0,193,10.58659291267395,0,1,1,5,ok
+mbpp:231,mbpp,coding,451,,Qwen2.5-3B-Instruct,"Write a function to remove all whitespaces from the given string.
+
+Your code should pass these tests:
+```python
+assert remove_whitespaces(' Google    Flutter ') == 'GoogleFlutter'
+assert remove_whitespaces(' Google    Dart ') == 'GoogleDart'
+assert remove_whitespaces(' iOS    Swift ') == 'iOSSwift'
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def remove_whitespaces(input_string):
+    # Remove all whitespace characters (spaces, tabs, newlines, etc.)
+    cleaned_string = ''.join(input_string.split())
+    return cleaned_string
+
+# Test the function with the provided test cases
+assert remove_whitespaces(' Google    Flutter ') == 'GoogleFlutter'
+assert remove_whitespaces(' Google    Dart ') == 'GoogleDart'
+assert remove_whitespaces(' iOS    ","import re
+def remove_whitespaces(text1):
+  return (re.sub(r'\s+', '',text1))",1,1.0,-0.12534879451321554,nan,0.2632543862377677,nan,0.8412803157902601,0.99510622756523,1.0,171,19.312989433606464,0,1,1,5,ok
+mbpp:233,mbpp,coding,453,,Qwen2.5-3B-Instruct,"Write a python function to find the sum of even factors of a number.
+
+Your code should pass these tests:
+```python
+assert sumofFactors(18) == 26
+assert sumofFactors(30) == 48
+assert sumofFactors(6) == 8
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def sumofFactors(n):
+    # Initialize sum to store the sum of even factors
+    sum_even_factors = 0
+    
+    # Iterate through possible factors
+    for i in range(2, n + 1, 2):  # Start from 2 and increment by 2 to only check even numbers
+        if n % i == 0:
+            sum_even_factors += i
+    
+    return sum_even_factors
+
+# Test cases
+assert sumofFactors(18) == 26
+assert sumofFactors(30) == ","import math 
+def sumofFactors(n) : 
+    if (n % 2 != 0) : 
+        return 0
+    res = 1
+    for i in range(2, (int)(math.sqrt(n)) + 1) :    
+        count = 0
+        curr_sum = 1
+        curr_term = 1
+        while (n % i == 0) : 
+            count= count + 1
+            n = n // i 
+            if (i == 2 and count == 1) : 
+                curr_sum = 0
+            curr_term = curr_term * i 
+     ",1,1.0,-0.09322841434444208,nan,0.2143354071086055,nan,0.8748118216866878,0.9965201923206671,0.8,134,19.312989433606464,0,1,1,5,ok
+mbpp:234,mbpp,coding,454,,Qwen2.5-3B-Instruct,"Write a function that matches a word containing 'z'.
+
+Your code should pass these tests:
+```python
+assert text_match_wordz(""pythonz."")==True
+assert text_match_wordz(""xyz."")==True
+assert text_match_wordz(""  lang  ."")==False
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","import re
+
+def text_match_wordz(text):
+    # Using regex to check if the string contains 'z' (case insensitive)
+    pattern = r'\bz\b'
+    return bool(re.search(pattern, text, re.IGNORECASE))
+
+# Test cases
+assert text_match_wordz(""pythonz."") == True
+assert text_match_wordz(""xyz."") == True
+assert text_match_wordz(""  lang  ."") == False","import re
+def text_match_wordz(text):
+        patterns = '\w*z.\w*'
+        if re.search(patterns,  text):
+                return True
+        else:
+                return False",0,1.0,-0.09697557192644397,nan,0.19007207890144595,nan,0.8817176541432421,0.996271846142221,0.8,94,19.312989433606464,0,1,1,4,AssertionError
+mbpp:236,mbpp,coding,456,,Qwen2.5-3B-Instruct,"Write a function to reverse each string in a given list of string values.
+
+Your code should pass these tests:
+```python
+assert reverse_string_list(['Red', 'Green', 'Blue', 'White', 'Black'])==['deR', 'neerG', 'eulB', 'etihW', 'kcalB']
+assert reverse_string_list(['john','amal','joel','george'])==['nhoj','lama','leoj','egroeg']
+assert reverse_string_list(['jack','john','mary'])==['kcaj','nhoj','yram']
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def reverse_string_list(string_list):
+    # Reverse each string in the list and return the new list
+    reversed_list = [s[::-1] for s in string_list]
+    return reversed_list
+
+# Test cases to verify the correctness of the function
+assert reverse_string_list(['Red', 'Green', 'Blue', 'White', 'Black']) == ['deR', 'neerG', 'eulB', 'etihW', 'kcalB']
+assert reverse_string_list(['john','amal','joel','g","def reverse_string_list(stringlist):
+    result = [x[::-1] for x in stringlist]
+    return result",1,1.0,-0.036509559018402964,nan,0.0922960256795723,nan,0.947159387362309,0.9987699450590671,1.0,156,19.312989433606464,0,1,1,5,ok
+mbpp:238,mbpp,coding,458,,Qwen2.5-3B-Instruct,"Write a function to find the area of a rectangle.
+
+Your code should pass these tests:
+```python
+assert rectangle_area(10,20)==200
+assert rectangle_area(10,5)==50
+assert rectangle_area(4,2)==8
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def rectangle_area(length, width):
+    # Calculate the area of the rectangle
+    return length * width
+
+# Test cases to verify the correctness of the function
+assert rectangle_area(10, 20) == 200
+assert rectangle_area(10, 5) == 50
+assert rectangle_area(4, 2) == 8","def rectangle_area(l,b):
+  area=l*b
+  return area",1,1.0,-0.036685196158252865,nan,0.07968435539022964,nan,0.940973004662847,0.9998889594192965,1.0,83,19.312989433606464,0,1,1,5,ok
+mbpp:239,mbpp,coding,459,,Qwen2.5-3B-Instruct,"Write a function to remove uppercase substrings from a given string.
+
+Your code should pass these tests:
+```python
+assert remove_uppercase('cAstyoUrFavoRitETVshoWs') == 'cstyoravoitshos'
+assert remove_uppercase('wAtchTheinTernEtrAdIo') == 'wtchheinerntrdo'
+assert remove_uppercase('VoicESeaRchAndreComMendaTionS') == 'oiceachndreomendaion'
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","import re
+
+def remove_uppercase(input_string):
+    # Use regular expression to replace all uppercase letters with an empty string
+    result = re.sub('[A-Z]', '', input_string)
+    return result
+
+# Test cases to verify the correctness of the function
+assert remove_uppercase('cAstyoUrFavoRitETVshoWs') == 'cstyoravoitshos'
+assert remove_uppercase('wAtchTheinTernEtrAdIo') == 'wtchheinerntrdo'
+assert ","import re
+def remove_uppercase(str1):
+  return re.sub('[A-Z]', '', str1)",1,1.0,-0.09169869605753295,nan,0.2086941629722643,nan,0.8756111171288589,0.9961006764284114,0.6,194,19.312989433606464,0,1,1,3,ok
+mbpp:240,mbpp,coding,460,,Qwen2.5-3B-Instruct,"Write a python function to get the first element of each sublist.
+
+Your code should pass these tests:
+```python
+assert Extract([[1, 2], [3, 4, 5], [6, 7, 8, 9]]) == [1, 3, 6]
+assert Extract([[1,2,3],[4, 5]]) == [1,4]
+assert Extract([[9,8,1],[1,2]]) == [9,1]
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def Extract(lst):
+    # Use list comprehension to extract the first element from each sublist
+    return [sub[0] for sub in lst]
+
+# Test cases to verify the correctness of the function
+assert Extract([[1, 2], [3, 4, 5], [6, 7, 8, 9]]) == [1, 3, 6]
+assert Extract([[1,2,3],[4, 5]]) == [1,4]
+assert Extract([[9,8,1],[1,2]]) == [9,1]","def Extract(lst): 
+    return [item[0] for item in lst] ",1,1.0,-0.03423271221091814,nan,0.08641535660117837,nan,0.9507508518234375,0.9988277631421243,1.0,124,19.312989433606464,0,1,1,5,ok
+mbpp:241,mbpp,coding,461,,Qwen2.5-3B-Instruct,"Write a python function to count the upper case characters in a given string.
+
+Your code should pass these tests:
+```python
+assert upper_ctr('PYthon') == 1
+assert upper_ctr('BigData') == 1
+assert upper_ctr('program') == 0
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def upper_ctr(s):
+    # Initialize a counter for uppercase characters
+    upper_count = 0
+    
+    # Iterate through each character in the string
+    for char in s:
+        # Check if the character is an uppercase letter
+        if char >= 'A' and char <= 'Z':
+            upper_count += 1
+            
+    return upper_count
+
+# Test cases to verify the correctness of the function
+assert upper_ctr('","def upper_ctr(str):
+    upper_ctr = 0
+    for i in range(len(str)):
+          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1
+          return upper_ctr",0,1.0,-0.05732006674554604,nan,0.12234727916686665,nan,0.9149068197435584,0.9993456828692728,0.0,121,19.312989433606464,0,1,1,0,AssertionError
+mbpp:242,mbpp,coding,462,,Qwen2.5-3B-Instruct,"Write a function to find all possible combinations of the elements of a given list.
+
+Your code should pass these tests:
+```python
+assert combinations_list(['orange', 'red', 'green', 'blue'])==[[], ['orange'], ['red'], ['red', 'orange'], ['green'], ['green', 'orange'], ['green', 'red'], ['green', 'red', 'orange'], ['blue'], ['blue', 'orange'], ['blue', 'red'], ['blue', 'red', 'orange'], ['blue', 'green'], ['blue', 'green', 'orange'], ['blue', 'green', 'red'], ['blue', 'green', 'red', 'orange']]
+assert combinations_list(['red', 'green', 'blue', 'white', 'black', 'orange'])==[[], ['red'], ['green'], ['green', 'red'], ['blue'], ['blue', 'red'], ['blue', 'green'], ['blue', 'green', 'red'], ['white'], ['white', 'red'], ['white', 'green'], ['white', 'green', 'red'], ['white', 'blue'], ['white', 'blue', 'red'], ['white', 'blue', 'green'], ['white', 'blue', 'green', 'red'], ['black'], ['black', 'red'], ['black', 'green'], ['black', 'green', 'red'], ['black', 'blue'], ['black', 'blue', 'red'], ['black', 'blue', 'green'], ['black', 'blue', 'green', 'red'], ['black', 'white'], ['black', 'white', 'red'], ['black', 'white', 'green'], ['black', 'white', 'green', 'red'], ['black', 'white', 'blue'], ['black', 'white', 'blue', 'red'], ['black', 'white', 'blue', 'green'], ['black', 'white', 'blue', 'green', 'red'], ['orange'], ['orange', 'red'], ['orange', 'green'], ['orange', 'green', 'red'], ['orange', 'blue'], ['orange', 'blue', 'red'], ['orange', 'blue', 'green'], ['orange', 'blue', 'green', 'red'], ['orange', 'white'], ['orange', 'white', 'red'], ['orange', 'white', 'green'], ['orange', 'white', 'green', 'red'], ['orange', 'white', 'blue'], ['orange', 'white', 'blue', 'red'], ['orange', 'white', 'blue', 'green'], ['orange', 'white', 'blue', 'green', 'red'], ['orange', 'black'], ['orange', 'black', 'red'], ['orange', 'black', 'green'], ['orange', 'black', 'green', 'red'], ['orange', 'black', 'blue'], ['orange', 'black', 'blue', 'red'], ['orange', 'black', 'blue', 'green'], ['orange', 'black', 'blue', 'green', 'red'], ['orange', 'black', 'white'], ['orange', 'black', 'white', 'red'], ['orange', 'black', 'white', 'green'], ['orange', 'black', 'white', 'green', 'red'], ['orange', 'black', 'white', 'blue'], ['orange', 'black', 'white', 'blue', 'red'], ['orange', 'black', 'white', 'blue', 'green'], ['orange', 'black', 'white', 'blue', 'green', 'red']]
+assert combinations_list(['red', 'green', 'black', 'orange'])==[[], ['red'], ['green'], ['green', 'red'], ['black'], ['black', 'red'], ['black', 'green'], ['black', 'green', 'red'], ['orange'], ['orange', 'red'], ['orange', 'green'], ['orange', 'green', 'red'], ['orange', 'black'], ['orange', 'black', 'red'], ['orange', 'black', 'green'], ['orange', 'black', 'green', 'red']]
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","To solve this problem, we can use Python's `itertools.combinations` function which generates all possible combinations of a specified length from a given iterable. We will generate combinations for each possible length from 0 to the length of the input list. Here is how you could implement it:
+
+```python
+from itertools import combinations
+
+def combinations_list(lst):
+    # Generate all possible co","def combinations_list(list1):
+    if len(list1) == 0:
+        return [[]]
+    result = []
+    for el in combinations_list(list1[1:]):
+        result += [el, el+[list1[0]]]
+    return result",0,1.0,-0.05531227910665837,nan,0.12391173838377756,nan,0.9273766661353875,0.9976944363443181,0.2,512,19.312989433606464,0,0,1,1,SyntaxError: unterminated string literal (detected at line 2)
+mbpp:243,mbpp,coding,463,,Qwen2.5-3B-Instruct,"Write a function to find the maximum product subarray of the given array.
+
+Your code should pass these tests:
+```python
+assert max_subarray_product([1, -2, -3, 0, 7, -8, -2]) == 112
+assert max_subarray_product([6, -3, -10, 0, 2]) == 180
+assert max_subarray_product([-2, -40, 0, -2, -3]) == 80
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def max_subarray_product(nums):
+    if not nums:
+        return 0
+    
+    max_product = min_product = result = nums[0]
+    
+    for num in nums[1:]:
+        # If current number is positive, update both max and min products
+        if num > 0:
+            max_product, min_product = max(num, num * max_product), min(num, num * min_product)
+        # If current number is negative, swap max and min pr","def max_subarray_product(arr):
+	n = len(arr)
+	max_ending_here = 1
+	min_ending_here = 1
+	max_so_far = 0
+	flag = 0
+	for i in range(0, n):
+		if arr[i] > 0:
+			max_ending_here = max_ending_here * arr[i]
+			min_ending_here = min (min_ending_here * arr[i], 1)
+			flag = 1
+		elif arr[i] == 0:
+			max_ending_here = 1
+			min_ending_here = 1
+		else:
+			temp = max_ending_here
+			max_ending_here = max (min_endi",0,1.0,-0.12708712458867574,nan,0.2981901226424934,nan,0.8512307952014392,0.988144652955484,0.8,298,19.312989433606464,0,1,1,4,AssertionError
+mbpp:245,mbpp,coding,465,,Qwen2.5-3B-Instruct,"Write a function to drop empty items from a given dictionary.
+
+Your code should pass these tests:
+```python
+assert drop_empty({'c1': 'Red', 'c2': 'Green', 'c3':None})=={'c1': 'Red', 'c2': 'Green'}
+assert drop_empty({'c1': 'Red', 'c2': None, 'c3':None})=={'c1': 'Red'}
+assert drop_empty({'c1': None, 'c2': 'Green', 'c3':None})=={ 'c2': 'Green'}
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def drop_empty(d):
+    # Use dictionary comprehension to filter out keys with None values
+    result = {key: value for key, value in d.items() if value is not None}
+    return result
+
+# Test cases to verify the correctness of the function
+assert drop_empty({'c1': 'Red', 'c2': 'Green', 'c3':None}) == {'c1': 'Red', 'c2': 'Green'}
+assert drop_empty({'c1': 'Red', 'c2': None, 'c3':None}) == {'c1': 'Red","def drop_empty(dict1):
+  dict1 = {key:value for (key, value) in dict1.items() if value is not None}
+  return dict1",1,1.0,-0.04320637133172201,nan,0.10258640447066412,nan,0.942378204814188,0.9980958495170448,1.0,157,19.312989433606464,0,1,1,5,ok
+mbpp:246,mbpp,coding,468,,Qwen2.5-3B-Instruct,"Write a function to find the maximum product formed by multiplying numbers of an increasing subsequence of that array.
+
+Your code should pass these tests:
+```python
+assert max_product([3, 100, 4, 5, 150, 6]) == 3000
+assert max_product([4, 42, 55, 68, 80]) == 50265600
+assert max_product([10, 22, 9, 33, 21, 50, 41, 60]) == 2460
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def max_product(nums):
+    # Initialize variables to store the maximum product and the current maximum element in the increasing subsequence
+    max_product = nums[0]
+    current_max = nums[0]
+    
+    # Iterate through the list starting from the second element
+    for num in nums[1:]:
+        # Update the current_max if the current number is greater than it
+        current_max = max(num, current_","def max_product(arr):   
+  n = len(arr)
+  mpis = arr[:]
+  for i in range(n): 
+    current_prod = arr[i]
+    j = i + 1
+    while j < n:
+      if arr[j-1] > arr[j]: 
+        break
+      current_prod *= arr[j]
+      if current_prod > mpis[j]:
+        mpis[j] = current_prod 
+      j = j + 1
+  return max(mpis)",0,1.0,-0.12973757749368986,nan,0.29862158027969,nan,0.8435128273095115,0.9891287132845087,0.2,295,19.312989433606464,0,1,1,2,AssertionError
+mbpp:248,mbpp,coding,471,,Qwen2.5-3B-Instruct,"Write a python function to find the product of the array multiplication modulo n.
+
+Your code should pass these tests:
+```python
+assert find_remainder([ 100, 10, 5, 25, 35, 14 ],11) ==9
+assert find_remainder([1,1,1],1) == 0
+assert find_remainder([1,2,1],2) == 0
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","from functools import reduce
+
+def find_remainder(arr, n):
+    # Calculate the product of all elements in the array
+    product = reduce(lambda x, y: (x * y) % n, arr, 1)
+    
+    # Return the product modulo n
+    return product % n
+
+# Test cases
+assert find_remainder([ 100, 10, 5, 25, 35, 14 ],11) == 9
+assert find_remainder([1,1,1],1) == 0
+assert find_remainder([1,2,1],2) == 0","def find_remainder(arr, n): 
+    mul = 1
+    for i in range(len(arr)):  
+        mul = (mul * (arr[i] % n)) % n 
+    return mul % n ",1,1.0,-0.07503653548690101,nan,0.17020568659918459,nan,0.896574892896287,0.9961561810040305,1.0,141,16.74211698770523,0,1,1,5,ok
+mbpp:249,mbpp,coding,472,,Qwen2.5-3B-Instruct,"Write a python function to check whether the given list contains consecutive numbers or not.
+
+Your code should pass these tests:
+```python
+assert check_Consecutive([1,2,3,4,5]) == True
+assert check_Consecutive([1,2,3,5,6]) == False
+assert check_Consecutive([1,2,1]) == False
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def check_Consecutive(nums):
+    # Sort the list to bring consecutive numbers next to each other
+    sorted_nums = sorted(nums)
+    
+    # Check for consecutive numbers
+    for i in range(1, len(sorted_nums)):
+        if sorted_nums[i] - sorted_nums[i-1] != 1:
+            return False
+    return True
+
+# Test cases
+assert check_Consecutive([1,2,3,4,5]) == True
+assert check_Consecutive([1,2,3,5,6]) ","def check_Consecutive(l): 
+    return sorted(l) == list(range(min(l),max(l)+1)) ",1,1.0,-0.05770022230690634,nan,0.13395497729609254,nan,0.9216995194895576,0.9969480201488233,0.8,131,16.74211698770523,0,1,1,4,ok
+mbpp:250,mbpp,coding,473,,Qwen2.5-3B-Instruct,"Write a function to find the tuple intersection of elements in the given tuple list irrespective of their order.
+
+Your code should pass these tests:
+```python
+assert tuple_intersection([(3, 4), (5, 6), (9, 10), (4, 5)] , [(5, 4), (3, 4), (6, 5), (9, 11)]) == {(4, 5), (3, 4), (5, 6)}
+assert tuple_intersection([(4, 1), (7, 4), (11, 13), (17, 14)] , [(1, 4), (7, 4), (16, 12), (10, 13)]) == {(4, 7), (1, 4)}
+assert tuple_intersection([(2, 1), (3, 2), (1, 3), (1, 4)] , [(11, 2), (2, 3), (6, 2), (1, 3)]) == {(1, 3), (2, 3)}
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def tuple_intersection(tuples_list1, tuples_list2):
+    # Convert each tuple in both lists into sets for easy comparison
+    set_list1 = [set(tup) for tup in tuples_list1]
+    set_list2 = [set(tup) for tup in tuples_list2]
+    
+    # Find the intersection of all sets from both lists
+    intersection_sets = set.intersection(*map(set, set_list1 + set_list2))
+    
+    # Convert the resulting set back","def tuple_intersection(test_list1, test_list2):
+  res = set([tuple(sorted(ele)) for ele in test_list1]) & set([tuple(sorted(ele)) for ele in test_list2])
+  return (res)",0,1.0,-0.10267854767312197,nan,0.2316129052151443,nan,0.8711797231768333,0.9930057015285984,0.6,466,16.74211698770523,0,1,1,4,AssertionError
+mbpp:251,mbpp,coding,474,,Qwen2.5-3B-Instruct,"Write a function to replace characters in a string.
+
+Your code should pass these tests:
+```python
+assert replace_char(""polygon"",'y','l')==(""pollgon"")
+assert replace_char(""character"",'c','a')==(""aharaater"")
+assert replace_char(""python"",'l','a')==(""python"")
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def replace_char(input_string, char_to_replace, replacement_char):
+    # Replace occurrences of char_to_replace with replacement_char in input_string
+    return input_string.replace(char_to_replace, replacement_char)
+
+# Test cases
+print(replace_char(""polygon"", 'y', 'l'))  # Expected: ""pollgon""
+print(replace_char(""character"", 'c', 'a'))  # Expected: ""aharaater""
+print(replace_char(""python"", 'l', 'a'","def replace_char(str1,ch,newch):
+ str2 = str1.replace(ch, newch)
+ return str2",1,1.0,-0.07097617826264559,nan,0.15399804928414593,nan,0.9088237048791987,0.9972522971885545,1.0,112,16.74211698770523,0,1,1,5,ok
+mbpp:252,mbpp,coding,475,,Qwen2.5-3B-Instruct,"Write a function to sort a dictionary by value.
+
+Your code should pass these tests:
+```python
+assert sort_counter({'Math':81, 'Physics':83, 'Chemistry':87})==[('Chemistry', 87), ('Physics', 83), ('Math', 81)]
+assert sort_counter({'Math':400, 'Physics':300, 'Chemistry':250})==[('Math', 400), ('Physics', 300), ('Chemistry', 250)]
+assert sort_counter({'Math':900, 'Physics':1000, 'Chemistry':1250})==[('Chemistry', 1250), ('Physics', 1000), ('Math', 900)]
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def sort_counter(input_dict):
+    # Sort the dictionary items by value and return a list of tuples sorted by value
+    sorted_items = sorted(input_dict.items(), key=lambda item: item[1], reverse=True)
+    return sorted_items
+
+# Test cases to verify the correctness of the function
+assert sort_counter({'Math':81, 'Physics':83, 'Chemistry':87})==[('Chemistry', 87), ('Physics', 83), ('Math', 81)]
+asse","from collections import Counter
+def sort_counter(dict1):
+ x = Counter(dict1)
+ sort_counter=x.most_common()
+ return sort_counter",1,1.0,-0.03857145437379089,nan,0.07652634214726736,nan,0.9431591363258014,0.9994234899951987,0.8,219,16.74211698770523,0,1,1,4,ok
+mbpp:254,mbpp,coding,477,,Qwen2.5-3B-Instruct,"Write a python function to convert the given string to lower case.
+
+Your code should pass these tests:
+```python
+assert is_lower(""InValid"") == ""invalid""
+assert is_lower(""TruE"") == ""true""
+assert is_lower(""SenTenCE"") == ""sentence""
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def is_lower(s):
+    # Convert the entire string to lowercase
+    return s.lower()
+
+# Test cases to verify the correctness of the function
+assert is_lower(""InValid"") == ""invalid""
+assert is_lower(""TruE"") == ""true""
+assert is_lower(""SenTenCE"") == ""sentence""","def is_lower(string):
+  return (string.lower())",1,1.0,-0.0621936254843279,nan,0.12635646304723552,nan,0.9139940466199602,0.9991455342088427,1.0,70,16.74211698770523,0,1,1,5,ok
+mbpp:255,mbpp,coding,478,,Qwen2.5-3B-Instruct,"Write a function to remove lowercase substrings from a given string.
+
+Your code should pass these tests:
+```python
+assert remove_lowercase(""PYTHon"")==('PYTH')
+assert remove_lowercase(""FInD"")==('FID')
+assert remove_lowercase(""STRinG"")==('STRG')
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def remove_lowercase(input_string):
+    # Use a generator expression within the join method to filter out lowercase characters
+    return ''.join(c for c in input_string if not c.islower())
+
+# Test cases to verify the correctness of the function
+assert remove_lowercase(""PYTHon"") == 'PYTH'
+assert remove_lowercase(""FInD"") == 'FID'
+assert remove_lowercase(""STRinG"") == 'STRG'","import re
+def remove_lowercase(str1):
+ return re.sub('[a-z]', '', str1)",1,1.0,-0.2967629263272092,nan,0.6548877692482766,nan,0.7387386689545544,0.9426759299431139,1.0,131,16.74211698770523,0,1,1,5,ok
+mbpp:256,mbpp,coding,479,,Qwen2.5-3B-Instruct,"Write a python function to find the first digit of a given number.
+
+Your code should pass these tests:
+```python
+assert first_Digit(123) == 1
+assert first_Digit(456) == 4
+assert first_Digit(12) == 1
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def first_Digit(n):
+    # Ensure n is positive for simplicity
+    n = abs(n)
+    # Divide n by 10 until it's less than 10
+    while n >= 10:
+        n /= 10
+    return int(n)
+
+# Test cases to verify the correctness of the function
+assert first_Digit(123) == 1
+assert first_Digit(456) == 4
+assert first_Digit(12) == 1","def first_Digit(n) :  
+    while n >= 10:  
+        n = n / 10 
+    return int(n) ",1,1.0,-0.07401147716527877,nan,0.1705802421398326,nan,0.8987313136458397,0.9958835015339511,1.0,112,16.74211698770523,0,1,1,5,ok
