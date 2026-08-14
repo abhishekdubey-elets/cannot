@@ -352,6 +352,52 @@ def prediction_verdicts(rq1, rq2, tables_dir, df):
             mn = min(rhos)
             v.append(dict(model=model, prediction="P4", statistic=f"min_rho={mn:.3f}",
                           ci="", verdict="SUPPORTED" if mn > 0.9 else "FALSIFIED"))
+        # P5 (preregistered falsifiers, benchmark-level): internal beats best free feature
+        # on GSM8K/SVAMP, or a free feature beats selfconf on MMLU/TruthfulQA. Saturated
+        # benchmarks (acc outside SATURATION) are excluded, as in every primary test.
+        def _best_ff_auroc(bs):
+            best = 0.5
+            labs = bs["correct"].tolist()
+            for name in freefeat.FEATURE_NAMES:
+                col = f"ff_{name}"
+                if col not in bs or bs[col].nunique() < 2:
+                    continue
+                a = S.auroc(bs[col].tolist(), labs)
+                best = max(best, a, 1 - a)   # folded: direction-free discrimination
+            return best
+
+        def _sig_auroc(bs, sig):
+            col, orient = SIGNALS[sig]
+            ok = bs.dropna(subset=[col])
+            if len(ok) < 100:
+                return np.nan
+            return S.auroc((orient * ok[col]).tolist(), ok["correct"].tolist())
+
+        stats_bits, falsified = [], []
+        for b in ("gsm8k", "svamp"):
+            bs = sub[sub["benchmark"] == b]
+            if not len(bs) or not SATURATION[0] <= bs["correct"].mean() <= SATURATION[1]:
+                continue
+            ff = _best_ff_auroc(bs)
+            internal = max((a for s in SIGNALS if not np.isnan(a := _sig_auroc(bs, s))),
+                           default=np.nan)
+            stats_bits.append(f"{b}: ff={ff:.3f} best_int={internal:.3f}")
+            if not np.isnan(internal) and internal > ff:
+                falsified.append(f"internal>ff on {b}")
+        for b in ("mmlu", "truthfulqa"):
+            bs = sub[sub["benchmark"] == b]
+            if not len(bs) or not SATURATION[0] <= bs["correct"].mean() <= SATURATION[1]:
+                continue
+            ff = _best_ff_auroc(bs)
+            sc = _sig_auroc(bs, "selfconf")
+            stats_bits.append(f"{b}: ff={ff:.3f} selfconf={sc:.3f}")
+            if not np.isnan(sc) and ff > sc:
+                falsified.append(f"ff>selfconf on {b}")
+        if stats_bits:
+            v.append(dict(model=model, prediction="P5",
+                          statistic="; ".join(stats_bits)[:200],
+                          ci="; ".join(falsified) if falsified else "",
+                          verdict="FALSIFIED" if falsified else "SUPPORTED"))
     t = pd.DataFrame(v)
     write_table(t, tables_dir, "prediction_verdicts")
     return t
