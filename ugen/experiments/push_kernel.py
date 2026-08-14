@@ -98,6 +98,16 @@ main(model_hint={hint!r}, model_name={model_name!r},
 '''
 
 
+PROBE_WORDING_TEMPLATE = KERNEL_TEMPLATE.replace(
+    "from ugen.pipeline.runner import main",
+    "from ugen.pipeline.probe_wording import main").replace(
+    """main(model_hint={hint!r}, model_name={model_name!r},
+     benchmarks={benchmarks!r},
+     data_dir=data_dir,
+     seed=0, limit={limit!r})""",
+    """main(model_hint={hint!r}, model_name={model_name!r}, data_dir=data_dir, seed=0)""")
+
+
 def sh(*args, check=True):
     print("+", " ".join(args))
     r = subprocess.run(list(args), text=True, capture_output=True)
@@ -194,6 +204,31 @@ def push_run(run, limit=None, resume_from=None, suffix=""):
     return slug
 
 
+def push_probe_wording(run="m1"):
+    """Wording-sensitivity probe (PLAN 9.9): MMLU+GSM8K x 100 items x 4 confidence
+    wordings on one greedy chain each. ~1-2 GPU-h. Needs the one-time T4 UI toggle."""
+    kname, model_source, hint, model_name = MODELS[run]
+    slug = f"ugen-probe-wording-{kname}"
+    script = PROBE_WORDING_TEMPLATE.format(hint=hint, model_name=model_name,
+                                           benchmarks=[], limit=None)
+    pushed = HERE / "pushed"
+    pushed.mkdir(exist_ok=True)
+    (pushed / f"{slug}.py").write_text(script, encoding="utf-8")   # audit trail
+    with tempfile.TemporaryDirectory() as td:
+        (Path(td) / f"{slug}.py").write_text(script, encoding="utf-8")
+        meta = dict(
+            id=f"{USER}/{slug}", title=slug, code_file=f"{slug}.py",
+            language="python", kernel_type="script", is_private=True,
+            enable_gpu=True, enable_tpu=False, enable_internet=False,
+            dataset_sources=[SRC_DS, DATA_DS], kernel_sources=[],
+            competition_sources=[], model_sources=[model_source])
+        (Path(td) / "kernel-metadata.json").write_text(json.dumps(meta, indent=1),
+                                                       encoding="utf-8")
+        sh("kaggle", "kernels", "push", "-p", td)
+    print(f"pushed -> https://www.kaggle.com/code/{USER}/{slug}")
+    return slug
+
+
 def push_probe(run):
     """CPU-only kernel that just lists the attached model — verifies consent/attachability
     for M2-M4 without spending GPU quota."""
@@ -245,6 +280,8 @@ def main():
         push_run("m4", resume_from=a.resume_from, suffix=a.suffix)
     elif a.cmd == "probe":
         push_probe(a.arg)
+    elif a.cmd == "probe-wording":
+        push_probe_wording(a.arg or "m1")
     elif a.cmd == "status":
         sh("kaggle", "kernels", "status", f"{USER}/{a.arg}")
     elif a.cmd == "fetch":
