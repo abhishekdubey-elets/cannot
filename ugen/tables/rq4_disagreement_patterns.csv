@@ -1,0 +1,6 @@
+pattern,n,frac,acc,top_domains
+selfconf_hi_logprob_lo,0,0.0,,
+consist_hi_entropy_hi,22,0.008661417322834646,0.8181818181818182,reasoning;knowledge
+entropy_lo_wrong,171,0.0673228346456693,0.0,knowledge;reasoning;coding
+logprob_hi_wrong,90,0.03543307086614173,0.0,knowledge;reasoning;commonsense
+selfconf_lo_correct,37,0.014566929133858268,1.0,commonsense;knowledge;reasoning

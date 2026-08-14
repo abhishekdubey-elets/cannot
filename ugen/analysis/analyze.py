@@ -100,34 +100,49 @@ def cell_metrics(sub, sig_col, orient, prob_like, seed=0):
     return out
 
 
-def rq1_tables(df, tables_dir):
+def extraction_flags(df):
+    """PLAN 9.2: per (model, benchmark) extraction-failure rate; > 10% -> flagged, excluded
+    from primary contrasts. Returns {(model, benchmark): flagged_bool}."""
+    if "extraction_ok" not in df:
+        return {}
+    r = df.groupby(["model", "benchmark"])["extraction_ok"].mean()
+    return {(m, b): (1 - v) > 0.10 for (m, b), v in r.items()}
+
+
+def rq1_tables(df, tables_dir, ext_flags):
     rows = []
     for (model, bench), sub in df.groupby(["model", "benchmark"]):
         acc = sub["correct"].mean()
+        ext_fail = (1 - sub["extraction_ok"].mean()) if "extraction_ok" in sub else np.nan
         for sig, (col, orient) in SIGNALS.items():
             m = cell_metrics(sub, col, orient, sig in PROB_SIGNALS)
             if m is None:
                 continue
             rows.append(dict(model=model, benchmark=bench, domain=sub["domain"].iloc[0],
                              signal=sig, accuracy=acc,
-                             saturated=int(not SATURATION[0] <= acc <= SATURATION[1]), **m))
+                             saturated=int(not SATURATION[0] <= acc <= SATURATION[1]),
+                             ext_fail=ext_fail,
+                             ext_flagged=int(ext_flags.get((model, bench), False)), **m))
     t = pd.DataFrame(rows)
     write_table(t, tables_dir, "rq1_signal_benchmark")
     return t
 
 
-def domain_pooled(df, model):
-    """Per-signal per-domain pooled scores, excluding saturated benchmarks (PLAN 7)."""
+def domain_pooled(df, model, ext_flags=None):
+    """Per-signal per-domain pooled scores, excluding saturated benchmarks (PLAN 7) and,
+    when ext_flags is given, extraction-flagged benchmarks (PLAN 9.2)."""
     sub = df[df["model"] == model]
     acc = sub.groupby("benchmark")["correct"].mean()
-    ok_bench = acc[(acc >= SATURATION[0]) & (acc <= SATURATION[1])].index
+    ok_bench = set(acc[(acc >= SATURATION[0]) & (acc <= SATURATION[1])].index)
+    if ext_flags:
+        ok_bench -= {b for (m, b), f in ext_flags.items() if m == model and f}
     return sub[sub["benchmark"].isin(ok_bench)]
 
 
-def rq2_contrasts(df, tables_dir):
+def rq2_contrasts(df, tables_dir, ext_flags=None, name="rq2_domain_contrasts"):
     rows, pvals = [], []
     for model in df["model"].unique():
-        pooled = domain_pooled(df, model)
+        pooled = domain_pooled(df, model, ext_flags)
         for sig, (col, orient) in SIGNALS.items():
             for da, db in PRIMARY_CONTRASTS:
                 A = pooled[(pooled["domain"] == da)].dropna(subset=[col])
@@ -150,7 +165,7 @@ def rq2_contrasts(df, tables_dir):
         prim = t["primary"] == 1
         adj = S.holm(t.loc[prim, "p_perm"].tolist())
         t.loc[prim, "p_holm"] = adj
-    write_table(t, tables_dir, "rq2_domain_contrasts")
+    write_table(t, tables_dir, name)
     return t
 
 
@@ -310,36 +325,77 @@ def rq5_information(df, tables_dir):
     return rows, pid_rows
 
 
-def prediction_verdicts(rq1, rq2, tables_dir, df):
-    """P1-P5 verdict table — the pre-registered tests, evaluated mechanically."""
+def prediction_verdicts(rq1, rq2, rq2_sens, tables_dir, df, ext_flags=None):
+    """P1-P5 verdict table — the pre-registered tests, evaluated mechanically.
+    Primary verdicts respect saturation (PLAN 7) + extraction-QC (PLAN 9.2) exclusions;
+    where those empty a pool the verdict is INCONCLUSIVE and a clearly-labelled
+    sensitivity row (flagged cells included) is emitted alongside."""
+    def _p1_verdict(r):
+        return ("SUPPORTED" if r.delta >= 0.15 and r.delta_lo > 0 else
+                "FALSIFIED" if r.delta < 0.10 or r.delta_lo <= 0 else "INCONCLUSIVE")
+
     v = []
-    for model in rq2["model"].unique():
+    models = set(rq2["model"].unique()) | set(rq1["model"].unique())
+    for model in sorted(models):
         t = rq2[(rq2.model == model)]
+        ts = rq2_sens[(rq2_sens.model == model)] if rq2_sens is not None else t
         p1 = t[(t.signal == "selfconf") & (t.contrast == "knowledge-arithmetic")]
+        p1s = ts[(ts.signal == "selfconf") & (ts.contrast == "knowledge-arithmetic")]
         if len(p1):
             r = p1.iloc[0]
-            verdict = ("SUPPORTED" if r.delta >= 0.15 and r.delta_lo > 0 else
-                       "FALSIFIED" if r.delta < 0.10 or r.delta_lo <= 0 else "INCONCLUSIVE")
             v.append(dict(model=model, prediction="P1", statistic=f"dAUROC={r.delta:+.3f}",
-                          ci=f"[{r.delta_lo:+.3f},{r.delta_hi:+.3f}]", verdict=verdict))
+                          ci=f"[{r.delta_lo:+.3f},{r.delta_hi:+.3f}]",
+                          verdict=_p1_verdict(r)))
+        else:
+            v.append(dict(model=model, prediction="P1",
+                          statistic="not evaluable: contrast pool empty after "
+                                    "saturation + extraction-QC exclusions",
+                          ci="", verdict="INCONCLUSIVE"))
+            if len(p1s):
+                r = p1s.iloc[0]
+                v.append(dict(model=model, prediction="P1 (sensitivity: QC-flagged cells "
+                              "included; exploratory)",
+                              statistic=f"dAUROC={r.delta:+.3f}",
+                              ci=f"[{r.delta_lo:+.3f},{r.delta_hi:+.3f}]",
+                              verdict=_p1_verdict(r)))
         pc = t[(t.signal == "consistency") & (t.contrast == "knowledge-arithmetic")]
+        pcs = ts[(ts.signal == "consistency") & (ts.contrast == "knowledge-arithmetic")]
         if len(p1) and len(pc):
             d_self, d_cons = p1.iloc[0].delta, pc.iloc[0].delta
             v.append(dict(model=model, prediction="P2",
                           statistic=f"d_cons={d_cons:+.3f} vs d_self={d_self:+.3f}",
                           ci="", verdict="SUPPORTED" if d_cons < d_self else "FALSIFIED"))
-        arith = rq1[(rq1.model == model) & (rq1.domain == "arithmetic") &
-                    (rq1.signal == "logprob") & (rq1.saturated == 0)]
-        arith_ans = rq1[(rq1.model == model) & (rq1.domain == "arithmetic") &
-                        (rq1.signal == "logprob_answer") & (rq1.saturated == 0)]
-        if len(arith):
+        elif len(p1s) and len(pcs):
+            d_self, d_cons = p1s.iloc[0].delta, pcs.iloc[0].delta
+            v.append(dict(model=model, prediction="P2", statistic="not evaluable (QC)",
+                          ci="", verdict="INCONCLUSIVE"))
+            v.append(dict(model=model, prediction="P2 (sensitivity: QC-flagged cells "
+                          "included; exploratory)",
+                          statistic=f"d_cons={d_cons:+.3f} vs d_self={d_self:+.3f}",
+                          ci="", verdict="SUPPORTED" if d_cons < d_self else "FALSIFIED"))
+        qok = (rq1.model == model) & (rq1.domain == "arithmetic") & (rq1.saturated == 0)
+        strict = qok & (rq1.ext_flagged == 0) if "ext_flagged" in rq1 else qok
+        for label, mask in (("P3", strict),
+                            ("P3 (sensitivity: QC-flagged cells included; exploratory)",
+                             qok)):
+            arith = rq1[mask & (rq1.signal == "logprob")]
+            arith_ans = rq1[mask & (rq1.signal == "logprob_answer")]
+            if not len(arith):
+                if label == "P3":
+                    v.append(dict(model=model, prediction="P3",
+                                  statistic="not evaluable: no unsaturated unflagged "
+                                            "arithmetic cell",
+                                  ci="", verdict="INCONCLUSIVE"))
+                continue
             full = arith["auroc"].mean()
             ans = arith_ans["auroc"].mean() if len(arith_ans) else np.nan
             verdict = "SUPPORTED" if full < 0.6 and (np.isnan(ans) or ans > full) else \
                       "FALSIFIED" if full >= 0.6 else "PARTIAL"
-            v.append(dict(model=model, prediction="P3",
+            v.append(dict(model=model, prediction=label,
                           statistic=f"logprob_full={full:.3f}, answer={ans:.3f}",
                           ci="", verdict=verdict))
+            if label == "P3":
+                break  # strict evaluable — no sensitivity row needed
         # P4: consistency vs entropy_answer redundancy per benchmark
         sub = df[df["model"] == model]
         rhos = []
@@ -373,10 +429,13 @@ def prediction_verdicts(rq1, rq2, tables_dir, df):
                 return np.nan
             return S.auroc((orient * ok[col]).tolist(), ok["correct"].tolist())
 
-        stats_bits, falsified = [], []
+        stats_bits, falsified, excluded = [], [], []
         for b in ("gsm8k", "svamp"):
             bs = sub[sub["benchmark"] == b]
             if not len(bs) or not SATURATION[0] <= bs["correct"].mean() <= SATURATION[1]:
+                continue
+            if ext_flags and ext_flags.get((model, b)):
+                excluded.append(b)
                 continue
             ff = _best_ff_auroc(bs)
             internal = max((a for s in SIGNALS if not np.isnan(a := _sig_auroc(bs, s))),
@@ -388,14 +447,18 @@ def prediction_verdicts(rq1, rq2, tables_dir, df):
             bs = sub[sub["benchmark"] == b]
             if not len(bs) or not SATURATION[0] <= bs["correct"].mean() <= SATURATION[1]:
                 continue
+            if ext_flags and ext_flags.get((model, b)):
+                excluded.append(b)
+                continue
             ff = _best_ff_auroc(bs)
             sc = _sig_auroc(bs, "selfconf")
             stats_bits.append(f"{b}: ff={ff:.3f} selfconf={sc:.3f}")
             if not np.isnan(sc) and ff > sc:
                 falsified.append(f"ff>selfconf on {b}")
         if stats_bits:
+            note = f" [QC-excluded: {','.join(excluded)}]" if excluded else ""
             v.append(dict(model=model, prediction="P5",
-                          statistic="; ".join(stats_bits)[:200],
+                          statistic=("; ".join(stats_bits) + note)[:220],
                           ci="; ".join(falsified) if falsified else "",
                           verdict="FALSIFIED" if falsified else "SUPPORTED"))
     t = pd.DataFrame(v)
@@ -426,13 +489,19 @@ def main():
     df, _ = attach_free_features(df, a.datasets)
     print(f"{len(df)} rows, models={list(df['model'].unique())}, "
           f"benchmarks={df['benchmark'].nunique()}")
-    rq1 = rq1_tables(df, a.tables)
-    rq2 = rq2_contrasts(df, a.tables)
+    ext_flags = extraction_flags(df)
+    flagged = sorted(b for (m, b), f in ext_flags.items() if f)
+    if flagged:
+        print(f"extraction-QC flagged (>10% fail, excluded from primary): {flagged}")
+    rq1 = rq1_tables(df, a.tables, ext_flags)
+    rq2 = rq2_contrasts(df, a.tables, ext_flags)
+    rq2_sens = rq2_contrasts(df, a.tables, None,
+                             name="rq2_domain_contrasts_sensitivity") if flagged else None
     rq2_transfer_matrix(df, a.tables)
     rq3_cross_model(rq1, a.tables)
     rq4_disagreement(df, a.tables, a.outputs)
     rq5_information(df, a.tables)
-    prediction_verdicts(rq1, rq2, a.tables, df)
+    prediction_verdicts(rq1, rq2, rq2_sens, a.tables, df, ext_flags)
     print("analysis complete — tables/ updated. Figures: python analysis/make_figures.py")
 
 

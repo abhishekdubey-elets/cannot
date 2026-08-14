@@ -1,0 +1,9 @@
+model,prediction,statistic,ci,verdict
+Qwen2.5-3B-Instruct,P1,not evaluable: contrast pool empty after saturation + extraction-QC exclusions,,INCONCLUSIVE
+Qwen2.5-3B-Instruct,P1 (sensitivity: QC-flagged cells included; exploratory),dAUROC=+0.008,"[-0.033,+0.039]",FALSIFIED
+Qwen2.5-3B-Instruct,P2,not evaluable (QC),,INCONCLUSIVE
+Qwen2.5-3B-Instruct,P2 (sensitivity: QC-flagged cells included; exploratory),d_cons=-0.116 vs d_self=+0.008,,SUPPORTED
+Qwen2.5-3B-Instruct,P3,not evaluable: no unsaturated unflagged arithmetic cell,,INCONCLUSIVE
+Qwen2.5-3B-Instruct,P3 (sensitivity: QC-flagged cells included; exploratory),"logprob_full=0.725, answer=0.655",,FALSIFIED
+Qwen2.5-3B-Instruct,P4,min_rho=0.001,,FALSIFIED
+Qwen2.5-3B-Instruct,P5,mmlu: ff=0.660 selfconf=0.511; truthfulqa: ff=0.627 selfconf=0.551 [QC-excluded: gsm8k],ff>selfconf on mmlu; ff>selfconf on truthfulqa,FALSIFIED
