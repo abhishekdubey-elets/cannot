@@ -13,8 +13,10 @@ import json
 from pathlib import Path
 
 from . import grading
+import csv
+
 from .runner import (CONF_MAX_NEW, GREEDY_BATCH, LM, _greedy_with_oom_ladder,
-                     find_model_dir, load_items, log, write_rows)
+                     find_model_dir, load_items, log)
 from .runner import ELICITATION as W0
 
 # id -> (wording, inverted_scale)
@@ -31,6 +33,20 @@ WORDINGS = {
 
 PROBE_BENCHMARKS = ("mmlu", "gsm8k")
 N_ITEMS = 100
+
+# The probe has its OWN schema — runner.write_rows enforces the frozen COLUMNS list and
+# silently drops anything else (which ate the first probe run's per-wording data).
+PROBE_COLUMNS = (["sample_id", "benchmark", "model", "seed", "correct", "extraction_ok",
+                  "prediction"] +
+                 [f"{p}_{wid}" for wid in WORDINGS for p in ("conf", "raw", "reply")])
+
+
+def write_probe_rows(path, rows):
+    with open(path, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=PROBE_COLUMNS)
+        w.writeheader()
+        for r in rows:
+            w.writerow({k: r.get(k, "") for k in PROBE_COLUMNS})
 
 
 def elicit_with_wording(lm, prompt_answer_pairs, wording, seed):
@@ -88,9 +104,9 @@ def main(model_hint, model_name, data_dir, work_dir="/kaggle/working", seed=0,
                     row[f"reply_{wid}"] = reply
                 global_rows.append(row)
             if (start // GREEDY_BATCH) % 3 == 0:
-                write_rows(out_csv, global_rows)
+                write_probe_rows(out_csv, global_rows)
                 log(f"[{bench}] {len(global_rows)} probe rows (partial saved)")
-    write_rows(out_csv, global_rows)
+    write_probe_rows(out_csv, global_rows)
     log(f"probe_wording DONE: {len(global_rows)} rows -> {out_csv}")
 
 
