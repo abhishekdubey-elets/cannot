@@ -1,0 +1,2001 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+commonsenseqa:6,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"In what Spanish speaking North American country can you get a great cup of coffee?
+
+Options:
+A. mildred's coffee shop
+B. mexico
+C. diner
+D. kitchen
+E. canteen
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.5061232587942331,-0.11051775869251894,1.1151568768448996,0.22977402626109633,0.536667200922966,0.9191303990982674,1.0,185,6.612561861673991,0,1,1,5,
+commonsenseqa:12,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where does a heifer's master live?
+
+Options:
+A. farm house
+B. barnyard
+C. stockyard
+D. slaughter house
+E. eat cake
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.42632773481324676,-0.07190844145831458,0.9857546877146455,0.27279984103268023,0.5898225409131385,0.9313716023263325,1.0,299,6.612561861673991,0,1,1,5,
+commonsenseqa:23,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where could you find a toilet that only friends can use?
+
+Options:
+A. rest area
+B. school
+C. stadium
+D. apartment
+E. hospital
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.6409365406662942,-0.29392285196142137,1.4676896284003216,0.6235688863538366,0.46595754467438316,0.8701839921908958,0.6,214,6.612561861673991,0,1,1,5,
+commonsenseqa:24,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is someone who isn't clever, bright, or competent called?
+
+Options:
+A. clumsy
+B. ineffectual
+C. dull
+D. clumsy
+E. stupid
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,E,0,1.0,-0.5246811853795114,-0.19033677874055263,1.1596258833309476,0.5217562491163635,0.5368337676707042,0.9084012944056806,0.8,249,6.612561861673991,0,1,1,5,
+commonsenseqa:37,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If you have leftover cake, where would you put it?
+
+Options:
+A. quandry
+B. refrigerator
+C. oven
+D. night stand
+E. bakery
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.347127008697697,-0.05446553433500867,0.7833678475829358,0.15825932991525346,0.6214763028164433,0.9660872866029608,1.0,146,6.612561861673991,0,1,1,5,
+commonsenseqa:50,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where can a human find clothes that aren't pants?
+
+Options:
+A. pants shop
+B. on planet earth
+C. dress shop
+D. school
+E. train wreck
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.49953319719855066,-0.01878671982990454,1.1001664455690296,0.08976118581190429,0.5469409608690257,0.9201460373535585,1.0,178,6.612561861673991,0,1,1,5,
+commonsenseqa:69,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What continent has the most castles?
+
+Options:
+A. fairy tale
+B. edinburgh
+C. germany
+D. europe
+E. antarctica
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5117689231438727,-0.09493263187890004,1.1761940721360307,0.30657326596511475,0.5538536412402605,0.9042440535675766,1.0,234,6.612561861673991,0,1,1,5,
+commonsenseqa:76,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where does a wild bird usually live?
+
+Options:
+A. cage
+B. sky
+C. countryside
+D. desert
+E. windowsill
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.4756498783195465,-0.118747845383344,1.0573776408757216,0.2349773542322874,0.5585014079160954,0.9264387147767204,1.0,217,6.612561861673991,0,1,1,5,
+commonsenseqa:84,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where would you put uncooked crab meat?
+
+Options:
+A. wharf
+B. red lobster
+C. tidepools
+D. boss's office
+E. stew pot
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.39154559834854696,-0.01797648731993225,0.9132687838686581,0.06818059100721056,0.6001364723120106,0.9421610451180097,1.0,219,6.612561861673991,0,1,1,5,
+commonsenseqa:87,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If you're remembering something, it's because of your what of it to begin with?
+
+Options:
+A. knowledge
+B. knowing
+C. forgetful
+D. pleasure
+E. depression
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,B,0,1.0,-0.40219403640681,-0.13197787835482208,0.9301457653372828,0.2788232836740254,0.6112386684276556,0.9371774329950935,0.8,228,6.612561861673991,0,1,1,5,
+commonsenseqa:90,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The teens were trying to hide that they get drink, but when they walked in the door their what gave it away?
+
+Options:
+A. health
+B. fall down
+C. stagger
+D. get arrested
+E. vomit
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.5342085911458013,-0.10670032336558204,1.1947058349505273,0.23142340241249806,0.5219381078249878,0.9100634576545821,1.0,180,6.612561861673991,0,1,1,5,
+commonsenseqa:91,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"You'll find a landing at the top of what?
+
+Options:
+A. ocean
+B. apartment building
+C. stairwell
+D. airport
+E. room
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.3906340292866906,-0.03601120218237005,0.9217114620407406,0.14527600171464053,0.615328928977251,0.938252509534359,1.0,200,6.612561861673991,0,1,1,5,
+commonsenseqa:96,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Billy set aside a block of time for having fun after work. Why might he do this?
+
+Options:
+A. happiness
+B. stress relief
+C. pleasure
+D. ocean
+E. may laugh
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.41928834716068636,-0.13683803193206737,0.910643882799119,0.32547532329652845,0.5710441727605131,0.9507041613260905,1.0,180,5.403775056203206,0,1,1,5,
+commonsenseqa:99,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"It was a long trip from the farm, so he stayed in a hotel when he arrived at the what?
+
+Options:
+A. bed away from home
+B. wwii bunker
+C. resort
+D. las vegas
+E. city
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,E,0,1.0,-0.5292166899810256,-0.05009267384783319,1.2252519815580505,0.15552053446946465,0.5225010181138338,0.9053060668559114,0.8,242,5.403775056203206,0,1,1,5,
+commonsenseqa:108,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"James looked up and saw the start twinkling in the black yonder.  He marveled the sheer number of them and the size of what?
+
+Options:
+A. universe
+B. orbit
+C. night sky
+D. outer space
+E. his wallet
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5194040242829402,-0.30121402118068846,1.1279492732865983,0.5487974848287415,0.5220477717383852,0.9216927664834749,0.8,159,5.403775056203206,0,1,1,5,
+commonsenseqa:114,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"A man wants air conditioning while we watches the game on Saturday, where will it likely be installed?
+
+Options:
+A. car
+B. house
+C. offices
+D. park
+E. movie theatre
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.6453207288819001,-0.05630656776755435,1.436643273765027,0.21759821357768802,0.4623528577418507,0.8716611708806649,1.0,239,5.403775056203206,0,1,1,5,
+commonsenseqa:120,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"John and James are idiots. They bought two tickets to the Falcons vs the Jets even though neither wanted to see the what?
+
+Options:
+A. internet cafe
+B. sporting event
+C. pressing wrong buttons
+D. obesity
+E. hockey game
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.41274389649081994,-0.07792056355234915,0.9940997100769663,0.31415199379803704,0.60668799098995,0.9309963997867372,1.0,180,5.403775056203206,0,1,1,5,
+commonsenseqa:122,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Who do professors work with?
+
+Options:
+A. methods of facts
+B. teach courses
+C. wear wrinkled tweed jackets
+D. school students
+E. state facts
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5045650990205824,-0.11193905254640413,1.1055825059733886,0.26220868806475206,0.5534857992388776,0.9154348053793976,1.0,207,5.403775056203206,0,1,1,5,
+commonsenseqa:123,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Colorful anemone look somewhat like what object you find on window sills?
+
+Options:
+A. intertidal zone
+B. coral sea
+C. under water
+D. flower bed
+E. florida keys
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.43948638348069324,-0.05879576040160828,0.9953749516391408,0.2076301065727654,0.5916259386500374,0.930407814315108,1.0,244,5.403775056203206,0,1,1,5,
+commonsenseqa:139,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What green area is a marmot likely to be found in?
+
+Options:
+A. countryside
+B. great plains
+C. encyclopedia
+D. jungle
+E. north america
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5008305456435861,-0.10881534059596258,1.1214025984196012,0.22567737805496998,0.5369252178663483,0.9194116158419491,1.0,217,5.403775056203206,0,1,1,5,
+commonsenseqa:140,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Jan tested the current, and noticed that it was high.  He thought that the wires might have too much what?
+
+Options:
+A. later
+B. updated
+C. still
+D. resistance
+E. now
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.47534275689545563,-0.011176943528880656,1.0501799971057044,0.0590676369685473,0.5428916756576354,0.9317148975822904,1.0,218,5.403775056203206,0,1,1,5,
+commonsenseqa:157,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What could you get an unsmooth pit from?
+
+Options:
+A. backyard
+B. rock
+C. mine
+D. cherry
+E. peach
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,E,0,0.5,-0.6381936553917803,-0.11121269432987901,1.4417647591083793,0.40099667349895896,0.48123196979321126,0.8690794024600491,0.8,233,5.403775056203206,0,1,1,5,
+commonsenseqa:166,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Diving into backyard pools can be very dangerous and can lead to serious head and what?
+
+Options:
+A. going somewhere
+B. splats
+C. cancer
+D. getting wet
+E. spinal injuries
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.4261080272710476,-0.07213523453719972,0.9487413176546122,0.14389005633854404,0.5962364966059751,0.9364340220861894,1.0,187,5.403775056203206,0,1,1,5,
+commonsenseqa:171,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"When you get together with friends to watch film, you might do plenty of this?
+
+Options:
+A. see what happens
+B. enjoy stories
+C. pass time
+D. have fun
+E. interesting
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.46707717930967063,-0.05566871936629999,1.0437078371848352,0.13559423338304202,0.5686499652954248,0.9228743764070364,1.0,195,5.403775056203206,0,1,1,5,
+commonsenseqa:173,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Bill puts meat on the scale, where does Bill work?
+
+Options:
+A. music store
+B. assay office
+C. tidal wave
+D. butcher shop
+E. bathroom
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.44401428962586137,-0.014617357271996903,1.0058650353887042,0.06404899519853095,0.565073990073409,0.935314304148989,1.0,221,5.2485426266988116,0,1,1,5,
+commonsenseqa:175,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Before racers start to run they must do what at the starting line?
+
+Options:
+A. learn to walk
+B. walking
+C. walk slowly
+D. breathe
+E. stand still
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.5035104538001419,-0.0420427112244397,1.1509676731699483,0.1633915202410785,0.555304031797062,0.9096253948098809,1.0,169,5.2485426266988116,0,1,1,5,
+commonsenseqa:176,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What does an actor do when they are bored of their roles?
+
+Options:
+A. mask
+B. branch out
+C. wear costume
+D. pretend
+E. sing songs
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.5130796756729571,-0.1842676883192477,1.1353523715874974,0.2845508029685873,0.5294922259868,0.9182046893225536,1.0,221,5.2485426266988116,0,1,1,5,
+commonsenseqa:177,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is a person called who doesn't have immortality?
+
+Options:
+A. mortal
+B. dying
+C. death
+D. dead
+E. mortal
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,E,0,1.0,-0.4582022515446405,-0.22667097501653188,1.0281740633974588,0.4464139615055201,0.5555570643239965,0.9302881179998318,0.6,192,5.2485426266988116,0,1,1,5,
+commonsenseqa:179,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If chewing food is difficult for you, what is a possible reason?
+
+Options:
+A. broken jaw
+B. sore mouth
+C. eating
+D. good digestion
+E. avoiding choking
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.49284335811910557,-0.22545102965765787,1.1047647095277535,0.64675980617366,0.5543159780402979,0.9175275843917278,1.0,228,5.2485426266988116,0,1,1,5,
+commonsenseqa:185,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Why do most people take a quick rest during the day?
+
+Options:
+A. need to
+B. hungry
+C. feel more energetic
+D. weak
+E. regenerate
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,C,0,1.0,-0.45937606126514896,-0.10926555636221262,1.082282429813022,0.2730899173672019,0.5809305152539069,0.9172085797423639,0.8,197,5.2485426266988116,0,1,1,5,
+commonsenseqa:197,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What do airplanes do as they are arriving at the gate?
+
+Options:
+A. slow down
+B. crash
+C. speed up
+D. land
+E. carry people
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.4720701780475757,-0.07812882352429067,1.0905345452272217,0.19925746547589185,0.5594242925076506,0.9196261013959693,1.0,229,5.2485426266988116,0,1,1,5,
+commonsenseqa:208,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The hostess was good at her job, she always had a smile when she would what?
+
+Options:
+A. group people
+B. ready parlor for guests
+C. welcome guests
+D. work room
+E. park
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.5010946115181393,-0.052893297512506855,1.139514523979723,0.16608701587565614,0.5630434652621096,0.9090099750143109,1.0,165,5.2485426266988116,0,1,1,5,
+commonsenseqa:214,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What instrument can be played with an air of happiness?
+
+Options:
+A. jump up and down
+B. jump up and down
+C. sing
+D. play games
+E. fiddle
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.3917771169067818,-0.04706035962719094,0.8861511020661794,0.15123476012429884,0.6220499067143961,0.9419850524176251,1.0,176,5.2485426266988116,0,1,1,5,
+commonsenseqa:219,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If you spend all your time buying and not saving what is is likely to happen?
+
+Options:
+A. using money
+B. feel better
+C. ocean
+D. losing money
+E. go broke
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.49079994895581325,-0.10733906768132329,1.1218233383175564,0.19209983561964114,0.5376817349243809,0.9192868870657843,1.0,185,5.2485426266988116,0,1,1,5,
+commonsenseqa:231,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"A person with an allergy might be doing what if they awake suddenly?
+
+Options:
+A. have fun
+B. enjoy with friends
+C. stretch
+D. yawn
+E. sneezing
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.4795295773327662,-0.019088136170997434,1.0816221783117919,0.08788961519144796,0.5619895452300444,0.9213565560366144,1.0,151,5.2485426266988116,0,1,1,5,
+commonsenseqa:246,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is a wet person likely to do?
+
+Options:
+A. gain weight
+B. thank god
+C. catch cold
+D. suicide
+E. cross street
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.5966090869849149,-0.12215448368711652,1.351717221984353,0.27807571927712615,0.4984264820502393,0.8834900278676006,1.0,239,5.2485426266988116,0,1,1,5,
+commonsenseqa:249,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"After high tide, where on the coast can you look to find a sea anemone?
+
+Options:
+A. nursery
+B. museum
+C. gulf of mexico
+D. tide pool
+E. intertidal zone
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.4893316545088912,-0.08340324157748569,1.1157816356692534,0.3117776148148881,0.5609038676179591,0.9134538634901955,1.0,294,6.499888241291046,0,1,1,5,
+commonsenseqa:257,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The smelly man was having a bath, but what is he pursuing?
+
+Options:
+A. hydration
+B. being clear
+C. personal cleanliness
+D. will drown
+E. use of water
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.5220332817896023,-0.03898526128189891,1.1665786063958261,0.12479238797681565,0.5236346575192042,0.9118222277505057,1.0,175,6.499888241291046,0,1,1,5,
+commonsenseqa:259,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If a person is working a lot, what are they likely trying to earn?
+
+Options:
+A. much money
+B. own house
+C. creativity
+D. new car
+E. caregiver
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5671618731657051,-0.02981262734003091,1.301840197295051,0.12116416436312301,0.5128698885019592,0.8917873237453164,1.0,283,6.499888241291046,0,1,1,5,
+commonsenseqa:274,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"One of the potential hazards of attending school is what?
+
+Options:
+A. cooties
+B. get smart
+C. boredom
+D. colds and flu
+E. taking tests
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.49015416756528996,-0.10349664414115978,1.0275347763212923,0.2152819201639158,0.5456684328575823,0.930117619228873,1.0,187,6.499888241291046,0,1,1,5,
+commonsenseqa:275,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What has a surface with many sides?
+
+Options:
+A. tetrahedron
+B. object
+C. geometry problem
+D. lake
+E. triangle
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,A,0,1.0,-0.38211957986406275,-0.010191349538066182,0.8574056753801027,0.04804418835776344,0.6194939692398064,0.9457483975259402,0.6,262,6.499888241291046,0,1,1,5,
+commonsenseqa:280,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where could you find a bureau as well as many politicians?
+
+Options:
+A. each city
+B. office building
+C. a zoo
+D. french government
+E. washington dc
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.5519382062407525,-0.08991546718698373,1.285645120695878,0.23590683215473676,0.5043972610333644,0.896040542956886,1.0,218,6.499888241291046,0,1,1,5,
+commonsenseqa:282,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"For some reason she was devoid of regular emotions, buying products was the only way she could feel what?
+
+Options:
+A. pleasure
+B. owning
+C. debt
+D. spending money
+E. smart
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5844157939416333,-0.0656177262452123,1.302283687057662,0.17154506968281136,0.4959501970771681,0.8949362045742687,1.0,193,6.499888241291046,0,1,1,5,
+commonsenseqa:283,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where are horses judged on appearance?
+
+Options:
+A. race track
+B. fair
+C. raised by humans
+D. in a field
+E. countryside
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.47675969003166785,-0.11919407834549627,1.0800440247614886,0.269290201005487,0.5314054470407507,0.9315920742483087,1.0,183,6.499888241291046,0,1,1,5,
+commonsenseqa:284,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Why do people read non fiction?
+
+Options:
+A. having fun
+B. it's more relatable
+C. learn new things
+D. becoming absorbed
+E. falling asleep
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.5013435857616158,-0.04262943978191439,1.138020611723801,0.13698222787175926,0.5495189136413278,0.9104151999364134,1.0,244,6.499888241291046,0,1,1,5,
+commonsenseqa:288,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The man flew his airplane over the city and saw pollution visibly in the sky, what was polluted?
+
+Options:
+A. forest
+B. street
+C. air
+D. caused by humans
+E. car show
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.5476978171495779,-0.013483698015079426,1.294794516944496,0.05683777778403846,0.5152704495374324,0.8931200975235903,1.0,212,6.499888241291046,0,1,1,5,
+commonsenseqa:289,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is a very unlikely side effect of becoming inebriated?
+
+Options:
+A. fights
+B. drunkenness
+C. staggering
+D. puke
+E. paralysis
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.5077392731104936,-0.026066025700667222,1.1303791062238826,0.11902016427231388,0.557672875572224,0.9068394730589828,1.0,196,6.499888241291046,0,1,1,5,
+commonsenseqa:292,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What are people likely to want to do with their friends?
+
+Options:
+A. own land
+B. own home
+C. talk to each other
+D. believe in god
+E. spend time
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,E,0,1.0,-0.48012731480881216,-0.0333328492218925,1.1109426146435237,0.13066197282798128,0.5489748768922356,0.920062655210495,0.6,180,6.499888241291046,0,1,1,5,
+commonsenseqa:294,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is the likely result of buying products in excess?
+
+Options:
+A. running out of money
+B. spending money
+C. poverty
+D. comparison shopping
+E. overstocking
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.5321116404234142,-0.01368377231286407,1.1470749921378953,0.05941973138020865,0.5219130440368482,0.9163157357999929,0.6,253,6.574965973695119,0,1,1,5,
+commonsenseqa:295,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is a person trying to accomplish when taking analgesics?
+
+Options:
+A. acceptance
+B. avoid pain
+C. acknowledgment
+D. passing grade
+E. intellectual challenge
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.41702121769368145,-0.021972226674353834,0.9565657626175481,0.08907088557908838,0.607545190947313,0.9325036435734992,1.0,204,6.574965973695119,0,1,1,5,
+commonsenseqa:308,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Kramer wrote a self-referential book.  What might that book be about?
+
+Options:
+A. counter
+B. coffee table
+C. school room
+D. backpack
+E. bedside table
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.563925856562385,-0.05007450944170463,1.2985280510304413,0.1995062196441615,0.5139479548749277,0.8905277690644992,0.6,295,6.574965973695119,0,1,1,5,
+commonsenseqa:313,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"People are very much like the animals, but one thing has secured or dominance over the planet.  We're better at doing what?
+
+Options:
+A. eat eggs
+B. make tools
+C. eat dosa
+D. talk to each other
+E. smoke pot
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,B,0,1.0,-0.4983966243859945,-0.09146057330963231,1.1915890949674826,0.23227201707971878,0.5360124060406094,0.9123181550376183,0.6,226,6.574965973695119,0,1,1,5,
+commonsenseqa:317,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"When a human is earning money, where are they often found?
+
+Options:
+A. deep thought
+B. park
+C. friend's house
+D. place of work
+E. school
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.4672016762219075,-0.006452668482306005,1.0485611863457338,0.032701824733334016,0.5546023880249887,0.9293036325860419,1.0,181,6.574965973695119,0,1,1,5,
+commonsenseqa:335,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The person was in physical distress, where should he go?
+
+Options:
+A. synagogue
+B. for help
+C. hospital
+D. bus stop
+E. building
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.45486265002292564,-0.011100612941580342,1.0078114865157561,0.05900576782221364,0.5348117564525982,0.9443879393534472,1.0,177,6.574965973695119,0,1,1,5,
+commonsenseqa:339,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The cat carefully navigated the area, they do everything they can to avoid what?
+
+Options:
+A. get wet
+B. eat vegetables
+C. falling
+D. wool sweater
+E. sharp claws
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,A,0,1.0,-0.538512117128488,-0.10702112633775111,1.2519618695222514,0.2960497944417398,0.5238825335128098,0.896458972459552,0.8,261,6.574965973695119,0,1,1,5,
+commonsenseqa:350,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where can you buy a clock, clothing and wrenches?
+
+Options:
+A. counter
+B. train station
+C. school room
+D. desk
+E. department store
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.3675499801338774,-0.04000209729728491,0.8535767269415659,0.14298905776867343,0.6283021528945595,0.9474088249962187,1.0,183,6.574965973695119,0,1,1,5,
+commonsenseqa:362,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Batman bought beer.  There were no bottles available.  He had to settle for what?.
+
+Options:
+A. shelf
+B. soccer game
+C. keg
+D. can
+E. refrigerator
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,1.0,-0.5294589643138825,-0.09168241465878542,1.153105275574887,0.2052706421638736,0.511195566327799,0.9205163140145559,1.0,189,6.574965973695119,0,1,1,5,
+commonsenseqa:366,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Killing people should not cause what emotion?
+
+Options:
+A. vengeance
+B. going to prison
+C. joy
+D. afraid
+E. terrible
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,C,0,1.0,-0.5312999315467029,-0.058616184161337515,1.1945516018952669,0.2035922801068928,0.5344045112973878,0.9042874516120979,0.4,224,6.574965973695119,0,1,1,5,
+commonsenseqa:368,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"More people should lower the guard and just have fun, we don't got long just what?
+
+Options:
+A. enjoy living
+B. happy
+C. enjoyable
+D. get laid
+E. do enjoy
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5977749939689275,-0.191571914589152,1.324049165272192,0.4252236069876556,0.4998734635818336,0.885034760253297,0.8,216,6.574965973695119,0,1,1,5,
+commonsenseqa:371,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"She was in an affair, what did that end upon discovery by her husband?
+
+Options:
+A. relationship
+B. marriage
+C. fidelity
+D. love
+E. divorce
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.6044749471009329,-0.1500296884484366,1.3913699535430393,0.357885961060886,0.4733556967228651,0.8845358334481717,0.8,200,6.574965973695119,0,1,1,5,
+commonsenseqa:383,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"It's Friday night and Alice puts off going to bed because she plans on doing what Saturday?
+
+Options:
+A. hatred
+B. sleeping in
+C. rest
+D. making love
+E. insomnia
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,B,0,1.0,-0.470282649584324,-0.06420696045461227,1.097682677951698,0.17935313367786768,0.5601485674607687,0.9217619083447164,0.6,179,6.025950789451599,0,1,1,5,
+commonsenseqa:399,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"James needed smooth sandpaper, but instead he got what type?
+
+Options:
+A. rough
+B. non smooth
+C. uneven
+D. plastic
+E. bumpy
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5076021305594528,-0.03504407445476806,1.1635619940541613,0.16444990388822647,0.5426834067171913,0.9117654963570127,0.4,236,6.025950789451599,0,1,1,5,
+commonsenseqa:420,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Many people wanted to leave their country estates for row houses, what did they need to move to?
+
+Options:
+A. living less expensively
+B. england
+C. prison
+D. city
+E. town
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5791577366112456,-0.07245169187414528,1.3140989350691135,0.2081437899261959,0.49123557840357535,0.895786791224964,1.0,256,6.025950789451599,0,1,1,5,
+commonsenseqa:422,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What would you do to a crime scene before asking a question?
+
+Options:
+A. express information
+B. touch everything
+C. think
+D. give clue
+E. analyse
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.6731953692458762,-0.16658771030324715,1.5368915662828397,0.3264119464195116,0.4590152933834547,0.8564968595064308,0.6,249,6.025950789451599,0,1,1,5,
+commonsenseqa:435,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Zane doesn't like answering questions.  He's not good at it because he suffers from what?
+
+Options:
+A. panic
+B. discussion
+C. attention
+D. confusion
+E. satisfaction
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5442108257301,-0.08866083128259561,1.170278290663155,0.21987119016256862,0.525285078219981,0.9061549864267643,0.8,253,6.025950789451599,0,1,1,5,
+commonsenseqa:439,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If it is Chrismas time what came most recently before?
+
+Options:
+A. halloween
+B. summer
+C. easter
+D. kwaanza
+E. give gift
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.4739121427217108,-0.16358852570131788,1.065349648574834,0.4454729448122068,0.5615629600564929,0.9233649429613656,0.8,274,6.025950789451599,0,1,1,5,
+commonsenseqa:442,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"what do you fill with ink to write?
+
+Options:
+A. squid
+B. fountain pen
+C. pencil case
+D. newspaper
+E. printer
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.45420677994759606,-0.0302663797238741,1.0272286086508173,0.1298779793886123,0.5581888836878602,0.9359230325427107,1.0,186,6.025950789451599,0,1,1,5,
+commonsenseqa:450,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where do cars usually travel at very high speeds?
+
+Options:
+A. freeway
+B. road
+C. race track
+D. alley
+E. parking lot
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,C,0,1.0,-0.41374009032102593,-0.016621300814487466,0.97271625389725,0.08237668581668613,0.6128297465070625,0.9285592557462446,1.0,163,6.025950789451599,0,1,1,5,
+commonsenseqa:460,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Jane works for the government as a senator, where does she spend a lot of time?
+
+Options:
+A. capitol building
+B. everything
+C. washington d.c
+D. russia
+E. canada
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.4289271617670938,-0.0635328732483534,0.9643916467434472,0.18344191424435433,0.5831769382274603,0.9368979112256931,1.0,158,6.025950789451599,0,1,1,5,
+commonsenseqa:465,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What type of building has the most top floor?
+
+Options:
+A. go down
+B. apartment building
+C. tall building
+D. office building
+E. cabin
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.5165578022492447,-0.33149077897238993,1.1964048377251049,0.8025351139661913,0.5362310597516653,0.9077258777754907,1.0,262,6.025950789451599,0,1,1,5,
+commonsenseqa:468,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What would you put coins into to make it work?
+
+Options:
+A. stove
+B. water fountain
+C. desk
+D. purse
+E. jar
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.4989894126859427,-0.04500244594642785,1.1304028376999071,0.17000885174703884,0.5290785398889095,0.9224997781692668,0.6,235,6.025950789451599,0,1,1,5,
+commonsenseqa:470,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where can you go to use a piano in your neighborhood if you don't have one?
+
+Options:
+A. music school
+B. music store
+C. neighbor's house
+D. lunch
+E. drawing room
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,C,0,1.0,-0.4984017790255771,-0.099394749415751,1.1004894004569148,0.27527142216550676,0.5349032033735247,0.9230501886030927,0.6,201,6.025950789451599,0,1,1,5,
+commonsenseqa:472,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Kissing is normally an activity reserved for your romantic what?
+
+Options:
+A. anus
+B. partner
+C. arousal
+D. trust
+E. cooperation
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.42326158217569426,-0.07618733276694911,0.9923998884469276,0.15180980747869585,0.599147350837787,0.9307899079507306,1.0,168,6.399559835592906,0,1,1,5,
+commonsenseqa:473,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What does a child learn to do before school?
+
+Options:
+A. count to ten
+B. state name
+C. dress herself
+D. clean room
+E. socialize
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,C,0,1.0,-0.6182126794276721,-0.09176725461823783,1.3557677389212173,0.22392213997713672,0.4814632460474968,0.8838632910311977,0.4,158,6.399559835592906,0,1,1,5,
+commonsenseqa:483,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What happens to a body after death?
+
+Options:
+A. rebirth
+B. human experience
+C. sadness
+D. decomposition
+E. obesity
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.44917304021527743,-0.025957045571127917,1.0058630814989344,0.09613566187515706,0.5688178123796688,0.933755297053094,1.0,255,6.399559835592906,0,1,1,5,
+commonsenseqa:486,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"They had a theory of what they could do in t he big game, so over and over they would what?
+
+Options:
+A. park
+B. practice
+C. fact
+D. practical
+E. practise
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.5093714714299818,-0.025001871358881544,1.1602832265722933,0.11616075777699682,0.5323696345524881,0.9139014641636783,1.0,206,6.399559835592906,0,1,1,5,
+commonsenseqa:494,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What do people want to acquire from opening business?
+
+Options:
+A. home
+B. wealth
+C. bankruptcy
+D. lose money
+E. get rich
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.6179738975109146,-0.05542577045055452,1.3456101069939028,0.17132904325313358,0.47339537494505446,0.8901176809022824,0.6,240,6.399559835592906,0,1,1,5,
+commonsenseqa:511,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The smile gave away that the what was one of happiness?
+
+Options:
+A. manual
+B. rainbow
+C. cry
+D. frown
+E. make others happy too
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,C,0,1.0,-0.5179711525134177,-0.3715742073958002,1.1563151300788572,0.7968060162310474,0.5517337385363179,0.902470376544398,0.6,203,6.399559835592906,0,1,1,5,
+commonsenseqa:523,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"John didn't mind getting in line.  It was what game after that he hated.  The time, the sore feet. He did not like doing what?
+
+Options:
+A. have to wait for
+B. standing in line
+C. eat cake
+D. less confusion
+E. being ordered
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,B,0,1.0,-0.5504508881600002,-0.049874823773279786,1.2743137780802969,0.19722516462853612,0.5167586539800351,0.8956891069045434,0.6,286,6.399559835592906,0,1,1,5,
+commonsenseqa:524,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is the process of going somewhere?
+
+Options:
+A. fire
+B. energy
+C. car
+D. transporting
+E. staying in place
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.4001088245587694,-0.0377159371464586,0.9331497896682392,0.13925503925005753,0.5907912631770094,0.9425509689810747,1.0,167,6.399559835592906,0,1,1,5,
+commonsenseqa:527,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where is a good place to store pamphlets in your home or office?
+
+Options:
+A. library
+B. health department
+C. mail box
+D. drawer
+E. bookstore
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.49267024156677364,-0.05105917864161332,1.0808757082739808,0.19089340083885217,0.5346597729821425,0.927105088798986,1.0,173,6.399559835592906,0,1,1,5,
+commonsenseqa:529,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where would you get some maps that you own?
+
+Options:
+A. bookstore
+B. library
+C. electrical circuit
+D. cabinet
+E. important when traveling
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,D,0,1.0,-0.44766573178908675,-0.1823186004375721,1.0208012496121397,0.32272963115060566,0.5658986381043686,0.9342459034334663,0.6,163,6.399559835592906,0,1,1,5,
+commonsenseqa:539,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What are you getting from you boss at the end of the week?
+
+Options:
+A. asking for
+B. money
+C. food
+D. work
+E. energy
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,B,0,1.0,-0.5717893305192837,-0.35563453651654225,1.2980439392554688,0.8440041948942175,0.5287064431655791,0.8801054200543786,0.8,217,6.399559835592906,0,1,1,5,
+commonsenseqa:544,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The church was giving assistance, what were they hoping to accomplish?
+
+Options:
+A. exhilliration
+B. hardship
+C. risk taking
+D. helping others
+E. happiness
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5124974900252784,-0.01481463735641834,1.1440145592798219,0.0683171268176143,0.5320647725933476,0.9172933101654053,1.0,190,6.399559835592906,0,1,1,5,
+commonsenseqa:546,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What can eating hamburger cause immediately after eating it?
+
+Options:
+A. tasty
+B. health problems
+C. eat cake
+D. indigestion
+E. gain weight
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.46357562468872326,-0.008075679576071101,1.0680660213137014,0.04840562392445413,0.572365040736539,0.9213221076556615,1.0,175,5.450208048025767,0,1,1,5,
+commonsenseqa:547,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where is a shelf likely to be hidden behind a door?
+
+Options:
+A. refrigerator
+B. bookstore
+C. cupboard
+D. school building
+E. wardrobe
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.45761318653147137,-0.011480537888322337,1.0473287524147012,0.05933926391202723,0.5594417970046143,0.9290324442648474,0.8,173,5.450208048025767,0,1,1,5,
+commonsenseqa:549,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What kind of cold storage could you find in your house?
+
+Options:
+A. ice pack
+B. freezer
+C. laboratory
+D. warehouse
+E. refrigerator
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.47797352263786136,-0.019420630632983677,1.1086114640799039,0.08329492561708325,0.563851420020703,0.9186092851185562,0.8,202,5.450208048025767,0,1,1,5,
+commonsenseqa:553,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If it's not used for hair a round brush is an example of what?
+
+Options:
+A. hair brush
+B. ladies bathroom
+C. art supplies
+D. shower
+E. hair salon
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.5456338176052784,-0.23492999923928437,1.1979570708122018,0.5726126043071093,0.4942755733859049,0.9175218681222228,0.8,219,5.450208048025767,0,1,1,5,
+commonsenseqa:554,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"His parents thought he was suffering from boredom, but the teen loved to lay in bed and just do what?
+
+Options:
+A. meet interesting people
+B. lift weights
+C. listen to music
+D. play chess
+E. entertain
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.47684230327187127,-0.030403868813967467,1.0816677569720046,0.10542721419421537,0.5649649315962085,0.9222145152312738,1.0,162,5.450208048025767,0,1,1,5,
+commonsenseqa:560,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"There were times where kids wanted to know a definition, so there was a nice big dictionary in the what?
+
+Options:
+A. pocket
+B. classroom
+C. table
+D. library
+E. shelf
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,B,0,1.0,-0.5522076035560602,-0.01029740432560781,1.247212093874054,0.05087356610754216,0.49798452899436263,0.9087112784714989,1.0,181,5.450208048025767,0,1,1,5,
+commonsenseqa:565,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"I want to use string to keep something from moving, how should I do it?
+
+Options:
+A. tie around
+B. wind around
+C. weave
+D. stringbed
+E. ball up
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.536559467232892,-0.12596046568410202,1.1846294257438987,0.36852179767386833,0.5105150085873902,0.9112699127623013,0.6,224,5.450208048025767,0,1,1,5,
+commonsenseqa:567,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"A potato is kept in the cellar, where is likely to be stored?
+
+Options:
+A. farmer's market
+B. grocery bag
+C. pantry
+D. bushel basket
+E. fridge
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,1.0,-0.49097584212817247,-0.046716002843671355,1.0659024826954477,0.18233435550385577,0.5344782993197441,0.9307084521213611,0.8,143,5.450208048025767,0,1,1,5,
+commonsenseqa:570,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What do people do when they think too quickly?
+
+Options:
+A. jump to conclusions
+B. hurry home
+C. build trust
+D. pay bills
+E. sing
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5261498793803271,-0.07708031082543698,1.183877371736497,0.22180647038654713,0.5273593467158767,0.9119075794632618,1.0,208,5.450208048025767,0,1,1,5,
+commonsenseqa:572,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What might someone do after they finish creating art?
+
+Options:
+A. frustration
+B. relax
+C. eat
+D. enlightenment
+E. communication
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.5679525696440663,-0.09584693455334066,1.2487542702075756,0.21952797454664066,0.4881542906345379,0.9069228148268115,1.0,248,5.450208048025767,0,1,1,5,
+commonsenseqa:576,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Joe plays a percussion instrument in something.  What might be play in?
+
+Options:
+A. own home
+B. music store
+C. marching band
+D. orchestra
+E. party
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,1.0,-0.5914322254881544,-0.07879797990055219,1.3263722549112096,0.21620808038507597,0.49107042628352116,0.8887831836814162,0.8,239,5.450208048025767,0,1,1,5,
+commonsenseqa:603,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where would you find gazelle under a G?
+
+Options:
+A. open field
+B. ivory coast
+C. dictionary
+D. steppe
+E. encyclopedia
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,E,0,1.0,-0.4736515434248455,-0.06274333126202691,1.0527826117468695,0.20583371812707676,0.5623825699495514,0.9240834866713614,1.0,221,5.450208048025767,0,1,1,5,
+commonsenseqa:604,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Competing can lead to great highs, and also great lows when suffering what?
+
+Options:
+A. winning or losing
+B. aggression
+C. gain
+D. defeat
+E. sweat
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5586531949933702,-0.15542992685201776,1.3037729781876404,0.3601081362624144,0.5205415102763701,0.8851847687767724,1.0,236,5.388684610525767,0,1,1,5,
+commonsenseqa:606,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"When you feel too much heat in your home you can turn on what?
+
+Options:
+A. coolness
+B. fan
+C. get wet
+D. coldness
+E. air conditioning
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.4075926364621216,-0.044330050430517076,0.9364370177937931,0.15751862372538797,0.5862712881914,0.9468640830458664,1.0,164,5.388684610525767,0,1,1,5,
+commonsenseqa:608,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If the kitten was going to grow up to be a mouser like it's mother, where should it spend most of it's time?
+
+Options:
+A. shelter
+B. floor
+C. warm place
+D. farmhouse
+E. living room
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,D,0,1.0,-0.5376941116981417,-0.027391983156576316,1.2475083911069687,0.14451493531335133,0.5224951006606355,0.898345027823706,0.8,222,5.388684610525767,0,1,1,5,
+commonsenseqa:609,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where is that man buying silk from?
+
+Options:
+A. space shuttle
+B. theater
+C. china
+D. indian resteraunt
+E. bar
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.46745293754003087,-0.08291035762219205,1.064631777788311,0.23442588006883205,0.5515850406213134,0.9274207254250845,1.0,204,5.388684610525767,0,1,1,5,
+commonsenseqa:619,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"John loved his snake.  It was the only ting he loved. He hated everyone else and was abrasive to most people, but he loved his snake.   How might you describe the snake?
+
+Options:
+A. sun itself
+B. tropical forest
+C. pet
+D. rude
+E. sharp
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.4866729555996268,-0.05465747439787568,1.1332513505390895,0.16527515341990076,0.5445112706573736,0.9192276414116053,1.0,233,5.388684610525767,0,1,1,5,
+commonsenseqa:630,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If you want to learn about the world and understand the real reasons behind cultural norms and mores, you have achieved a sense of what?
+
+Options:
+A. enlightenment
+B. open mind
+C. confusion
+D. smartness
+E. anger
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.48447823906879495,-0.10558759885119191,1.0849610418070001,0.2611779686040656,0.553186193710946,0.9222824810667241,1.0,235,5.388684610525767,0,1,1,5,
+commonsenseqa:631,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is the hopeful result of going to see a play?
+
+Options:
+A. sit
+B. being entertained
+C. jobless
+D. meet
+E. laugh
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.4152022897696425,-0.08988314105181416,0.9722210900477509,0.2829732707081069,0.6142794351862825,0.9297058271325153,1.0,230,5.388684610525767,0,1,1,5,
+commonsenseqa:634,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where would you put some ham if you want to cook it?
+
+Options:
+A. hamshackle
+B. pizza
+C. fridge
+D. refrigerator
+E. part of meal
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,B,0,1.0,-0.5871824015468514,-0.08439444432951859,1.301781529399444,0.3172240069821057,0.4854141351642068,0.8980345844300752,0.8,194,5.388684610525767,0,1,1,5,
+commonsenseqa:640,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where may you be if you're buying pork chops at a corner shop?
+
+Options:
+A. england
+B. town
+C. desert
+D. kentucky
+E. iowa
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.5931446836964446,-0.03598600691187315,1.31080506980015,0.1339969210332749,0.5049137156067034,0.8843016346378805,0.8,239,5.388684610525767,0,1,1,5,
+commonsenseqa:644,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where would you find an office worker gossiping with their colleagues?
+
+Options:
+A. water cooler
+B. space shuttle
+C. baby shower
+D. bus stop
+E. family
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5047175792246964,-0.011884745055131892,1.1747671956976964,0.06469097486934257,0.5330914878694143,0.9124861609551215,1.0,217,5.388684610525767,0,1,1,5,
+commonsenseqa:645,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where would you put nails if they are already packaged?
+
+Options:
+A. pocket
+B. container
+C. cabinet
+D. jar
+E. store
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,C,0,1.0,-0.5850650607760456,-0.016613105771417242,1.2991883484305666,0.09171571978455521,0.4782899170190342,0.9033572341292357,1.0,242,5.388684610525767,0,1,1,5,
+commonsenseqa:667,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where might you see a green field while driving?
+
+Options:
+A. kansas
+B. meadow
+C. farmland
+D. countryside
+E. rural area
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5695643662990831,-0.10665303258351362,1.2634144631136353,0.2103968801910101,0.5023574925828398,0.8986868905393701,1.0,228,5.388684610525767,0,1,1,5,
+commonsenseqa:675,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"I am looking for honey right from the source, where should I look?
+
+Options:
+A. last all night
+B. beehive
+C. farmer's market
+D. jar
+E. honeyful
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.4952662055238142,-0.034056367100978,1.1033429116032314,0.12002425786286335,0.556130269151411,0.9128225372161394,1.0,243,6.2892151872317,0,1,1,5,
+commonsenseqa:699,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If you spend a long time running after a ball how are you likely to feel?
+
+Options:
+A. laughter
+B. sweating
+C. embarrassed
+D. breathing heavily
+E. tiredness
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.5283265611540608,-0.21883242823590385,1.1743882993087482,0.3995885087028294,0.5411935318445805,0.904106936980002,0.8,202,6.2892151872317,0,1,1,5,
+commonsenseqa:700,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"When you need to rest it's often because you have been doing what?
+
+Options:
+A. action
+B. sleep
+C. sleeping
+D. in motion
+E. using energy
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,E,0,1.0,-0.5711922030433048,-0.09759462228868188,1.2345238510059795,0.24243466853906318,0.49470567013672057,0.9030704257336069,0.8,188,6.2892151872317,0,1,1,5,
+commonsenseqa:706,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"To get out of there the person had to keep on walking, they had to keep on what?
+
+Options:
+A. moving forward
+B. locomotion
+C. blisters
+D. rollerskate
+E. exercise
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.64610512125683,-0.026652334723280546,1.3565909330535768,0.12959925416931983,0.4592213257701097,0.8822973996936204,1.0,167,6.2892151872317,0,1,1,5,
+commonsenseqa:709,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"How does a person begin reproducing?
+
+Options:
+A. genetic mutation
+B. have sex
+C. kiss
+D. flirting
+E. going on a date
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.42990924211110576,-0.09357546298050086,0.9856886345268023,0.19603132013175686,0.5811368750328082,0.9354644865510566,1.0,209,6.2892151872317,0,1,1,5,
+commonsenseqa:713,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What are you using if there are speakers strapped on your ears?
+
+Options:
+A. take it all in
+B. headphones
+C. desktop
+D. conference
+E. concert
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.514316221770892,-0.11555324660124218,1.118115196002942,0.19432150809572546,0.5311902570812141,0.9176478035309735,1.0,204,6.2892151872317,0,1,1,5,
+commonsenseqa:715,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where is likely to not just have a kosher restaurant?
+
+Options:
+A. jerusalem
+B. jewish neighborhoods
+C. dining in
+D. new york city
+E. dining
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,1.0,-0.4694697242519649,-0.17681614400551857,1.056340934256279,0.41047659393343966,0.5834246606623031,0.9208181885128118,1.0,196,6.2892151872317,0,1,1,5,
+commonsenseqa:732,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What furniture will you normally find near a side chair?
+
+Options:
+A. bedroom
+B. table
+C. wheel barrow
+D. building
+E. office
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.49113193926501797,-0.07549492913843399,1.0984042704137376,0.2490224022147832,0.5439261899329721,0.9239665478467941,1.0,160,6.2892151872317,0,1,1,5,
+commonsenseqa:736,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"John knew that the sun produced a massive amount of energy in two forms.  If you were on the surface of the sun, what would kill you first?
+
+Options:
+A. ocean
+B. heat
+C. life on earth
+D. wrinkles
+E. light
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.5399456259135262,-0.05810666851418015,1.2762691217834112,0.17844408080619845,0.5235832975420429,0.8917116141572016,1.0,283,6.2892151872317,0,1,1,5,
+commonsenseqa:737,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Lawyers often talk in front of an audience where?
+
+Options:
+A. work
+B. courtroom
+C. office building
+D. press charges
+E. theatre
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.4630304756791049,-0.022488107267330786,1.0234413319547626,0.0868317401723649,0.5634850600604401,0.931444821662681,0.6,172,6.2892151872317,0,1,1,5,
+commonsenseqa:739,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If I wanted to eat something that is made from plants and needs to be washed, what would it be?
+
+Options:
+A. roots
+B. millions of cells
+C. see work
+D. leaves to gather light
+E. flowers on
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5930020124795741,-0.14749275370346973,1.3133727347606332,0.3890225348010414,0.4887820878744724,0.8880575925261531,1.0,199,6.2892151872317,0,1,1,5,
+commonsenseqa:740,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Ficus can be planted in a yard to make summer more bearable, what sort of areas do they create?
+
+Options:
+A. shady places
+B. screened porch
+C. pots
+D. ceramics
+E. clay pot
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.4485691050226419,-0.24092192849911834,0.9474415348044473,0.5003597633947727,0.5683371363950602,0.9422077350533766,1.0,173,6.2892151872317,0,1,1,5,
+commonsenseqa:750,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Sean was leaving work and took the roadway that led to his what?
+
+Options:
+A. neighborhood
+B. city
+C. fate
+D. countryside
+E. maps
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,A,0,1.0,-0.6214992321721113,-0.04609231650609521,1.4167626947055123,0.17936172579954857,0.4669259973959616,0.8802893405769303,0.6,171,5.825922230879466,0,1,1,5,
+commonsenseqa:753,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What will likely happen after stabbing to death a person?
+
+Options:
+A. gruesome
+B. being arrested
+C. pool of blood
+D. mess
+E. grisly
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.5264684777988121,-0.05147008842049653,1.229281521027361,0.18397295405577316,0.5244182948219148,0.904471339102377,0.6,228,5.825922230879466,0,1,1,5,
+commonsenseqa:778,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The man working in the attic swatted away a bee, but soon the single bee was an entire what?
+
+Options:
+A. swarm
+B. pack
+C. countryside
+D. soft drink
+E. field of flowers
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5943409116760217,-0.16603176902867745,1.3473305037632175,0.32978931742982515,0.4741398548370941,0.8909132120892865,1.0,227,5.825922230879466,0,1,1,5,
+commonsenseqa:780,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What type of store would have lots of sports equipment?
+
+Options:
+A. mall
+B. office supply store
+C. school
+D. sporting goods store
+E. sporting event
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5292124881605262,-0.009221966961466896,1.1666274533047691,0.041646568968064436,0.5339765157463938,0.9097774914530821,1.0,215,5.825922230879466,0,1,1,5,
+commonsenseqa:787,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where would you put a plate immediately after eating from it?
+
+Options:
+A. kitchen cupboard
+B. floor
+C. table
+D. dishwasher
+E. flea market
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,1.0,-0.6698505225226202,-0.16749141006941196,1.4227801343366622,0.40908393452818714,0.45709315358715896,0.8710758791250341,0.6,204,5.825922230879466,0,1,1,5,
+commonsenseqa:791,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"James saw a kite flying in the sky.  He traced the string back to its origin and found it.  Where did the string begin?
+
+Options:
+A. end of line
+B. hobby shop
+C. his hand
+D. toy store
+E. child's hand
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.5108340714400371,-0.3544268105033552,1.1486465046923924,0.7158901891157292,0.5389432894279722,0.9103044994541856,0.6,244,5.825922230879466,0,1,1,5,
+commonsenseqa:796,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where is a likely place for an ivy plant?
+
+Options:
+A. flower pot
+B. shelf
+C. windowsill
+D. outside
+E. sill
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,1.0,-0.5933515348561023,-0.13402138891046889,1.2951773562959874,0.3294028499239164,0.5114007368297775,0.8869748033698976,1.0,193,5.825922230879466,0,1,1,5,
+commonsenseqa:800,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What might happen if someone is not losing weight?
+
+Options:
+A. loose skin
+B. beauty
+C. miss universe
+D. death
+E. healthier
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5835001588849292,-0.06648880040484073,1.340946496531153,0.14574760737689743,0.5085254629070942,0.8813480182335927,0.6,260,5.825922230879466,0,1,1,5,
+commonsenseqa:806,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is a person likely to experience after they stop being married to a mean person?
+
+Options:
+A. isolation
+B. grief
+C. happiness
+D. relief
+E. angry
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,C,0,1.0,-0.6510504899574108,-0.0269725416461218,1.4253588703514908,0.1332186999819683,0.4535493451114903,0.8791501241871434,1.0,234,5.825922230879466,0,1,1,5,
+commonsenseqa:809,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The dog curled up for a nap, it was tuckered out because it had just been what?
+
+Options:
+A. walked
+B. petted
+C. affection
+D. go outside
+E. scratch
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5650853463331598,-0.06593053345250155,1.2599954465477263,0.1869292090377511,0.5165381327678915,0.8971754190279171,1.0,256,5.825922230879466,0,1,1,5,
+commonsenseqa:821,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"A creek could be located in the opposite for the city which is called what?
+
+Options:
+A. meadow
+B. stick
+C. valley
+D. forest
+E. countryside
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.5873064710064729,-0.057874891447373976,1.378913877721271,0.22676969992539261,0.4877147936468361,0.8822656434228402,0.8,262,5.825922230879466,0,1,1,5,
+commonsenseqa:841,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Metal is taken from what which is pulled from the ground?
+
+Options:
+A. dirt
+B. instruments
+C. ore
+D. car
+E. junkyard
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.5176399864228852,-0.018345133784805512,1.1513622535998733,0.07458085784629276,0.5112308376176017,0.9229734243665423,1.0,175,5.825922230879466,0,1,1,5,
+commonsenseqa:844,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where might the stapler be if I cannot find it?
+
+Options:
+A. office building
+B. office supply store
+C. desk drawer
+D. with dwight
+E. desktop
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.5660635846300293,-0.07121032578576465,1.2667474993726995,0.2233836014801227,0.5065258387160503,0.8991238686998012,1.0,236,6.27052487929662,0,1,1,5,
+commonsenseqa:846,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Sean was a wreck.  He  loved to build houses, but in his current state, he couldn't do what?
+
+Options:
+A. stand up
+B. produce
+C. construct
+D. make
+E. build
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,C,0,1.0,-0.4603135735263096,-0.24845647959527165,1.0175942903292003,0.4121636014144651,0.5790515895167442,0.9287866590774223,0.6,146,6.27052487929662,0,1,1,5,
+commonsenseqa:850,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Joe found spiders in the place where he keeps his tools.  Where might that be?
+
+Options:
+A. cupboard
+B. toolbox
+C. closet
+D. garage
+E. mail box
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,D,0,1.0,-0.4286497036997166,-0.046680616316280066,0.9797262231245902,0.17912388559482026,0.5823322654302631,0.9383708178287461,0.6,168,6.27052487929662,0,1,1,5,
+commonsenseqa:852,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where are you likely to find a supermarket?
+
+Options:
+A. buy food for family
+B. city or town
+C. get supplies
+D. strip mall
+E. vermont
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,B,0,1.0,-0.45705755935246023,-0.12423479355701754,0.9829553945920743,0.15833583235047807,0.5726090969283724,0.9322787142190777,0.6,183,6.27052487929662,0,1,1,5,
+commonsenseqa:855,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Why would a woman kill a stranger she met in a dark alley?
+
+Options:
+A. being raped
+B. get rid of
+C. they didn't know the passcode
+D. get revenge
+E. were evil
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,A,0,0.85,-0.6496402936226117,-0.19445156759077994,1.4584542615171778,0.5492309306730215,0.4639292418641943,0.8684883994955412,0.4,284,6.27052487929662,0,1,1,5,
+commonsenseqa:879,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where outside of a city would a squirrel live?
+
+Options:
+A. roof
+B. inside home
+C. forest
+D. yard
+E. park
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.47843837383250254,-0.049489988499847946,1.085030403352559,0.16929081971522297,0.5609041937951291,0.9173193148682627,1.0,178,6.27052487929662,0,1,1,5,
+commonsenseqa:880,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"You should watch out for snakes if floating down what African body of water?
+
+Options:
+A. wet grass
+B. western texas
+C. high grass
+D. amazon river
+E. tree
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.3599290790819605,-0.022638548381413177,0.8374432138663401,0.09530529684097999,0.6679176406545954,0.9416273863433482,1.0,182,6.27052487929662,0,1,1,5,
+commonsenseqa:891,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is the main purpose of having a bath?
+
+Options:
+A. cleanness
+B. wetness
+C. exfoliation
+D. use water
+E. hygiene
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,A,0,1.0,-0.3982566160656066,-0.040119530657648284,0.8989643300435942,0.1570033233015614,0.6206262037540093,0.943970805253738,1.0,195,6.27052487929662,0,1,1,5,
+commonsenseqa:903,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The family wanted to adopt for enviro-ethical reasons, what did they abhor?
+
+Options:
+A. orphan
+B. biological child
+C. give away
+D. foster child
+E. abandon
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,B,0,1.0,-0.6432244365991551,-0.09349043635783498,1.440539489964271,0.3251119967734534,0.4655959374629534,0.8725444883108139,1.0,260,6.27052487929662,0,1,1,5,
+commonsenseqa:904,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What happens when airplane engines cut off and are unable to be restarted in flight?
+
+Options:
+A. stall
+B. start melting
+C. taxi
+D. crash
+E. speed up
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5238500476844781,-0.05205409880970061,1.195444042378327,0.18882156567050767,0.5305119065188728,0.9088207299994157,1.0,226,6.27052487929662,0,1,1,5,
+commonsenseqa:908,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"He wanted lodging in the actual what, so that he was already where he needed to be?
+
+Options:
+A. a yurt
+B. resort area
+C. big city
+D. michigan
+E. going on vacation
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,B,0,0.5,-0.6014238904986766,-0.35973854699235136,1.4105439491083394,0.6720955189972737,0.4868955225199461,0.8758149248361587,0.8,250,6.27052487929662,0,1,1,5,
+commonsenseqa:913,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If I want to behave with proper aplomb, what manners should I avoid?
+
+Options:
+A. inappropriate
+B. incomplete
+C. impolite
+D. none
+E. incorrect
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,A,0,1.0,-0.5805400279595531,-0.38293730721003766,1.3116364603300963,0.7138936874270039,0.4911932177296499,0.8949770686103077,1.0,205,6.27052487929662,0,1,1,5,
+commonsenseqa:914,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Before lifting weights he liked to warm up on the squash court, he really enjoyed the facilities of the what?
+
+Options:
+A. swimming pool
+B. rich person's house
+C. country club
+D. fitness center
+E. park
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,1.0,-0.5567200285355459,-0.060610202836187455,1.2159133358066259,0.19495830124787497,0.5074073020794075,0.9045365064927976,1.0,219,6.440285483996074,0,1,1,5,
+commonsenseqa:916,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If I wanted to grow plants, where could I put a lot of dirt?
+
+Options:
+A. corner
+B. street
+C. closet
+D. garden
+E. bathtub
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5507003845607634,-0.022649930233152798,1.2052906039336613,0.10557674502806232,0.49737515652256464,0.9095876401074454,1.0,233,6.440285483996074,0,1,1,5,
+commonsenseqa:919,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"James need to use a toilet but there were no public ones in sight.  Eventually he broke down and did something very expensive so that he could get a toilet.  Where might he have gone?
+
+Options:
+A. motel room
+B. apartment
+C. bathroom
+D. games
+E. house
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.5,-0.6294313901066403,-0.26263563314023486,1.448579497919757,0.5948826285864856,0.4593831921878614,0.875790082885508,0.4,285,6.440285483996074,0,1,1,5,
+commonsenseqa:920,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Why did the heavy metal band need electricity at the stadium?
+
+Options:
+A. concert
+B. bedroom
+C. make person sick
+D. building
+E. church
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.4163618950215309,-0.22115813325672207,0.9455787900554633,0.4375496222300305,0.5726103312362826,0.9445601946356669,1.0,173,6.440285483996074,0,1,1,5,
+commonsenseqa:925,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The man  tried to break the glass in order to make his escape in time, but he could not.  The person in the cat, trying to kill him, did what?
+
+Options:
+A. accelerate
+B. putting together
+C. working
+D. construct
+E. train
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,A,0,0.0,-0.5738789567997552,-0.2694272992084545,1.3206315548454128,0.7326754431863568,0.5088168394027485,0.8849788455085622,0.6,288,6.440285483996074,0,1,1,5,
+commonsenseqa:933,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"There was no shade for Jenny.  She was forced to lie there exposed to what?
+
+Options:
+A. full sunlight
+B. bright sunshine
+C. sunny place
+D. eat cake
+E. direct sunlight
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,A,0,1.0,-0.5631253459516988,-0.02561126160208005,1.2486519249712482,0.107251977871897,0.5121614399978093,0.8966666911329542,1.0,175,6.440285483996074,0,1,1,5,
+commonsenseqa:938,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The vet found malignant tumors on the animals, what is their likely fate?
+
+Options:
+A. euthanasia
+B. pass water
+C. die of cancer
+D. feel pain
+E. feel pleasure
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,C,0,1.0,-0.5661300974035941,-0.06500762013820349,1.3130706306535742,0.24208982412831848,0.5044909792190249,0.8929349967024544,0.8,220,6.440285483996074,0,1,1,5,
+commonsenseqa:939,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is the thing that is agitated in your head when kissing?
+
+Options:
+A. sexual stimulation
+B. herpes
+C. headache
+D. catch cold
+E. happiness
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,E,0,1.0,-0.5116285921671572,-0.17342660534539314,1.1792751407882638,0.3882103180221612,0.539821097167466,0.9081219272633477,0.6,239,6.440285483996074,0,1,1,5,
+commonsenseqa:941,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where do you keep a pail in your house?
+
+Options:
+A. garage
+B. pool
+C. utility room
+D. hardware store
+E. wishing well
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.5351904610475022,-0.1429902526091761,1.1676866764683134,0.32768974213901697,0.5002142600536916,0.9186636362064398,1.0,209,6.440285483996074,0,1,1,5,
+commonsenseqa:955,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If I was watching TV on the couch and the air was stuffy, I might turn the fan on to make the what more comfortable?
+
+Options:
+A. hockey game
+B. living room
+C. bathroom
+D. football stadium
+E. hot room
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.5266121889901738,-0.030280692708400874,1.2016189504792576,0.14274547080047414,0.5107200034459431,0.9161165085103776,0.8,225,6.440285483996074,0,1,1,5,
+commonsenseqa:958,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is a possible outcome for committing murder?
+
+Options:
+A. problems
+B. incarceration
+C. trial
+D. imprisonment
+E. prosecution
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.562930170097957,-0.13058862530063683,1.250160194719716,0.41652659535083875,0.4966250621873465,0.9029494648697984,1.0,239,6.440285483996074,0,1,1,5,
+commonsenseqa:968,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Why do young people swallow semen ?
+
+Options:
+A. you're into
+B. prostitute
+C. you're curious
+D. curiosity
+E. heterosexual woman in love
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,C,0,0.85,-0.5130548296439285,-0.13051209243008088,1.1955444834604658,0.48154174744982353,0.5649801289526427,0.896189392776024,0.8,205,6.440285483996074,0,1,1,5,
+commonsenseqa:970,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is the animal trying to accomplish?
+
+Options:
+A. sand trap
+B. live long
+C. leave home
+D. feel pain
+E. eating
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,B,0,1.0,-0.47459630161835814,-0.15783657694039732,1.0802642747483815,0.27343697943801243,0.5519469543360174,0.9267700069894393,0.8,240,6.840848724047343,0,1,1,5,
+commonsenseqa:977,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If a person stutters when he experiences anxiety or excitement, he'll have difficult doing what?
+
+Options:
+A. express information
+B. dance
+C. library
+D. go somewhere
+E. study
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5812273300711417,-0.16009370974829076,1.2590755455147284,0.3926385646504371,0.48730683306106937,0.9006630190511937,1.0,253,6.840848724047343,0,1,1,5,
+commonsenseqa:988,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"When going to sleep what happens to your body?
+
+Options:
+A. snoring
+B. latency
+C. dreams
+D. relaxation
+E. dreaming
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.43402449811796345,-0.1215072635091019,0.9944333461670298,0.2488110230805559,0.5771951284639689,0.9350167324348372,1.0,196,6.840848724047343,0,1,1,5,
+commonsenseqa:990,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is a form of anaerobic exercising?
+
+Options:
+A. shortness of breath
+B. lift weights
+C. error
+D. fall down
+E. run
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,E,0,1.0,-0.40286031381871446,-0.04314936822280894,0.913582651938318,0.13163714265175708,0.5957010263311011,0.9446750224700996,0.8,224,6.840848724047343,0,1,1,5,
+commonsenseqa:1003,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where would using a boat not require navigation skills?
+
+Options:
+A. water
+B. ocean
+C. garage
+D. harbor
+E. river
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,E,0,1.0,-0.5212707167555323,-0.05069821477267548,1.1877698830362955,0.18725891848024703,0.5225330342438596,0.9058605357388819,1.0,242,6.840848724047343,0,1,1,5,
+commonsenseqa:1005,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"He was very outgoing, for him making friends was no personal what?
+
+Options:
+A. scary
+B. having friends
+C. good feeling
+D. conflict
+E. friendship
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,D,0,1.0,-0.6218671137045382,-0.03074328994220347,1.3625401600727318,0.1199897245406009,0.4650229841892449,0.8885746602461023,0.4,212,6.840848724047343,0,1,1,5,
+commonsenseqa:1012,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What could go to a tennis court?
+
+Options:
+A. desert
+B. college campus
+C. recreational center
+D. athletic club
+E. park
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,1.0,-0.5166463995581423,-0.18529020775107105,1.1650574508265938,0.601632180654675,0.5444210901084842,0.9067434609707891,0.4,309,6.840848724047343,0,1,1,5,
+commonsenseqa:1018,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"The poker dealer spread the flop of cards across the what?
+
+Options:
+A. players
+B. play games
+C. casino
+D. table
+E. toy store
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.45380807865976985,-0.01756633058287586,1.0257954359751278,0.07401338713041532,0.5461795999398155,0.9368307662587012,1.0,124,6.840848724047343,0,1,1,5,
+commonsenseqa:1022,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is unlikely to get bugs on its windshield due to bugs' inability to reach it when it is moving?
+
+Options:
+A. airplane
+B. scooter
+C. motorboat
+D. car
+E. motor vehicle
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.52658354166182,-0.08345886418889374,1.1917345308076683,0.19321414120628702,0.5389284797564701,0.9034521904256608,0.6,270,6.840848724047343,0,1,1,5,
+commonsenseqa:1023,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What mall store sells jeans for a decent price?
+
+Options:
+A. clothing store
+B. bedroom
+C. thrift store
+D. apartment
+E. gap
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.546173974089355,-0.010658590915340937,1.1788006422771877,0.04992060123146539,0.5034706154108597,0.9141058126627575,0.6,217,6.840848724047343,0,1,1,5,
+commonsenseqa:1026,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"John rode on the plain until it reached the ocean and couldn't go any farther. What might he have bee on?
+
+Options:
+A. mountain
+B. fancy
+C. sandplain
+D. cliff
+E. gorge
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,1.0,-0.5534636627889511,-0.035980124864939476,1.2583446917311922,0.13453395222974626,0.5151335984626983,0.8927389460992305,1.0,188,6.840848724047343,0,1,1,5,
+commonsenseqa:1032,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Spraining an ankle while playing baseball will cause what?
+
+Options:
+A. strikes
+B. eating
+C. injury
+D. sore muscles
+E. pain
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.4618107578994662,-0.021072258449786812,1.009087893696497,0.08886139092099654,0.5624911494632351,0.934039093395497,0.8,188,6.840848724047343,0,1,1,5,
+commonsenseqa:1035,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where is hard to read note likely to be?
+
+Options:
+A. fridge
+B. sheet music
+C. desk
+D. bed
+E. medical chart
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,E,0,1.0,-0.6708763651703982,-0.1679817883597631,1.519220846193329,0.3298106686458335,0.4738869379673685,0.8528183363928583,0.6,203,6.8174237211545305,0,1,1,5,
+commonsenseqa:1037,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If there is gum on your shoe where did it likely come from?
+
+Options:
+A. shelf
+B. movies
+C. sidewalk
+D. water fountain
+E. table
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.5531819491916021,-0.13028198098209032,1.300898018333246,0.34129817474491136,0.5168548628273938,0.8902390082677205,1.0,180,6.8174237211545305,0,1,1,5,
+commonsenseqa:1038,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If a person isn't able to pay their bills what must they do?
+
+Options:
+A. know everything
+B. acknowledgment
+C. make more money
+D. throw a party
+E. spare time
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.4628448082782692,-0.007338225710403397,0.9927370090356601,0.04208473727491321,0.5818138038739562,0.9294974458217621,1.0,200,6.8174237211545305,0,1,1,5,
+commonsenseqa:1052,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If you want to kill someone you can do what to them with a gun?
+
+Options:
+A. sip through
+B. damnation
+C. shoot
+D. commit crime
+E. eat breakfast
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.3736205680735894,-0.07515884116613354,0.8555527079796575,0.1298636268205374,0.6222097942206476,0.950391486287117,1.0,224,6.8174237211545305,0,1,1,5,
+commonsenseqa:1054,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where is a likely place to store unused soap?
+
+Options:
+A. cabinet
+B. supermarket
+C. jail
+D. butt
+E. own home
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,A,0,1.0,-0.4451548188222137,-0.14083702573884693,1.0148110261457999,0.306074991035362,0.5523910544579849,0.9367009089328349,0.6,128,6.8174237211545305,0,1,1,5,
+commonsenseqa:1056,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where in your home would you keep a ballpoint pen when not in use?
+
+Options:
+A. backpack
+B. bank
+C. desk drawer
+D. eat cake
+E. office desk
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.39809945893546944,-0.01068200315201769,0.9137038098224383,0.04845807468418428,0.5957759136833796,0.9463470991064863,1.0,205,6.8174237211545305,0,1,1,5,
+commonsenseqa:1060,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What was the man encouraged to do after he expressed his anger violently?
+
+Options:
+A. cool off
+B. punch
+C. illustrate point
+D. fight
+E. release energy
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5360370217129227,-0.14073817233793307,1.2492805291861466,0.296545842694548,0.5489779662586258,0.8897220278214552,1.0,167,6.8174237211545305,0,1,1,5,
+commonsenseqa:1065,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Dan fell off a bar stool.  He did this because he was what than ever before?
+
+Options:
+A. kitchen
+B. drunker
+C. tavern
+D. restaurant
+E. shorter
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.4454551080831332,-0.3257986563354838,1.0560493483377045,0.6462899116691977,0.5843703433581926,0.9188169599736778,1.0,309,6.8174237211545305,0,1,1,5,
+commonsenseqa:1071,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where would you find the sharpest parts of a triangle?
+
+Options:
+A. three vertices
+B. point
+C. 3 sides
+D. three sides
+E. math book
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,A,0,0.0,-0.541827088292338,-0.3374565558236308,1.2540490923700123,0.7385411658145434,0.5131518124589618,0.9016347892687354,0.8,284,6.8174237211545305,0,1,1,5,
+commonsenseqa:1084,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where could you find a shark before it was caught?
+
+Options:
+A. pool hall
+B. tomales bay
+C. marine museum
+D. business
+E. desert
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.4656255991616692,-0.010940155221684714,1.0658314595366696,0.06104887658842928,0.5557364697863416,0.9261895897911816,1.0,205,6.8174237211545305,0,1,1,5,
+commonsenseqa:1085,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where is one likely to find poker chips?
+
+Options:
+A. supermarket
+B. pantry
+C. motherboard
+D. bar
+E. bar
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.40173450043537157,-0.015759974293568273,0.8949595505553247,0.08038002568765634,0.6057760053607699,0.9447449441641977,0.8,146,6.8174237211545305,0,1,1,5,
+commonsenseqa:1087,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where can one obtain a bass fiddle?
+
+Options:
+A. jazz band
+B. string quartet
+C. group band
+D. nursery rhyme
+E. music store
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.37251545124352453,-0.02761577493673902,0.8309398581511553,0.11526847767967396,0.6284547546973168,0.9497451759495977,1.0,236,6.8174237211545305,0,1,1,5,
+commonsenseqa:1091,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"If someone laughs after surprising them they have a good sense of what?
+
+Options:
+A. joy
+B. fight
+C. frightened
+D. humor
+E. laughter
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5320337275192363,-0.055960854621882085,1.2074363706133657,0.15571869582851483,0.5264608200433796,0.9064800240145139,0.8,163,5.824609220027924,0,1,1,5,
+commonsenseqa:1093,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What is likely to have a better school cafeteria?
+
+Options:
+A. high school
+B. canteen
+C. polytechnic
+D. large room
+E. all kinds of schools
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,C,0,1.0,-0.6371649966659688,-0.09067228227886896,1.4267455936214983,0.2772044887670371,0.48427834037239803,0.8697586133511681,1.0,264,5.824609220027924,0,1,1,5,
+commonsenseqa:1098,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"How does going jogging generally affect one's self esteem?
+
+Options:
+A. feel better
+B. feel pride
+C. sweating
+D. ocean
+E. arthritis
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.45601710776585647,-0.08510283027771948,1.0258005324528845,0.19335945622780612,0.578781452287452,0.924818141943848,0.8,217,5.824609220027924,0,1,1,5,
+commonsenseqa:1102,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"When are people buying products more?
+
+Options:
+A. debt
+B. economic boom
+C. being able to use
+D. disagreements
+E. trading
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.5482687423499626,-0.07832246292718992,1.2897406829160476,0.23146572445974833,0.5175066248346598,0.8916175971683274,1.0,234,5.824609220027924,0,1,1,5,
+commonsenseqa:1108,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Why do some people get passports and go to different locations?
+
+Options:
+A. believe in god
+B. smoke marijuana
+C. desire to travel
+D. use weapons
+E. throw away
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.39444973803150896,-0.011467409125354303,0.892292854390946,0.05396680243580191,0.6118265480019044,0.9420370733104466,1.0,207,5.824609220027924,0,1,1,5,
+commonsenseqa:1132,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What do you do when you're going to market?
+
+Options:
+A. buy food
+B. see other people
+C. buying vegetables
+D. buy a fat pig
+E. traveling
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.4506461075105807,-0.2114097781389622,1.0226112061368766,0.43035545614615806,0.5747479848598006,0.9310988767355818,0.8,217,5.824609220027924,0,1,1,5,
+commonsenseqa:1139,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"When did mammoth's live?
+
+Options:
+A. boscage
+B. forest
+C. prehistory
+D. prehistoric times
+E. ancient times
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,E,0,1.0,-0.5118661116810764,-0.072013370455655,1.1270195892094788,0.2504279950752206,0.5419812642102098,0.9128833256404976,1.0,232,5.824609220027924,0,1,1,5,
+commonsenseqa:1145,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Bart entered his horse into the contest.  Where did he do this?
+
+Options:
+A. circus
+B. in kentucky
+C. western movie
+D. central park
+E. state fair
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.465904418163479,-0.0765246889973999,1.0356507491194158,0.20619432215176067,0.5742094202669795,0.9229333714810674,1.0,167,5.824609220027924,0,1,1,5,
+commonsenseqa:1147,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"All the power tools like the drill used for fixing cars made for a very loud workplace where?
+
+Options:
+A. basement
+B. work shop
+C. tool shed
+D. repair shop
+E. store room
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.578275062360159,-0.03605072071809445,1.2882400568122843,0.12339660585863177,0.4967218687799242,0.8992619205845727,1.0,225,5.824609220027924,0,1,1,5,
+commonsenseqa:1152,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Turkey only has a small northern part of their country located in part of the what?
+
+Options:
+A. middle east
+B. oven
+C. balkan peninsula
+D. provide meat
+E. asia minor
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,C,0,1.0,-0.38113311008691414,-0.028620156272230208,0.8905860004568319,0.1108150867525571,0.6444433878253525,0.9382412411893407,0.8,192,5.824609220027924,0,1,1,5,
+commonsenseqa:1161,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Copulating with the wrong partner may be ill advised, many diseases can be transferred that can cause different types of what?
+
+Options:
+A. intense pleasure
+B. ejaculation
+C. period of rest
+D. enjoyment
+E. skin irritation
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,1.0,-0.42776111314847576,-0.03554027070367738,1.0094643494757132,0.14011662370520858,0.5825183267863292,0.9348375669815255,1.0,159,5.824609220027924,0,1,1,5,
+commonsenseqa:1169,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where would you find a ticket booth and see a concert?
+
+Options:
+A. clerk
+B. indoors
+C. movie theater
+D. venue
+E. auditorium
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5119743964550105,-0.1525304415448545,1.1456736367215332,0.4189573194358764,0.5316562718416313,0.9157206092972353,0.8,249,5.824609220027924,0,1,1,5,
+commonsenseqa:1178,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"When cooking sheep meat a lot of people might want to be well?
+
+Options:
+A. ram
+B. lamb
+C. done
+D. ram
+E. wolf
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-0.5398193572617968,-0.16538939480748618,1.1875930322145187,0.30066985542091906,0.5137953176460368,0.9114747529334211,1.0,188,10.45009309053421,0,1,1,5,
+commonsenseqa:1183,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"There was a long cottage somewhere.  People thought it was haunted.  It was overgrown, there was nothing near it.  It's was far into the what?
+
+Options:
+A. mountains
+B. countryside
+C. train
+D. painting
+E. village
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.5941328989493933,-0.036977334556163775,1.3443889115235343,0.17299221255101038,0.4792112541706573,0.8904644372484609,0.6,223,10.45009309053421,0,1,1,5,
+commonsenseqa:1190,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What are our bodies doing after having food?
+
+Options:
+A. falling down
+B. digesting
+C. gas
+D. weight gain
+E. not hungry
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.47067985303731097,-0.04185355295157933,1.0548441241811786,0.1483904477994812,0.553781119870468,0.9285817151897949,1.0,213,10.45009309053421,0,1,1,5,
+commonsenseqa:1191,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Why would one try to avoid work?
+
+Options:
+A. making money
+B. leave home
+C. success
+D. malaise
+E. bad mood
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.5356831592658404,-0.09547987986638873,1.2314719257826496,0.23476278285127541,0.5233711424570546,0.9021269599848156,0.6,237,10.45009309053421,0,1,1,5,
+commonsenseqa:1197,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"Where can you find a place to eat in an urban area close to local nightlife?
+
+Options:
+A. city
+B. downtown
+C. mall
+D. shopping center
+E. own house
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.4311965322564587,-0.005870299763728326,0.9729235886467275,0.0338124841644006,0.6001420032910325,0.9267567399550568,1.0,176,10.45009309053421,0,1,1,5,
+commonsenseqa:1204,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"A person with digestion issues eats a meat-filled breakfast, what does he feel?
+
+Options:
+A. heartburn
+B. overeating
+C. happiness
+D. being satisfied
+E. gain energy
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.598228454786878,-0.024494773486291404,1.3474296183369885,0.10867405057653261,0.47428792066513054,0.8909915209893721,1.0,332,10.45009309053421,0,1,1,5,
+commonsenseqa:1211,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What are cats often known for?
+
+Options:
+A. whiskers
+B. sharp teeth
+C. purr
+D. four legs
+E. sharp claws
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,E,0,1.0,-0.5022836344316902,-0.059356933060901916,1.139749145403952,0.2796612016127815,0.5573627807265311,0.9099352629038325,0.8,228,10.45009309053421,0,1,1,5,
+commonsenseqa:1216,commonsenseqa,commonsense,,,Qwen2.5-3B-Instruct,"What would you do to a rock when climb up a cliff?
+
+Options:
+A. grab
+B. look down
+C. throw
+D. falling
+E. may fall
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-0.5034237883410391,-0.10226753573715541,1.163134058773725,0.2574443106255222,0.5386549741825433,0.9092559697269236,1.0,206,10.45009309053421,0,1,1,5,

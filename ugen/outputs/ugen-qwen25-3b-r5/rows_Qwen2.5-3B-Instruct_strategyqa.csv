@@ -1,0 +1,601 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+strategyqa:3,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Are eagles and young bears both used as labels for skills-training youth groups?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,0.85,-0.5162189854669531,-0.07264632994489754,1.2115545213359686,0.2569763743562697,0.5481969475307885,0.9001068548828948,1.0,204,8.409013986587524,0,1,1,5,
+strategyqa:5,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would a goblin shark eat at Crossroads Kitchen?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5673821878285519,-0.027298690120602487,1.2929173841737247,0.14445929782501907,0.532292258845368,0.8841444936198026,1.0,197,8.409013986587524,0,1,1,5,
+strategyqa:8,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Guitar Hero Beatles inappropriate for a US third grader?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.75,-0.6085127668184137,-0.19560880733964345,1.383482144542741,0.41247023012695055,0.4731226380322581,0.8856079286875383,1.0,321,8.409013986587524,0,1,1,5,
+strategyqa:12,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is it unusual to play Happy hardcore music at a funeral?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5748764643355596,-0.19366552652597116,1.2832733866308539,0.34054598168674327,0.5175036934652815,0.8848161133351149,0.6,270,8.409013986587524,0,1,1,5,
+strategyqa:13,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could every citizen of Samoa send a letter to a unique JPMorgan Chase employee?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.22833083329347625,-0.15571592995620448,0.4912144675638762,0.26494373149471356,0.7538428156978999,0.9764510060958711,0.8,253,8.409013986587524,0,1,1,5,
+strategyqa:15,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Will a Holstein cow and the Liberty Bell balance out a giant scale?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.2279043742223111,-0.07199049089102043,0.5283277655635018,0.2656732186087112,0.7425907721715187,0.9781290821175077,0.8,335,8.409013986587524,0,1,1,5,
+strategyqa:17,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Are most mall Santa Claus actors white?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,0.85,-0.6338013994287564,-0.023054267000892043,1.4741003001344617,0.11209406305291954,0.48260384886747315,0.8664653958106527,1.0,294,8.409013986587524,0,1,1,5,
+strategyqa:28,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is lunch on the beach a good activity to spot the full circle of a rainbow?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.8,-0.62039799195518,-0.10214047983753478,1.4288472699335573,0.33778440405042903,0.481174893979577,0.8714280340118684,1.0,345,8.409013986587524,0,1,1,5,
+strategyqa:29,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is a fairy more prevalent in world myths than a valkyrie?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5155783557589664,-0.08637645975977648,1.1979234430059054,0.16503752809616604,0.5517065716867752,0.897804274283191,0.8,376,8.409013986587524,0,1,1,5,
+strategyqa:30,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would a caracal be defeated by Javier Sotomayor in a high jump competition?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.511237052977661,-0.008970810546619154,1.1572362918549661,0.0572537377325224,0.5569237209042239,0.9022195114464057,1.0,366,8.409013986587524,0,1,1,5,
+strategyqa:34,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Do most high school head coaches make as much as the Head Coach at NCSU?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.43144452231442343,-0.07770314210208085,1.0025337624309039,0.20693199525241232,0.5991158006949858,0.9232554920153184,1.0,275,8.409013986587524,0,1,1,5,
+strategyqa:35,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Michael an unpopular name in the United States?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.6,-0.5865737863176622,-0.15463953569509195,1.3057605437236302,0.33325463609540407,0.476532537275584,0.8985128296607452,1.0,382,8.409013986587524,0,1,1,5,
+strategyqa:45,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can Arnold Schwarzenegger deadlift an adult Black rhinoceros?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5133124327546132,-0.08607135544297269,1.1521537529840946,0.263117004082756,0.5652143326687052,0.9024751687303503,1.0,282,11.571049610773722,0,1,1,5,
+strategyqa:48,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Was Kurt Cobain's death indirectly caused by Daniel LeFever?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5560725320310189,-0.21612597856437313,1.303271330382907,0.460960252106446,0.549392978142051,0.8822048227715341,1.0,316,11.571049610773722,0,1,1,5,
+strategyqa:49,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could the moon fit inside the Black Sea?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",None,no,0,1.0,-0.12641380241854755,nan,0.27671582964095265,nan,0.8442924101545941,0.9906258736737072,0.2,512,11.571049610773722,0,0,1,1,
+strategyqa:52,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is it possible to get killed walking to the Very Large Telescope?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,0.75,-0.576627358472869,-0.13477692700689659,1.3211219326021093,0.3771924615643674,0.5185707480676712,0.88329939679666,1.0,341,11.571049610773722,0,1,1,5,
+strategyqa:54,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does it seem like the Gorillaz is composed of more members than they have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5727014098354278,-0.18613854155743562,1.3481991958402724,0.3972892575196732,0.5385284104268067,0.8740189330652356,1.0,320,11.571049610773722,0,1,1,5,
+strategyqa:57,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Was the Carnation Revolution the deadliest revolution in Europe?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5041905634740966,-0.0693126878613081,1.1322835756222496,0.16495233405920118,0.5776200828481918,0.900909318614786,0.4,428,11.571049610773722,0,1,1,2,
+strategyqa:61,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could Al Capone have read works from the Harlem Renaissance?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5508184075904929,-0.1136958227143623,1.2412532297626369,0.29801119266029846,0.5536076925645437,0.8857327578372733,1.0,301,11.571049610773722,0,1,1,5,
+strategyqa:72,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"If Goofy were a pet, would he need heartworm prevention?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5054295418706052,-0.2622797770695608,1.1742055221006333,0.5283029687074148,0.5589436230271362,0.9027177545913431,0.6,258,11.571049610773722,0,1,1,5,
+strategyqa:74,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did University of Pittsburgh founder have great deal in common with Judith Sheindlin?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.4429476885999042,-0.18219060180125743,0.9956168954865652,0.40480233116344283,0.6085740458220243,0.9229293319773166,1.0,188,11.571049610773722,0,1,1,5,
+strategyqa:86,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would someone on antidepressants need to be cautious of some citrus fruits?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.49724798985666585,-0.09179581922944635,1.086832215337833,0.18308737063573233,0.5384575096277538,0.9232939112846549,0.8,307,11.571049610773722,0,1,1,5,
+strategyqa:88,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did earth complete at least one orbit around the sun during the Napoleonic Wars?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.19969514391554702,-0.06261311300655237,0.4472444867752785,0.21571293664167493,0.7804538193527314,0.9796988342305739,0.8,278,11.571049610773722,0,1,1,5,
+strategyqa:89,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can the Moscow Kremlin fit inside Disney Land?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.3854696755708197,-0.14051745001049198,0.8728171835958989,0.36521738291739797,0.622719549721925,0.9415012854281987,0.6,214,11.571049610773722,0,1,1,5,
+strategyqa:90,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would a snakebite hypothetically be a threat to T-1000?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,no,0,1.0,-0.6252829695049993,-0.08015321290683157,1.4501368889790465,0.25062124156808113,0.4922976065967674,0.8628464993826632,0.8,379,8.591073056062063,0,1,1,5,
+strategyqa:94,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would Persephone be a good consultant to a landscape architect?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.6453767272650457,-0.0670853869523853,1.465025129285833,0.17326564830592428,0.4656286287444369,0.868131695213837,0.6,349,8.591073056062063,0,1,1,5,
+strategyqa:99,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can a person be diagnosed with a Great Depression?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4687875555645605,-0.08436930003027025,1.0751851678215025,0.13779130639493312,0.5906447166713272,0.9155106047304665,0.8,205,8.591073056062063,0,1,1,5,
+strategyqa:100,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does the land in close proximity to beaver dams suffer?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.6102403414805562,-0.07060571880189552,1.4165888101395299,0.2326767665382571,0.48065495156706906,0.8766914355449188,0.6,390,8.591073056062063,0,1,1,5,
+strategyqa:102,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does rock star Keith Richards play a captain of a boat in a movie?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.4213033261336836,-0.066030511554942,0.98677174154112,0.3009294401354978,0.5886197420048345,0.9352068258929498,1.0,194,8.591073056062063,0,1,1,5,
+strategyqa:104,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does Buddy The Elf know anyone who works in publishing?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.585511306393125,-0.014094462928615789,1.3623450137308641,0.08381652373150554,0.5136174485621486,0.8807397024392227,1.0,279,8.591073056062063,0,1,1,5,
+strategyqa:107,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did Dale Jr.'s father crash his car due to a stroke?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4766145630537822,-0.010889654746203329,1.0705623175585277,0.051568320636774224,0.5716304094475858,0.9167597022711061,1.0,255,8.591073056062063,0,1,1,5,
+strategyqa:110,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does Super Mario require electricity to play?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5502724638516364,-0.15861520192144477,1.244417125824162,0.35010642943180176,0.493365498422419,0.9072498404285283,0.6,206,8.591073056062063,0,1,1,5,
+strategyqa:115,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did Queen Elizabeth The Queen Mother and her daughter share name with Tudor queen?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.4004715092175299,-0.23481415879602233,0.9770645238013408,0.6183949782510183,0.6117940590931819,0.9305437177002847,0.6,286,8.591073056062063,0,1,1,5,
+strategyqa:116,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would the crew of Apollo 15 have difficulty riding a unicycle?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5391061258482922,-0.06575061412877403,1.2436073426916023,0.22564631877620775,0.5450863275638025,0.8912572161868889,1.0,287,8.591073056062063,0,1,1,5,
+strategyqa:121,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can actress Danica McKellar skip astronaut education requirements?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5539618468262167,-0.1092280513742594,1.253834800587491,0.27892108005818034,0.5217394343245838,0.8987416171421438,1.0,295,8.591073056062063,0,1,1,5,
+strategyqa:123,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did Sugar Ray Robinson win a fight against Canelo Alvarez?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.3488678596965066,-0.1597236218997485,0.7965565930458436,0.4107758763139439,0.6720628641912194,0.9425242824144051,1.0,244,8.591073056062063,0,1,1,5,
+strategyqa:125,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would eliminating competition in the Japanese bulk carrier market be profitable for a steel company?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.6064713253431172,-0.11101169879248118,1.3839679734452741,0.21852199411158324,0.5010567774690193,0.8739073440561377,0.8,347,8.743533929189047,0,1,1,5,
+strategyqa:129,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Supreme Court of the United States analogous to High Courts of Justice of Spain?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,no,0,1.0,-0.4681786780764289,-0.33589858967025066,1.0651244579395454,0.6159963796950917,0.5858015515945024,0.9131887190043926,1.0,360,8.743533929189047,0,1,1,5,
+strategyqa:130,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Phileas Fogg's around the world would be difficult to achieve during Pope John Paul I's reign?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5432970505750143,-0.08534679530324259,1.2705346876680825,0.21787402603445546,0.545506152425763,0.8849245031045962,0.8,395,8.743533929189047,0,1,1,5,
+strategyqa:135,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does Mercury make for good Slip N Slide material?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5179726030714722,-0.21539101546899056,1.2153618308917744,0.4503222039183707,0.539805229768338,0.901794577175789,1.0,247,8.743533929189047,0,1,1,5,
+strategyqa:136,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Do many fans of J.K Rowling know who Alan Rickman is?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5035586323747053,-0.10216045696832528,1.1440867980687017,0.22964819691832497,0.5576056865105167,0.9066539326341094,1.0,289,8.743533929189047,0,1,1,5,
+strategyqa:137,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would human race go extinct without chlorophyll?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.43039829563608073,-0.03390350178718412,0.9982622691769729,0.1678274094970007,0.597134416083289,0.9274903770555486,0.8,386,8.743533929189047,0,1,1,5,
+strategyqa:141,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can methane be seen by the naked eye?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5412841320059527,-0.15495120126673592,1.196396788056322,0.29838046594523365,0.5334754942271572,0.8996696287622818,1.0,260,8.743533929189047,0,1,1,5,
+strategyqa:146,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is silicon important in California?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5665226369700244,-0.023647598756061445,1.2346798504982663,0.07780046641090273,0.4829812632993825,0.9056297531051021,1.0,248,8.743533929189047,0,1,1,5,
+strategyqa:151,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is SnapCap an example of a retail store?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4867783639221048,-0.08231689704792682,1.099200395009616,0.2210303507145094,0.5694582904156168,0.9127916027953968,0.8,201,8.743533929189047,0,1,1,5,
+strategyqa:155,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"During the pandemic, is door to door advertising considered inconsiderate?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5687460347267088,-0.17171132888567323,1.2761664230133545,0.34649589141539633,0.5170516099999932,0.8916186119549002,1.0,289,8.743533929189047,0,1,1,5,
+strategyqa:160,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did Alfred Hitchcock include internet slang in his films?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5301604440461789,-0.06787290315692947,1.1865505776114758,0.2177117320390168,0.5550521869503015,0.8990829633482804,1.0,282,8.743533929189047,0,1,1,5,
+strategyqa:167,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could morphine cure HIV?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4580819435306892,-0.06838804496022514,1.0359198503916238,0.2393658919178018,0.5651012187505641,0.9293174946271792,1.0,328,8.743533929189047,0,1,1,5,
+strategyqa:169,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would Gomer Pyle salute a lieutenant?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.45990309598796,-0.17595335178521054,1.0709888686918203,0.39341514819663104,0.5818477474428989,0.9162914678454399,0.6,216,8.624996940294901,0,1,1,5,
+strategyqa:176,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is myocardial infarction a brain problem?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4006443386424103,-0.19390442888832618,0.904244380739101,0.3669417989497313,0.6312744741829542,0.933742303114671,1.0,390,8.624996940294901,0,1,1,5,
+strategyqa:178,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can a 2019 Toyota Hilux hypothetically support weight of thirty Big John Studd clones?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.21233354757236056,-0.07985646915989264,0.4995766161357998,0.2821871197329007,0.7612973024508148,0.9772411175411885,0.8,329,8.624996940294901,0,1,1,4,
+strategyqa:181,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would Harvey Milk have approved of Obama?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5149169792136774,-0.03351662480902936,1.2098472455133937,0.10645630360707987,0.5503900512654818,0.8984212204245211,1.0,262,8.624996940294901,0,1,1,5,
+strategyqa:185,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Edward Snowden in hiding from the United States?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,no,0,1.0,-0.6020232797825569,-0.12043650645015684,1.3733271988812472,0.3376002653914287,0.5111996360627332,0.8719483087385508,0.8,266,8.624996940294901,0,1,1,5,
+strategyqa:186,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does the judo rank system reach the triple digits?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.20930713517493327,-0.0676147911289983,0.5357208375132112,0.2190342395406321,0.7757884393687602,0.968972537436603,1.0,324,8.624996940294901,0,1,1,5,
+strategyqa:196,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can actress Dafne Keen win the Eurovision Song Contest finals in 2020?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5335616415067335,-0.07285676633181974,1.2305228767808527,0.21373282326215323,0.5530509167476326,0.8939290051975994,1.0,282,8.624996940294901,0,1,1,5,
+strategyqa:207,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is the United States Capitol located near the White House?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.3095199203490613,-0.015275400898076441,0.7222285511265998,0.06051569105639132,0.6856110025674869,0.9561203473653549,0.8,195,8.624996940294901,0,1,1,5,
+strategyqa:210,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does Masaharu Morimoto rely on glutamic acid?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.6066928437554351,-0.089275002360561,1.332902730769212,0.21692154826987556,0.5039480896331267,0.8828352968778637,0.8,361,8.624996940294901,0,1,1,5,
+strategyqa:217,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is it impossible for pigs to use pig latin?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5194895591132609,-0.05770606523098346,1.166337007653474,0.20959527376146422,0.5229020320257898,0.9104487196873811,1.0,295,8.624996940294901,0,1,1,5,
+strategyqa:219,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would a duke hypothetically be subservient to a Tsar?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.6576635561492179,-0.20422631145620093,1.4854435948147202,0.509308208907394,0.44315896303486574,0.8718892354813833,0.6,378,8.624996940294901,0,1,1,5,
+strategyqa:221,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can telescopes hear noise?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.44601479464259597,-0.07130106271263041,1.0335379248194738,0.23599879268420074,0.5552686670605017,0.9316408656081375,1.0,245,8.624996940294901,0,1,1,5,
+strategyqa:230,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would Bugs Bunny harm an olive tree in the real world?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,0.85,-0.6280494663435997,-0.17845362279391944,1.4099899448548605,0.42309683667305364,0.4907187889658564,0.8673538066044882,1.0,241,7.059562861919403,0,1,1,5,
+strategyqa:232,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does  Lionel Richie believe in holistic medicine?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,0.5,-0.5020921290063001,-0.07996346364916462,1.084295656814335,0.15023536223008804,0.5311538178939372,0.9231665693223476,1.0,160,7.059562861919403,0,1,1,5,
+strategyqa:233,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would Columbus have discovered Durian trees during his 1492 expedition?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5794104446833473,-0.1670291513825267,1.2721444480032733,0.3349587431263264,0.5283795674623598,0.8882793554300752,1.0,271,7.059562861919403,0,1,1,5,
+strategyqa:235,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did mongoose come from later period than rhinos?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.4409315529540639,-0.15108342092086482,1.0074182996485825,0.3368330517900337,0.585050767630923,0.9307456762182946,0.8,255,7.059562861919403,0,1,1,5,
+strategyqa:236,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Sirius part of a constellation of an animal?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.27520410505738063,-0.024385890302255575,0.6515539067769711,0.11205316949645787,0.6983029494999321,0.9672893566690433,1.0,157,7.059562861919403,0,1,1,5,
+strategyqa:237,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is there a popular Disney character made from living ice?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.4814628850666214,-0.06952741878678619,1.1204467601738106,0.1937985355116041,0.5637904025487981,0.913620481955803,1.0,295,7.059562861919403,0,1,1,5,
+strategyqa:238,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would Goofy hypothetically enjoy Nylabone?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5504917657025035,-0.21243556951715922,1.3022977116676064,0.3660382804748335,0.53548640208809,0.8832806633379227,0.8,266,7.059562861919403,0,1,1,5,
+strategyqa:240,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does the Pixar film Brave feature Scottish people?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.6360562153681419,-0.06551177814344555,1.4558685360368968,0.21972002053276563,0.46460402950327445,0.8738638499949841,0.6,235,7.059562861919403,0,1,1,5,
+strategyqa:251,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can you chew argon?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4167817021597196,-0.012096503763984856,0.9437387143009652,0.06951094589059892,0.595189821246255,0.9383592821400741,1.0,261,7.059562861919403,0,1,1,5,
+strategyqa:252,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does the Red Sea have biblical significance?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.44369008629583095,-0.09371651494539417,1.031497795665268,0.2122665144029948,0.5774165871777719,0.9295549549857136,1.0,311,7.059562861919403,0,1,1,5,
+strategyqa:255,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would a Yeti be likely to have prehensile limbs?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,0.6,-0.6006640575748629,-0.20414725788075808,1.362545838434147,0.34119643753443657,0.5134443408365433,0.8745518436798683,1.0,325,7.059562861919403,0,1,1,5,
+strategyqa:257,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would a member of the United States Air Force get a discount at Dunkin Donuts?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5470914452900152,-0.07840810677831674,1.2775400874942822,0.23311887858415936,0.5384508073780565,0.8883491067155715,0.8,248,7.059562861919403,0,1,1,5,
+strategyqa:259,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would an actuary be confused about what prime numbers are?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.3294520286237161,-0.059886528668945026,0.7617888604019349,0.148801554736982,0.6929179892270234,0.9455901715007141,1.0,274,7.487881163756053,0,1,1,5,
+strategyqa:261,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could a white belt defeat Jon Jones in a Brazilian jiu-jitsu match?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5999718804972541,-0.08265025364854257,1.3677801749443264,0.22766746706497307,0.49092794531246736,0.8807465082832745,0.8,336,7.487881163756053,0,1,1,5,
+strategyqa:262,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"In geometry terms, is the Royal Observatory in Greenwich similar to a yield sign?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.541898249332957,-0.02880011686643987,1.2555594017061493,0.15107507542230034,0.5226511110356727,0.8969789805800416,1.0,344,7.487881163756053,0,1,1,5,
+strategyqa:263,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would a birdwatcher pursue their hobby at a Philadelphia Eagles game?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5276339689899477,-0.09619643737095866,1.1781270546096378,0.18273990276649776,0.5602162338531854,0.9024733826518059,1.0,228,7.487881163756053,0,1,1,5,
+strategyqa:264,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is it okay to lie after taking an oath in a court of law?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5272327819431136,-0.029578206968456772,1.1975725651807194,0.1337959882166698,0.5250019265156166,0.9049668532960555,1.0,255,7.487881163756053,0,1,1,5,
+strategyqa:268,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does Ahura Mazda have a rivalry with Zeus?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5020334778987199,-0.11865097401216455,1.128942945883935,0.32721889100974727,0.5605991095165659,0.908134479885516,1.0,322,7.487881163756053,0,1,1,5,
+strategyqa:269,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Cookie Monster's diet Paleo friendly?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4112173935748247,-0.10662001383991537,0.9948657893581375,0.23301050992324215,0.6009228113284908,0.9296634721616146,1.0,341,7.487881163756053,0,1,1,5,
+strategyqa:271,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Will you see peach blossoms and Andromeda at the same time?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,no,0,1.0,-0.5157968364926756,-0.34358104670536704,1.1789881715215431,0.6470837462626093,0.5370071107850355,0.9093596664129519,0.6,255,7.487881163756053,0,1,1,5,
+strategyqa:272,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can too many oranges cause diarrhea?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5778248687004127,-0.10173104068962857,1.284940937618165,0.2589626055790906,0.49963732768040503,0.8939266723655436,0.8,274,7.487881163756053,0,1,1,5,
+strategyqa:273,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can Viper Room concert hypothetically be held at National Diet building?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5347628314972568,-0.06575568914315492,1.2421198628388328,0.19135853131805783,0.5216300033793158,0.9000121162862194,1.0,245,7.487881163756053,0,1,1,5,
+strategyqa:274,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Was Alexander the Great baptized?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5551599462009922,-0.20426105497365654,1.2571592057384722,0.3543515303729965,0.5150772925164249,0.895182622982575,1.0,222,7.487881163756053,0,1,1,5,
+strategyqa:276,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would General Zod prefer an iPhone over a Samsung Galaxy S4?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.6,-0.666583315440408,-0.44348636368522304,1.5659346515202786,0.9834198110866433,0.47279182004682513,0.8476191414605587,1.0,327,7.487881163756053,0,1,1,5,
+strategyqa:279,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did eggs need to be kept cold in the middle ages?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5793690748877014,-0.16829807462147528,1.2913792162176667,0.29442542778864284,0.5058657502228359,0.8856564300240211,1.0,265,8.705127020676931,0,1,1,5,
+strategyqa:283,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Are Brussels sprout particularly good for adrenal fatigue?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,0.8,-0.5170808158042044,-0.16428808351323218,1.162507721818347,0.5097726385334447,0.5330330770810445,0.9097484878698985,0.6,375,8.705127020676931,0,1,1,5,
+strategyqa:284,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would John the Baptist be invited to a hypothetical cephalophore reunion in heaven?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.567072038761527,-0.14832723444809895,1.3277855718854152,0.308614678408721,0.5289084204867434,0.8806825411358312,0.6,309,8.705127020676931,0,1,1,5,
+strategyqa:286,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could boolean algebra be described as binary?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.4669577037979223,-0.2046034365146928,1.0332224778881571,0.3955374263678877,0.5726332910126075,0.9285204837409159,0.8,192,8.705127020676931,0,1,1,5,
+strategyqa:289,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did John Lennon listen to Compact discs?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4381088196581295,-0.0438436784073275,1.0133230826589117,0.15367929338582265,0.6087002240653548,0.9221057580137739,1.0,196,8.705127020676931,0,1,1,5,
+strategyqa:292,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can COVID-19 spread to maritime pilots?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.44644022651803844,-0.1522873334748359,1.0429916482352126,0.27198381560117824,0.5856542986019815,0.9226025213830246,1.0,307,8.705127020676931,0,1,1,5,
+strategyqa:293,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Pan a symbol of virtue and virginity in women?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.48552140130699006,-0.027248698922141063,1.1343048480868843,0.12333673425402363,0.5714842814952135,0.9071954949448506,1.0,240,8.705127020676931,0,1,1,5,
+strategyqa:295,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Has the Subway restaurant franchise had any connections with child abusers?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,0.1,-0.6008069071815257,-0.11271933412110968,1.3620080459518766,0.37328559726135185,0.4877145163124741,0.883067459605708,1.0,202,8.705127020676931,0,1,1,5,
+strategyqa:299,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Were any of despised Pope Alexander VI's descendants canonized?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.4289583433808708,-0.17366838423670097,1.030584704408632,0.34520359841700693,0.6226876336539123,0.9154620966859647,0.6,323,8.705127020676931,0,1,1,5,
+strategyqa:305,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could a Bengal cat hypothetically best Javier Sotomayor's record?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5508659138082557,-0.032293319497284756,1.2215889052721742,0.1034181145011311,0.5361957446683812,0.8947217143034634,1.0,395,8.705127020676931,0,1,1,5,
+strategyqa:306,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did Donatello use a smartphone?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.48390906784808274,-0.038944052726336054,1.1845739856959225,0.1622346709587248,0.5832391500276307,0.8986641701692009,1.0,303,8.705127020676931,0,1,1,5,
+strategyqa:307,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can a grey seal swim in the same water as the subject of Moby Dick?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.4712337342199498,-0.02355244236709571,1.0593245827280442,0.10829103439490002,0.5680682990915965,0.9182822093151618,0.6,276,8.705127020676931,0,1,1,5,
+strategyqa:314,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does the Taco Bell kitchen contain cinnamon?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.639009723259559,-0.048398071509533715,1.4925846243991878,0.2037982056934394,0.4902439761792989,0.8602946664828921,1.0,229,8.110140244166056,0,1,1,5,
+strategyqa:315,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can chemicals in onion help create a thermonuclear bomb?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5636398913642988,-0.11882436152272173,1.277646365835127,0.25126422568882845,0.5214773135456613,0.887746683021548,1.0,369,8.110140244166056,0,1,1,5,
+strategyqa:316,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would Cardi B. benefit from soy milk?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,0.5,-0.5729767478414273,-0.082114268191314,1.2797708214754484,0.309399762541626,0.48659095353075676,0.899344475119264,0.8,286,8.110140244166056,0,1,1,5,
+strategyqa:318,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Were number of states in Ancient Greece underwhelming compared to US states in 1900?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.3720910135171497,-0.018775768485890392,0.8666445820712151,0.08392549108185203,0.6467953879587554,0.9386995451877246,1.0,296,8.110140244166056,0,1,1,5,
+strategyqa:319,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Edgar Allan Poe obscure in the world of horror fiction?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4996828064400039,-0.12830489199503367,1.1220810402752541,0.3445185964565809,0.5476202979639527,0.9155114032328129,1.0,336,8.110140244166056,0,1,1,5,
+strategyqa:320,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is someone more likely to survive having breast cancer in Japan than in Sweden?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.3028396470041072,-0.11480158926133299,0.65023253206182,0.27823152467608453,0.7019412420826767,0.9600413985755465,0.6,218,8.110140244166056,0,1,1,5,
+strategyqa:322,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"For Hostas to look their best, do they need lots of chlorophyll?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.39934661338880273,-0.10235196627309051,0.9418106484166447,0.27585014147886966,0.6141490682705559,0.9324513927779414,0.6,352,8.110140244166056,0,1,1,5,
+strategyqa:325,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Do more anchovy live in colder temperature waters than warmer?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,no,0,1.0,-0.4853327578229667,-0.09653182768185313,1.1483881799776239,0.2331080554080708,0.5609996658280191,0.9066539630079132,0.8,347,8.110140244166056,0,1,1,5,
+strategyqa:328,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can a goat be used for one of the ingredients in French toast?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.4766016067692417,-0.2515334870895458,1.0970741033626552,0.581303131841981,0.563551933019461,0.9208163711839094,0.8,167,8.110140244166056,0,1,1,5,
+strategyqa:337,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did Al Capone carry a smartphone?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.3689923511455008,-0.0570328312532998,0.8964324525590291,0.24475703459669873,0.643244641972947,0.9377432831519626,1.0,193,8.110140244166056,0,1,1,5,
+strategyqa:346,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Do worshipers of Shiva make a pilgrimage to the Holy Land?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.45586151774449996,-0.2701403151149672,1.080144384156256,0.5879913770234758,0.5855717437520419,0.9145408909614772,1.0,292,8.110140244166056,0,1,1,5,
+strategyqa:351,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would dual-energy X-ray absorptiometry be useful if performed on a crab?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5218650309055967,-0.052225526296117174,1.186673107439873,0.19316566717415937,0.5257954906525188,0.908326112616219,1.0,304,8.110140244166056,0,1,1,5,
+strategyqa:356,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can monkeys use QWERTY keyboards?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.6089534205948656,-0.11295098522288072,1.3936244114236576,0.2762633919859046,0.49148694151746375,0.8764191076159478,1.0,280,8.452212274074554,0,1,1,5,
+strategyqa:361,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can Harry Potter book a flight on Asiana Airlines?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.6,-0.6196081192976716,-0.0380153398012529,1.439914202208166,0.18135367202227806,0.5126418297619172,0.8593480996301218,1.0,383,8.452212274074554,0,1,1,5,
+strategyqa:368,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Was the first Vice President of the United States an Ottoman descendant?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.3865466493726992,-0.18947068570801662,0.8671983629911653,0.4135491481167719,0.6415478821705889,0.9347466349049851,1.0,216,8.452212274074554,0,1,1,5,
+strategyqa:373,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Are human footprints absent from Mount Sharp?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5286557059283894,-0.2288884708250407,1.2133031440891215,0.3932168388735242,0.5437429986856691,0.89875603096569,1.0,199,8.452212274074554,0,1,1,5,
+strategyqa:374,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can all of Snow White's dwarfs play a game of 7 Wonders simultaneously?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.26802780113457736,-0.03361218121422856,0.6121194143751727,0.14725986118429546,0.7221777045175316,0.969574754867028,0.6,254,8.452212274074554,0,1,1,5,
+strategyqa:377,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would Swiss Guard defeat the Marines?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5736542038676478,-0.059277912271956744,1.32095428939743,0.19561897076111498,0.5184477988943875,0.882890215543943,1.0,321,8.452212274074554,0,1,1,5,
+strategyqa:382,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would The Dark Knight be appropriate for a preschool class?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.85,-0.5761515326663885,-0.1694924339487045,1.3287290629102984,0.2931820606999474,0.5248809825432929,0.8807604589352482,1.0,304,8.452212274074554,0,1,1,5,
+strategyqa:384,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Are ground bell peppers the main ingredient of black pepper?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4760908517784527,-0.03829324715963859,1.0687769478776912,0.13320593813537052,0.5648486132351614,0.9221038909481584,1.0,278,8.452212274074554,0,1,1,5,
+strategyqa:385,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would John Muir not likely have a vitamin D deficiency?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5179600151916612,-0.10694724598821874,1.1730597859155742,0.26883586266649573,0.5340691234785527,0.9096579537414514,0.8,313,8.452212274074554,0,1,1,5,
+strategyqa:389,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Phobos (moon) name origin similar to Roman god Pavor?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.44984495025461374,-0.17936265385408964,0.9908911459712493,0.40046208134670574,0.5788368562093148,0.9346743080860529,0.6,195,8.452212274074554,0,1,1,5,
+strategyqa:396,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Will Chuck Norris be a nonagenarian by time next leap year after 2020 happens?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.2372611052164727,-0.10910636626046728,0.5744610094234245,0.3011752235326715,0.7532649129629135,0.966139709218493,0.8,265,8.452212274074554,0,1,1,4,
+strategyqa:397,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is growing seedless cucumber good for a gardener with entomophobia?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,0.8,-0.6767902886115543,-0.11485177438908067,1.5169302471699515,0.34346671928440503,0.46594843633121846,0.8540770034671454,1.0,382,8.452212274074554,0,1,1,5,
+strategyqa:398,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does water have viscosity?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,no,0,1.0,-0.41808276990838583,-0.02420877603192177,0.9613149951087855,0.10855745317100467,0.5850961366914353,0.9380632996559143,1.0,265,8.845414360364279,0,1,1,5,
+strategyqa:401,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is US route 1 dominated by historically red states?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.6063661287377031,-0.20135049816839037,1.3876803391035464,0.44852160266510427,0.48940975518239477,0.8774531240251187,0.6,371,8.845414360364279,0,1,1,5,
+strategyqa:406,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would menu at Chinese Starbucks be familiar to an American?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.8,-0.6045630918026504,-0.009628321015043184,1.4071783970241165,0.06066266688719146,0.5040354800935324,0.8707223652583088,0.6,394,8.845414360364279,0,1,1,5,
+strategyqa:409,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is it wise to feed a Snickers bar to a poodle?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4930604813255873,-0.0972058565578872,1.1313829681138754,0.2834510231372159,0.5435862064598098,0.9142283937997289,1.0,252,8.845414360364279,0,1,1,5,
+strategyqa:411,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did the Presidency of Bill Clinton conclude with his impeachment?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.39657935182503024,-0.28229203351655013,0.9138224695313738,0.5322067711358329,0.626108989936893,0.936201711244221,1.0,237,8.845414360364279,0,1,1,5,
+strategyqa:417,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does Abdulqawi Yusuf go to the Hague on a typical work day?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.44169859989971166,-0.010603740529859351,1.0245818497285084,0.052432512670726794,0.5895504402945626,0.9209118714872396,0.8,265,8.845414360364279,0,1,1,5,
+strategyqa:418,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could ancient Tony Bennett have a baby in 2020?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.4118495205094596,-0.028522621621955107,0.9580002592887533,0.1327584305777562,0.6213500431828922,0.9255203018265385,1.0,248,8.845414360364279,0,1,1,5,
+strategyqa:420,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Will Ronda Rousey hypothetically defeat X-Men's Colossus in a fight?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,no,0,0.85,-0.6398917181320598,-0.18522712748138778,1.4613292329762162,0.46699496368415616,0.5008454099483788,0.8575960680097342,1.0,400,8.845414360364279,0,1,1,5,
+strategyqa:423,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would you take a photo of a Saltwater crocodile in Memphis?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4936439214867601,-0.0428515359041152,1.171920542403814,0.17256273634549166,0.5801572334162439,0.9007943205986962,1.0,264,8.845414360364279,0,1,1,5,
+strategyqa:427,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Was Mercedes-Benz associated with the Nazis?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5409620830440972,-0.0573846860594737,1.2394364183934312,0.2106916313001701,0.5426422495454076,0.8954787225477279,0.8,315,8.845414360364279,0,1,1,5,
+strategyqa:431,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can every digit in Pi be memorized?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4474425810732913,-0.10404500070580032,1.037210595270798,0.2320245302958135,0.5654984772205353,0.9279319397781206,1.0,230,8.845414360364279,0,1,1,5,
+strategyqa:439,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can you hunt Iberian wolves in the Southern United States?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.3653592055808506,-0.07086619247754318,0.8795403269241597,0.24256901406505804,0.6420101925082828,0.9401649629292281,1.0,230,8.845414360364279,0,1,1,5,
+strategyqa:440,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is eleventh grade required to get a driver's licence?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.41044906266734615,-0.13282188890654348,0.9691722776344853,0.40163956179099597,0.6200406630389607,0.9273955947674882,1.0,313,11.558295468489328,0,1,1,5,
+strategyqa:449,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does chlorine inhibit photosynthesis?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.44814885105197366,-0.06139972522214521,1.019701973582872,0.2328902857566645,0.5893132663997156,0.921389229329569,0.8,336,11.558295468489328,0,1,1,5,
+strategyqa:451,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did the Coen brothers ever collaborate with the Brothers Grimm?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.38590130253103916,-0.008119610870655455,0.8885438266089912,0.04568537369514954,0.6396632977850634,0.9350083741831453,1.0,292,11.558295468489328,0,1,1,5,
+strategyqa:465,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Has Elon Musk's hairline changed?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.6398420192062003,-0.054867410526640015,1.4309269323610472,0.20555911172359723,0.4701955494890501,0.8680928549268744,0.8,182,11.558295468489328,0,1,1,5,
+strategyqa:466,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could Reza Shah be related to Queen Elizabeth I?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.38470100088495707,-0.018325940160129523,0.8924043885689492,0.07987866022822221,0.6486165187849465,0.9310197471926789,1.0,277,11.558295468489328,0,1,1,5,
+strategyqa:468,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is sunscreen unhelpful for the condition that killed Bob Marley?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.45530476999767655,-0.3225084009309285,1.0361328008707769,0.5977335735852805,0.5532232936820947,0.9325522469589487,1.0,256,11.558295468489328,0,1,1,5,
+strategyqa:472,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Are there tearjerkers about United Airlines flights?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.6543719408695252,-0.19123746381690884,1.5330195794339512,0.4606375166340741,0.47194354857007664,0.8566048281888167,0.6,312,11.558295468489328,0,1,1,5,
+strategyqa:473,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did Japanese serfdom have higher status than English counterpart?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",None,yes,0,1.0,-0.5798203759428274,-0.24550864286720753,1.3479813111181134,0.585929786786437,0.5098952218104387,0.8797955371555872,0.6,512,11.558295468489328,0,0,1,3,
+strategyqa:476,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Do guitarists need both hands to play?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.6409773047633256,-0.1754501804583318,1.46089544286139,0.41879358161099844,0.478508114929031,0.8625800395670112,1.0,326,11.558295468489328,0,1,1,5,
+strategyqa:477,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is most store bought rice pudding made with brown rice?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4520619032478371,-0.04632845838689074,1.0406108663041456,0.1823290244244052,0.5796318892600402,0.9222232942311269,1.0,265,11.558295468489328,0,1,1,5,
+strategyqa:482,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Are there some countries where waiting staff need no tip?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5482049762716743,-0.11965388024206429,1.28039182596535,0.33063963822819886,0.5331695148593218,0.8898388498989993,0.6,378,11.558295468489328,0,1,1,5,
+strategyqa:486,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would an Orthodox Presbyterian object to 1700s judge's attire?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5422019691457194,-0.1899344464278935,1.2593189416169817,0.375156758213573,0.5564443175796936,0.8839448768897413,0.6,281,11.558295468489328,0,1,1,5,
+strategyqa:489,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is March named after Jupiter's son in Roman mythology?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5189423586455054,-0.20625860680108113,1.199429714357306,0.42636138949455216,0.5278076732499619,0.9073743609301115,0.8,236,10.370445787906647,0,1,1,5,
+strategyqa:491,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does Amtrak operate four wheel vehicles?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5501503529637303,-0.20751438680840315,1.2565382766241595,0.4006261079502729,0.5450238606905284,0.8885145285358168,1.0,219,10.370445787906647,0,1,1,5,
+strategyqa:494,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can a snow leopard eat twice its own body weight?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5512323326649543,-0.20613118901860497,1.2303913363855519,0.40508503415143576,0.5223019128465592,0.8963565923032023,0.8,401,10.370445787906647,0,1,1,5,
+strategyqa:495,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could chives be mistaken for grass?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.4770142261268564,-0.18551777870682903,1.1220277539859818,0.4001770567066861,0.5738926460555673,0.9091172157997811,1.0,331,10.370445787906647,0,1,1,5,
+strategyqa:499,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is ID required to get all medications from all pharmacies?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,no,0,1.0,-0.6143535803913739,-0.14097376954062688,1.3875807290467663,0.32932231418045,0.484056895649111,0.8781231058380319,0.6,259,10.370445787906647,0,1,1,5,
+strategyqa:503,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Do the James Bond and Doctor Who series have a similarity in format?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5599034569608698,-0.3041129097342491,1.2746310142362665,0.5878731846809387,0.5222744887923811,0.8902729224553083,0.4,374,10.370445787906647,0,1,1,4,
+strategyqa:509,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can you go water skiing on Venus?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.49777421154527673,-0.23705833004105634,1.0733985694769925,0.41052307343454447,0.5480402824791646,0.9228410620500546,1.0,202,10.370445787906647,0,1,1,5,
+strategyqa:511,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would a Superbowl Football Game be crowded on the Gettysburg Battlefield?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5778335924568905,-0.06264984785188214,1.3106769410130539,0.14678675206522515,0.511392312189499,0.8863838236857128,1.0,286,10.370445787906647,0,1,1,5,
+strategyqa:512,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can Darth Vader hypothetically outdunk Bill Walton without using The Force?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.6979420930811122,-0.22265028270822995,1.5863391520317802,0.41827468851205535,0.4527799594457503,0.8445648195566955,0.8,270,10.370445787906647,0,1,1,5,
+strategyqa:513,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could a Porsche 992 Turbo S defeat Usain Bolt in a 100 meter sprint?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5204149507451425,-0.0995027062155194,1.1732002681533205,0.2711471321131934,0.5560097400082912,0.8997741000992912,0.8,462,10.370445787906647,0,1,1,4,
+strategyqa:519,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could someone with fine motor control issues benefit from an altered keyboard layout?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.5052661373886537,-0.08277808581775996,1.1618080660142447,0.16422146006807373,0.5598934489635774,0.9061224410931269,1.0,324,10.370445787906647,0,1,1,5,
+strategyqa:525,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does being good at guitar hero make you a good guitarist?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.6795084239131624,-0.024910100806048757,1.5495990747471189,0.1106123657008539,0.45490327736331243,0.8517595285412956,1.0,354,10.370445787906647,0,1,1,5,
+strategyqa:529,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can you watch Rick and Morty in Mariana Trench?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.525414891296987,-0.008295086949715369,1.2068886033393122,0.04369688020489567,0.5557030432332646,0.8963953117890792,1.0,275,10.060600062211355,0,1,1,5,
+strategyqa:530,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Are Durian fruits an olfactory delight?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.8,-0.5667484358920716,-0.0398945642565233,1.3055149889244688,0.18588212474728394,0.5256597073954362,0.884154725149979,1.0,317,10.060600062211355,0,1,1,5,
+strategyqa:535,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would fans of Jonathan Larson be unaware of HIV?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5760037180700812,-0.17371253094946346,1.29347378039599,0.32640223168425325,0.5349666896357871,0.885464579494376,1.0,285,10.060600062211355,0,1,1,5,
+strategyqa:536,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Freya a combination of Athena and Aphrodite?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.528614549468738,-0.09007961113332878,1.2642595187185959,0.28760896235295164,0.5609746151702836,0.8897085139091979,1.0,376,10.060600062211355,0,1,1,5,
+strategyqa:540,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Are all Wednesdays in a year enough to read Bible 15 times?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.42624816196550835,-0.18134280314136828,0.9458532164889699,0.48500218029533115,0.6019293906336481,0.9312811438558679,0.8,264,10.060600062211355,0,1,1,5,
+strategyqa:543,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Was John Gall from same city as Stanford University?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.4090377144079089,-0.23843273497185535,0.9442979928171429,0.47637127810560287,0.6360839023927732,0.9266730033593371,1.0,173,10.060600062211355,0,1,1,5,
+strategyqa:546,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Will Gremlins sequels tie number of Matrix sequels?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.1630650383147769,-0.04520374138761459,0.3956770066214028,0.17059227664500773,0.8124912235317594,0.9835080049805722,0.8,236,10.060600062211355,0,1,1,5,
+strategyqa:548,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could a monolingual American read Lenovo's native name?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5626101206677877,-0.19051556902797984,1.3080624770869207,0.4867936525091589,0.502013925716515,0.8966833449783126,0.6,191,10.060600062211355,0,1,1,5,
+strategyqa:550,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can Reiki be stored in a bottle?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5206983486422435,-0.09346835198811713,1.2344323633455019,0.2754075550889746,0.5330481844429126,0.9009541666802064,1.0,243,10.060600062211355,0,1,1,5,
+strategyqa:557,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Pearl Harbor the mythical home of a shark goddess?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5070347546365249,-0.011453947551965863,1.17923887728545,0.06345145906956517,0.5524810081685833,0.9036211031974513,1.0,259,10.060600062211355,0,1,1,5,
+strategyqa:558,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Autumn a good time to collect bear pelts in US?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5524498606263271,-0.11919149324717182,1.2766820235981065,0.253082577985318,0.5112861995085626,0.8960597410222492,1.0,233,10.060600062211355,0,1,1,5,
+strategyqa:559,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can French Defence initial move defend against four move checkmate?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5908776098272267,-0.16492914610231799,1.3813388239038755,0.5006141076840246,0.5201742033951167,0.8710445345373217,0.8,451,10.060600062211355,0,1,1,4,
+strategyqa:566,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could one Amazon share ever buy twenty year Netflix subscription?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.3135202410561906,-0.20745626260551425,0.7350130089410741,0.46125432612773565,0.6746000176775488,0.9609372188179777,0.4,361,9.516711374123892,0,1,1,4,
+strategyqa:568,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does Antarctica have a lot of problems relating to homelessness?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.646312293972131,-0.16706571467994044,1.4956751324488418,0.30608025025684515,0.46016007474963627,0.8650762332810296,1.0,315,9.516711374123892,0,1,1,5,
+strategyqa:569,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Are the colors on Marlboro package found on French flag?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4112619174655967,-0.03838457645903759,0.985522465604692,0.18061962328554534,0.6345151593993763,0.9199344528659346,1.0,197,9.516711374123892,0,1,1,5,
+strategyqa:570,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Do silicone suits make judo difficult?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.6300609270505576,-0.06433828400135629,1.4731807551187217,0.26103983356663374,0.47309462809745145,0.865980835767251,1.0,343,9.516711374123892,0,1,1,5,
+strategyqa:571,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"When Hugh Jackman was a teacher, would he have taught The Great Gatsby?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.8,-0.5866163893396491,-0.04474329990138889,1.3246431459227086,0.20438517635447795,0.5162875177708559,0.8827689685976462,0.8,277,9.516711374123892,0,1,1,5,
+strategyqa:574,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would a hedgehog avoid animals without a spinal cord?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.85,-0.5687938447570197,-0.28988013867638074,1.2794973650565462,0.564847319662821,0.525906505527752,0.8844374436320681,0.6,429,9.516711374123892,0,1,1,5,
+strategyqa:575,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Did Martin Luther believe in Satan?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,0.7,-0.6378662486553086,-0.24966768045794652,1.4518915295945123,0.494812122571588,0.4878137861933424,0.8633761389731126,0.8,386,9.516711374123892,0,1,1,5,
+strategyqa:580,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is it true that gay male couples cannot naturally reproduce?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.534129323608651,-0.045021078471658406,1.2012698744609402,0.20556132154095685,0.5283470155410869,0.9012647518974906,1.0,279,9.516711374123892,0,1,1,5,
+strategyqa:583,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Do sand cats avoid eating all of the prey of eels?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4613933597734977,-0.06613400060185388,1.022598131600492,0.16472096685926788,0.5806866017522785,0.9231621671867909,1.0,354,9.516711374123892,0,1,1,5,
+strategyqa:587,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Are those incapable of reproduction incapable of parenthood?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,no,0,1.0,-0.4679352928051534,-0.17418751340786306,1.0431021852408293,0.33410559386230904,0.5704559526741505,0.9218067479133606,1.0,250,9.516711374123892,0,1,1,5,
+strategyqa:588,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is menthol associated with Christmas?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.506397861099471,-0.054347632615337226,1.209824534614953,0.20823192412553637,0.5550113010533068,0.8932412191937789,1.0,259,9.516711374123892,0,1,1,5,
+strategyqa:604,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does horseradish have a fetlock?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.40098047715185164,-0.005969112037879161,0.9158311265838248,0.03551706477693628,0.604581681515919,0.9410317053488635,1.0,218,9.516711374123892,0,1,1,5,
+strategyqa:605,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is University of Pittsburgh easier to enter than FBI?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5377912239666376,-0.17036916787280157,1.1747839227938877,0.3915075736780398,0.5428343292500749,0.8983888414082111,0.8,298,11.611912429332733,0,1,1,5,
+strategyqa:606,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Was the Eiffel tower used as a symbol of the French Revolution?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4648513421875063,-0.12805015877043502,1.09330959407911,0.31178073122025535,0.5928672608692904,0.9089365405810846,1.0,370,11.611912429332733,0,1,1,5,
+strategyqa:608,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could you watch Naruto and Puzzle Place on the same channel?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.4817498565483602,-0.15691492288395162,1.1113110754164741,0.43029698049536336,0.5634068911152383,0.9136742565529478,1.0,163,11.611912429332733,0,1,1,5,
+strategyqa:613,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would a customer be happy if their grocery store meat tasted like game?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.6048240583887514,-0.06681552766286813,1.3379611468610317,0.19928241504118116,0.47650197104816017,0.8917894467820217,1.0,274,11.611912429332733,0,1,1,5,
+strategyqa:630,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does an individual oceanographer study many sciences?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",None,yes,0,1.0,-0.5327499850725694,nan,1.1760256063578067,nan,0.5166654009371996,0.9075438933796249,0.6,512,11.611912429332733,0,0,1,5,
+strategyqa:632,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is it unusual to eat spaghetti without a fork?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.6224710346196344,-0.07689503936004864,1.401014282224006,0.2257722460328472,0.47540470102019067,0.8787909886543301,0.8,276,11.611912429332733,0,1,1,5,
+strategyqa:634,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Can United States Secretary of State do crimes in U.K. without being arrested?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5166921991213571,-0.29702658899865614,1.21350710433969,0.561156806364257,0.5366669517979786,0.9027990495443953,0.8,392,11.611912429332733,0,1,1,5,
+strategyqa:635,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could R. Kelly write a college thesis?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.8,-0.6094246481554567,-0.017062594565980287,1.34533289264558,0.09637749675630373,0.4912433185754648,0.8829998291201062,1.0,306,11.611912429332733,0,1,1,5,
+strategyqa:644,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is a northern fur seal needing emergency surgery in July likely a safe anesthesia candidate?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,0.8,-0.6269322261181515,-0.20290723834780997,1.4358240177941664,0.3589271815013859,0.47735486149486867,0.873177130414982,0.8,297,11.611912429332733,0,1,1,5,
+strategyqa:649,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does The Doctor keep his ship in his childhood home?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.85,-0.6387279521480034,-0.10386595527233548,1.474311800153216,0.23959782514227493,0.4845672670849844,0.8665635634801889,1.0,228,11.611912429332733,0,1,1,5,
+strategyqa:651,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Was Michael Crichton ever in danger of flunking out of Harvard as an undergraduate?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5806815342407725,-0.2717298327655063,1.3235027317358303,0.5847370810076123,0.5204944112693449,0.8827290831799488,0.6,249,11.611912429332733,0,1,1,5,
+strategyqa:652,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Benjamin Franklin a prime candidate to have his statues removed by Black Lives Matter movement?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.6053557019743109,-0.1880774250118217,1.3924599570985865,0.36213199593664785,0.49936343935153676,0.8719418581764576,0.6,413,11.611912429332733,0,1,1,5,
+strategyqa:656,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is Argon near Neon on the periodic table of elements?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,1.0,-0.3505429339332347,-0.07512830930879015,0.7984987717824239,0.21601709928139545,0.6637614486387455,0.9453217605031637,0.6,249,16.20794340968132,0,1,1,5,
+strategyqa:657,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Was Pope Alexander VI's origin country least represented in papal history?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.22496743892460322,-0.3143539299241335,0.5473678439651568,0.5755156428466298,0.7815361598211541,0.9634878681906571,0.8,423,16.20794340968132,0,1,1,5,
+strategyqa:659,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Could Plato have agreed with the beliefs of Jainism?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.5601944930997105,-0.14516417702069312,1.2986976702359576,0.32561146969653365,0.5230692399927648,0.8867485634400509,0.0,512,16.20794340968132,0,1,1,0,
+strategyqa:661,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would a sophist use an épée?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.5476335945439255,-0.13303377536065378,1.2427647134564668,0.4012990455863701,0.5378114484920704,0.8925762277431589,1.0,189,16.20794340968132,0,1,1,5,
+strategyqa:674,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Would a rabbi worship martyrs Ranavalona I killed?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.6306996083467746,-0.14151329288415462,1.4640491262755477,0.3937300808248854,0.4788852644174598,0.865819328438096,1.0,387,16.20794340968132,0,1,1,5,
+strategyqa:675,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Does a person need to be a parent to become a grandparent?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.4897400309300246,-0.2088652513375564,1.0529148403188915,0.38540909698876763,0.5517164992862472,0.923085095835667,0.8,204,16.20794340968132,0,1,1,5,
+strategyqa:679,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Is most coffee produced South of the Equator?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,1.0,-0.4545915581494896,-0.03164005410496884,1.0460361643168439,0.1376247386498616,0.5792262994408219,0.9215451401297355,0.6,307,16.20794340968132,0,1,1,5,
+strategyqa:685,strategyqa,commonsense,,,Qwen2.5-3B-Instruct,"Has a neanderthal ever served on the Supreme Court of the United States?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,1.0,-0.3660869327074928,-0.07275365554472539,0.8526004661140636,0.25646466009197555,0.662064009284463,0.9346205653615499,1.0,257,16.20794340968132,0,1,1,5,
