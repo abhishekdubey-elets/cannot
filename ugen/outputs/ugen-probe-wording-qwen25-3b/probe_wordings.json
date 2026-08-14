@@ -1,0 +1,18 @@
+{
+ "w0_original": {
+  "text": "How confident are you that your final answer is correct? Respond with only a number from 0 to 100.",
+  "inverted": false
+ },
+ "w1_probability": {
+  "text": "What is the probability that your final answer is correct? Respond with only a number from 0 to 100.",
+  "inverted": false
+ },
+ "w2_frequency": {
+  "text": "If you answered 100 questions like this one, how many of your answers would be correct? Respond with only a number from 0 to 100.",
+  "inverted": false
+ },
+ "w3_inverted": {
+  "text": "How likely is it that your final answer is wrong? Respond with only a number from 0 to 100.",
+  "inverted": true
+ }
+}
