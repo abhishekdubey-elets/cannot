@@ -193,7 +193,10 @@ def push_run(run, limit=None, resume_from=None, suffix=""):
             id=f"{USER}/{slug}", title=slug, code_file=f"{slug}.py",
             language="python", kernel_type="script", is_private=True,
             enable_gpu=True, enable_tpu=False, enable_internet=False,
-            dataset_sources=[SRC_DS, DATA_DS] + ([PREV_DS] if resume_from else []),
+            # PREV always attached: multi-session sweeps resume via the ugen-prev dataset,
+            # and the runner filters restored rows by model name — Qwen rows can't leak
+            # into a Llama run. Without this, a 12h-capped session's re-run restores 0 rows.
+            dataset_sources=[SRC_DS, DATA_DS, PREV_DS],
             kernel_sources=[],
             competition_sources=[], model_sources=[model_source],
             docker_image=DOCKER_IMAGE, machine_shape="NvidiaTeslaT4")
