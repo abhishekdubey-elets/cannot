@@ -1,0 +1,81 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+commonsenseqa:6,commonsenseqa,commonsense,,,Llama-3.2-3B-Instruct,"In what Spanish speaking North American country can you get a great cup of coffee?
+
+Options:
+A. mildred's coffee shop
+B. mexico
+C. diner
+D. kitchen
+E. canteen
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.8,-0.1535144171309172,-0.21473696666665276,0.34808188938312085,0.36734737814019996,0.8111453855909952,0.9918233874367505,1.0,205,8.707149118185043,0,1,1,5,
+commonsenseqa:12,commonsenseqa,commonsense,,,Llama-3.2-3B-Instruct,"Where does a heifer's master live?
+
+Options:
+A. farm house
+B. barnyard
+C. stockyard
+D. slaughter house
+E. eat cake
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.8,-0.2648132814225577,-0.1515152041398918,0.5750471832788786,0.25889694026561,0.6887983848313683,0.9812398324313673,0.4,206,8.707149118185043,0,1,1,5,
+commonsenseqa:23,commonsenseqa,commonsense,,,Llama-3.2-3B-Instruct,"Where could you find a toilet that only friends can use?
+
+Options:
+A. rest area
+B. school
+C. stadium
+D. apartment
+E. hospital
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.8,-0.370342045936997,-0.1117287010400452,0.8316556377335604,0.21788401625383358,0.616366133949403,0.9553662572751205,1.0,209,8.707149118185043,0,1,1,5,
+commonsenseqa:24,commonsenseqa,commonsense,,,Llama-3.2-3B-Instruct,"What is someone who isn't clever, bright, or competent called?
+
+Options:
+A. clumsy
+B. ineffectual
+C. dull
+D. clumsy
+E. stupid
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,E,0,0.6,-0.27971651719523793,-0.17920622734006944,0.5733766278999567,0.2698821561994334,0.6740816557051047,0.9795895235046096,1.0,184,8.707149118185043,0,1,1,5,
+commonsenseqa:37,commonsenseqa,commonsense,,,Llama-3.2-3B-Instruct,"If you have leftover cake, where would you put it?
+
+Options:
+A. quandry
+B. refrigerator
+C. oven
+D. night stand
+E. bakery
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.8,-0.2653055679924556,-0.1351667331073211,0.5565560811883539,0.25479835371004356,0.6891631369931357,0.9825755398614066,1.0,175,8.707149118185043,0,1,1,5,
+commonsenseqa:50,commonsenseqa,commonsense,,,Llama-3.2-3B-Instruct,"Where can a human find clothes that aren't pants?
+
+Options:
+A. pants shop
+B. on planet earth
+C. dress shop
+D. school
+E. train wreck
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.8,-0.2853550992444754,-0.23400885327888807,0.5976827625311578,0.43841650319207776,0.6732045125160644,0.9772808172216463,1.0,201,8.707149118185043,0,1,1,5,
+commonsenseqa:69,commonsenseqa,commonsense,,,Llama-3.2-3B-Instruct,"What continent has the most castles?
+
+Options:
+A. fairy tale
+B. edinburgh
+C. germany
+D. europe
+E. antarctica
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.8,-0.19908537028616013,-0.10624483514432725,0.4285010307285593,0.20376372390442535,0.742989148840169,0.9921721534751285,1.0,214,8.707149118185043,0,1,1,5,
+commonsenseqa:76,commonsenseqa,commonsense,,,Llama-3.2-3B-Instruct,"Where does a wild bird usually live?
+
+Options:
+A. cage
+B. sky
+C. countryside
+D. desert
+E. windowsill
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.8,-0.3319526076835039,-0.015265642723533071,0.6961753879591869,0.05175281949269106,0.6434622363771423,0.9693211628218829,1.0,295,8.707149118185043,0,1,1,5,

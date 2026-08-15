@@ -1,0 +1,282 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+humaneval:0,humaneval,coding,HumanEval/0,,Llama-3.2-3B-Instruct,"Complete the following Python function.
+
+```python
+from typing import List
+
+
+def has_close_elements(numbers: List[float], threshold: float) -> bool:
+    """""" Check if in given list of numbers, are any two numbers closer to each other than
+    given threshold.
+    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
+    False
+    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)
+    True
+    """"""
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","from typing import List
+
+def has_close_elements(numbers: List[float], threshold: float) -> bool:
+    """"""
+    Check if in given list of numbers, are any two numbers closer to each other than
+    given threshold.
+
+    Args:
+        numbers (List[float]): A list of floating point numbers.
+        threshold (float): The maximum distance between two numbers.
+
+    Returns:
+        bool: True if any two ","    for idx, elem in enumerate(numbers):
+        for idx2, elem2 in enumerate(numbers):
+            if idx != idx2:
+                distance = abs(elem - elem2)
+                if distance < threshold:
+                    return True
+
+    return False
+",1,0.8,-0.07598459230512836,nan,0.1544247268617913,nan,0.8922210484743118,0.9991445582286984,1.0,204,13.059811145067215,0,1,1,5,ok
+humaneval:1,humaneval,coding,HumanEval/1,,Llama-3.2-3B-Instruct,"Complete the following Python function.
+
+```python
+from typing import List
+
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    """""" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
+    separate those group into separate strings and return the list of those.
+    Separate groups are balanced (each open brace is properly closed) and not nested within each other
+    Ignore any spaces in the input string.
+    >>> separate_paren_groups('( ) (( )) (( )( ))')
+    ['()', '(())', '(()())']
+    """"""
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    """"""
+    Input to this function is a string containing multiple groups of nested parentheses.
+    Your goal is to separate those groups into separate strings and return the list of those.
+    Separate groups are balanced (each open brace is properly closed) and not nested within each other
+    Ignore any spaces ","    result = []
+    current_string = []
+    current_depth = 0
+
+    for c in paren_string:
+        if c == '(':
+            current_depth += 1
+            current_string.append(c)
+        elif c == ')':
+            current_depth -= 1
+            current_string.append(c)
+
+            if current_depth == 0:
+                result.append(''.join(current_string))
+                current_string.clear()
+",0,0.8,-0.07370924434668956,nan,0.16561118978156805,nan,0.8920766007812584,0.9979021991876995,0.4,408,13.059811145067215,0,1,1,4,AssertionError
+humaneval:2,humaneval,coding,HumanEval/2,,Llama-3.2-3B-Instruct,"Complete the following Python function.
+
+```python
+
+
+def truncate_number(number: float) -> float:
+    """""" Given a positive floating point number, it can be decomposed into
+    and integer part (largest integer smaller than given number) and decimals
+    (leftover part always smaller than 1).
+
+    Return the decimal part of the number.
+    >>> truncate_number(3.5)
+    0.5
+    """"""
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","def truncate_number(number: float) -> float:
+    """"""
+    Given a positive floating point number, it can be decomposed into
+    an integer part (largest integer smaller than given number) and decimals
+    (leftover part always smaller than 1).
+
+    Return the decimal part of the number.
+    >>> truncate_number(3.5)
+    0.5
+    """"""
+    # Calculate the integer part of the number
+    integer_part = in","    return number % 1.0
+",1,0.8,-0.04624537044587928,nan,0.1117970740203402,nan,0.9360946295516831,0.9972803609711783,1.0,140,13.059811145067215,0,1,1,5,ok
+humaneval:3,humaneval,coding,HumanEval/3,,Llama-3.2-3B-Instruct,"Complete the following Python function.
+
+```python
+from typing import List
+
+
+def below_zero(operations: List[int]) -> bool:
+    """""" You're given a list of deposit and withdrawal operations on a bank account that starts with
+    zero balance. Your task is to detect if at any point the balance of account fallls below zero, and
+    at that point function should return True. Otherwise it should return False.
+    >>> below_zero([1, 2, 3])
+    False
+    >>> below_zero([1, 2, -4, 5])
+    True
+    """"""
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","from typing import List
+
+def below_zero(operations: List[int]) -> bool:
+    """"""
+    Detects if the balance of a bank account falls below zero at any point.
+
+    Args:
+    operations (List[int]): A list of deposit and withdrawal operations on a bank account.
+
+    Returns:
+    bool: True if the balance falls below zero at any point, False otherwise.
+    """"""
+    balance = 0  # Initialize the balance ","    balance = 0
+
+    for op in operations:
+        balance += op
+        if balance < 0:
+            return True
+
+    return False
+",1,0.8,-0.0979410980566221,nan,0.1893220586097104,nan,0.8666801809007862,0.9982702987021711,0.8,166,13.059811145067215,0,1,1,4,ok
+humaneval:4,humaneval,coding,HumanEval/4,,Llama-3.2-3B-Instruct,"Complete the following Python function.
+
+```python
+from typing import List
+
+
+def mean_absolute_deviation(numbers: List[float]) -> float:
+    """""" For a given list of input numbers, calculate Mean Absolute Deviation
+    around the mean of this dataset.
+    Mean Absolute Deviation is the average absolute difference between each
+    element and a centerpoint (mean in this case):
+    MAD = average | x - x_mean |
+    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])
+    1.0
+    """"""
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","from typing import List
+
+def mean_absolute_deviation(numbers: List[float]) -> float:
+    """"""
+    For a given list of input numbers, calculate Mean Absolute Deviation
+    around the mean of this dataset.
+    Mean Absolute Deviation is the average absolute difference between each
+    element and a centerpoint (mean in this case):
+    MAD = average | x - x_mean |
+    """"""
+    
+    # Check if the list ","    mean = sum(numbers) / len(numbers)
+    return sum(abs(x - mean) for x in numbers) / len(numbers)
+",1,0.8,-0.06114778918622726,nan,0.11388625800580832,nan,0.9124906501728735,0.9997715555228196,0.8,231,13.059811145067215,0,1,1,4,ok
+humaneval:5,humaneval,coding,HumanEval/5,,Llama-3.2-3B-Instruct,"Complete the following Python function.
+
+```python
+from typing import List
+
+
+def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+    """""" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+    >>> intersperse([], 4)
+    []
+    >>> intersperse([1, 2, 3], 4)
+    [1, 4, 2, 4, 3]
+    """"""
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","from typing import List
+
+def intersperse(numbers: List[int], delimiter: int) -> List[int]:
+    """"""
+    Insert a number 'delimiter' between every two consecutive elements of input list `numbers'.
+
+    Args:
+        numbers (List[int]): The input list of integers.
+        delimiter (int): The number to insert between elements.
+
+    Returns:
+        List[int]: The modified list with 'delimiter' inser","    if not numbers:
+        return []
+
+    result = []
+
+    for n in numbers[:-1]:
+        result.append(n)
+        result.append(delimeter)
+
+    result.append(numbers[-1])
+
+    return result
+",1,0.8,-0.06508222753896886,nan,0.13775670505510643,nan,0.9091434370168308,0.998726083923448,0.2,247,13.059811145067215,0,1,1,4,ok
+humaneval:6,humaneval,coding,HumanEval/6,,Llama-3.2-3B-Instruct,"Complete the following Python function.
+
+```python
+from typing import List
+
+
+def parse_nested_parens(paren_string: str) -> List[int]:
+    """""" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.
+    For each of the group, output the deepest level of nesting of parentheses.
+    E.g. (()()) has maximum two levels of nesting while ((())) has three.
+
+    >>> parse_nested_parens('(()()) ((())) () ((())()())')
+    [2, 3, 1, 3]
+    """"""
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","from typing import List
+
+def parse_nested_parens(paren_string: str) -> List[int]:
+    """"""
+    Input to this function is a string represented multiple groups for nested parentheses separated by spaces.
+    For each of the group, output the deepest level of nesting of parentheses.
+    E.g. (()()) has maximum two levels of nesting while ((())) has three.
+
+    >>> parse_nested_parens('(()()) ((())) ()","    def parse_paren_group(s):
+        depth = 0
+        max_depth = 0
+        for c in s:
+            if c == '(':
+                depth += 1
+                max_depth = max(depth, max_depth)
+            else:
+                depth -= 1
+
+        return max_depth
+
+    return [parse_paren_group(x) for x in paren_string.split(' ') if x]
+",1,0.8,-0.09015000243169709,nan,0.21088923812855082,nan,0.894113346408759,0.9920930095728008,0.6,241,13.059811145067215,0,1,1,3,ok
+humaneval:7,humaneval,coding,HumanEval/7,,Llama-3.2-3B-Instruct,"Complete the following Python function.
+
+```python
+from typing import List
+
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    """""" Filter an input list of strings only for ones that contain given substring
+    >>> filter_by_substring([], 'a')
+    []
+    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')
+    ['abc', 'bacd', 'array']
+    """"""
+```
+
+Think about the problem if needed, then output the complete solution as a single ```python code block.","from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    """"""
+    Filter an input list of strings only for ones that contain given substring
+
+    Args:
+        strings (List[str]): Input list of strings
+        substring (str): Substring to filter by
+
+    Returns:
+        List[str]: Filtered list of strings
+    """"""
+    # Use list comprehension to filter","    return [x for x in strings if substring in x]
+",1,0.8,-0.06626495457404204,nan,0.14026293342643265,nan,0.9078623551404339,0.9985256078599514,0.8,174,13.059811145067215,0,1,1,4,ok

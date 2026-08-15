@@ -1,0 +1,78 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+bbh:date_understanding:1,bbh,reasoning,date_understanding,,Llama-3.2-3B-Instruct,"In the UK, people usually put the day before the month when formatting the date. Therefore, today is 02/01/1987 to them. What is the date a month ago in MM/DD/YYYY?
+Options:
+(A) 12/02/1986
+(B) 12/01/1986
+(C) 03/02/1986
+(D) 12/02/2032
+(E) 12/02/2062
+(F) 02/06/1987
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,A,0,0.3,-0.33581300871873837,-0.13350564272451018,0.7141603216968352,0.3744963153974368,0.6589394600038797,0.9659725473800176,0.6,142,16.47391065955162,0,1,1,4,
+bbh:date_understanding:40,bbh,reasoning,date_understanding,,Llama-3.2-3B-Instruct,"Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date tomorrow in MM/DD/YYYY?
+Options:
+(A) 03/25/2017
+(B) 03/01/2017
+(C) 03/01/2116
+(D) 02/20/2017
+(E) 03/17/2017
+(F) 03/01/2076
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.8,-0.15673352839235288,-0.013411183142911417,0.31190229090989036,0.07217827857311931,0.7973294770892929,0.9939369493547607,0.6,136,16.47391065955162,0,1,1,4,
+bbh:date_understanding:43,bbh,reasoning,date_understanding,,Llama-3.2-3B-Instruct,"Jane quited her job on Mar 20, 2020. 176 days have passed since then. What is the date today in MM/DD/YYYY?
+Options:
+(A) 09/12/2020
+(B) 11/12/2020
+(C) 12/12/2020
+(D) 09/12/1961
+(E) 09/17/2020
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.8,-0.12832872153484834,-0.1532428946811315,0.3052676389369939,0.3363737319608238,0.8544721074983583,0.9885454196879204,0.6,282,16.47391065955162,0,1,1,4,
+bbh:date_understanding:49,bbh,reasoning,date_understanding,,Llama-3.2-3B-Instruct,"Jane and John married on Jan 2, 1958. Today is their golden wedding anniversary. What is the date yesterday in MM/DD/YYYY?
+Options:
+(A) 12/31/2007
+(B) 01/01/2008
+(C) 02/03/2008
+(D) 01/02/2008
+(E) 12/27/2007
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.8,-0.213028538700206,-0.041349545276380205,0.4984429117730438,0.17507910769109003,0.744371612010331,0.9834525968836642,1.0,87,16.47391065955162,0,1,1,5,
+bbh:date_understanding:51,bbh,reasoning,date_understanding,,Llama-3.2-3B-Instruct,"Today is 9/7. Jane is watching NFL 2003. What is the date tomorrow in MM/DD/YYYY?
+Options:
+(A) 09/08/1916
+(B) 09/13/2003
+(C) 08/18/2003
+(D) 09/08/2003
+(E) 09/15/2003
+(F) 09/01/2003
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.8,-0.11387923723967343,-0.00799398535550703,0.2454079517605702,0.04705231555089995,0.8713575334155134,0.9914739616215229,0.8,224,16.47391065955162,0,1,1,5,
+bbh:date_understanding:53,bbh,reasoning,date_understanding,,Llama-3.2-3B-Instruct,"Yesterday was April 30, 2021. What is the date one year ago from today in MM/DD/YYYY?
+Options:
+(A) 05/15/2020
+(B) 05/01/2020
+(C) 05/08/2020
+(D) 04/01/2020
+(E) 05/01/1971
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",None,B,0,0.2,-0.2276950754007559,nan,0.5185376643448825,nan,0.7442419428261928,0.977532337536104,0.4,512,16.47391065955162,0,0,1,5,
+bbh:date_understanding:57,bbh,reasoning,date_understanding,,Llama-3.2-3B-Instruct,"Jane was born on the last day of Feburary in 2000. Today is her 16-year-old birthday. What is the date one year ago from today in MM/DD/YYYY?
+Options:
+(A) 02/28/2015
+(B) 03/10/2015
+(C) 03/08/2015
+(D) 04/28/2015
+(E) 02/21/2015
+(F) 03/28/2015
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,A,0,0.3,-0.1756358855114469,-0.010738953550267402,0.3957131017279221,0.06102379081304813,0.8018140356838073,0.9829802004655874,0.6,473,16.47391065955162,0,1,1,3,
+bbh:date_understanding:59,bbh,reasoning,date_understanding,,Llama-3.2-3B-Instruct,"Today is Christmas Eve of 1937. What is the date one year ago from today in MM/DD/YYYY?
+Options:
+(A) 12/24/1862
+(B) 01/10/1937
+(C) 10/24/1936
+(D) 12/24/1936
+(E) 03/24/1936
+(F) 12/29/1936
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,1.0,-0.1303783484484624,-0.0547039921705732,0.3019697812755129,0.17076401926381854,0.8288907183107929,0.993626990050913,1.0,107,16.47391065955162,0,1,1,5,

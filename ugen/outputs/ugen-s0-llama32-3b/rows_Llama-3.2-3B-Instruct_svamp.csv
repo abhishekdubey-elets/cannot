@@ -1,0 +1,25 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+svamp:1,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Paige raised 7 goldfish and 12 catfish in the pond but stray cats loved eating them. Now she has 15 left. How many fishes disappeared?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.11486531502654153,-0.11248823169432447,0.24665046350832892,0.20752518952063578,0.8425551073891776,0.997489515372685,1.0,105,8.124758124351501,0,1,1,5,
+svamp:2,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Marco and his dad went strawberry picking. Together they collected strawberries that weighed 22 pounds. On the way back Marco ' dad found 30 more pounds of strawberries. Marco's strawberries now weighed 36 pounds. How much did his dad's strawberries weigh now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",52.0,16.0,0,0.8,-0.1993704025465337,-0.0021480527481685385,0.4474398621937849,0.015550756056622308,0.7759261180303598,0.9838875363531866,0.4,152,8.124758124351501,0,1,1,5,
+svamp:3,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Debby bought 200 water bottles and 256 soda bottles when they were on sale. If she drank 312 water bottles and 4 soda bottles a day How many days would the soda bottles last?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",64.0,64.0,1,0.8,-0.0877202070574806,-0.06277543914202457,0.19364172200316132,0.16242117739940504,0.8783165478925092,0.9975665315575556,0.8,109,8.124758124351501,0,1,1,5,
+svamp:4,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"There were 106 dollars in Olivia's wallet. After she visited a supermarket and a showroom there were 26 dollars left. If she spent 49 dollars at the showroom How much did she spend at the supermarket?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",80.0,31.0,0,0.8,-0.1823427858977613,-0.0027078812896123494,0.3922357610567466,0.02050596219948732,0.784113768134674,0.9889921204452097,1.0,274,8.124758124351501,0,1,1,5,
+svamp:5,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"Faye was placing her pencils and crayons into 30 rows with 71 crayons and 24 pencils in each row. How many pencils does she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",720.0,720.0,1,1.0,-0.06099627123968465,-0.007472084814634984,0.12756950383080037,0.037830497851733265,0.9122927633921305,0.9991771864891053,1.0,75,8.124758124351501,0,1,1,5,
+svamp:6,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Ed had 10 more marbles than Doug. Doug lost 11 of his marbles at the playground. If Ed had 45 marbles How many more marbles did Ed have than Doug then?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",21.0,21.0,1,0.8,-0.10584424435286172,-0.0019674620368570167,0.22520303824362317,0.013370034321626787,0.8551860037287311,0.9979165669023637,0.8,169,8.124758124351501,0,1,1,5,
+svamp:10,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"An industrial machine made 9 shirts yesterday and 44 shirts today. It can make 3 shirts a minute. How many minutes did the machine work yesterday?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.16331222123597347,-0.023161018264934188,0.3114078812774846,0.0793202356114112,0.7927223449354773,0.996591194255932,1.0,111,8.124758124351501,0,1,1,5,
+svamp:11,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"Bryan took a look at his books and magazines. If he has 9 books and 46 magazines in each of his 10 bookshelves How many magazines does he have in total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",460.0,460.0,1,1.0,-0.05951137885864868,-0.0038161615141396915,0.12022893014853592,0.021335038108775604,0.9144404412702073,0.9991216444691946,1.0,86,8.124758124351501,0,1,1,5,

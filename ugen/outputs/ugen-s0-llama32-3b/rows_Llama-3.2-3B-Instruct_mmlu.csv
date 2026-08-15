@@ -1,0 +1,73 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+mmlu:39,mmlu,knowledge,abstract_algebra,,Llama-3.2-3B-Instruct,"Statement 1 | Every permutation is a cycle. Statement 2 | Every cycle is a permutation.
+
+Options:
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,0.8,-0.2655722752819183,-0.07752999658561066,0.5807715718263916,0.23191623656718244,0.6967090484435841,0.9789944650024496,0.4,186,15.797354727983475,0,1,1,5,
+mmlu:54,mmlu,knowledge,abstract_algebra,,Llama-3.2-3B-Instruct,"Find the degree for the given field extension Q(sqrt(2)) over Q.
+
+Options:
+A. 0
+B. 2
+C. 1
+D. 3
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.8,-0.12061323926041764,-0.012858895336344508,0.280498496341006,0.05064414082026284,0.8577780434313942,0.9896791770177729,1.0,170,15.797354727983475,0,1,1,5,
+mmlu:64,mmlu,knowledge,abstract_algebra,,Llama-3.2-3B-Instruct,"How many homomorphisms are there of Z into Z_2?
+
+Options:
+A. 1
+B. 2
+C. infinitely many
+D. 0
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.8,-0.1728331515641166,-0.03081627516022441,0.3707502642441586,0.09601640988770062,0.7797119519813266,0.992292721787531,0.6,499,15.797354727983475,0,1,1,5,
+mmlu:86,mmlu,knowledge,abstract_algebra,,Llama-3.2-3B-Instruct,"Statement 1 | If H and K are subgroups of a group G, then |HK| = |H||K|/|H intersection K|. Statement 2 | A group of order 2p where p is an odd prime is cyclic or isomorphic to D_p.
+
+Options:
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.8,-0.18029694560179022,-0.23599208848704242,0.4221906422946368,0.3857859740502742,0.787251433322185,0.9853762868692666,0.8,263,15.797354727983475,0,1,1,5,
+mmlu:213,mmlu,knowledge,anatomy,,Llama-3.2-3B-Instruct,"Which of the following allows gas exchange in the lungs?
+
+Options:
+A. Alveoli
+B. Bronchi
+C. Bronchioles
+D. Capillaries
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.9,-0.15620818946796644,-0.05349858456732548,0.3413569317906722,0.12848524368098424,0.7995592163819255,0.9930187648896015,1.0,264,15.797354727983475,0,1,1,5,
+mmlu:318,mmlu,knowledge,astronomy,,Llama-3.2-3B-Instruct,"How do scientists know that the majority of meteorites come from the asteroid belt?
+
+Options:
+A. The spectra of some meteorites are similar to the spectra of asteroids in the asteroid belt.
+B. The asteroid belt is the only possible source of meteorites therefore they must originate there.
+C. Collisions are common in the asteroid belt and we can track the fragments from their source asteroid to the Earth where they become meteorites.
+D. High levels of Iridum have been detected in both asteroids and meteorites therefore meteorites come from the asteroid belt.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.8,-0.21712108957838427,-0.13334848121545897,0.48196581355208545,0.2642794454625535,0.7508526409090047,0.9826814003710477,0.8,371,15.797354727983475,0,1,1,5,
+mmlu:334,mmlu,knowledge,astronomy,,Llama-3.2-3B-Instruct,"The constellation ... is a bright W-shaped constellation in the northern sky.
+
+Options:
+A. Centaurus
+B. Cygnus
+C. Cassiopeia
+D. Cepheus
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.8,-0.2505435310784259,-0.14131414334315076,0.5842983835443849,0.28095707563671607,0.7216302005808211,0.9737495402169358,0.8,183,15.797354727983475,0,1,1,5,
+mmlu:530,mmlu,knowledge,clinical_knowledge,,Llama-3.2-3B-Instruct,"How much toothpaste is recommended for cleaning teeth?
+
+Options:
+A. A smear.
+B. A pea-sized amount.
+C. The length of the toothbrush.
+D. Half an inch.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.9,-0.2806326735942715,-0.09178723447061136,0.6202817774601638,0.1073854367639748,0.6970695857113848,0.9705552142113447,1.0,192,15.797354727983475,0,1,1,5,

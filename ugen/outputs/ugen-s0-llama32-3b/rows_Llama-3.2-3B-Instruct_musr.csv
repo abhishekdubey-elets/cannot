@@ -1,0 +1,423 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+musr:murder_mysteries:1,musr,reasoning,murder_mysteries,,Llama-3.2-3B-Instruct,"In an adrenaline inducing bungee jumping site, Mack's thrill-seeking adventure came to a gruesome end by a nunchaku; now, it's up to Detective Winston to unravel the deadly secrets between Mackenzie and Ana.
+
+Winston sat quietly in an unmarked Ford, parked a block away from Mackenzie's downtown apartment building. He observed Mackenzie through his binoculars, watching closely as they hastily unlocked their front door. It had been a long day at the office for Mackenzie and, like clockwork, they were seen taking their customary break on a public bench, working on their laptop.
+
+Before long, Mackenzie was seen through the partially closed blinds of their apartment, sitting at their desk with their laptop open. They had just returned from a local cyber security meetup, a reality Winston discovered after following Mackenzie to the event later that evening. As Winston watched, they shifted their body and their eyes darted around, Winston duly noted on Mackenzie's apparent concern for online privacy.
+
+""Interesting,"" Winston thought, while making a mental note to do some research on further cyber security meetups occurring in the vicinity.
+
+The next morning, Winston watched Mackenzie walk out of a martial arts training center. As Mackenzie stopped to say goodbye to their instructor, Winston quickly snapped a photo on his phone. In the picture, Winston could clearly see Mackenzie practicing techniques with the unmistakable form of Mackenzie's sturdy nunchaku resting in the backdrop. This gave Winston a clue that his martial arts training includes nunchaku techniques.
+
+Winston's interest peaked further when he followed Mackenzie to a local shop where they were seen purchasing a new set of nunchaku. Even more intriguing was when they examined a pair of cufflinks on display with a yearning look, cufflinks Winston knew were identical to a pair Mack frequently flaunted around. It appeared Mack had things that Mackenzie also desired.
+
+The investigator decided it was time to pay Mackenzie a visit. He knocked on the apartment door and Mackenzie cautiously invited him in.
+
+Pleasantries were briefly exchanged before Winston's gaze quickly fell on the laptop that was resting by some papers next to an open window.
+
+""You always take this with you to work?"" Winston inquired, pointing at the laptop.
+
+""Every day,"" Mackenzie replied, ""I can't leave my work at the office.""
+
+""Work goes that well, huh?"" Winston probed further. ""I hear you were recently ... overlooked for a promotion.""
+
+At these words, Mackenzie's expression darkened. ""I was the top candidate, you know. It should've been mine. Mack, the new guy, he is nothing compared to me, but he takes it. That promotion, the respect I had. Even those cufflinks I have always wanted, somehow Mack always gets to have them.""
+
+Winston nodded, making a mental note of Mackenzie's reaction. They turned the conversation to martial arts and during the chat, Mackenzie unintentionally revealed their prowess with nunchaku.
+
+In a small, hidden compartment in Mackenzie's wardrobe, Winston found the pair of nunchaku that Mackenzie had recently purchased. He swiftly snapped a picture of this evidence before closing the wardrobe.
+
+As the day grew late, Winston thanked Mackenzie for their time and headed out, feeling more certain than ever about the path his investigation was following.
+
+Winston sat in his office, photos of Mack --the bungee jumper found dead-- scattered heartbreakingly across his desk. The lack of clues at the murder site puzzled him, nothing seemed out of place. All he had was an unusual weapon, the nunchaku, not something he’d found at too many crime scenes.
+
+Standing up, he straightened his tie and headed to the shared housing complex of the victim and suspect. Ana Diaz lived here, along with Mack. Ground rules for questioning the suspect were laid out in his mind.
+
+Ana received him with a stoic expression and invited him inside. Her suitcase was unpacked, strewn helter-skelter around the room. She explained she had come back from the bungee jumping site late last night, still in shock about Mack’s murder.
+
+Nunchaku lay on the table. Winston noticed, she explained it as the normal household item of a martial artist. She said she practices martial arts at the same bungee jumping location. 
+
+Asked about their shared occupation, she sighed heavily. “Mack loved it, though,"" She said, ""He was the instigator, insisting everyone take the jump.”
+
+Ana seemed to soften, talking about her faith, her traditions. “Bungee jumping, it's against my beliefs,” she admitted, “but I’d signed up too, expecting some ridicule like always.”
+
+Ridicule. That was a word Winston had already heard before concerning Mack. He asked around, among their friends, everyone said the same, Mack liked to joke, to point fun at beliefs. Especially Ana’s it seemed.
+
+They left together, Ana and Mack, the morning of the murder, people had seen them. Winston asked why, given their strained relationship. Ana shrugged off, her hands trembling. “He wasn’t too bad,” she replied. 
+
+Nobody else was documented at the bungee jumping site that day, only Mack and Ana. It was time to head there. Winston thanked Ana for her time and left, driving straight to the scene. He stared up at the looming diving board, picturing the scene.  
+
+Only two people there that day, Mack and Ana. He looked around, the martial arts practice ground nearby held the last piece. Nunchaku, a common weapon in martial arts practices. He tested one, the weight fitting neatly into his palm while he surveyed the area. This was the scene he needed to piece together.
+
+Who is the most likely murderer?
+
+Options:
+A. Mackenzie
+B. Ana
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,B,0,0.8,-0.2895937560078232,-0.2732890533903287,0.6367391439277825,0.507651117237439,0.6799560256187732,0.9710962508274958,0.8,325,27.89648950099945,0,1,1,5,
+musr:murder_mysteries:6,musr,reasoning,murder_mysteries,,Llama-3.2-3B-Instruct,"In the grim spectacle of the wrestling ring stained with blood, Detective Winston embarks on a chilling manhunt for Serenity's chainsaw-wielding murderer, revolving around two main suspects: Terrance and Nelson.
+
+Winston mused over his coffee cup, squinting at his notes from last night's wrestling match. Serenity, the star wrestler, had publicly threatened her opponent, Terrance. And Terrance, poor lad, was found pale and trembling after their match. Terrance was no stranger to the grit and physicality of ranch life, but the wrestling ring was another story entirely. He had been in the losing end of a previous matchup with Serenity. 
+
+Finally placated by the caffeine and recalling his purpose, Winston trudged to the boots and scruff leather of the local ranch. He was greeted by the sight of Terrance coordinating his ranch work, his sun-worn skin a testament to long hours under the warm Texan sun. ""You're Terrance I suppose?"" Winston asked, as he gestured to the flourishing land around them.
+
+""That'd be me, Detective,"" Terrance replied in a thick southern drawl. ""This land's been around longer than I have. Been a rancher all my life.""
+
+There was an odd sense of hitched anxiety when Winston brought up the chainsaw classes he'd heard Terrance attended. ""Gotta know how to operatin' it,"" Terrance replied. ""Helps keepin' the place run smooth.""
+
+Winston hustled over to where the recent wrestling match had taken place. It was a local tradition in the town and Terrance was no stranger to it, being a regular sponsor. It was a sweltering evening when he found himself at the scene, their wrestling ring splattered with the remnants of what occurred.
+
+Returning to the station under the glow of disjointed neon lights, Winston on a hunch asked a few local attendees about the particular wrestling match where Serenity was killed. Terrance was in the crowd that night, cheering heatedly during the match.
+
+In a more relaxed visit to the local bar, Terrance appeared more forthright. ""She was strong, Detective. Really strong,"" Terrance eased into his confession after a few sips of his drink. At another instance, in a low murmured admission to some friends, Terrance had been heard saying he felt threatened by Serenity. There were rumors around of Terrance being seen frequently repairing a chainsaw. The very same chainsaw Terrance learned to operate, and the chilling instrument that ended Serenity's life.
+
+For now, this was the puzzle Winston had to unravel. He gave Terrance a long, discerning look over the rim of his beer glass before leaving the lightly crowded bar. On his way out, the words of a recent reports echoed in his head, “A chainsaw is essential in ranch work…”
+
+Winston had been downing cups of coffee all day, trying to make sense of the pieces of what seemed like a nonsensical puzzle. He made a decision to visit the place it all transpired – an old, grimy wrestling ring where Serenity had met her horrific end.
+
+The image of the chainsaw used as the murder weapon kept coming back to him. So brutal was it that Winston found it hard to shake off. He had heard that Nelson, the painter and prime suspect in the case, had been seen training with a chainsaw - a tool that he directly employed in his painting procedures, forming part of his job. The oddity seemed to strengthen the potential motive Nelson had for this grim act and Winston felt compelled to pursue this lead.
+
+After a quick tour to the local gallery, Winston visited an exhibition where Nelson's pieces were showcased. It was evident that his chainsaw artwork had amassed some level of local attention, owing to their exceptional detailing accomplished with a chainsaw. Nelson adored wood, especially intricate shapes created out of it. He would often proclaim that shaping wood using his chainsaw was an integral part of his painting role. His proficiency seemed uncanny, almost eerie, but the public admired his work for its notable woodsiness.
+
+From the gallery, Winston travelled to the correction facility where Nelson used to work. The officers seemed reluctant to speak about the past events which led to Nelson's termination and the painter's complete obliteration from the collective memory. Winston found no records of Nelson in the personnel files. His data seemed to have been deliberately wiped out, prompting Winston to question their collective avoidance in discussing Nelson.
+
+Winston then moved to his final stop, Nelson's quaint bungalow. Unusually quiet and still with the curtains tightly drawn; not the usual sight, as reported by neighbors who mentioned Nelson's affection for painting under natural light. Winston learned that Nelson had ceased attending the weekly game nights at the local pub, coinciding with his new preference for drawn curtains.
+
+As Winston introspected leaning against his car, he realized the significance of the patterns in the changing behaviors of the painter. Winston was now confident that Nelson indeed had a strong motive in Serenity's demise – albeit, this was supported by an eerie amalgamation of evidence: the drawn curtains, the nonattendance at the pub, the wiped data, the unusual termination, and finally, his habitual, ominous use of chainsaws. 
+
+Time was ticking away, and Winston was now more determined than ever. He drove away from Nelson’s bungalow, deep in thoughts about the painter and his last works that haunted his thoughts. The presentiment of the forthcoming day, the hunt for more truths and the justice for Serenity, was overwhelming. Each passing hour made the air heavier with unspoken truths, and Winston was resolute to unthread them all.
+
+Who is the most likely murderer?
+
+Options:
+A. Terrance
+B. Nelson
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,A,0,0.8,-0.27609575263111974,-0.0767165774783886,0.6223618056918546,0.13839539123691225,0.6984836863689735,0.9718758878160696,1.0,305,27.89648950099945,0,1,1,5,
+musr:murder_mysteries:13,musr,reasoning,murder_mysteries,,Llama-3.2-3B-Instruct,"In the sleepy town of Mapleton, the unusual murder of Stella by a nunchaku in her own kitchen has set the stage for Detective Winston's most perplexing case yet.
+
+Emma, the renowned fashion designer, was having quite the morning with her martial arts training. Nothing out of the ordinary. Her classmates know her to be systematic, picking up the pace at which she had been twirling the nunchaku around; she had been at this for a while. Today's training session ended with each student placing their nunchaku back in its storage area. Emma, being one of the last attendees to leave, noticed that the instructor was already preoccupied with another task and wasn't paying attention. This allowed Emma to slyly pocket her training Nunchaku, unnoticed by everyone. Emma usually attended these classes regularly, blending easily within her group, never causing a fuss.
+
+Emma's next stop was Stella's. Winston examined Emma's calendar and noted that she and Stella had an appointment back at Stella's home for a fitting. Stella liked having her fittings at home, right there in the kitchen. Their appointment was routine; the kitchen was the best spot for Stella to have a fitting given its large, airy space. Moreover, Stella had always been known to spend her mornings truly alone, right there in the kitchen. This allowed her to enjoy her solitude without attraction any attention or interruptions. There's no harm in using it as a makeshift studio.
+
+While Emma was working in Stella's kitchen, Stella had taken it upon herself to visit Emma's studio. Emma didn't mind. She knew her studio was a secure private space, no prying eyes to worry about. But then, something piqued Stella's interest. She found a hidden stack of papers from Emma's sketchbook. Intrigued, Stella began looking more closely at the sketches. They were designs of a new collection, never before seen. And as she scrutinized them, a glassy look came over Stella's eyes. These designs resembled her own unlaunched collection, she realized.
+
+Emma had arrived back at the studio to find Stella stiff with anger and an odd collection of sketch pages in her hand. Stella looked up at Emma, her features hardening as she accused her of plagiarism and threatened to expose her.
+
+Despite Emma's flair for art and design, this niche of Stella's discovery in her studio led Winston back to the martial arts class and how Emma had learned to expertly handle the nunchaku. He found it peculiar that such a unique weapon was the weapon of choice in Stella's demise. More peculiar and somewhat perplexing was how Emma would have found an opportunity to carry a pair of the increasingly rare weapon, nunchaku to the crime scene without anyone noticing. This case was turning out to be more intriguing than Winston had initially assumed; a fashion designer, a nunchaku, and a quiet kitchen.
+
+While smoking on his half-bitten down cigar, Winston rubbed the corner of his eye, trying to make sense of the gruesome, disarming photographs of Stella's murder scene in her own kitchen.
+
+There was a mere few facts he had that could be of any substance for the detective, one of which was that nunchaku was held responsible for the cause of death, synonymous with martial arts, that made Winston think of Milton, a martial arts enthusiast appearing rather benign.
+
+Another fact he'd picked up on was that Milton had been invited by Stella for dinner that fatal night. Winston stomped out his cigar, inaudibly muttered 'no holds barred,' and prepared to interview his suspect of interest - Milton.
+
+Arriving at the local dojo, after a short spar, a sweat-drenched Milton, sporting his martial arts certification belt, made his way over to Winston.
+
+""Hi Detective,"" greeted Milton offering a tepid smile.
+
+""Milton,"" acknowledged Winston commenting, ""see you're stickin' to your trainin' regimen.""
+
+Adjusting his martial arts belt, Milton nodded, ""It's a passion, yes sir, good way to keep fit.""
+
+""You were invited to Stella's last night for dinner, ain't that right?"" inquired Winston, his eyes never leaving Milton's face.
+
+Taken aback by Winston's sudden mention of Stella, Milton blurted, ""Y-yes. I was invited...we were good friends and I was often at her place for dinner. I found out this morning...that she was murdered in her own kitchen after dinner.""
+
+One eyebrow arched skeptically, Winston questioned further, ""and you left her house when, after dessert?""
+
+""Got a call from trace analysis,"" Winston's phone intercepted abruptly, ""looks like the local journalist sent over some more pictures of Milton. He was captured in various locations, which we later discovered were areas of Tommy's gang activity.""
+
+""Winston, we also got a picture of Milton with Tommy at the local bar,"" the voice continued, ""judging from the photo, Tommy's living up to his reputation as a troublemaker - even in the bar, his henchmen are always around him.""
+
+""Milton, how'd you account for your presence at these 'areas of interest'?"" Winston asked, showing him the freshly received photos over the phone.
+
+Milton looked stunned, ""I had...I had no idea about this. I did meet Tommy once at the bar, but...""
+
+Before he could finish his defense, Winston wrapped up, ""It's getting late, Milton, let's continue this another day.""
+
+As Winston drove off, he glanced at another picture sent over from forensics featuring Milton and Tommy, both laughing over drinks at a local bar with Tommy's henchmen lurking in the background, serving as a chilling background to his already twisted thoughts of the case.
+
+Who is the most likely murderer?
+
+Options:
+A. Milton
+B. Emma
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.6,-0.2675232885120655,-0.13179862871705458,0.6140129685311289,0.27194653605553754,0.697177167922099,0.9732406378429841,0.6,374,27.89648950099945,0,1,1,5,
+musr:murder_mysteries:19,musr,reasoning,murder_mysteries,,Llama-3.2-3B-Instruct,"""When Keira's lifeless body was discovered in an airplane bathroom, and a shotgun was found tucked beneath a seat, Detective Winston stepped forward to interrogate the only suspects: Angela and Roy.""
+
+Winston grimaced slightly as he wrestled the file folder open. The crime scene photographs laid out on his desk seemed far-fetched, yet chillingly real. The circumstances were more Hollywood than real life; a body on a plane and a shotgun involved. The wedding party, including Keira and Angela, had travelled together to the destination for the wedding. 
+
+As he took a sip of his lukewarm coffee, he forced down the bitter taste, and turned his attention to the suspect in question; Angela, the Maid of Honor. Apparently, she had been quite the participant in Keira’s wedding party; even had the responsibility for the suitcases.
+
+Keira's life seemed to have ended prematurely, and one piece of information struck Winston immediately. Keira and Angela were reported to have had a fierce argument over Sam, Keira's boyfriend. From what he could gather, Angela had more than platonic feelings towards Sam. She had been spotted several times, gazing at him at the party with longing in her eyes. Furthermore, it seemed Angela knew a secret. Keira was planning to dump Sam after their trip, leaving him heartbroken. This argument about Sam and Angela's secret feelings towards him, seemed like a potential motive.
+
+As Winston flipped through the case files, a detail about Angela's past caught his eye. She was an award-winning sharpshooter. Interesting. She also had a penchant for hunting... regularly. Another sip of coffee followed this revelation.
+
+An initial testimony revealed that there had been no security checks for the suitcases and Angela was responsible for managing them. Was that a coincidence or a calculated move?
+
+Angela left the party late in the night and her departure seemed odd. What made it more unsettling was that shortly after Keira was last seen, Angela was sighted entering her house. Angela and Keira had been at the same party that night.
+
+He swirled the last bit of his coffee in the paper cup. There were still many clues to decode and pieces to connect. Nonetheless, the facts were all laid out in front of him.
+
+He finally exited his office, determined. Personal disagreement, unchecked suitcases, a late-night departure, and a secret crush... Winston knew he needed answers. The puzzle wasn’t complete. As he stepped into his car, he knew his next move - he had to interview Angela.
+
+Winston drummed his fingers on his notepad, waiting for Roy in the gritty staff room of the film set. In the room, a plethora of props scattered about - fake wigs, fake blood, all the tools of the trade for making movie magic look real. Among them, oddly enough, was a shotgun - a prop for one of the upcoming scenes.
+
+He was here to interview Roy, a makeup artist by title, but wearing many hats in reality. Besides artfully painting faces, he handled the props and was even a certified gun handler, quite an unusual combination of skills, Winston thought not for the first time.
+
+Finally, Roy sauntered into the room, looking dishevelled but alert despite the insanely late hour. His eyes, through years of experience, immediately began to scrutinize Winston's face as if preparing to apply foundation and concealer.
+
+Before his eyes could do his work, Winston began. ""Mr. Roy, could you explain a bit about your relationship with Ms. Keira?""
+
+Roy's face muscle twitched noticeably at his question. Resisting the urge to highlight this, Winston continued.
+
+""Were you two traveling together for the movie shoot?""
+
+""Yeah,"" Roy murmured. ""She was seated near me during the flight."" Winston then chose to ease into a more delicate topic to officially address the rumor. ""The passengers reported seeing Keira being intimate with another man on the flight, a man who was not you. It created quite a commotion.""
+
+Roy swallowed hard, ""I confronted her about it, of course. But she simply dismissed it as casual flirting, nothing more.""
+
+""I understand that it's a part of your job to handle the props in the films you work on, including firearms?"" Winston asked.
+
+""Yeah,"" Roy sighed, his eyes wandering far beyond the confines of the room. ""There was this scene involving a fired shotgun in the movie we were working on.""
+
+A ‘ding’ from Roy’s phone caught his attention. Winston noticed him unholstering his phone to view an incoming message, just like the day when Roy found explicit messages on Keira's phone that confirmed her infidelity. 
+
+Noticing Roy’s quiet discomfort, Winston prodded further, “You were wide awake and idle the night Keira was murdered, weren't you?”
+
+Roy flickered a gaze at Winston but said nothing.
+
+""It must have felt like a dream,"" Winston muttered, musing on his own thoughts rather than posing a question. ""To watch someone intimate with another man while ignoring your confrontations. It can make anyone lose composure. You were awake and not busy, is it because you were thinking about the scene you witnessed in the plane?""
+
+Roy didn't answer, his hardened gaze holding Winston's. Whether it was for the detective to find or the truth to remain hidden, only time would tell as the conversation, like the investigation, carried on.
+
+Who is the most likely murderer?
+
+Options:
+A. Angela
+B. Roy
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,B,0,0.6,-0.2662040014071266,-0.15442525129433957,0.5766347143059377,0.21087104529578937,0.6985048586534242,0.9740732833490533,0.8,295,27.89648950099945,0,1,1,5,
+musr:murder_mysteries:29,musr,reasoning,murder_mysteries,,Llama-3.2-3B-Instruct,"In the hushed sanctity of an ancient temple, the seemingly innocuous corkscrew turns deadly, plunging Detective Winston into a maze of deceit with only two suspects - Xochitl and Martin.
+
+With Olivia's murder still fresh, Winston found himself at the local temple, the gusty air bringing an ominous chill. Instagram photos and notes, discovered by Xochitl, declared that Olivia had intentions to seriously harm Xochitl's sister and ruin her life. Olivia's actions had extended to constant harassment, as per statements from numerous local residents. 
+
+That's when Winston set his eyes on Xochitl for the first time. A town local, known for conducting regular Tarot readings, she was known to have a strong inclination towards rituals and esoteric practices. The temple was often her stage for spiritual enlightenment, which required the uncorking of ritualistic wine bottles with a trusty corkscrew, a habit she had grown accustomed to.
+
+Winston approached her while she was meticulously packing away her Tarot cards, her dark, expressive eyes betraying a myriad of deep emotions. ""Are you always this involved in your...ritual practices?"" he asked, noting her obvious devotion. ""Yes,"" she responded, her voice barely rising above the rustling of her Tarot cards. ""It has become a part of me, something very close to my heart.""
+
+Winston paused before asking about her trips. Xochitl's expression faltered a bit as she looked at him, then away. ""They happen now and then,"" she said calmly, swiftly changing the subject to the next upcoming spiritual gathering. Winston noted that her trips were far from listed on her nearby calendar, a fact he filed away on his internal docket.
+
+Conversation shifted, and Xochitl showered her sister with affection. She shared a story of a recent conflict Olivia had with her sister, one laced with threats to ruin her life. The passion with which Xochitl narrated the story was palpable.
+
+As Winston was exiting, he caught sight of various trinkets littered around Xochitl's space. A glance at one of the suitcase tags confirmed it had an origin from a foreign country. He recalls how the locals often gossiped about Xochitl bringing back a new trinket or souvenir from each trip she made, adding to her ever-growing collection. It was the same country that matched one of Xochitl's passport stamps -- a souvenir from her unmarked trips perhaps. The details of her travels remained shrouded in mystery, with Xochitl deftly avoiding deeper conversations about these.
+
+""I'll speak with you soon, Xochitl,"" Winston affirmed as he left, feeling a complex web of possibilities dissecting in his mind. Curious about the tie between Xochitl, her mysterious trips, the souvenirs and the tragic murder, he was determined to peel back the layers of ambiguity surrounding this case.
+
+In the wake of the unfortunate event at the local temple, Detective Winston flipped through the details of the victims. A familiar sense of dread had come to accompany the name of Olivia – similar to the other women whose investigations he had compiled over time, yet still distinctly unique. It spurred the creeping sensation of a suspected serial killer at large.
+
+“There’s something about this delivery guy…” he murmured, pulling a file, filled with suspicions, on Martin, a package delivery driver. Winston had previously handled several investigations related to Martin for similar incidents, but they had all gone cold. “Is it déjà vu?”
+
+He shuffled through the documents in Martin's file. The delivery man, as per his employer’s statement, made regular visits to the temple for his deliveries, which interestingly enough, had also happened on the fateful day Olivia was found dead. Today, he was scheduled to deliver a package to none other than Olivia herself.
+
+As Winston read further, he scratched the stubble on his chin, remembering a tidbit he had come across in one of the previous investigations. Martin had this... peculiar method of opening packages, using a corkscrew. Yes, a corkscrew of all things. And that was a part of his regular equipment, he would carry it with him every day.
+
+Quirkily, during an early afternoon surveillance encounter upon one of his visits at the temple on the very day of the murder, Martin was seen carrying his odd tool, the corkscrew.
+
+""It's ironic, don't you think?"" One of his fellow officers had remarked dryly. ""Our potential serial killer and his corkscrew.""
+
+Winston refrained from comment, remembering the discrepancies that had led those cases to grow cold. Several of them were left inconclusive - always touch and go - with evidence that went around in circles but never quite completed the picture.
+
+As he went through his notes, Winston noticed another uncanny resemblance - Olivia was quite similar in appearance to the past victims; young, brunette, and striking eyes.
+
+Fingers drumming against the cool, polished surface of his wooden desk, Winston reviewed Martin’s work log. It noted the driver was prescheduled enough to have him at the temple around the suspected time of Olivia’s demise that day. With furrowed brows, he made note of the temple's solitary condition during the time - not another soul around.
+
+Too many coincidences and not enough clarity. Winston sighed heavily, clicking his pen shut. The more things unravelled, the more they seemed convoluted. But he knew better than to pinpoint connections. For now, it was about gathering facts, no matter how cryptic.
+
+Who is the most likely murderer?
+
+Options:
+A. Xochitl
+B. Martin
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.3,-0.293922701689226,-0.0980721966119644,0.6668303428771748,0.19363908613175024,0.680724936593595,0.9677336857249484,0.8,481,27.89648950099945,0,1,1,5,
+musr:murder_mysteries:30,musr,reasoning,murder_mysteries,,Llama-3.2-3B-Instruct,"In the ominous arena of a wrestling ring, Sophie's life was unexpected cut short by the deadly crack of a pistol; now it's up to grizzled Detective Winston to interrogate suspects Willard and Miles, unmasking the murderer among them.
+
+Winston sipped his coffee as he walked into the busy dealership, hidden behind large glass paneling. Beside the main floor was a separate storage area, cleverly concealed and invisible from the sales floor - tucked away in a quiet corner where no customer could see. Salesmen were bustling about, attempting to close deals and lure in unsuspecting customers. His gaze settled on a particular man, who was rather keenly explaining the mileage of a specific model to a customer: Miles.
+
+""Mr. Miles,"" Winston greeted in his stern tone, interrupting the technical talk about mileage.
+
+""Sorry, sir. I'm deep in a conversation,"" he said, not looking up from the customer.
+
+""I believe this is more important,"" Winston replied, flashing his badge.
+
+Miles made an excuse to the customer and led Winston toward the hidden storage room, away from the prying eyes of the staff and customers. Entering the secretive area that no other employee had set foot in, Miles seemed visibly unnerved, surrounded by nothing but stacks of tires and car parts. 
+
+""Is there something wrong, detective?"" He asked, subtly glancing at the locked door behind him.
+
+""Miles, I want to talk to you about Sophie. I understand you were both in the wrestling match. Quite the tough opponent you had there."" Winston began. 
+
+Miles cleared his throat, ""Well, we were more than just opponents in the ring. We've had our issues politically too.""
+
+""I'm aware,"" Winston said curtly, noticing Miles turning defensive.
+
+""Sophie possessed evidence against you, she found out about money laundering carried out through this dealership, perhaps?"" Winston probed. 
+
+Miles shifted uncomfortably; his complexion changed and he cast his eyes down nervously. ""I...I don't know what you're talking about, Detective."" 
+
+Winston sternly replied, ""Sophie planned to reveal these illegal acts. You knew it, didn’t you? She was about to expose your whole operation.”
+
+""Anyone would want to protect their livelihood, Detective,” retorted Miles, avoiding Winston's piercing gaze.
+
+""I see,"" Winston said calmly assessing the situation, ""It seems no one else knows what you do in this storage room Miles.""
+
+“Well, it's my dealership, my storage. Do I need an audience now?"" Miles retorted, frustration creeping into his voice.
+
+Deciding to change gears a bit, Winston asked, ""Say, Miles, you sponsor anyone in Sophie's campaign?""
+
+""Actually I do, I have been secretly financing a competing candidate in Sophie's campaign."" Revealed Miles with a mischievous grin, sensing no immediate danger. 
+
+""Ah, hedging your bets, are we?"" Winston concluded.
+
+""Interesting,"" Winston said, ending the conversation. He finished up his lukewarm coffee, thanked Mr. Miles for his time, and walked out of the concealed storage room, leaving Miles behind in the stuffy room of tires and car parts. 
+
+As he meandered through the dealership, Winston thought about what Miles had said and not said. He stepped out into the parking lot, squinting against the harsh afternoon sun. He had a mystery to solve, and every lead mattered.
+
+Winston took another sip from his coffee cup as he shuffled through the files, his tired eyes narrowing on the name Willard, the initial suspect for the recent wrestling ring homicide. Sophie's death had hit the community like a brick wall, and the press swarmed around it like flies.
+
+Sophie, a champion wrestler, was shot in the ring while performing one of her signature moves. The chaos of that night was still reported in the tabloids, time seemed to have stopped, and the investigation was now up to him.
+
+Sophie had falsely accused Willard of malpractice, however, she won the court case. It was an incident that was the talk of the town. The accusations, though false, were ratified by court, leaving Willard's career as a chiropractor on thin ice. Winston remembered Willard's hands shaking at the courthouse, his eyes burning with something Winston could not quite pinpoint.
+
+Spotting Willard's front-row wrestling event ticket in the collected evidence file, Winston knew he had been there right at the heart of the event. It was well known that mandatory check-ins were required for attendees and part of Willard’s check-in document showed his presence at the entrance of the arena, confirming his presence at that fateful match. 
+
+The interviews had a common thread - Willard frequented the wrestling matches. Winston had found the receipts and tickets for each event annotated in Willard's handwriting; it was an unquestionable fact.
+
+Dr. Willard's profile drew Winston's attention. His career as a chiropractor not only required him using protective tools like support belts and gloves, but also a familiarity with the human anatomy that would be advantageous in a wrestling match. It was especially Willard’s second career—his military background—that caught Winston’s eye. Winston had heard about Willard's long career in the army. The firearm training he got there pulled him back to the murder.
+
+Poring over reports again, Winston recalled that Willard carried a firearm for protection. The firearm was engraved into the case's backbone, another undeniable fact that Winston had to grapple with. 
+
+He took a deep breath and decided to pay Willard a visit. 
+
+Meeting Willard at his office, Winston perched himself on the edge of the chiropractic table, looking at the protective gloves and belts hanging on the wall, it was evident that his chiropractic practice required these safety tools. Winston could see Willard's tension, the hint of uncontrollable worry seeping from his face. He handed over his business card to Willard.
+
+""So, Willard, you were at the wrestling match the night Sophie was shot?"" Winston asked.
+
+Willard nodded, ""Yes, I was there... I... I usually go to watch the matches. I had a front-row ticket.""
+
+Winston opened his notepad, marking it down. ""The court case, it was... tough on you, wasn't it?"" He asked.
+
+Willard swallowed, nodding again without a word. 
+
+Winston stood up to leave, passing a quick glance over the firearms manual lying on the shelf, and pocketed his notepad. He didn't know if he had all the answers, but he was determined to find the truth.
+
+Who is the most likely murderer?
+
+Options:
+A. Willard
+B. Miles
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,A,0,0.6,-0.310705873121721,-0.13307598623254713,0.7062976047433053,0.2647754802278036,0.6799661620068795,0.9586443271219116,0.8,388,27.89648950099945,0,1,1,5,
+musr:murder_mysteries:32,musr,reasoning,murder_mysteries,,Llama-3.2-3B-Instruct,"In the quiet solitude of a local library, Philip is found shockingly murdered with a barbed wire, leaving Detective Winston with the arduous task of sifting truth from alibis of the two main suspects, Hugo and Maria.
+
+Stepping into the library, a sea of hushed whispers and tiptoeing patrons, detective Winston began his appointment with Hugo. Navigating his way through the maze of bookshelves and study cubicles, he found the man seated in a corner, engrossed in a tangle of wires and knobs. Hugo was a sound engineer. The smorgasbord of tools and wires – even a wild-looking barbed one often used in some peculiar sound gigs-, extending around him served as a testament to his profession and the variety of venues he worked in.
+
+""Mr. Hugo?"" Winston interrupted, his voice barely a notch above a whisper. Hugo nodded, eyelids still glued to his work. ""I'm detective Winston. I hope I'm not interrupting,"" he casually commented, glancing at the array of wiring tangled in the engineer's hands. 
+
+He took notice of the barbed wire amongst the mix. A trace of unease settled in the back of his mind as he recalled the crime scene images: Philip, lifeless in the library-turned-crime scene, surrounded by scattered books and barbed wire.
+
+After a moment, Hugo paused his work and leaned back, engaging the detective. Hugo mentioned a sound engineering job he was working on at the library at the time of Philip's murder. His work, he explained, often brought him to quiet, empty venues like this after dark, be it a library, an amphitheater, or something else entirely, each requiring specific types of wires and tools, barbed wire included.
+
+""Bit of an unusual pick, isn't it?"" Winston tried to sound nonchalant.
+
+Hugo chuckled, revealing a collection of rare and unusual wires he'd acquired as part of his professional routines. He casually referred to his atypical collection as an occupational hazard, barbed wire included.
+
+The conversation somehow segued to Hugo's family, particularly his brother. ""He's not the responsible, betting kind,"" Hugo sighed, mentioning a lost gamble that cost his brother significantly. ""Between you and me,"" he leaned in to confide, ""Philip could be pretty aggressive when it came to his debts. In fact, he was known to resort to physical violence to get his way, a tendency that worried me always.""
+
+Detective Winston couldn't help but ask, ""Did you confront him about it?""
+
+""No, but..."" Hugo hesitated before confessing a private phone call he overheard between Philip and his brother. Philip, as per Hugo, had not minced words in expressing his threats. 
+
+With his booked time slot over, Hugo readied to leave. Winston noticed the lights around them were already shutting down. The library often stayed vacant during Hugo's setup and takedown sessions, he mentioned nonchalantly. 
+
+As Winston left the dusky library, he contemplated the quiet bulk of sound equipment Hugo had in tow, wires of all sorts jingling together. It left a disquiet in his gut that he couldn't quite explain. But as a detective, he was trained to never jump to conclusions. After all, in a murder investigation, everything and everyone was a piece in the puzzle until proven otherwise.
+
+As Winston walked into Maria's salon, he was overrun by the smell of hair products and freshly brewed coffee. The salon itself was bustling, filled with happy chatter and the occasional hum of hair dryers. He was taken in by the sight of Maria, a veteran hairdresser of over 15 years, working diligently on a customer's hair, using an abundance of sharp tools, from scissors to razors.
+
+""Maria?"" called Winston.
+
+She looked up, her eyes catching the sheen of the barbed hairpins on her tray. They looked dangerously sharp - almost eerily similar to barbed wire.
+
+""Yes, that's me! Can I help you?"" Maria responded.
+
+""Just have a few questions,"" Winston muttered. 
+
+Maria's salon, open until 10 pm every evening, was bustling. As he waited for Maria to finish with her current client, he couldn't help but notice a large unidentifiable bag resting in the corner. 
+
+Maria then joined Winston, washing her hands before sitting across from him. ""Detective, isn't it?"" she said, having picked up on his official demeanor. 
+
+""I often see you at the library,"" Winston started, hoping his observation could break the ice.
+
+Maria's eyes twinkled as she answered, ""Yes, that's true. I find it soothing to visit the library after I close the salon at 10 pm. It's open till then, making it a perfect addition to my schedule.""
+
+They went on, revealing Maria's deep connection with the library—it came to the point where she became one of its registered trustees and was trusted with its key.
+
+Later, the conversation shifted to her closing activities at the salon. It didn't take long for Winston to realize the purpose of the large unidentifiable bag. After closing, Maria would routinely transport this bag to her car trunk, which she conveniently parked just outside.
+
+""I heard from a neighbor that they've seen you cleaning your car in the parking lot after midnight,"" Winston remarked.
+
+Maria simply nodded, unfazed. ""Yes, I tidy up my car after a long day at the salon. I usually carry my cleaning supplies in there—it's easier to keep things clean on the go.""
+
+The conversation then took a darker turn. Winston disclosed the tragic news of Philip's demise—he had been found murdered in the library. His time of death coincidentally coincided with Maria's usual visits. The revelation hung heavy in the air, but Winston, true to his role, kept his thoughts in check. His job was to collect information. Deductions were left to the reader.
+
+After expressing his gratitude to Maria, Winston has left her to continue her work. Retreating to his car, he began considering his next line of inquiry, Philip's murder fresh on his mind.
+
+Who is the most likely murderer?
+
+Options:
+A. Hugo
+B. Maria
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,A,0,0.6,-0.30449918753525235,nan,0.6813595848946701,nan,0.6737047892514166,0.9664522126480773,1.0,455,27.89648950099945,0,0,1,5,
+musr:murder_mysteries:39,musr,reasoning,murder_mysteries,,Llama-3.2-3B-Instruct,"In the tranquil world of pirouettes and pliés, prima ballerina Giselle is found dead with a syringe at a dance studio and it’s up to the steely-eyed Detective Winston to interrogate two unlikely suspects - Fred and Imogen.
+
+It was a typically bleak morning as detective Winston reflected on the upcoming staff meeting. No doubt Fred, the diligent night shift security guard for Dance Studio Giselle had devoted her life to, would again bring up the unsolved murder case. It was a habit of Fred to discuss the crime, be it casually or at a formal setting like the staff meetings.
+
+Winston remembered Giselle mentioning Fred's constant references to the crime whenever they had personal interactions. Giselle's murder, occurring during a late-night practice at her dance studio when Fred was on his night shift, had flipped their world upside down, and now there was a whole list of strange occurrences. Fred had been caught, multiple times, brooding over his notebook scribbling details about the various events. Not just during his nightly shifts, but meticulously recording the date, time, and details of each recent crime that took place in and around the dance studio.
+
+Winston often wondered about the contents of Fred's notebook. He recalled Fred having overheard a personal conversation between Giselle and himself when she had openly voiced her plans to bring her findings about his security lapses to the authorities. It was strange how quickly Fred had been informed about it, almost as if he had intentionally been listening in.
+
+Slowly sipping his coffee, Winston made his way to Fred’s space, hearing the familiar scratch of Fred’s pen against paper. Fred, tall with broad shoulders and a hard-set face, looked up, his pen momentarily idle.
+
+Fred, never one to skip over details, asked, as if on cue, ""Detective, any updates about the murder?""
+
+""Fred,"" Winston carefully started, acknowledging his inquiry. ""Yes, updates about Giselle's claim of finding evidence against your nighttime security practices and her plan of taking it to the authorities. You knew about it, didn't you?""
+
+Fred chuckled nervously and looked down at his notebook, his eyes lingering on his detailed crime records. Nodding, he softly confessed, ""Yes, I overheard her talking about it. Couldn't help but worry, detective.""
+
+Intent on keeping a keen eye on each detail, detective Winston left Fred back to recounting the happenings in his notebook, knowing there were a lot more facts to align in this perplexing puzzle.
+
+Winston assembled his notes and drained his mug of lukewarm coffee. He turned his thoughts to Giselle, the victim. From all accounts she was a wealthy ballerina, well-loved in the community, rarely seen without a crowd applauding her every move. She had no children, but was known to be frugal, having long been building a nest egg for an ambitious future. He grimaced. The future was one thing she no longer had.
+
+His next stop was at a bustling hospital. His entrance was marked by the characteristic smell of disinfectant and the chaos of emergency medical staff rushing about. Among them, he used to find Imogen, a former nurse who likely felt comfortable amidst the syringes, gloves and pill bottles. Imogen had worked there long enough to cultivate a reliable reputation, until her recent dismissal. Winston had been notified about her job loss by a hospital insider.
+
+After the hospital, detective Winston drove to Imogen's house. Imogen was Giselle’s godmother, and they shared a close bond, so close that Giselle confided in her like no other. Imogen was among the few who knew about Giselle’s financial prudence as she saved for the future. Giselle treated Imogen like a member of her own family, even extending an implicit trust to her. She invited Imogen to her performances and elite parties frequently, detective Winston noted a stack of fancy invitations on Imogen's side table. 
+
+With the pleasantries out of the way, the detective carefully broached the subject of Imogen’s financial struggles. He had discovered that Imogen had some rather sizable medical bills to pay. These bills burdened her with a severe debt. This was no small sum to be owing, especially after losing her job.
+
+“You asked for financial help from Giselle, didn't you?” he asked, choosing his words carefully. Imogen looked away, nodding and admitting,""Yes, losing my job was a shock. I asked her for help.""
+
+Winston could tell this wasn’t an easy admission for Imogen, her goddaughter’s death compounded by the guilt of asking for financial help. As their conversation came to an end, Winston thanked her for cooperation and walked back to his car. 
+
+No conclusions had been drawn. No suspects had been named, but the information gathered from Imogen was another piece in a complex puzzle. The very picture of a detective's work. A bottomless mug of coffee, a relentless quest for answers... and a lingering smell of hospital disinfectant.
+
+Who is the most likely murderer?
+
+Options:
+A. Fred
+B. Imogen
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.6,-0.26610973459688525,-0.13500313511508466,0.6029632106989035,0.38874532865080863,0.7063645576664175,0.9721344634174154,1.0,416,27.89648950099945,0,1,1,5,

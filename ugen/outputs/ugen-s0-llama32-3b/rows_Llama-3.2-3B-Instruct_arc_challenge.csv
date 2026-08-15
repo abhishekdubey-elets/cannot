@@ -1,0 +1,73 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+arc_challenge:6,arc_challenge,commonsense,,,Llama-3.2-3B-Instruct,"A type of small mammal from the mountain regions of the western United States makes its home out of piles of rock. During summer months, the mammal places grasses and seeds in protected places in the rock piles. Which of the following is the most likely reason for this behavior?
+
+Options:
+A. to repare for migration before winter
+B. to provide warmth during the cold winter months
+C. to store food that will be eaten over the winter months
+D. to protect the grasses and seeds from decay before winter
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.8,-0.34937853474304664,-0.008603936921640335,0.7201108831370028,0.04150102268853573,0.6366026893424279,0.9644447370089563,1.0,269,11.47822567820549,0,1,1,5,
+arc_challenge:7,arc_challenge,commonsense,,,Llama-3.2-3B-Instruct,"Petrified palm trees are found in sedimentary rock near glaciers. The presence of the petrified palm trees most likely provides evidence for which statement?
+
+Options:
+A. There was once more water in the area.
+B. The area was once grassland.
+C. The climate in the area was once tropical.
+D. There are active faults in the area.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.8,-0.2359200931692557,-0.06138846070098225,0.5246188397501557,0.1205612677678971,0.7206066010519863,0.9813888624310494,1.0,160,11.47822567820549,0,1,1,5,
+arc_challenge:16,arc_challenge,commonsense,,,Llama-3.2-3B-Instruct,"Fossil bones and teeth of dinosaurs have been researched for the last century. Recent discoveries of fossilized dinosaurs have also revealed details of soft tissues, such as skin. Which is best for a scientist to do when reporting research on dinosaurs now?
+
+Options:
+A. exclude research on teeth or bones
+B. predict what the next discovery will be
+C. analyze new data as it becomes available
+D. delete earlier reports that were missing the new findings
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.8,-0.3285548197925571,-0.08445822168027443,0.7200980447391343,0.2079858502340457,0.6606819774298107,0.9620547782191459,1.0,272,11.47822567820549,0,1,1,5,
+arc_challenge:17,arc_challenge,commonsense,,,Llama-3.2-3B-Instruct,"Molly was making iced tea by putting tea bags in boiling water. She needed to cool the hot tea quickly, so she poured it into a pitcher full of ice. Which best describes the flow of thermal energy?
+
+Options:
+A. from the ice to the tea
+B. from the tea to the ice
+C. from the pitcher to the tea
+D. from the ice to the pitcher
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.8,-0.21327908708558843,-0.16168757954922697,0.4875318317881759,0.26318451921487923,0.7264080645627533,0.9879985878009669,0.8,151,11.47822567820549,0,1,1,5,
+arc_challenge:24,arc_challenge,commonsense,,,Llama-3.2-3B-Instruct,"Snow, rain, hail, and fog are all forms of
+
+Options:
+A. gas.
+B. water.
+C. wind.
+D. clouds.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.9,-0.1997963107091782,-0.16093005449114425,0.4506941226360693,0.3537592199496982,0.7618627892221723,0.9860137060710362,1.0,175,11.47822567820549,0,1,1,5,
+arc_challenge:25,arc_challenge,commonsense,,,Llama-3.2-3B-Instruct,"Scott filled a tray with juice and put it in a freezer. The next day, Scott opened the freezer. How did the juice most likely change?
+
+Options:
+A. It condensed.
+B. It evaporated.
+C. It became a gas.
+D. It became a solid.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.8,-0.25306215308189967,-0.1536096978212894,0.5478484727074094,0.26109629858187117,0.7037840011267881,0.9823523346894707,1.0,153,11.47822567820549,0,1,1,5,
+arc_challenge:35,arc_challenge,commonsense,,,Llama-3.2-3B-Instruct,"A scientist maps a long region in which earthquakes originate and determines this region is a transform plate boundary. Which evidence would cause the scientist to reevaluate this determination?
+
+Options:
+A. Volcanism also characterizes the region.
+B. Earthquake centers in the region occur at shallow depths.
+C. The region shows extensive faulting of sediments.
+D. Equal crust densities are found on opposite sides of the region.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.8,-0.2268617330074453,-0.03767440895899199,0.508434527357316,0.11480804308865326,0.7515964520474275,0.9760974793811965,0.8,366,11.47822567820549,0,1,1,5,
+arc_challenge:69,arc_challenge,commonsense,,,Llama-3.2-3B-Instruct,"What is the primary cause of rainstorms?
+
+Options:
+A. Earth is heated by the Sun.
+B. Mountains direct moist air upward.
+C. Water forms droplets when cooled.
+D. Most of Earth is covered with water.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,A,0,0.8,-0.1756554276129766,-0.09600699813173666,0.3824151156469151,0.12342644955255164,0.7766011321425039,0.9902627079383187,1.0,299,11.47822567820549,0,1,1,5,
