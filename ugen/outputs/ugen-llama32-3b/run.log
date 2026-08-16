@@ -1,0 +1,58 @@
+stats self-test passed in-kernel
+loading model from /kaggle/input/models/metaresearch/llama-3.2/transformers/3b-instruct/1
+model loaded
+restored 0 previously-completed rows
+[mmlu] 200 to run, 0 restored
+[mmlu] 12 rows (partial saved)
+[mmlu] 36 rows (partial saved)
+[mmlu] 60 rows (partial saved)
+[mmlu] 84 rows (partial saved)
+[mmlu] 108 rows (partial saved)
+[mmlu] 132 rows (partial saved)
+[mmlu] 156 rows (partial saved)
+[mmlu] 180 rows (partial saved)
+[mmlu] 200 rows (partial saved)
+[mmlu] DONE n=200 acc=0.655
+[mmlu_pro] 200 to run, 0 restored
+[mmlu_pro] 12 rows (partial saved)
+[mmlu_pro] 36 rows (partial saved)
+[mmlu_pro] 60 rows (partial saved)
+[mmlu_pro] 84 rows (partial saved)
+[mmlu_pro] 108 rows (partial saved)
+[mmlu_pro] 132 rows (partial saved)
+[mmlu_pro] 156 rows (partial saved)
+[mmlu_pro] 180 rows (partial saved)
+[mmlu_pro] 200 rows (partial saved)
+[mmlu_pro] DONE n=200 acc=0.370
+[truthfulqa] 200 to run, 0 restored
+[truthfulqa] 12 rows (partial saved)
+[truthfulqa] 36 rows (partial saved)
+[truthfulqa] 60 rows (partial saved)
+[truthfulqa] 84 rows (partial saved)
+[truthfulqa] 108 rows (partial saved)
+[truthfulqa] 132 rows (partial saved)
+[truthfulqa] 156 rows (partial saved)
+[truthfulqa] 180 rows (partial saved)
+[truthfulqa] 200 rows (partial saved)
+[truthfulqa] DONE n=200 acc=0.595
+[gpqa] no frozen data — skipped
+[gsm8k] 200 to run, 0 restored
+[gsm8k] 12 rows (partial saved)
+[gsm8k] 36 rows (partial saved)
+[gsm8k] 60 rows (partial saved)
+[gsm8k] 84 rows (partial saved)
+[gsm8k] 108 rows (partial saved)
+[gsm8k] 132 rows (partial saved)
+[gsm8k] 156 rows (partial saved)
+[gsm8k] 180 rows (partial saved)
+[gsm8k] 200 rows (partial saved)
+[gsm8k] DONE n=200 acc=0.770
+[svamp] 200 to run, 0 restored
+[svamp] 12 rows (partial saved)
+[svamp] 36 rows (partial saved)
+[svamp] 60 rows (partial saved)
+[svamp] 84 rows (partial saved)
+[svamp] 108 rows (partial saved)
+[svamp] 132 rows (partial saved)
+[svamp] 156 rows (partial saved)
+[svamp] 180 rows (partial saved)
