@@ -1,0 +1,73 @@
+stats self-test passed in-kernel
+loading model from /kaggle/input/models/metaresearch/llama-3.2/transformers/3b-instruct/1
+model loaded
+restored 980 previously-completed rows
+[mmlu] 0 to run, 200 restored
+[mmlu] DONE n=200 acc=0.655
+[mmlu_pro] 0 to run, 200 restored
+[mmlu_pro] DONE n=200 acc=0.370
+[truthfulqa] 0 to run, 200 restored
+[truthfulqa] DONE n=200 acc=0.595
+[gpqa] no frozen data — skipped
+[gsm8k] 0 to run, 200 restored
+[gsm8k] DONE n=200 acc=0.770
+[svamp] 20 to run, 180 restored
+[svamp] 192 rows (partial saved)
+[svamp] DONE n=200 acc=0.860
+[multiarith] 180 to run, 0 restored
+[multiarith] 12 rows (partial saved)
+[multiarith] 36 rows (partial saved)
+[multiarith] 60 rows (partial saved)
+[multiarith] 84 rows (partial saved)
+[multiarith] 108 rows (partial saved)
+[multiarith] 132 rows (partial saved)
+[multiarith] 156 rows (partial saved)
+[multiarith] 180 rows (partial saved)
+[multiarith] DONE n=180 acc=0.983
+[commonsenseqa] 200 to run, 0 restored
+[commonsenseqa] 12 rows (partial saved)
+[commonsenseqa] 36 rows (partial saved)
+[commonsenseqa] 60 rows (partial saved)
+[commonsenseqa] 84 rows (partial saved)
+[commonsenseqa] 108 rows (partial saved)
+[commonsenseqa] 132 rows (partial saved)
+[commonsenseqa] 156 rows (partial saved)
+[commonsenseqa] 180 rows (partial saved)
+[commonsenseqa] 200 rows (partial saved)
+[commonsenseqa] DONE n=200 acc=0.620
+[arc_challenge] 200 to run, 0 restored
+[arc_challenge] 12 rows (partial saved)
+[arc_challenge] 36 rows (partial saved)
+[arc_challenge] 60 rows (partial saved)
+[arc_challenge] 84 rows (partial saved)
+[arc_challenge] 108 rows (partial saved)
+[arc_challenge] 132 rows (partial saved)
+[arc_challenge] 156 rows (partial saved)
+[arc_challenge] 180 rows (partial saved)
+[arc_challenge] 200 rows (partial saved)
+[arc_challenge] DONE n=200 acc=0.845
+[strategyqa] 200 to run, 0 restored
+[strategyqa] 12 rows (partial saved)
+[strategyqa] 36 rows (partial saved)
+[strategyqa] 60 rows (partial saved)
+[strategyqa] 84 rows (partial saved)
+[strategyqa] 108 rows (partial saved)
+[strategyqa] 132 rows (partial saved)
+[strategyqa] 156 rows (partial saved)
+[strategyqa] 180 rows (partial saved)
+[strategyqa] 200 rows (partial saved)
+[strategyqa] DONE n=200 acc=0.675
+[bbh] 198 to run, 0 restored
+[bbh] 12 rows (partial saved)
+[bbh] 36 rows (partial saved)
+[bbh] 60 rows (partial saved)
+[bbh] 84 rows (partial saved)
+[bbh] 108 rows (partial saved)
+[bbh] 132 rows (partial saved)
+[bbh] 156 rows (partial saved)
+[bbh] 180 rows (partial saved)
+[bbh] 198 rows (partial saved)
+[bbh] DONE n=198 acc=0.641
+[musr] 198 to run, 0 restored
+[musr] 12 rows (partial saved)
+[musr] OOM at batch of 12; splitting

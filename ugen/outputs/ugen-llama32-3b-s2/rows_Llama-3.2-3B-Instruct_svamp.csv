@@ -1,0 +1,601 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+svamp:1,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Paige raised 7 goldfish and 12 catfish in the pond but stray cats loved eating them. Now she has 15 left. How many fishes disappeared?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.11486531502654153,-0.11248823169432447,0.24665046350832892,0.20752518952063578,0.8425551073891776,0.997489515372685,1.0,105,5.54760201772054,0,1,1,5,
+svamp:2,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Marco and his dad went strawberry picking. Together they collected strawberries that weighed 22 pounds. On the way back Marco ' dad found 30 more pounds of strawberries. Marco's strawberries now weighed 36 pounds. How much did his dad's strawberries weigh now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",52.0,16.0,0,0.8,-0.1993704025465337,-0.0021480527481685385,0.4474398621937849,0.015550756056622308,0.7759261180303598,0.9838875363531866,0.4,152,5.54760201772054,0,1,1,5,
+svamp:3,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Debby bought 200 water bottles and 256 soda bottles when they were on sale. If she drank 312 water bottles and 4 soda bottles a day How many days would the soda bottles last?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",64.0,64.0,1,0.8,-0.0877202070574806,-0.06277543914202457,0.19364172200316132,0.16242117739940504,0.8783165478925092,0.9975665315575556,0.8,109,5.54760201772054,0,1,1,5,
+svamp:4,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"There were 106 dollars in Olivia's wallet. After she visited a supermarket and a showroom there were 26 dollars left. If she spent 49 dollars at the showroom How much did she spend at the supermarket?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",80.0,31.0,0,0.8,-0.1823427858977613,-0.0027078812896123494,0.3922357610567466,0.02050596219948732,0.784113768134674,0.9889921204452097,1.0,274,5.54760201772054,0,1,1,5,
+svamp:5,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"Faye was placing her pencils and crayons into 30 rows with 71 crayons and 24 pencils in each row. How many pencils does she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",720.0,720.0,1,1.0,-0.06099627123968465,-0.007472084814634984,0.12756950383080037,0.037830497851733265,0.9122927633921305,0.9991771864891053,1.0,75,5.54760201772054,0,1,1,5,
+svamp:6,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Ed had 10 more marbles than Doug. Doug lost 11 of his marbles at the playground. If Ed had 45 marbles How many more marbles did Ed have than Doug then?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",21.0,21.0,1,0.8,-0.10584424435286172,-0.0019674620368570167,0.22520303824362317,0.013370034321626787,0.8551860037287311,0.9979165669023637,0.8,169,5.54760201772054,0,1,1,5,
+svamp:10,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"An industrial machine made 9 shirts yesterday and 44 shirts today. It can make 3 shirts a minute. How many minutes did the machine work yesterday?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.16331222123597347,-0.023161018264934188,0.3114078812774846,0.0793202356114112,0.7927223449354773,0.996591194255932,1.0,111,5.54760201772054,0,1,1,5,
+svamp:11,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"Bryan took a look at his books and magazines. If he has 9 books and 46 magazines in each of his 10 bookshelves How many magazines does he have in total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",460.0,460.0,1,1.0,-0.05951137885864868,-0.0038161615141396915,0.12022893014853592,0.021335038108775604,0.9144404412702073,0.9991216444691946,1.0,86,5.54760201772054,0,1,1,5,
+svamp:12,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Dave had 17 apps on his phone. After adding some he had 18 left. How many apps did he add?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,1.0,-0.05742472615302285,-0.010343495607838602,0.1454502676377007,0.04585453453390593,0.9173497406833143,0.9978905341711389,1.0,83,5.54760201772054,0,1,1,5,
+svamp:13,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Dan has $ 4. He bought a candy bar for $ 7 and a chocolate for $ 6. How much money did he spend buying the candy bar and chocolate?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",13.0,13.0,1,1.0,-0.10445102588076217,-0.03441651433857779,0.22701614180831212,0.1259385355152907,0.8651336204837745,0.9968632149024749,1.0,71,5.54760201772054,0,1,1,5,
+svamp:14,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"The bananas in Philip's collection are organized into 196 groups. If there are a total of 392 bananas in Philip's banana collection How big is each group?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.8,-0.03971097559619072,-0.002439864918613033,0.09867568076180318,0.01635936168997887,0.9373172127025228,0.998736708936557,1.0,71,5.54760201772054,0,1,1,5,
+svamp:15,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"The cave is 1218 feet deep and they are already at 849 feet. If they are travelling at speed of 17 How much farther until they reach the end of the cave?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",21.82,369.0,0,0.8,-0.17793892715118093,-0.007976123188503456,0.3696876027580761,0.04712971550381755,0.7950640914514083,0.9883949239124623,0.6,129,5.54760201772054,0,1,1,5,
+svamp:16,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"The Ferris wheel in paradise park has 4 seats. If 20 people can ride the wheel at the same time How many people can each seat hold?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",5.0,5.0,1,0.8,-0.056132815199379966,-0.0020912064812240567,0.12493495056574946,0.014473358179787153,0.9225515399568824,0.9975549899121766,1.0,93,3.270788311958313,0,1,1,5,
+svamp:18,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Danny collects bottle caps. He lost 66 bottle caps at the park. Now he has 25 bottle caps in his collection. How many bottle caps did danny have at first?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",91.0,91.0,1,0.9,-0.09075478735292983,-0.10148001613148137,0.19600312467653855,0.18646758796067583,0.8745375826822973,0.9980388410323489,0.8,113,3.270788311958313,0,1,1,5,
+svamp:19,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Jack received 4 emails in the morning, 5 emails in the afternoon and 8 emails in the evening. How many emails did Jack receive in the afternoon and evening?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",13.0,13.0,1,1.0,-0.07611977840836001,-0.002946590200078195,0.15683400585852442,0.017808112750604517,0.897613005623931,0.9981806356282461,1.0,84,3.270788311958313,0,1,1,5,
+svamp:21,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"The ring toss game at the carnival made the same amount of money each day. In total in 5 days they earned 165 dollars. How much did they make per day?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",33.0,33.0,1,0.9,-0.11087342561094178,-0.11922046068426795,0.22577263637351128,0.18750141699820233,0.8453976841166962,0.997487775808157,1.0,86,3.270788311958313,0,1,1,5,
+svamp:24,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"Rebecca wants to split a collection of eggs into groups of 11. If each group has 2 eggs How many eggs does Rebecca have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",22.0,22.0,1,0.8,-0.12889346841785088,-0.0015354331072541885,0.2834023768565835,0.01139019707954958,0.8278547366187997,0.9932432664583807,1.0,73,3.270788311958313,0,1,1,5,
+svamp:25,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Mary is baking a cake. The recipe calls for 7 cups of sugar and 10 cups of flour. She already put in 4 cups of sugar. How many more cups of sugar does she need to add?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.9,-0.13546343881705386,-0.15745806671401802,0.2470312019535879,0.2072081817770725,0.8240007143921968,0.998624539229928,1.0,82,3.270788311958313,0,1,1,5,
+svamp:26,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Dave had 21 apps on his phone. He added 89 new apps. After deleting some he had 24 left. How many more apps did he add than he deleted?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.09522459282920442,-0.06491585441493239,0.1899727568618661,0.1368138569293933,0.8632857000627437,0.9991772690740954,1.0,119,3.270788311958313,0,1,1,5,
+svamp:28,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"The grasshopper and the frog had a jumping contest. The grasshopper jumped 13 inches. The grasshopper jumped 2 inches farther than the grasshopper. How far did the frog jump?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",11.0,11.0,1,0.8,-0.20456530033996523,-0.019358161116928483,0.40207300630290005,0.06168354665295998,0.7587471231818199,0.987755631466946,1.0,166,3.270788311958313,0,1,1,5,
+svamp:29,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Allan brought 3 balloons and 20 balls while Jake brought 5 balloons and 59 balls to the park. How many balloons did Allan and Jake have in the park?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,1.0,-0.06496701252143117,-0.0069477921834797075,0.15109799324151688,0.03357512054500538,0.912203860195244,0.9979476201183656,1.0,68,3.270788311958313,0,1,1,5,
+svamp:30,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"He then went to see the oranges being harvested. He found out that they harvest 8 sacks per day. How many days will it take to harvest 24 sacks of oranges?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,1.0,-0.0392223839144388,-0.009379747643570064,0.099879976653451,0.037360094638123495,0.9494915915207124,0.9988858456342993,1.0,71,3.270788311958313,0,1,1,5,
+svamp:34,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Allan brought 5 balloons and Jake brought 6 balloons to the park. Jake then bought 3 more balloons at the park. How many balloons did Jake bring to the park?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,1.0,-0.15545205115709607,-0.089522518528691,0.33980443661953225,0.20974698953822163,0.8097113065638588,0.992125590449398,1.0,103,3.270788311958313,0,1,1,5,
+svamp:35,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"An industrial machine worked for 5 minutes. It can make 4 shirts a minute. How many shirts did machine make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",20.0,20.0,1,1.0,-0.11909786368290937,-0.07505917370810522,0.23972036152800963,0.1284697236149636,0.839900762012059,0.9969344132325866,1.0,88,3.270788311958313,0,1,1,5,
+svamp:39,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Rebecca wants to split a collection of eggs into 3 groups. Rebecca has 4 marbles and 15 eggs. How many eggs will each group have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",5.0,5.0,1,0.8,-0.13404826177581214,-0.004580951545107277,0.2911558766102738,0.024551313423086998,0.8346593217260536,0.9932055589796482,1.0,87,2.219918688138326,0,1,1,5,
+svamp:40,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"After finding some bottle caps at the park danny has 32 bottle caps in his collection. If he had 25 bottle caps in his collection earlier How many bottle caps did he find at the park?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,1.0,-0.07393349855148003,-0.0344758492375336,0.14170700111984236,0.10885529953234904,0.9091064719926744,0.9971194125357128,1.0,105,2.219918688138326,0,1,1,5,
+svamp:41,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Julia played tag with 15 kids on monday, 18 kids on tuesday and 97 kids on wednesday. How many kids did she play with on monday and tuesday?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",33.0,33.0,1,1.0,-0.06834786869366491,-0.004709891132847588,0.15562661717501433,0.027348043166284697,0.8996987905767229,0.9977833587262366,1.0,72,2.219918688138326,0,1,1,5,
+svamp:42,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"In Haley's class some boys love to play marbles. If Haley has 10 marbles and she gave 5 marbles to each boy How many boys did she give the marbles to?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,2.0,0,1.0,-0.12094186063856545,-0.04918054288450285,0.27772777919981717,0.14825086188745576,0.8373456986537621,0.9933321111237825,0.6,67,2.219918688138326,0,1,1,5,
+svamp:43,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"After resting they decided to go for a swim. If the depth of the water is 10 times Dean's height and he stands at 9 feet How much deeper is the water than Dean's height?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",81.0,81.0,1,0.8,-0.0636035879143362,-0.000932042748827046,0.13674182154279563,0.007038943154384469,0.9066081637373338,0.9994339278111091,1.0,104,2.219918688138326,0,1,1,5,
+svamp:44,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"A book has 3 chapters. The first chapter is 91 pages long the second chapter is 23 pages long and the third chapter is 25 pages long. How many more pages does the first chapter have than the second chapter?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",68.0,68.0,1,1.0,-0.04207655165233875,-0.0027098773182347357,0.09912940805057402,0.01542855286662156,0.9418137035586617,0.998186221447858,1.0,110,2.219918688138326,0,1,1,5,
+svamp:45,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"After eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that 317 visitors came to the Buckingham palace that day. If there were 295 visitors the previous day How many more visitors visited the Buckingham palace on that day than on the previous day?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",22.0,22.0,1,1.0,-0.06874190291998022,-0.005955231564545979,0.14352392538871414,0.02710583973768215,0.8984849188372354,0.9987848445633861,1.0,107,2.219918688138326,0,1,1,5,
+svamp:46,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"The Razorback t-shirt shop made $ 51 dollars from selling 3 t-shirt during the Arkansas and Texas tech game they. What is the cost of each t-shirt?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",17.0,17.0,1,0.8,-0.07253645650944676,-0.018145739288343066,0.15003898388444706,0.07717649636898775,0.900560703508708,0.9979220251647793,1.0,98,2.219918688138326,0,1,1,5,
+svamp:49,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"The grasshopper and the frog had a jumping contest. The grasshopper jumped 35 inches. The grasshopper jumped 4 inches farther than the frog. How much did they jump altogether?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",66.0,66.0,1,0.8,-0.12869955724391985,-0.0012186656983479744,0.2551453312982946,0.00831802105350172,0.8313744638888341,0.9975617820361875,1.0,106,2.219918688138326,0,1,1,5,
+svamp:53,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Friends of Katie had 57 games and she had 63 ds games. How many more games does Katie have than her friends?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",6.0,6.0,1,0.9,-0.061398017202076265,-0.006442760604961961,0.13948171141761181,0.02789447734065626,0.9239792484552303,0.9982852694836069,0.8,94,2.219918688138326,0,1,1,5,
+svamp:54,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Lucy went to the grocery store. She bought 10 packs of cookie and 4 packs of cake. How many more packs of cookie did she buy over cake?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",6.0,6.0,1,1.0,-0.05892668155931581,-0.003555050168801342,0.13008507292412308,0.017918687147455006,0.916938417452447,0.998380239339585,1.0,94,2.219918688138326,0,1,1,5,
+svamp:55,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"6 red peaches, 90 yellow peaches and 16 green peaches are in the basket. How many red and green peaches are in the basket?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",22.0,22.0,1,1.0,-0.05783601361061594,-0.005329376979731697,0.1296407868569318,0.03534322014924588,0.9128403808507655,0.9983042395777173,1.0,72,2.219918688138326,0,1,1,5,
+svamp:56,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Mary is baking a cake. The recipe calls for 10 cups of flour 2 cups of sugar and 80 cups of salt. She already put in 7 cups of flour. How many more cups of flour than cups of sugar does she need to add now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,0.8,-0.13392764409793567,-0.042354577925427704,0.2794956106051369,0.13391320364241568,0.823983053393338,0.9971420120285905,1.0,184,11.216751237710318,0,1,1,5,
+svamp:57,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Paco had 17 cookies. He ate 14 cookies and gave 13 of them to his friend. How many more cookies did he eat than those he gave to his friend?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,0.8,-0.11152681227097505,-0.005742863601747266,0.2279890056759604,0.029250971376930984,0.8552763128910608,0.9975860773063288,0.8,123,11.216751237710318,0,1,1,5,
+svamp:58,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"In a school there are 315 girls and 309 boys. There are also 772 teachers How many people are there in that school?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1396.0,1396.0,1,0.8,-0.07008614626692022,-0.01689692165244505,0.14463508419253707,0.053476552800646004,0.9152007664358893,0.9991002082824707,1.0,86,11.216751237710318,0,1,1,5,
+svamp:59,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"There are some baskets of peaches. Each basket has 4 red peaches and 3 green peaches. If there are a total of 7 peaches in all baskets How many baskets of peaches are there?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,0.8,-0.0999387606761922,-0.015355335183219918,0.22279029035806738,0.08460611230413763,0.8760841684632523,0.9955431313015694,1.0,86,11.216751237710318,0,1,1,5,
+svamp:60,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Jessie currently weighs 27 kilograms. After she started to go jogging everyday she lost 101 kilograms. How much did she weigh before starting to jog?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",101.0,128.0,0,0.0,-0.2004531164736183,nan,0.4998619277703398,nan,0.7805051633331459,0.9746571675641462,0.8,512,11.216751237710318,0,0,1,5,
+svamp:62,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"In a school there are 362 boys and 257 girls. 403 more girls joined the school. How many more girls than boys does the school have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",298.0,298.0,1,0.8,-0.1284491807871951,-0.0013489669956559933,0.27506410603260417,0.009636906362207551,0.8411019677296281,0.9957712776958942,0.8,96,11.216751237710318,0,1,1,5,
+svamp:63,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Josh had 22 marbles in his collection. He found 13 marbles ones while he lost 5 marbles. How many marbles does he have now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",30.0,30.0,1,0.8,-0.09235933672521747,-0.030923220775873363,0.1873082624615956,0.10122802518714837,0.8816713955667284,0.998387007801621,1.0,81,11.216751237710318,0,1,1,5,
+svamp:64,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"After eating a hearty meal they went to see the Buckingham palace. There were 39 paintings in the Buckingham palace. There, Rachel learned that 661 visitors came to the Buckingham palace that day. If there were 600 visitors the previous day How many more visitors visited the Buckingham palace on that day than on the previous day?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",61.0,61.0,1,1.0,-0.07632118504886913,-0.03920500672446841,0.14666527243410224,0.10745479154076877,0.8859569783273497,0.9994232678099683,1.0,76,11.216751237710318,0,1,1,5,
+svamp:65,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Nell collects baseball cards. She had 566 cards while Jeff had 234 cards. She gave some of her cards to Jeff and now has 535 cards left. How many cards does Jeff have now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",265.0,265.0,1,0.9,-0.17361220626710577,-0.02495345052062297,0.33686220649115417,0.10364490889182727,0.7846351711587473,0.9949286981062455,1.0,110,11.216751237710318,0,1,1,5,
+svamp:67,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"At the stop 8 more people got on the train. Initially there were 11 people on the train. How many people are there on the train now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",19.0,19.0,1,1.0,-0.07855632835455027,-0.0064872228845556735,0.17303165557085134,0.033821452600055375,0.8957176367667589,0.9982078989798372,1.0,88,11.216751237710318,0,1,1,5,
+svamp:68,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Rachel has 3 apple trees. She picked 8 apples from each of her trees. Now the trees have a total 9 apples still on them. How many apples were there on all trees initially?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",33.0,33.0,1,0.8,-0.10762630075017787,-0.07738733766924659,0.22169384350537996,0.14440886619662965,0.8504342490780181,0.9982405214206033,1.0,138,11.216751237710318,0,1,1,5,
+svamp:69,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"43 children were riding on the bus. At the bus stop some children got off the bus. Then there were 21 children left on the bus. How many children got off the bus at the bus stop?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",22.0,22.0,1,1.0,-0.05696541220708898,-0.0014779772709963318,0.1295579417243011,0.009847638183405902,0.9152354468901952,0.9988382246759203,1.0,90,11.216751237710318,0,1,1,5,
+svamp:70,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"5 red peaches and 11 green peaches are in the basket. How many more green peaches than red peaches are in the basket?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",6.0,6.0,1,1.0,-0.04190717894092299,-0.0007066808367548154,0.09280839019062087,0.0056176712259912165,0.9406054945825373,0.9988162210844096,1.0,103,3.5397650798161826,0,1,1,5,
+svamp:72,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Each pack of dvds costs 76 dollars. If there is a discount of 25 dollars on each pack How much do you have to pay to buy each pack?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",51.0,51.0,1,0.9,-0.10429969997110702,-0.056651265857218344,0.20153045792642044,0.12336051964848593,0.8495903315417694,0.9981977650613496,1.0,66,3.5397650798161826,0,1,1,5,
+svamp:76,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Jerry had 5 action figures and 2 books on a shelf in his room. Later he added 9 more books to the shelf. How many more books than action figures were on his shelf?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",6.0,6.0,1,0.8,-0.1197701544699785,-0.0012875709318507234,0.23185415263509596,0.008385261303731437,0.8429519157976874,0.9968673654140965,0.6,124,3.5397650798161826,0,1,1,5,
+svamp:78,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Because of the decision Sofia asked the students to suggest specific types of food. If 324 students suggested adding mashed potatoes 374 suggested adding bacon to the menu and 128 suggested adding tomatoes How many students participated in the suggestion of new food items?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",826.0,826.0,1,0.8,-0.06823994465478826,-0.001368254712031915,0.14569636579304182,0.009957820853417485,0.9030729917188486,0.9980669946720203,1.0,96,3.5397650798161826,0,1,1,5,
+svamp:79,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"A book has 31 chapters. Each chapter is 61 pages long. How many pages does the book have altogether?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1891.0,1891.0,1,1.0,-0.05761497506022702,-0.0005539644264400678,0.11246257640489929,0.004654829994166221,0.9200140479952097,0.9984493896365165,1.0,80,3.5397650798161826,0,1,1,5,
+svamp:80,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"The school is planning a field trip. The school has 67 classrooms. There are 66 students in each classroom in the school. If there are 6 seats on each school bus How many buses are needed to take the trip?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",738.0,737.0,0,0.8,-0.25340953123964205,-0.2214529556973243,0.5674085164427877,0.5963472507823359,0.7473435630875357,0.9623515117034483,0.6,178,3.5397650798161826,0,1,1,5,
+svamp:82,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Paco had 36 cookies. He gave 14 cookies to his friend and ate 10 cookies. How many cookies did Paco have left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",12.0,12.0,1,0.9,-0.0673554437345394,-0.0021475842673897966,0.1586555944780741,0.013919053526511302,0.9061234883502521,0.9986602822236256,1.0,113,3.5397650798161826,0,1,1,5,
+svamp:83,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Paige raised 15 goldfish in the pond but stray cats loved eating them. 5 were eaten. How many goldfish remained?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",10.0,10.0,1,1.0,-0.06969288652233258,-0.00038625192082365956,0.1505374707173909,0.0034085186194780753,0.9068207680469468,0.9974648796376728,1.0,84,3.5397650798161826,0,1,1,5,
+svamp:84,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"During summer break 61619 kids from Lawrence county stayed home and the rest went to camp. The total number of kids in Lawrence county is 91676. About how many kids in Lawrence county went to camp?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",30057.0,30057.0,1,0.9,-0.02486534363606478,-0.01119506080332755,0.0651390772995235,0.05260465480053256,0.9625511231521765,0.9996833000332117,1.0,96,3.5397650798161826,0,1,1,5,
+svamp:86,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"3 birds were sitting on the fence. 2 more birds and 6 more storks came to join them. How many more storks than birds are sitting on the fence?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,0.8,-0.10191887512123492,-0.08197832035039251,0.243623424769272,0.2133845849228107,0.8531698495149612,0.9973604126410051,0.8,110,3.5397650798161826,0,1,1,5,
+svamp:87,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"The Ferris wheel in paradise park has 6 seats. Each seat can hold 14 people. If there are 16 people on the wheel right now How many more people can join the wheel?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",68.0,68.0,1,0.8,-0.09463006348738322,-0.02160703994234073,0.19404103340615153,0.0658182403650309,0.871802975734075,0.9980340768592526,1.0,99,3.5397650798161826,0,1,1,5,
+svamp:88,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"He then went to see the oranges being harvested. He found out that they harvest 74 sacks per day and discard 71 of them. How many sacks of oranges will they have after 51 days of harvest?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",153.0,153.0,1,0.8,-0.1415035311356946,-0.027411178312490847,0.3095996616819196,0.10667096058991124,0.8069169816951598,0.9947801328474476,1.0,124,3.5397650798161826,0,1,1,5,
+svamp:89,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"The Razorback shop makes $ 115 dollars off each jersey and $ 25 off each t-shirt. During the Arkansas and Texas tech game they sold 113 t-shirts and 78 jerseys. How much more does a jersey cost than a t-shirt?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",90.0,90.0,1,0.8,-0.10831541134757997,-0.1526981837871436,0.22611422558063957,0.27267117984644884,0.8597326313819342,0.9966350103296885,0.4,246,11.158314605553945,0,1,1,5,
+svamp:90,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Next on his checklist is wax to stick the feathers together and colors to paint them. He needs a total of 49 g of colors to paint them. If the feathers require 288 g of wax and right now he just needs 260 g How many grams of wax does he already have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",28.0,28.0,1,0.8,-0.15838585868312363,-0.011614916994001792,0.35419488744375416,0.04838302623797323,0.8144384656961148,0.9868396552709433,0.8,130,11.158314605553945,0,1,1,5,
+svamp:91,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Paul had 21 books. After selling some in a garage sale he bought 42 new ones. If he has 15 books now How many more books did he sell than he bought?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",15.0,6.0,0,0.2,-0.11177308684357529,nan,0.2835124091561285,nan,0.8555159608658869,0.992609583074227,0.4,512,11.158314605553945,0,0,1,5,
+svamp:92,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Julia played tag with 9 kids on monday, 7 kids on tuesday and 96 kids on wednesday. How many more kids did she play with on monday than on tuesday?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,1.0,-0.0490529798063277,-0.007274635446212382,0.1127809398512622,0.03021054345621061,0.9307402606728008,0.9978843331336975,1.0,103,11.158314605553945,0,1,1,5,
+svamp:93,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"There are 65 baskets of peaches. Each basket has 7 red peaches and 3 green peaches. How many peaches are in each basket?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",10.0,10.0,1,1.0,-0.0767492355909255,-0.1349422884646856,0.15032702233952808,0.21755654473378985,0.9007086162117944,0.9971995008164558,0.8,69,11.158314605553945,0,1,1,5,
+svamp:94,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"You had 14 bags with equal number of cookies. If you had 28 cookies and 86 candies in total How many bags of cookies do you have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",14.0,2.0,0,0.2,-0.17460407876965897,-0.15611295646679732,0.36566467179835915,0.3299427396202321,0.786827538082068,0.9911187606320965,0.6,278,11.158314605553945,0,1,1,5,
+svamp:95,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Carol was sending out birthday invitations to her friends. Each package of invitations she bought had 14 invitations in it and she bought 6 packs. Then she bought 11 extra invitations. How many friends can she invite?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",95.0,95.0,1,0.8,-0.12184192503592904,-0.07593435668487457,0.24957319185952923,0.18412408725561136,0.8307861768537097,0.9981943441761865,1.0,90,11.158314605553945,0,1,1,5,
+svamp:96,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Baker made 155 cakes. If his friend bought 140 cakes from him How many cakes would baker still have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",15.0,15.0,1,0.9,-0.0872912344231011,-0.01436422508520455,0.17997833818420306,0.05741542029805454,0.8968235393172329,0.9957794882718799,1.0,103,11.158314605553945,0,1,1,5,
+svamp:99,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"Ryan learns english and chinese for 7 days. Every day he spends 4 hours on learning english and 5 hours on learning chinese. How many hours does he spend on learning english and chinese in all?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",63.0,63.0,1,0.9,-0.09310354591187849,-0.0005642004252623321,0.19333551754760545,0.004421849082153325,0.8690107151971641,0.9983236730521452,1.0,141,11.158314605553945,0,1,1,5,
+svamp:100,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Debby drinks 6 bottles a day. If she bought a total of 12 water bottles How many days would they last her?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.8,-0.06206741616745368,-0.005648907641272238,0.14168558920807967,0.03059227208689208,0.9143122394674832,0.9969894412866572,1.0,97,11.158314605553945,0,1,1,5,
+svamp:101,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"David did 44 push-ups in gym class today. David did 9 more push-ups than Zachary. How many push-ups did Zachary do?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",35.0,35.0,1,0.8,-0.08374642487339362,-0.018753352281757025,0.1780163449976679,0.05738507208950848,0.883972143096135,0.9984626429421561,0.8,133,11.158314605553945,0,1,1,5,
+svamp:102,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Mom buys 51 white t - shirts. If white t - shirts can be purchased in packages of 3 How many packages will she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",17.0,17.0,1,0.9,-0.10908393418131225,-0.1046827148490479,0.26259131668278984,0.26296658830181385,0.8571178157522221,0.9955608320958687,1.0,99,11.158314605553945,0,1,1,5,
+svamp:103,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"During summer break 907611 kids from Lawrence county stay home and the other 455682 kids go to camp. About how many kids are in Lawrence county?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1363293.0,1363293.0,1,0.8,-0.058415961552499764,-0.00247682125318723,0.1297596013065151,0.015958653695836093,0.917273848547655,0.9983538319082821,0.8,85,4.008149325847626,0,1,1,5,
+svamp:105,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"After Jessie started to go jogging everyday she lost 35 kilograms. She weighed 69 kilograms before beginning jogging. How much does she weigh now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",34.0,34.0,1,1.0,-0.054730395442220234,-0.0005910654387538525,0.1367337186558058,0.004908987191518983,0.9151570440315809,0.9986148056436758,1.0,61,4.008149325847626,0,1,1,5,
+svamp:106,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Josh had 20 marbles in his collection. He gave 2 marbles to Jack. How many marbles does Josh have now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",18.0,18.0,1,1.0,-0.12977424201895643,-0.023594384396281903,0.2329019611140313,0.102909140006789,0.8262821615769945,0.998620363145039,1.0,58,4.008149325847626,0,1,1,5,
+svamp:107,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Zachary did 15 push-ups in gym class today. David did 39 more push-ups than Zachary. John did 9 push-ups less than David. How many more push-ups did Zachary do than John?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",-30.0,30.0,0,0.2,-0.11087366876743186,-0.13349369614884868,0.22631358840712051,0.27514132560229754,0.8616069658736515,0.996705527897853,1.0,157,4.008149325847626,0,1,1,5,
+svamp:108,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"Lewis earns $ 368 every week during the 1359 weeks of harvest. If he has to pay $ 388 rent every week How much money does he pay as rent during the harvest season?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",526052.0,527292.0,0,0.8,-0.10539973053243121,-0.02180253718586221,0.21746148380439384,0.09625933824908214,0.8865560109416644,0.9888445874055226,0.4,75,4.008149325847626,0,1,1,5,
+svamp:109,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Winter is almost here and most animals are migrating to warmer countries. There are 18 bird families living near the mountain. If 38 bird families flew away to africa and 80 bird families flew away to asia How many bird families flew away for the winter?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",100.0,118.0,0,0.8,-0.17042357589656756,-0.024222207283591906,0.375063510863559,0.09261358013593833,0.7952937783939498,0.9878652964319502,1.0,140,4.008149325847626,0,1,1,5,
+svamp:110,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Mary is baking a cake. The recipe calls for 11 cups of sugar 6 cups of flour and 9 cups of salt. She already put in 12 cups of flour. How many more cups of sugar than cups of salt does she need to add now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,2.0,0,0.8,-0.1653681642280388,-0.005836015982919004,0.3381309267250641,0.030579091884630673,0.7909617175154274,0.9919356110737408,0.6,197,4.008149325847626,0,1,1,5,
+svamp:112,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Jesse's room is 7 feet long. If she needs a carpet of size 14 square feet What is the width of her room?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.8,-0.09179834751429712,-0.05065450171317768,0.2056104149022577,0.15686714906022253,0.8749904570226766,0.9971788002520191,1.0,98,4.008149325847626,0,1,1,5,
+svamp:115,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Bobby had 22 pieces of candy. He ate some pieces of candy. Then he ate 5 more. If he still has 8 pieces of candy left How many pieces of candy had he eaten at the start?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.11868148805234587,-0.004206008059810529,0.24253440961155662,0.02264253639769517,0.8452354853600264,0.9951834192872048,1.0,200,4.008149325847626,0,1,1,5,
+svamp:116,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"There are 2 baskets of peaches. Each basket has 4 red peaches and some more green peaches. If there are a total of 12 peaches in all baskets How many green peaches are in each basket?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.8,-0.10234527832614772,-0.03617303217466831,0.2122825955713982,0.10638325464183904,0.8561243007996839,0.9988172768118853,1.0,167,4.008149325847626,0,1,1,5,
+svamp:117,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Baker made some cakes. He sold 145 of them. If he still has 72 cakes left How many cakes did baker make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",217.0,217.0,1,0.9,-0.055143650753219295,-0.0013712279203527292,0.1198273943775555,0.009284767757938945,0.9178941868818723,0.9980583802247659,1.0,78,4.008149325847626,0,1,1,5,
+svamp:118,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"David did 40 more push-ups but 17 less crunches than Zachary in gym class today. If Zachary did 34 push-ups and 62 crunches How many crunches did David do?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",45.0,45.0,1,0.8,-0.08255736310328035,-0.0005983106125800727,0.17398068308170228,0.005289481911014653,0.8908036697478522,0.9987975920949663,1.0,105,4.008149325847626,0,1,1,5,
+svamp:119,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Olivia spent 78 dollars at a supermarket. If she has 33 dollars left with her How much money did she have initially?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",111.0,111.0,1,1.0,-0.14765076260234267,-0.0584298068358383,0.29342146692679955,0.12999874145459347,0.8178860814798445,0.9933079310825893,1.0,84,2.9016999006271362,0,1,1,5,
+svamp:120,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Bobby ate 17 pieces of candy. Then he ate 15 more. If he initially had 36 pieces of candy How many pieces of candy does he still have left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.13109559321293957,-0.10936244752026271,0.2798765215579961,0.17745720748423213,0.8213711761954156,0.9969451380046931,1.0,88,2.9016999006271362,0,1,1,5,
+svamp:122,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"They decided to hold the party in their backyard. They have 12 sets of tables and each set has 14 chairs. There are also 6 chairs extra. How many chairs do they have for the guests?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",174.0,174.0,1,0.8,-0.1122638983103995,-0.01828317070614308,0.2467472367283148,0.07123235367306993,0.8562721489106908,0.9961095487370211,1.0,85,2.9016999006271362,0,1,1,5,
+svamp:123,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Adam has 10 apples. Jackie has 2 apples. How many more apples does Adam have than Jackie?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,1.0,-0.044526245754030504,-0.017423056065687042,0.11476001481355887,0.07056184723192668,0.9405640950228306,0.9978157751103665,1.0,94,2.9016999006271362,0,1,1,5,
+svamp:126,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"There are 8 different movies and 21 different books in the ' crazy silly school ' series. If you read 7 of the books and watched 4 of the movies How many more movies do you still have to watch?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.08254592355938518,-0.06622096498395535,0.19326161907520145,0.16092083091137152,0.8909749272393017,0.9963557371279088,1.0,82,2.9016999006271362,0,1,1,5,
+svamp:127,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"White t - shirts can be purchased in packages of 13. If mom buys 39 white t - shirts How many packages will she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.9,-0.13144882095732485,-0.15434806489221436,0.2774274463929162,0.27940005001957097,0.8362754016202323,0.9952982408659798,1.0,98,2.9016999006271362,0,1,1,5,
+svamp:129,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"3 birds and 4 storks were sitting on the fence. 6 more storks came to join them. How many birds and storks are sitting on the fence?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",13.0,13.0,1,1.0,-0.16514769501415666,-0.10624161795424907,0.3137538268167191,0.1900636629473714,0.8003209215071466,0.9965257419480218,1.0,90,2.9016999006271362,0,1,1,5,
+svamp:131,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Adam has 3 more apples than jackie. Adam has 9 apples. How many apples does Jackie have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",6.0,6.0,1,0.8,-0.09055641377533152,-0.006217483312505172,0.19250089956676494,0.029359039611043563,0.8736554344022085,0.9984385432705046,1.0,126,2.9016999006271362,0,1,1,5,
+svamp:134,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than Ron How deep was the water?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",81.0,81.0,1,0.8,-0.09169178204318965,-0.003079343790773237,0.17923251586910008,0.018411371046405684,0.8750203642351874,0.9990898929793259,1.0,145,2.9016999006271362,0,1,1,5,
+svamp:135,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped 39 inches. The grasshopper jumped 19 inches farther than the frog and the mouse jumped 12 inches lesser than the frog. How far did the mouse jump?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,1.0,-0.06269922245373356,-0.0016811864602946766,0.12322816655847178,0.01162083985911977,0.916882378914777,0.9991791283383089,1.0,85,2.9016999006271362,0,1,1,5,
+svamp:136,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Tiffany was collecting cans for recycling. On monday she had 3 bags of cans. The next day she found 7 more bags of cans and 44 bags of bottles. How many bags of cans did she have altogether?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",10.0,10.0,1,1.0,-0.14874488866436347,-0.012809399828833128,0.3192064849411897,0.0495209786058045,0.8054966439356964,0.9942131002297562,1.0,89,2.9016999006271362,0,1,1,5,
+svamp:137,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Jerry had 2 action figures and 10 books on a shelf in his room. Later he added 4 more action figures to the shelf. How many more books than action figures were on his shelf?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.11537520832733432,-0.007301321964303854,0.2303377369168314,0.030668323107615185,0.8508056225035134,0.9964255516923318,1.0,127,2.9016999006271362,0,1,1,5,
+svamp:142,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Kelly has 80 nintendo games. She found 31 more nintendo games. How many does she need to give away so that she will have 6 games left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",105.0,105.0,1,0.8,-0.12719455503593052,-0.08163859185706863,0.26851663708698514,0.1720465362314891,0.8365698391927108,0.9962772335714967,0.8,131,3.22014719247818,0,1,1,5,
+svamp:143,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Paco had 40 cookies. He ate 2 of them. Then he bought 37 more cookies How many cookies did Paco have left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",75.0,75.0,1,0.9,-0.06408808898046185,-0.01057242492200621,0.146070080836526,0.051312801552090344,0.91148212403059,0.998482583463192,1.0,80,3.22014719247818,0,1,1,5,
+svamp:145,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Paul got a box of 457 erasers and 617 crayons for his birthday. At the end of the school year he only had 523 crayons left while not having lost a single eraser. How many more crayons than erasers did he have left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",66.0,66.0,1,1.0,-0.0833231160342491,-0.018639531265628357,0.1794068407690146,0.07170432679647222,0.8877184068163236,0.9972314496835073,0.6,90,3.22014719247818,0,1,1,5,
+svamp:146,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"There are 4 different books and 17 different movies in the ' crazy silly school ' series. If you read 19 of the books and watched 7 of the movies How many more movies do you still have to watch?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",10.0,10.0,1,0.8,-0.07970297563914885,-0.033756647897071446,0.18075687903812077,0.10335788918177968,0.8913376505176226,0.9975355125608898,1.0,84,3.22014719247818,0,1,1,5,
+svamp:148,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Katie had 62 new games and 80 old games. Her friends had 73 new games and 41 old games. How many old games do they have 3
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",121.0,121.0,1,0.9,-0.0778471194251021,-0.03495578114451904,0.1900435253832012,0.13924920555278472,0.8927451212014725,0.9972467208976177,1.0,67,3.22014719247818,0,1,1,5,
+svamp:149,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"We ordered 9 pizzas. Each pizza has 10 slices. If there are 2 of us How many slices of pizza does each of us get if distributed equally?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",45.0,45.0,1,0.8,-0.11385222929997653,-0.08794007124377552,0.24058281718720126,0.1766634047963375,0.8409980782257613,0.998485021052822,0.6,93,3.22014719247818,0,1,1,5,
+svamp:151,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"During summer break 819058 kids from Lawrence county go to camp and the other 668278 kids stay home. How many more kids spent their summer break at the camp compared to those who stayed home?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",150780.0,150780.0,1,1.0,-0.03426142753621,-0.001733203228140745,0.07925213982004636,0.010689037614170616,0.9499627567403685,0.9991757530507034,1.0,123,3.22014719247818,0,1,1,5,
+svamp:153,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Jerry had some action figures on a shelf in his room. Later he added 7 more action figures to the shelf. If there are a total of 10 action figures on his shelf now How many action figures did he have initially on the shelf?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.09853433373386511,-0.0007031961280605158,0.19409604555926988,0.005231834091603105,0.8579896731961588,0.9987514948252565,1.0,161,3.22014719247818,0,1,1,5,
+svamp:157,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"The ring toss game at the carnival made 144 dollars per day. They were at the carnival for 22 days. How much money did they make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3168.0,3168.0,1,0.9,-0.09136992460086697,-0.00803153377818866,0.17835380367144862,0.03529383658843699,0.8786716167240927,0.9960880802102285,0.8,73,3.22014719247818,0,1,1,5,
+svamp:159,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"White t - shirts can be purchased in packages of 53. If mom buys 57 packages of white t - shirts and 34 trousers How many white t - shirts will she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3031.0,3021.0,0,0.8,-0.08143213081157044,-0.1335239015865355,0.17788695958154763,0.262175416084915,0.8900903756065028,0.9966428790773664,0.4,84,3.22014719247818,0,1,1,5,
+svamp:160,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"He then went to see the oranges being harvested. He found out that they harvest 5 sacks of ripe oranges and 74 sacks of unripe oranges per day. How many more sacks of unripe oranges than ripe oranges are harvested per day?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",69.0,69.0,1,1.0,-0.0446551314988712,-0.002365600866982374,0.10846238469840687,0.013840133992874013,0.9369475508907011,0.9985318641577449,1.0,112,3.22014719247818,0,1,1,5,
+svamp:162,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Paco had 13 cookies. He ate 2 of them. Then he bought 36 more cookies How many more cookies did he buy than those he ate?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",34.0,34.0,1,1.0,-0.08227390860244935,-0.04857769754779996,0.17439825185123492,0.10775433845989417,0.8859476116624209,0.999015213829456,0.8,101,3.22014719247818,0,1,1,5,
+svamp:163,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"White t - shirts can be purchased in packages. If mom buys 28 packages which contain 56 white t - shirts in total How many white t - shirts does each package have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,1.0,-0.04699910039236202,-0.019454815413666005,0.09959157667047774,0.06482544051931427,0.9274469158228706,0.9989428976002861,1.0,85,3.721170345942179,0,1,1,5,
+svamp:164,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"The school has 304 grades and each grade has 75 students How many students were there in total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",22800.0,22800.0,1,0.9,-0.0454046216093181,-0.001608308467417885,0.10556931586886578,0.011066981912676965,0.9342026575045153,0.99857319794692,1.0,77,3.721170345942179,0,1,1,5,
+svamp:165,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"He then went to see the oranges being harvested. He found out that they harvest 25 sacks of unripe oranges and 5 sacks of ripe oranges per day. How many sacks of ripe oranges will they have after 73 days of harvest?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",365.0,365.0,1,0.0,-0.12767781396372468,-0.07613530544244489,0.26201612055634355,0.18805152564138033,0.8356442451477051,0.9925333746125765,1.0,107,3.721170345942179,0,1,1,5,
+svamp:167,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Steven has 14 peaches. Jake has 6 fewer peaches than Steven and 3 more peaches than Jill. How many peaches does Jill have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",5.0,5.0,1,0.8,-0.08024703895186129,-0.0038257605616658047,0.16951562137973789,0.01998590519521518,0.8902396011303683,0.9988198680955855,1.0,122,3.721170345942179,0,1,1,5,
+svamp:171,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Ed had 6 more marbles than Doug. Doug lost 7 of his marbles at the playground. If Ed had 22 marbles How many marbles does Doug have now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.11213709157611777,-0.0005528052133010013,0.2239197309996128,0.004493430409248893,0.8422110740513725,0.9984308975265626,1.0,187,3.721170345942179,0,1,1,5,
+svamp:172,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"At the arcade Dave had won 18 tickets. If he used 5 to buy some toys and 11 more to buy some clothes How many tickets did Dave have left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.9,-0.09603823889964039,-0.007715703339755464,0.2062875252575593,0.03651326142029835,0.866976713615915,0.998599444264951,1.0,115,3.721170345942179,0,1,1,5,
+svamp:174,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Paul got a box of 65 crayons for his birthday. During the school year he gave 213 crayons to his friends while he lost 16 crayons. How many crayons had been lost or given away?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",229.0,229.0,1,0.8,-0.10118433180063668,-0.0009806806242969352,0.18619403874440224,0.008200807500494582,0.8580350182950497,0.9978105932474136,1.0,80,3.721170345942179,0,1,1,5,
+svamp:175,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"At the arcade Dave had won 14 tickets and lost 2 tickets. If he used 10 to buy some toys How many tickets did Dave have left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.8,-0.11761971300519813,-0.017044857062695127,0.22850273351718,0.06086512561094943,0.8482503902724409,0.9977053131644181,1.0,127,3.721170345942179,0,1,1,5,
+svamp:176,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"A grocery store had 72 bottles of regular soda, 32 bottles of diet soda and 78 apples. How many more bottles than apple did they have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",26.0,26.0,1,0.8,-0.12067182357018957,-0.006106034617718795,0.22580731492423867,0.029316808776749376,0.8419528892636299,0.9984120994806289,1.0,100,3.721170345942179,0,1,1,5,
+svamp:177,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Because of the decision Sofia asked the students to suggest specific types of food. If 269 students suggested adding bacon 330 suggested adding mashed potatoes to the menu and 76 suggested adding tomatoes How many more students suggested mashed potatoes than those that suggested bacon?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",61.0,61.0,1,1.0,-0.0373532788336493,-0.0028807410977143327,0.09831225718250032,0.01570534433848739,0.9450444756251462,0.9989938865292747,1.0,106,3.721170345942179,0,1,1,5,
+svamp:178,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Because of the decision Sofia asked 310 students to suggest specific types of food. 185 students suggested adding mashed potatoes while others suggested adding bacon to the menu. How many students suggested bacon?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",125.0,125.0,1,0.9,-0.02829029771369427,-0.0007617875369752321,0.06918969022942449,0.005631478116957364,0.9560985345216024,0.9992699069636208,1.0,84,3.721170345942179,0,1,1,5,
+svamp:179,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"Lewis earns $ 403 every week during the 233 weeks of harvest. If he has to pay $ 49 rent every week How much money does he earn during harvest season?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",93649.0,93899.0,0,0.8,-0.12931888765423483,-0.0843915150361138,0.27231826127452124,0.23444991549533573,0.8549054326783669,0.9876377268841392,0.2,76,3.721170345942179,0,1,1,5,
+svamp:182,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"There are 11 different books and 17 different movies in the ' crazy silly school ' series. If you read 7 of the books and watched 21 of the movies How many more movies than books have you read?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",14.0,14.0,1,0.8,-0.09018961768352503,-0.00501631580474639,0.19806903930641376,0.02530062572350289,0.876330651956446,0.997945084291346,1.0,85,7.0117486119270325,0,1,1,5,
+svamp:184,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Matthew gave equal numbers of crackers and cakes to his 28 friends. If he had 13 crackers and 15 cakes initially How many crackers and cakes did each person eat?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",0.0,1.0,0,0.2,-0.21418172449687156,-0.19068785437392372,0.4830729593895524,0.470418895516819,0.7421750737982389,0.9829954413267282,0.4,338,7.0117486119270325,0,1,1,5,
+svamp:185,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Winter is almost here and most animals are migrating to warmer countries. 27 bird families flew away for the winter from near a mountain. If there were 41 bird families living near the mountain initially How many bird families were left near the mountain?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",14.0,14.0,1,1.0,-0.043256279711702914,-0.0008948299374803728,0.10106635882507109,0.006605177666025546,0.9336432546377182,0.9989533947573768,1.0,90,7.0117486119270325,0,1,1,5,
+svamp:186,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Rebecca wants to split a collection of eggs into groups of 20. Rebecca has 5 marbles and 12 eggs. How many more eggs does Rebecca have than marbles?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.8,-0.06938734388934585,-0.002779332873692348,0.14027965406374987,0.01466199039552001,0.910922493331316,0.9983743305613355,1.0,82,7.0117486119270325,0,1,1,5,
+svamp:187,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"A mailman has to give 32 pieces of junk mail to each of the 55 blocks. If he gives 8 mails to each house in a block How many houses are there in a block?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.08707716225030501,-0.011152398331025739,0.22067945779038853,0.056836958768534326,0.8828844089101959,0.9963740064547613,0.8,91,7.0117486119270325,0,1,1,5,
+svamp:188,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"After eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that 92 visitors came to the Buckingham palace that day. If there were 419 visitors the previous day and 103 visitors the day before that How many visited the Buckingham palace before that day?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",-430.0,522.0,0,0.0,-0.1572682261083879,-0.40853843836378345,0.37122787147601577,0.9551714082543705,0.808470649452045,0.989131628233811,0.4,145,7.0117486119270325,0,1,1,5,
+svamp:189,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Danny collects bottle caps and wrappers. He found 65 wrappers and 5 bottle caps at the park. Now he has 31 bottle caps and 9 wrappers in his collection. How many more wrappers than bottle caps did danny find at the park?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",56.0,60.0,0,0.8,-0.18371044792890787,-0.0985530760834428,0.38324848329668776,0.16371939778920414,0.7870149040751369,0.9879834459763821,0.4,214,7.0117486119270325,0,1,1,5,
+svamp:190,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"The Razorback t-shirt shop makes $ 87 dollars off each t-shirt sold. During the Arkansas game and the Texas tech game they sold a total of 95 t-shirts. If they sold 47 t-shirts during the Arkansas game How much money did they make from selling the t-shirts?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4176.0,8265.0,0,0.8,-0.09193096387020054,-0.029913692432894656,0.20427442133970025,0.10422223777368345,0.8711251359739345,0.9986647057842899,0.4,231,7.0117486119270325,0,1,1,5,
+svamp:191,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Paco had 41 cookies. He gave 9 cookies to his friend and ate 18 cookies. How many more cookies did he eat than those he gave to his friend?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.12175837786973656,-0.027547149535272247,0.2672795815229915,0.10149815185325549,0.8341461747375309,0.9964878574395791,0.6,117,7.0117486119270325,0,1,1,5,
+svamp:192,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"In a school there are 402 more girls than boys. If there are 739 girls How many boys are there in that school?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",337.0,337.0,1,0.9,-0.08780053139064864,-0.008268583759664645,0.17757579552653346,0.040880810577976136,0.8753130404572738,0.9988964240353807,1.0,133,7.0117486119270325,0,1,1,5,
+svamp:194,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped 9 inches. The mouse jumped 3 inches lesser than the frog who jumped 33 inches farther than the grasshopper. How far did the mouse jump?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",39.0,39.0,1,1.0,-0.03782565407893293,-0.00043422685744433565,0.08942637169168503,0.003756893036519874,0.9457683272478057,0.9995865247598509,1.0,82,7.0117486119270325,0,1,1,5,
+svamp:195,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Ed had 30 more marbles than Doug. Ed lost 21 of his marbles at the playground. If Ed had 91 marbles How many more marbles did Ed have than Doug then?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",39.0,9.0,0,0.8,-0.10722244303368074,-0.00129951495072029,0.20145670945231944,0.00956734559063729,0.8576235948265463,0.9987503641469467,0.8,207,7.0117486119270325,0,1,1,5,
+svamp:196,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Danny collects bottle caps. He found 30 bottle caps at the park while he threw away 63 old ones. Now he has 42 bottle caps in his collection. How many more bottle caps did danny throw away than those he found at the park?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",33.0,33.0,1,0.8,-0.08573646433145853,-0.000453374829861884,0.17323182458582434,0.004215494196906937,0.8825967686401831,0.9970650597735569,0.8,111,3.625986933708191,0,1,1,5,
+svamp:198,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Paul got a box of 253 crayons for his birthday. By the end of the school year he had either lost or given away 70 of them. How many crayons did he have left by the end of the school year?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",183.0,183.0,1,0.9,-0.05266241361125527,-0.0012799452992818974,0.10958166838574329,0.008194785169718801,0.9314134702520463,0.9981871322520728,1.0,103,3.625986933708191,0,1,1,5,
+svamp:199,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Josh had 15 marbles in his collection. He found 9 marbles while he lost 23 marbles. How many more marbles did he lose than those he found?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",14.0,14.0,1,0.8,-0.08547461318596032,-0.003159834391027516,0.16725142342325924,0.01748746531510343,0.8832389510729733,0.99778527079844,1.0,102,3.625986933708191,0,1,1,5,
+svamp:200,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"An industrial machine can make 6 shirts a minute. It worked for 12 minutes yesterday and for 14 shirts today. How many shirts did machine make altogether?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",156.0,156.0,1,0.8,-0.09879828664754181,-0.0003919539296199608,0.19641712269425476,0.003336398125416703,0.860443299671389,0.9988694730794655,0.8,159,3.625986933708191,0,1,1,5,
+svamp:201,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"A grocery store had 67 bottles of regular soda and 9 bottles of diet soda. How many more bottles of regular soda than diet soda did they have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",58.0,58.0,1,1.0,-0.05167748117295664,-0.0035044612650858248,0.10600286363365002,0.017407958927971583,0.9258399509420299,0.9989355808556682,1.0,99,3.625986933708191,0,1,1,5,
+svamp:202,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Lewis earns $ 21 every week during the 216 weeks of harvest. If he has to pay $ 702 tax How much money will have at the end of the harvest season?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3834.0,3834.0,1,0.8,-0.10704306573351101,-0.0038509056611246706,0.21578148314365397,0.020984415510270082,0.8548417241199986,0.9983909437944601,1.0,182,3.625986933708191,0,1,1,5,
+svamp:203,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Jessie weighed 92 kilograms. After she started to go jogging everyday she lost 56 kilograms in the first week and 99 kilograms in the second week. How much did she weigh after the first week of jogging?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",36.0,36.0,1,0.8,-0.046467162545538586,-0.018111335744832906,0.11134611110797671,0.07159483217193545,0.9283057868480682,0.9990947737413294,1.0,85,3.625986933708191,0,1,1,5,
+svamp:206,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Melissa scored a total of 21 points playing some games. Is she scored 7 points in each game. How many games did she play?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.1442525757607652,-0.021691384500266104,0.2946963885088894,0.0821102791847222,0.8059114290773869,0.9947684228420257,1.0,100,3.625986933708191,0,1,1,5,
+svamp:209,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Frank was reading through his favorite book. The book had 193 pages equally distributed over 15 chapters. It took Frank 660 days to finish the book. How many chapters did he read per day?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",0.0227,44.0,0,0.3,-0.15155518187560796,-0.05355670307644687,0.35543676005409,0.1932937312982176,0.8211916407097631,0.9877258427997133,0.4,134,3.625986933708191,0,1,1,5,
+svamp:211,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Frank put some pieces of candy equally into 2 bags. If he had 16 pieces of candy How many pieces of candy are in each bag?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,1.0,-0.08486171623177123,-0.005026487666627182,0.1635587039652424,0.026562345812895467,0.8884116981766725,0.9939981314696764,1.0,76,3.625986933708191,0,1,1,5,
+svamp:212,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Jerry had 8 action figures on a shelf in his room. Later he added 4 more action figures to the shelf and removed 5 old ones. How many action figures were on his shelf in all?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.9,-0.06547124936927863,-0.017247712740332384,0.16886502222857105,0.07099386093143169,0.9039770416742148,0.9991590207399323,1.0,86,3.625986933708191,0,1,1,5,
+svamp:213,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Baker made 110 cakes. He sold 75 of them. Then he made 76 more cakes. How many cakes would baker still have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",111.0,111.0,1,0.8,-0.11736034395123739,-0.17166146388725625,0.23864990729147528,0.30615496196034137,0.8404850126295299,0.9970364092470525,0.8,91,3.625986933708191,0,1,1,5,
+svamp:214,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Paco ate 19 cookies and had 35 cookies left. How many cookies did he have in the beginning?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",54.0,54.0,1,1.0,-0.16220300739833218,-0.00621316442772013,0.329518423253898,0.03195830512122809,0.8010924145065504,0.992564118114011,1.0,116,4.244208514690399,0,1,1,5,
+svamp:216,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"For the walls of the house he would use 11 nails in all to secure large planks of wood. If each plank needs 3 pieces of nails to be secured and an additional 8 nails were used. How many planks does John need for the house wall?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,1.0,0,0.8,-0.1729179688822701,-0.047575916202012944,0.36328299935876596,0.202127526125748,0.7888927864639655,0.99163150884535,0.2,184,4.244208514690399,0,1,1,5,
+svamp:217,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Paige raised 16 goldfish and 71 catfish in the pond but stray cats loved eating them. Now she has 2 left. How many goldfish disappeared?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",14.0,14.0,1,0.8,-0.1975285403700191,-0.021350345280145535,0.4139542282146626,0.09600675303931894,0.7594833394228402,0.9887455838211512,0.6,118,4.244208514690399,0,1,1,5,
+svamp:218,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Baker sold 44 cakes. If he had made 48 cakes initially How many cakes would baker still have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.9,-0.06256931065006434,-0.004028165902306162,0.12089657316599192,0.021005011366209407,0.9068044925792308,0.9990264124508146,1.0,79,4.244208514690399,0,1,1,5,
+svamp:219,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"The ring toss game at the carnival made 325 dollars in the first 154 days and 114 dollars in the remaining 57 days. How much did they make per day in the remaining 57 days at the carnival?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.74,2.0,0,0.8,-0.1062977106639505,-0.08336867190195345,0.2052373463579563,0.10539637954207137,0.85115856501986,0.9980269867707702,1.0,136,4.244208514690399,0,1,1,5,
+svamp:220,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Rachel had to complete 10 pages of math homework. If she had to complete 3 more pages of reading homework than math homework How many pages did she have to complete in all?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",23.0,23.0,1,0.8,-0.11507379619523789,-0.043456939128694624,0.23644200255183873,0.12305829129789865,0.8533284529799321,0.9970264102591843,0.8,122,4.244208514690399,0,1,1,5,
+svamp:221,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Being his favorite, he saved checking on the grapevines for his last stop. He was told by 36 of the pickers that they fill 8 drums of grapes per day. How many days will it take to fill 240 drums of grapes?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",20.0,30.0,0,0.8,-0.10304532076994524,-0.09152304683811151,0.2502079145989579,0.20875176762612163,0.8573204759914096,0.9964218307839762,0.4,202,4.244208514690399,0,1,1,5,
+svamp:223,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"There were 15 roses in the vase. Jessica threw away 33 roses from the vase and cut some more new roses from her flower garden to put in the vase. There are now 17 roses in the vase. How many more roses did she cut than those she threw away?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.8,-0.21341095148967637,-0.006802722317493094,0.43198422207509474,0.03296301112141009,0.7574359080379043,0.987063078236241,0.6,211,4.244208514690399,0,1,1,5,
+svamp:225,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"If they are already at 659 feet and the cave is 762 feet deep How much farther until they reach the end of the cave?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",103.0,103.0,1,0.8,-0.10852948114516822,-0.0035043685428044163,0.24831575934801617,0.019290816892732567,0.8520277476892238,0.9965412216942485,1.0,82,4.244208514690399,0,1,1,5,
+svamp:227,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"There were 6 roses and 20 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now 21 orchids and 22 roses in the vase. How many more roses than orchids are there in the vase now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",15.0,1.0,0,0.8,-0.11543241991988216,-0.002323650443152303,0.23138044752846246,0.016239131294566635,0.8605682809511429,0.9939682137202747,0.6,203,4.244208514690399,0,1,1,5,
+svamp:228,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"If Lewis earns $ 1357 every week during the 223 weeks of a harvest season. How much money will he earn if he works for 73 harvest seasons?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",443.64,22090603.0,0,0.8,-0.14957897747847787,-0.05853896158642632,0.3015061015875731,0.15204219920795164,0.8059803964022327,0.9952431426328772,0.2,136,4.244208514690399,0,1,1,5,
+svamp:230,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Mary is baking a cake. The recipe calls for 11 cups of sugar and 9 cups of flour. She already put in 12 cups of flour and 10 cups of sugar. How many more cups of sugar does she need to add?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,0.8,-0.1845974360861313,-0.045824574125808634,0.34873205821324044,0.09118178248076804,0.7620073253458196,0.9951255977153778,1.0,110,4.244208514690399,0,1,1,5,
+svamp:231,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Winter is almost here and most animals are migrating to warmer countries. There were 89 bird families living near the mountain. If 60 bird families flew away for winter How many more bird families flew away for the winter than those that stayed behind?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",31.0,31.0,1,0.8,-0.04295255595300233,-0.0026774367831957795,0.09303720194305948,0.01727613336785388,0.9340597707398084,0.9996371071557609,1.0,196,11.124407013257345,0,1,1,5,
+svamp:232,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Dan has $ 4. He bought 99 candy bar for $ 3 each one costing the same amount of money. How much money is left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,0.2,-0.12474008871259806,-0.014746420522734687,0.24695395122640384,0.06692901352133569,0.8531928737632564,0.9930684591903061,0.6,305,11.124407013257345,0,1,1,5,
+svamp:233,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Last week Fred had 47 dollars and Jason had 99 dollars. Over the weekend Fred delivered newspapers earning 111 dollars and washed cars earning 34 dollars. How much money does Fred have now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",192.0,192.0,1,0.8,-0.13702366121924722,-0.11996757555074364,0.2852113324607102,0.2321295832970723,0.815325736442459,0.9962586392866117,1.0,107,11.124407013257345,0,1,1,5,
+svamp:235,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"The school is planning a field trip. The school has 87 classrooms. There are 58 students in the school with each classroom having the same number of students. If there are 2 seats on each school bus. How many buses are needed to take the trip?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",176.0,29.0,0,0.6,-0.15097289660810545,-0.07506251742959742,0.3288419511307588,0.2012125650417147,0.8103023637086153,0.9906545092767858,0.8,376,11.124407013257345,0,1,1,5,
+svamp:236,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Paul had 95 pens and 153 books. After selling some books and pens in a garage sale he had 13 books and 23 pens left. How many books did he sell in the garage sale?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",140.0,140.0,1,0.8,-0.1298778432272956,-0.023766123579263315,0.2563922470564632,0.10485855246958765,0.8234574622133883,0.9970665446868757,1.0,164,11.124407013257345,0,1,1,5,
+svamp:239,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Ed had 24 more marbles than Doug. Doug lost 27 of his marbles at the playground while Ed found 9 more marbles. How many more marbles did Ed have than Doug then?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",24.0,60.0,0,0.2,-0.14038977474610717,nan,0.298590797392815,nan,0.8280551565112546,0.9921448789536953,1.0,512,11.124407013257345,0,0,1,5,
+svamp:240,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"If the cave is 919 feet deep and they need to travel 1307 feet How far is the end of the cave?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2226.0,2226.0,1,0.8,-0.10826362998710533,-0.10158405985630736,0.24060240812516087,0.23860344910917775,0.8703278473145525,0.991000665745265,0.8,71,11.124407013257345,0,1,1,5,
+svamp:242,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"He then went to see the oranges being harvested. He found out that they harvest 44 sacks of ripe oranges and 25 sacks of unripe oranges per day. How many more sacks of ripe oranges than unripe oranges are harvested per day?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",19.0,19.0,1,1.0,-0.04181043754898666,-0.0021014087113623453,0.09331760711745574,0.012596857714925136,0.9450127804385764,0.998498802206346,1.0,112,11.124407013257345,0,1,1,5,
+svamp:243,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"There are 4502 skittles in Steven's skittles collection. Steven also has 4276 erasers. If the skittles and erasers are organized into 154 groups How big is each group?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",57.0,57.0,1,0.8,-0.1079935701391847,-0.031472590964758594,0.20954001163128624,0.12679818291209294,0.8519773643041394,0.9988143474785323,0.8,97,11.124407013257345,0,1,1,5,
+svamp:246,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Because of the decision Sofia asked the students to suggest specific types of food. If 228 students suggested adding mashed potatoes 337 suggested adding bacon to the menu and 23 suggested adding tomatoes How many more students suggested bacon than those that suggested tomatoes?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",314.0,314.0,1,1.0,-0.03791220798355853,-0.0051520535636281495,0.10151808520684895,0.024012192792659853,0.9436087947670776,0.9987202564088424,1.0,101,11.124407013257345,0,1,1,5,
+svamp:249,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Jerry had some action figures on a shelf in his room. Later he added 2 more action figures to the shelf and removed 7 of the old ones. If there are 10 action figures on his shelf now How many action figures did he have initially on the shelf?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",15.0,15.0,1,0.8,-0.11010089017049379,-0.0016963935623672505,0.24228564385009285,0.010660482822426534,0.8608866480884151,0.9942744332496251,1.0,214,11.124407013257345,0,1,1,5,
+svamp:250,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Mary is baking a cake. The recipe calls for 12 cups of flour 5 cups of sugar and 49 cups of salt. She already put in 11 cups of flour. How many more cups of flour does she need to add?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,0.8,-0.13517764984175723,-0.08693168262165127,0.2451188958049512,0.11639323762411939,0.8195074184433274,0.9984528208556382,1.0,92,11.124407013257345,0,1,1,5,
+svamp:251,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Jake has 8 fewer peaches and 10 more apples than Steven. Steven has 11 apples and 18 peaches. How many more peaches than apples does Steven have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.8,-0.17459442074433587,-0.0016816708118077323,0.3494296961352216,0.010412626249035384,0.7926662232702142,0.9897177598334306,1.0,151,5.2818276683489485,0,1,1,5,
+svamp:256,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Brenda's mother made 14 cookies for 2 guests. If each of them had the same number of cookies How many did each of them have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,1.0,-0.06209901307385016,-0.020445516972950526,0.1438833067399688,0.07314856569210601,0.9168967910938792,0.9956153606375059,1.0,72,5.2818276683489485,0,1,1,5,
+svamp:257,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Mary is baking a cake. The recipe calls for 6 cups of flour 8 cups of sugar and 7 cups of salt. She already put in 5 cups of flour. How many more cups of sugar than cups of salt does she need to add now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,0.8,-0.12320147104019881,-0.09370316984843997,0.28303395961216055,0.24048917613695917,0.8338192226971395,0.9958789602539243,1.0,169,5.2818276683489485,0,1,1,5,
+svamp:259,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Julia played tag with 12 kids on monday. She played tag with 14 kids on tuesday. She spent a total of 34 hours to play tag on both days. How many kids did she play with altogether?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",26.0,26.0,1,0.8,-0.1427002056803829,-0.008134775597028465,0.2708069012041051,0.04768874205936819,0.8178451992571354,0.9965149235725402,1.0,100,5.2818276683489485,0,1,1,5,
+svamp:260,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Edward had $ 13. He spent some money. Now he has $ 3. How much money did Edward spend?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",10.0,10.0,1,1.0,-0.09434933848341584,-0.02402834980828012,0.17930576693191602,0.09269988254982309,0.8671482818854319,0.9986256492602361,1.0,77,5.2818276683489485,0,1,1,5,
+svamp:262,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Danny has 12 bottle caps in his collection. He found 53 bottle caps at the park. How many bottle caps does he have now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",65.0,65.0,1,1.0,-0.08819027744633422,-0.05004131010015759,0.20271310803863782,0.1322817333223481,0.8836983317493373,0.996496102748773,1.0,117,5.2818276683489485,0,1,1,5,
+svamp:265,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Lewis earns a total of $ 1216 during the harvest. If he earns $ 16 each week How many weeks did the harvest last?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",76.0,76.0,1,1.0,-0.11466976115692432,-0.012266417943456938,0.21708215719526955,0.04647943728566263,0.853265622948728,0.9961828095156972,1.0,82,5.2818276683489485,0,1,1,5,
+svamp:267,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"They decided to hold the party in their backyard. If they have 11 sets of tables and each set has 13 chairs How many chairs do they have in the backyard?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",143.0,143.0,1,0.9,-0.03643545465446467,-0.00044500165559416667,0.09163076612607857,0.0036979627976247036,0.9440623492370417,0.9987466776812518,1.0,81,5.2818276683489485,0,1,1,5,
+svamp:269,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Rebecca wants to split a collection of eggs into groups of 3. Rebecca has 99 bananas 9 eggs and 27 marbles. How many groups will be created?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.3,-0.22953147891889214,-0.028047799999569634,0.5016848158698759,0.12589303921322426,0.736156669384675,0.9820596240032679,0.8,261,5.2818276683489485,0,1,1,5,
+svamp:270,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Ed had 29 more marbles than Doug. Ed lost 17 of his marbles at the playground. How many more marbles did Ed have than Doug then?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",12.0,12.0,1,0.8,-0.12043811755658201,-0.0044845898893452075,0.24488000880827537,0.024776477947593127,0.8334513547745618,0.997706022045829,0.6,220,5.2818276683489485,0,1,1,5,
+svamp:271,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"There are 6 houses on a block. If a mailman has to give 24 pieces of junk mail to each block How many pieces of junk mail should he give in each house?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,1.0,-0.05726289530035425,-0.023290204812216837,0.12691388595804673,0.06359306521946044,0.9182588094717836,0.9988667074948141,1.0,73,5.2818276683489485,0,1,1,5,
+svamp:273,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"Emily is making bead necklaces for her friends. Each necklace takes 8 beads and she has 16 beads. How many necklaces can Emily make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.9,-0.10774113945962682,-0.010166334028614952,0.2151731928729073,0.04227090739225657,0.8574848147955808,0.9951389955751824,1.0,99,5.2818276683489485,0,1,1,5,
+svamp:274,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"Jesse's rooms are 19 feet long and 18 feet wide. If she has 20 rooms in all How much carpet does she need to cover the floors of all rooms?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",6840.0,6840.0,1,0.8,-0.09092612825380149,-0.002515164137200543,0.20411052404700059,0.01362787944404431,0.8646520965099335,0.9988209710121155,1.0,125,6.804765820503235,0,1,1,5,
+svamp:275,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Next on his checklist is wax to stick the feathers together. If the feathers require 166 g of wax and right now he has 20 g How many more grams of wax does he need?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",146.0,146.0,1,1.0,-0.1431183727923492,-0.047465977540464825,0.2842411683135741,0.11035856131068808,0.822649293824246,0.9921126102146349,1.0,95,6.804765820503235,0,1,1,5,
+svamp:276,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"15 campers went rowing in the morning. Some more campers went rowing in the afternoon. If a total of 32 campers went rowing that day How many campers went rowing in the afternoon?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",17.0,17.0,1,0.8,-0.08574478469773164,-0.006660377572382613,0.16636468605870794,0.029508399786306785,0.8909696937607439,0.9973306027834847,1.0,149,6.804765820503235,0,1,1,5,
+svamp:277,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"We ordered some pizzas. Each pizza has 2 slices. If there were a total of 28 slices How many pizzas did we order?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",14.0,14.0,1,1.0,-0.07825984672845854,-0.009947983268877993,0.1642851095420439,0.05002576325828808,0.8976677891568862,0.9942308284234309,1.0,69,6.804765820503235,0,1,1,5,
+svamp:278,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Paul got a box of 521 crayons and 66 erasers for his birthday. At the end of the school year he only had 154 left while not having lost a single erasers. How many crayons had been lost or given away?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",367.0,367.0,1,0.8,-0.06535664169223024,-0.0011545056188586905,0.14331356806806764,0.008015619578600308,0.9141545503035836,0.997814751189688,1.0,92,6.804765820503235,0,1,1,5,
+svamp:279,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"41 children were riding on the bus. At the bus stop some children got off the bus. Then there were 18 children left on the bus. How many more children were on the bus before the bus stop than there are now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",23.0,23.0,1,0.9,-0.07369761858142834,-0.011257648036779042,0.16353080853435498,0.04537003865256598,0.897247821399846,0.997262203816286,0.8,97,6.804765820503235,0,1,1,5,
+svamp:280,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Tiffany was collecting cans for recycling. On monday she had 7 bags of cans. The next day she found 12 more bags worth of cans. How many more bags did she find on the next day than she had on monday?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",5.0,5.0,1,1.0,-0.056145135924215495,-0.0035959461019591083,0.13538289801860515,0.01798592775677272,0.9242572974542091,0.9976497215443644,1.0,116,6.804765820503235,0,1,1,5,
+svamp:281,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Edward had $ 18. He spent $ 16. How much money does Edward have now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,1.0,-0.15047953373233225,-0.06146060653683451,0.2950674789968027,0.16774868063086096,0.8029437635985899,0.9982731434660899,1.0,71,6.804765820503235,0,1,1,5,
+svamp:282,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Lawrence county has 898051 kids. During summer break 629424 kids go to camp and the rest stay home. How many kids stay home?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",268627.0,268627.0,1,1.0,-0.0324074796066631,-0.0003517355091240404,0.07693068039243371,0.0031239060546681685,0.9525155557526482,0.9993757473097907,1.0,90,6.804765820503235,0,1,1,5,
+svamp:283,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"There were 16 roses and 3 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now 7 orchids and 13 roses in the vase. How many orchids did she cut?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.10057389160877388,-0.010405813902618124,0.220787748739665,0.04512476629588491,0.8594604629336051,0.9972801978148303,1.0,103,6.804765820503235,0,1,1,5,
+svamp:285,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Danny collects bottle caps and wrappers. He found 30 bottle caps and 14 wrappers at the park. Now he has 7 bottle caps and 86 wrappers in his collection. How many more bottle caps than wrappers did danny find at the park?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",95.0,16.0,0,0.8,-0.09909920634504078,-0.057498781670891015,0.23103296165633885,0.14244351510719103,0.8703836771279481,0.9958890442536256,0.8,321,6.804765820503235,0,1,1,5,
+svamp:286,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"There were 174 parents in the program and 521 pupils too. How many more pupils were present compared to parents in the program?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",347.0,347.0,1,1.0,-0.04785804946562072,-0.05557246979219599,0.1090910261910423,0.12690063134566895,0.9283066214020572,0.999334405607252,1.0,67,6.804765820503235,0,1,1,5,
+svamp:288,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"There are 20 different books in the ' crazy silly school ' series. If you are yet to read 5 of the books How many books have you already read?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",15.0,15.0,1,1.0,-0.066102069060175,-0.001105688038125306,0.1557813465193956,0.008352151606231928,0.9088561922311783,0.9969306104713016,1.0,90,5.270704120397568,0,1,1,5,
+svamp:289,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped 24 inches. The frog jumped 33 inches farther than the grasshopper and the mouse jumped 5 inches lesser than the frog. How much farther did the mouse jump than the grasshopper?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",28.0,28.0,1,0.8,-0.08443713859065444,-0.13685162031294595,0.17188668465226573,0.24447891069413735,0.8861537619548685,0.9983436469159095,1.0,153,5.270704120397568,0,1,1,5,
+svamp:290,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Haley grew 13 trees in her backyard. After a typhoon 6 died. How many more trees survived the typhoon than those that died?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,0.8,-0.0765370465507807,-0.0009385495426832742,0.17888149165382752,0.007212121705379104,0.8882713678410683,0.9986936354089058,1.0,174,5.270704120397568,0,1,1,5,
+svamp:292,svamp,arithmetic,Multiplication,,Llama-3.2-3B-Instruct,"Faye was placing her pencils into rows with 22 pencils in each row. She had 6 packs of pencils each one having 14 pencils. How many pencils does she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",84.0,84.0,1,0.8,-0.11820404161221378,-0.01157800918172366,0.22876606517565287,0.05473463068691282,0.8524545555820271,0.9978281204797783,0.4,98,5.270704120397568,0,1,1,5,
+svamp:293,svamp,arithmetic,Common-Division,,Llama-3.2-3B-Instruct,"White t - shirts can be purchased in packages. If mom buys 66 white t - shirts where each package has 3 white t - shirts. How many packages will she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",22.0,22.0,1,1.0,-0.10822010603155802,-0.10655860856239181,0.22869329867948676,0.19971517540268127,0.8490396987910223,0.9974760298777108,1.0,99,5.270704120397568,0,1,1,5,
+svamp:294,svamp,arithmetic,Subtraction,,Llama-3.2-3B-Instruct,"Mary is baking a cake. The recipe calls for 5 cups of sugar and 13 cups of flour. She already put in some cups of flour. If she still needs 12 more cups of flour How many cups of flour did she put in?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,0.8,-0.12624112411951455,-0.019415425997453082,0.2768306705226523,0.06254720235572872,0.8388400955200195,0.9953518166542054,0.8,125,5.270704120397568,0,1,1,5,
+svamp:296,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Jack received 3 emails and 64 letters in the morning. He then received 5 emails and 54 letters in the afternoon. How many emails did jack receive in the day?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,1.0,-0.08224284057782438,-0.005022834010998979,0.16093792035114315,0.026839137818374832,0.8791619530745916,0.9982430185590472,1.0,70,5.270704120397568,0,1,1,5,
+svamp:299,svamp,arithmetic,Addition,,Llama-3.2-3B-Instruct,"Jake has 13 fewer peaches and 3 more apples than Steven. Steven has 9 peaches and 8 apples. How many apples does Jake have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",11.0,11.0,1,0.8,-0.1612222803597528,-0.027570180625515053,0.3369803035850406,0.0785360705824912,0.795279043472626,0.9947657314213839,1.0,88,5.270704120397568,0,1,1,5,
