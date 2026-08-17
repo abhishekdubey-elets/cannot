@@ -1,0 +1,61 @@
+stats self-test passed in-kernel
+loading model from /kaggle/input/models/metaresearch/llama-3.2/transformers/3b-instruct/1
+model loaded
+restored 1990 previously-completed rows
+[mmlu] 0 to run, 200 restored
+[mmlu] DONE n=200 acc=0.655
+[mmlu_pro] 0 to run, 200 restored
+[mmlu_pro] DONE n=200 acc=0.370
+[truthfulqa] 0 to run, 200 restored
+[truthfulqa] DONE n=200 acc=0.595
+[gpqa] no frozen data — skipped
+[gsm8k] 0 to run, 200 restored
+[gsm8k] DONE n=200 acc=0.770
+[svamp] 0 to run, 200 restored
+[svamp] DONE n=200 acc=0.860
+[multiarith] 0 to run, 180 restored
+[multiarith] DONE n=180 acc=0.983
+[commonsenseqa] 0 to run, 200 restored
+[commonsenseqa] DONE n=200 acc=0.620
+[arc_challenge] 0 to run, 200 restored
+[arc_challenge] DONE n=200 acc=0.845
+[strategyqa] 0 to run, 200 restored
+[strategyqa] DONE n=200 acc=0.675
+[bbh] 0 to run, 198 restored
+[bbh] DONE n=198 acc=0.641
+[musr] 186 to run, 12 restored
+[musr] 24 rows (partial saved)
+[musr] OOM at batch of 12; splitting
+[musr] OOM at batch of 12; splitting
+[musr] 48 rows (partial saved)
+[musr] OOM at batch of 12; splitting
+[musr] OOM at batch of 12; splitting
+[musr] 72 rows (partial saved)
+[musr] 96 rows (partial saved)
+[musr] 120 rows (partial saved)
+[musr] OOM at batch of 12; splitting
+[musr] 144 rows (partial saved)
+[musr] 168 rows (partial saved)
+[musr] 192 rows (partial saved)
+[musr] DONE n=198 acc=0.434
+[humaneval] 164 to run, 0 restored
+[humaneval] 12 rows (partial saved)
+[humaneval] 36 rows (partial saved)
+[humaneval] 60 rows (partial saved)
+[humaneval] 84 rows (partial saved)
+[humaneval] 108 rows (partial saved)
+[humaneval] 132 rows (partial saved)
+[humaneval] 156 rows (partial saved)
+[humaneval] DONE n=164 acc=0.543
+[mbpp] 200 to run, 0 restored
+[mbpp] 12 rows (partial saved)
+[mbpp] 36 rows (partial saved)
+[mbpp] 60 rows (partial saved)
+[mbpp] 84 rows (partial saved)
+[mbpp] 108 rows (partial saved)
+[mbpp] 132 rows (partial saved)
+[mbpp] 156 rows (partial saved)
+[mbpp] 180 rows (partial saved)
+[mbpp] 200 rows (partial saved)
+[mbpp] DONE n=200 acc=0.625
+TOTAL rows: 2540

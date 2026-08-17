@@ -1,0 +1,541 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+multiarith:0,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Paige had 11 songs on her mp3 player. If she deleted 9 old songs from it and then added 8 new songs, how many songs does she have on her mp3 player?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",10.0,10.0,1,0.8,-0.09933226065787373,-0.035876738320414096,0.21905772304469687,0.1041201716757314,0.8683547595372567,0.99671987310434,1.0,78,2.663161794344584,0,1,1,5,
+multiarith:1,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"There were 39 girls and 4 boys trying out for the schools basketball team. If only 26 of them got called back, how many students didn't make the cut?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",17.0,17.0,1,0.8,-0.0891732207868041,-0.0013988478822284378,0.19549712447435738,0.01077725243700505,0.8764500359603025,0.9990723630703917,1.0,109,2.663161794344584,0,1,1,5,
+multiarith:2,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Faye had 34 coloring books. If she gave away 3 of them, but then bought 48 more, how many would she have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",79.0,79.0,1,0.9,-0.0916674551858577,-0.005666942860175693,0.19514598776851527,0.02839651571077541,0.8747983910143375,0.9972878411412239,1.0,80,2.663161794344584,0,1,1,5,
+multiarith:3,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"The school cafeteria had 23 apples. If they used 20 to make lunch for the students and then bought 6 more, how many apples would they have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.13700296014267616,-0.05941304140535765,0.26438997001628195,0.15506233928739935,0.823315440657291,0.997008851233949,1.0,94,2.663161794344584,0,1,1,5,
+multiarith:4,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"In a video game, each enemy defeated gives you 9 points. If a level has 11 enemies total and you destroy all but 3 of them, how many points would you earn?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",72.0,72.0,1,1.0,-0.1685034734749034,-0.00830877989207579,0.33010641975901095,0.03922471921227303,0.7769996235447545,0.9967700198132504,1.0,93,2.663161794344584,0,1,1,5,
+multiarith:5,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Megan earned 8 points for each bag of cans she recycled. If she had 14 bags, but didn't recycle 5 of them, how many points would she have earned?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",72.0,72.0,1,0.8,-0.11663349906180255,-0.017396648926592206,0.2435383642759251,0.07152240308445405,0.8337183144498379,0.9986740217563954,1.0,94,2.663161794344584,0,1,1,5,
+multiarith:6,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"April's discount flowers was having a sale where each rose was 4 dollars. If April started with 13 roses and had 4 roses left, how much money did she earn?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",36.0,36.0,1,0.8,-0.09767801509133428,-0.001954166999662935,0.20478665050000094,0.013775025016067437,0.8560370709431373,0.9989339855767913,1.0,118,2.663161794344584,0,1,1,5,
+multiarith:7,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Ned had to wash 9 short sleeve shirts and 21 long sleeve shirts before school. If he had only washed 29 of them by the time school started, how many did he not wash?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,0.8,-0.06383088029075239,-0.0018407369130386542,0.1420321244171581,0.012450214065341112,0.9086180240898342,0.9993328360410837,1.0,91,2.663161794344584,0,1,1,5,
+multiarith:8,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A company invited 47 people to a luncheon, but 7 of them didn't show up. If the tables they had held 5 people each, how many tables do they need?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,0.8,-0.15163119312128492,-0.09229042508832208,0.28622949238948603,0.17239237426978044,0.7995025854110718,0.9978917875289917,1.0,125,2.663161794344584,0,1,1,5,
+multiarith:9,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Tom had 5 books. If he sold 4 of them and used the money he earned to buy 38 new books, how many books would Tom have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",39.0,39.0,1,0.8,-0.11705635130501718,-0.003421775174923068,0.2654132576324545,0.01892667545657137,0.8488531485199928,0.9978337230590674,1.0,104,2.663161794344584,0,1,1,5,
+multiarith:10,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"For a birthday party Jerry bought 41 regular sodas and 22 diet sodas. If his fridge would only hold 9 on each shelf, how many shelves would he fill up?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.8,-0.11854021495652656,-0.09437311714431575,0.2279037930937414,0.18717905951429462,0.8439186736270115,0.9977966579231056,1.0,111,2.663161794344584,0,1,1,5,
+multiarith:11,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"For Halloween Debby and her sister combined the candy they received. Debby had 32 pieces of candy while her sister had 42. If they ate 35 pieces the first night, how many pieces do they have left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",39.0,39.0,1,0.8,-0.11013149100865002,-0.11440783723641447,0.22341716075221096,0.17257419631453427,0.8507089950572485,0.9981924713343039,1.0,87,2.663161794344584,0,1,1,5,
+multiarith:12,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Emily was planting vegetables in her garden. She started with 41 seeds and planted 29 of them in the big garden and in each of her small gardens put 4 seeds each. How many small gardens did Emily have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.11252122483029191,-0.01334572690753991,0.21316738296618284,0.04712827225191469,0.8459394033503743,0.9983050886508638,1.0,113,3.23339174191157,0,1,1,5,
+multiarith:13,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"For Halloween Emily received 5 pieces of candy from neighbors and 13 pieces from her older sister. If she only ate 9 pieces a day, how long would the candy last her?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.8,-0.09411433124983824,-0.042797515237695496,0.19161331070166931,0.10998682679337435,0.8722744549696262,0.9981931374623225,1.0,130,3.23339174191157,0,1,1,5,
+multiarith:14,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Mike is at the library helping put away books. There are 82 book to put away total but a librarian takes 10 of them and leaves Mike with the rest. If he can fit 9 books on a shelf, how many shelves will he need?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,0.8,-0.13501301865048349,-0.03693445217944661,0.27940765935581147,0.12314480962946359,0.8008573143528058,0.9988642715490781,1.0,130,3.23339174191157,0,1,1,5,
+multiarith:15,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"While on vacation, Nancy took 49 pictures at the zoo and 8 at the museum. If she later deleted 38 of the pictures, how many pictures from her vacation did she still have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",19.0,19.0,1,0.9,-0.12375107426127295,-0.0012719172146447022,0.2345251340300503,0.009248920341333036,0.8456691949112901,0.9955424845797344,1.0,103,3.23339174191157,0,1,1,5,
+multiarith:16,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A new building needed 14 windows. The builder had already installed 8 of them. If it takes 8 hours to install each window, how long will it take him to install the rest?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",48.0,48.0,1,0.8,-0.13142554577494464,-0.0062719633260672125,0.25859957624927754,0.029716577311806498,0.8136356699166538,0.9982711621325651,1.0,139,3.23339174191157,0,1,1,5,
+multiarith:17,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A store had 40 oranges in a bin. If they threw away 25 of the old ones and put 21 new ones in the bin how many would be in the bin?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",36.0,36.0,1,0.8,-0.12462722993920798,-0.0011935284902295149,0.2502627175072198,0.008356480746182829,0.8360144210568929,0.9957930698233136,1.0,118,3.23339174191157,0,1,1,5,
+multiarith:18,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"At lunch a waiter had 7 customers and 5 of them didn't leave a tip. If he got $3 each from the ones who did tip, how much money did he earn?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",6.0,6.0,1,0.8,-0.1446962232152407,nan,0.31069059894592055,nan,0.7977702111982908,0.9961820596554241,1.0,122,3.23339174191157,0,0,1,5,
+multiarith:19,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"For Halloween Faye scored 47 pieces of candy. She ate 25 pieces the first night and then her sister gave her 40 more pieces. How many pieces of candy does Faye have now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",62.0,62.0,1,1.0,-0.07446871397818036,-0.018895133361744292,0.17470831290760017,0.0764428867514815,0.8955876849199597,0.9978260084202415,1.0,95,3.23339174191157,0,1,1,5,
+multiarith:20,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A group of 4 friends went into a restaurant. The chef already had 9 chicken wings cooked but cooked 7 more for the group. If they each got the same amount how many would each person get?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.1237881557785633,-0.0013078462122473006,0.2605966241764754,0.009086779127820981,0.8368711848258972,0.9965685949325561,1.0,125,3.23339174191157,0,1,1,5,
+multiarith:21,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"John earned 8 dollars for each lawn he mowed. If he had 15 lawns to mow, but forgot to mow 7 of them, how much money did he actually earn?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",64.0,64.0,1,0.8,-0.09047364392531065,-0.0029252977084124965,0.20119894453890325,0.01927909082210785,0.8668750250962243,0.9984009577267206,1.0,134,3.23339174191157,0,1,1,5,
+multiarith:22,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A pet shelter had 5 puppies when another 35 were brought in. If 8 puppies a day are adopted, how long would it take for all of them to be adopted?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",5.0,5.0,1,0.8,-0.11339531487478148,-0.11519937303378518,0.23464820225242103,0.1617640618765758,0.8460152688010639,0.997429522062769,1.0,151,3.23339174191157,0,1,1,5,
+multiarith:23,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A new building needed 9 windows. The builder had already installed 6 of them. If it takes 6 hours to install each window, how long will it take him to install the rest?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",18.0,18.0,1,0.8,-0.1291304808417883,-0.012748188959834903,0.2589504462446284,0.05269490243171861,0.814542071078904,0.998507927171886,1.0,128,3.23339174191157,0,1,1,5,
+multiarith:24,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A teacher had 34 worksheets to grade. If she graded 7, but then another 36 were turned in, how many worksheets would she have to grade?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",70.0,63.0,0,0.8,-0.14782706345951413,-0.005496377977545462,0.3125051686212226,0.03178573742538252,0.8088647975048548,0.9963876327998201,1.0,71,3.0845693945884705,0,1,1,5,
+multiarith:25,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"While playing at the arcade, Frank won 33 tickets playing 'whack a mole' and 9 tickets playing 'skee ball'. If he was trying to buy candy that cost 6 tickets a piece, how many could he buy?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.8,-0.14090732933189543,-0.012014650566641194,0.2646204486805184,0.05733892868478766,0.8157166630750702,0.9975876841814287,1.0,124,3.0845693945884705,0,1,1,5,
+multiarith:26,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"At a restaurant each adult meal costs $7 and kids eat free. If a group of 13 people came in and 9 were kids, how much would it cost for the group to eat?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",28.0,28.0,1,1.0,-0.18806105774210863,-0.037700654835362,0.38437665346574806,0.1364902257538623,0.7590821685932451,0.9952221002619145,1.0,118,3.0845693945884705,0,1,1,5,
+multiarith:27,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Paige had 43 math problems and 12 science problems for homework. If she finished 44 of the problems at school, how many problems did she have to do for homework?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",11.0,11.0,1,0.8,-0.12587353499312828,-0.0035082739968197124,0.2641324229780266,0.025056221294091432,0.8405721788020695,0.9960361923657212,1.0,102,3.0845693945884705,0,1,1,5,
+multiarith:28,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Rachel was playing a video game where she scores 9 points for each treasure she finds. If she found 5 treasures on the first level and 2 on the second, what would her score be?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",63.0,63.0,1,1.0,-0.10440120834230404,-0.08038467323239777,0.21309305569645937,0.12309209325641339,0.8494966992965112,0.9990880102173895,1.0,117,3.0845693945884705,0,1,1,5,
+multiarith:29,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A waiter at 'The Greasy Spoon' restaurant had 26 customers to wait on. During the lunch rush he added another 27 customers. If 27 of the customers didn't leave him a tip, how many customers did leave a tip?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",26.0,26.0,1,0.8,-0.11511761856422636,-0.016265170614099742,0.22337252784185,0.06806852206992582,0.8475793653218321,0.9977861056032107,1.0,129,3.0845693945884705,0,1,1,5,
+multiarith:30,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A toy store had 17 giant stuffed bears in stock when they got another shipment with 10 bears in it. The put the bears onto shelves with 9 on each shelf. How many shelves did they use?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.1570448171777556,-0.0662819282935873,0.33390666247804923,0.1788732636729102,0.7996718401296271,0.9951639945308367,1.0,144,3.0845693945884705,0,1,1,5,
+multiarith:31,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Gwen was organizing her book case making sure each of the shelves had exactly 4 books on it. If she had 5 shelves of mystery books and 3 shelves of picture books, how many books did she have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",32.0,32.0,1,0.8,-0.07919355235375497,-0.0022448297661006628,0.1663932793964086,0.013693457087681184,0.8842979385852814,0.9983762507438659,1.0,125,3.0845693945884705,0,1,1,5,
+multiarith:32,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Wendy uploaded 79 pictures to Facebook. She put 44 pics into one album and put the rest into 5 different albums. How many pictures were in each album?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.8,-0.13552728555479132,-0.02304083370485139,0.28215036108768665,0.07888439095911183,0.8075933063030243,0.9983689150810242,1.0,125,3.0845693945884705,0,1,1,5,
+multiarith:33,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"The schools debate team had 5 boys and 40 girls on it. If they were split into groups of 9 how many groups could they make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",5.0,5.0,1,0.8,-0.13068657116333426,-0.03058787382306097,0.24025816423493107,0.1225662545713411,0.822854784982545,0.997612477058456,1.0,84,3.0845693945884705,0,1,1,5,
+multiarith:34,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"April's discount flowers was having a sale where each rose was 7 dollars. If April started with 9 roses and had 4 roses left, how much money did she earn?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",35.0,35.0,1,0.8,-0.09716668235321944,-0.0024508784078329476,0.20479953871890333,0.01663621106971342,0.8562976445181895,0.999006907313557,1.0,118,3.0845693945884705,0,1,1,5,
+multiarith:35,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A trivia team had 11 members total, but during a game 6 members didn't show up. If each member that did show up scored 9 points, how many points were scored total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",45.0,45.0,1,0.8,-0.11162340309546494,-0.0033524194677535695,0.21047482857433342,0.01847095156149083,0.8493950923993474,0.9971153499588133,1.0,126,3.0845693945884705,0,1,1,5,
+multiarith:36,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A pet store had 13 siamese cats and 5 house cats. During a sale they sold 10 cats. How many cats do they have left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,0.8,-0.10993987492099726,-0.010843185128704493,0.2187728114680032,0.04764517986661433,0.8532814336758033,0.9979018270969391,1.0,102,3.4145588278770447,0,1,1,5,
+multiarith:37,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Victor was working as a sacker at a grocery store where he made 6 dollars an hour. On Monday he worked 5 hours and on Tuesday he worked 5 hours. How much money did Victor make in those two days?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",60.0,60.0,1,0.8,-0.09998068617023192,-0.00036667352976240054,0.20056620458162513,0.003213510316657318,0.8589117582887411,0.9988773189485073,1.0,160,3.4145588278770447,0,1,1,5,
+multiarith:38,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Megan baked 71 cupcakes for her school's bake sale. If her brother, Todd, ate 43 of them how many packages could she make if she put 7 cupcake in each package?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.08187447595998852,-0.010998019696776242,0.19186924801178315,0.05283308282095537,0.8813082681548211,0.9982375714086718,1.0,124,3.4145588278770447,0,1,1,5,
+multiarith:39,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"There were 2 friends playing a video game online when 2 more players joined the game. If each player had 6 lives, how many lives did they have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",24.0,24.0,1,1.0,-0.10967741854981576,-0.0016404298127180742,0.23208616321572131,0.01252541022056773,0.8552009942276138,0.9967053319726672,1.0,84,3.4145588278770447,0,1,1,5,
+multiarith:40,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Sam had 10 socks. If he threw away 3 old ones that didn't fit and bought 36 new ones, how many socks would he have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",43.0,43.0,1,1.0,-0.11094902137977515,-0.0009106840277175772,0.21989265754816642,0.006608594700959917,0.8559332660266331,0.9993786641529628,1.0,70,3.4145588278770447,0,1,1,5,
+multiarith:41,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Wendy picked 103 flowers for her friend’s wedding. She was making bouquets with 8 flowers in each one. If 47 of the flowers wilted before the wedding, how many bouquets could she still make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.8,-0.06681443302693199,-0.015059084255596085,0.15905534897648416,0.06731932294009571,0.8969582983148776,0.9986480416321173,1.0,123,3.4145588278770447,0,1,1,5,
+multiarith:42,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Adam had 48 books. If he sold 19 of them and used the money he earned to buy 38 new books, how many books would Adam have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",67.0,67.0,1,0.8,-0.09294871657508667,-0.0522932959937959,0.21163491898644535,0.10184223176744515,0.8760631267320026,0.9986604059284384,1.0,88,3.4145588278770447,0,1,1,5,
+multiarith:43,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Nancy's class is going on a field trip to the zoo. If each van can hold 5 people and there are 12 students and 3 adults going, how many vans will they need?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.09273901115870384,-0.08993745048402449,0.19434682128870945,0.166802840796387,0.8771397070638065,0.9979394026871385,1.0,116,3.4145588278770447,0,1,1,5,
+multiarith:44,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"For a birthday party Tom bought 4 regular sodas and 52 diet sodas. If his fridge would only hold 7 on each shelf, how many shelves would he fill up?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,0.8,-0.12013977026376318,-0.052330910764663736,0.23390575605491995,0.1539465877707471,0.8368774341344833,0.9973936491012573,0.8,125,3.4145588278770447,0,1,1,5,
+multiarith:45,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"The school cafeteria had 38 apples. If they used 20 to make lunch for the students and then bought 28 more, how many apples would they have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",46.0,46.0,1,0.9,-0.12892673533308066,-0.02883424935703971,0.2479445226651812,0.09215080923058849,0.8308640842108016,0.9975085283847566,1.0,94,3.4145588278770447,0,1,1,5,
+multiarith:46,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Luke was helping the cafeteria workers pick up lunch trays, but he could only carry 4 trays at a time. If he had to pick up 20 trays from one table and 16 trays from another, how many trips will he make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.1001077033173626,-0.004014705488120488,0.2143548260273426,0.02194915374379239,0.8585428106479156,0.9985132451750275,1.0,117,3.4145588278770447,0,1,1,5,
+multiarith:47,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"The cafeteria had 96 apples. For lunch they handed out 42 to students and decided to use the rest to make pies. If each pie takes 6 apples, how many pies could they make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.1204440861430281,-0.0114045125233123,0.24639924239901692,0.053790334149847956,0.8291637642228085,0.9972389832786892,1.0,115,3.4145588278770447,0,1,1,5,
+multiarith:48,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Henry had 3 action figures, but needed 8 total for a complete collection. If each one costs $6, how much money would he need to finish his collection?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",30.0,30.0,1,0.9,-0.16907362226335992,-0.06617198872837905,0.3172279908042433,0.12135669659106238,0.7747163382387653,0.9984921069489312,1.0,97,3.5214184522628784,0,1,1,5,
+multiarith:49,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Frank had saved up 3 dollars. If he received another 37 dollars for his allowance, how many 8 dollar toys could he buy?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",5.0,5.0,1,0.8,-0.12483343047075852,-0.05417588150716109,0.26413356725943987,0.15068522860591266,0.8354694450894992,0.9981933976213138,1.0,120,3.5214184522628784,0,1,1,5,
+multiarith:50,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Vanessa and her mom were picking carrots from their garden. Vanessa picked 17 and her mother picked 14. If only 24 of the carrots were good, how many bad carrots did they have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.8,-0.07668309481993019,-0.0015944739575348063,0.1721132576015779,0.010789204064459617,0.8866877880963412,0.9991759805639914,1.0,121,3.5214184522628784,0,1,1,5,
+multiarith:51,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"At a company picnic 23 managers and 7 employees decided to start a game of volleyball. If they split into 6 teams how many people would be on each team?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",5.0,5.0,1,0.8,-0.10542168958984593,-0.006464474674361652,0.20770213792285058,0.032898188603082544,0.8569518317994864,0.998963506973308,1.0,92,3.5214184522628784,0,1,1,5,
+multiarith:52,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Tiffany baked 8 brownies, but needed 17 total for her party. If she used 8 cups of flour on each one, how much cups of flour does she still need?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,72.0,0,0.8,-0.1796842125938077,-0.07868000149961014,0.36000906410486994,0.18091707560727496,0.7663031515782465,0.994838798831323,0.2,167,3.5214184522628784,0,1,1,5,
+multiarith:53,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Carol and her mom were picking carrots from their garden. Carol picked 29 and her mother picked 16. If only 38 of the carrots were good, how many bad carrots did they have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.8,-0.10967764662213597,-0.004001748543061012,0.23862907707937325,0.019575058690065816,0.8429701155424119,0.9986858403682709,1.0,100,3.5214184522628784,0,1,1,5,
+multiarith:54,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A worksheet had 7 problems on it. If a teacher had 17 worksheets to grade and had already graded 8 of them, how many more problems does she have to grade?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",63.0,63.0,1,0.8,-0.14786496470082697,-0.007444141512482564,0.31731234146778736,0.03189524201332006,0.8071188073356946,0.9950162800153096,0.8,150,3.5214184522628784,0,1,1,5,
+multiarith:55,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"There were 8 friends playing a video game online when 2 more players joined the game. If each player had 6 lives, how many lives did they have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",60.0,60.0,1,0.8,-0.17491922829496356,-0.0007767304335684701,0.34941646832606693,0.006361289737729489,0.7806818015376726,0.9949319386482238,1.0,150,3.5214184522628784,0,1,1,5,
+multiarith:56,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"At the arcade Cody won 49 tickets. If he spent 25 tickets on a beanie and later won 6 more tickets, how many would he have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",30.0,30.0,1,0.8,-0.1236529815813527,-0.031201006491439136,0.24042564600670344,0.09406303690842119,0.8497702222555241,0.9970756097042814,1.0,94,3.5214184522628784,0,1,1,5,
+multiarith:57,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"For Halloween Bianca received 78 pieces of candy. She ate 30 pieces then placed the rest into piles with 8 in each pile. How many piles could she make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",6.0,6.0,1,0.8,-0.1285636195318561,-0.0030837852473583538,0.25560237974030914,0.01975599105012244,0.8320214793975673,0.9974850349461855,1.0,134,3.5214184522628784,0,1,1,5,
+multiarith:58,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"There were 5 friends playing a video game online when 2 more players joined the game. If each player had 8 lives, how many lives did they have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",56.0,56.0,1,0.8,-0.1658861316204411,-0.003505174001295432,0.33760197995644037,0.022654904444509936,0.7903122274291436,0.9955280671845999,1.0,151,3.5214184522628784,0,1,1,5,
+multiarith:59,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"At a restaurant each adult meal costs $8 and kids eat free. If a group of 11 people came in and 2 were kids, how much would it cost for the group to eat?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",72.0,72.0,1,1.0,-0.19389988166242375,-0.1294008072232324,0.39096815796016904,0.228498153808297,0.7542920787544811,0.995476941601569,1.0,119,3.5214184522628784,0,1,1,5,
+multiarith:60,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Roger had 25 books. If he sold 21 of them and used the money he earned to buy 30 new books, how many books would Roger have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",34.0,34.0,1,0.9,-0.11262956054560784,-0.0016981358400300905,0.2520885784067835,0.010865418919885477,0.8555735212217257,0.9974090098177345,1.0,103,3.6109283169110618,0,1,1,5,
+multiarith:61,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Wendy was playing a video game and had 10 lives. In a hard part of the game she lost 6 lives. If she got 37 more lives in the next level, how many lives would she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",41.0,41.0,1,1.0,-0.13785859441335027,-0.014143369726142956,0.27076799099128124,0.05653620791768584,0.8129431484267116,0.9973023999482393,1.0,96,3.6109283169110618,0,1,1,5,
+multiarith:62,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Frank made 19 dollars mowing lawns over the summer. If he spent 11 dollars buying new mower blades, how many 2 dollar games could he buy with the money he had left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.11749036841231025,-0.002921124236015617,0.25042540846929096,0.018841455896514554,0.8351409260873441,0.9988236824671427,1.0,135,3.6109283169110618,0,1,1,5,
+multiarith:63,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"There school's baseball team had 48 new players and 6 returning players. If the coach put them into groups with 6 players in each group, how many groups would there be?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.06157881327052126,-0.000798317871482165,0.13535933187265153,0.0066072561773385784,0.9068624906748244,0.9992237947519543,1.0,103,3.6109283169110618,0,1,1,5,
+multiarith:64,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Nancy had 80 files on her computer. She deleted 31 of them and put the rest into folders with 7 files in each one. How many folders did Nancy end up with?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.9,-0.155132963676946,-0.057805895344503914,0.3006649421750641,0.10624797726219574,0.8034894519513196,0.9952265968417177,1.0,101,3.6109283169110618,0,1,1,5,
+multiarith:65,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Luke was selling his old games. He started out with 39 but sold 19 of them. He packed the rest up putting 4 games into each box. How many boxes did he have to use?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",5.0,5.0,1,0.8,-0.14901797946870912,-0.08735812805533831,0.3022240109653269,0.18932403953989965,0.8137628687464673,0.9972334524859553,1.0,115,3.6109283169110618,0,1,1,5,
+multiarith:66,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"There are 65 students trying out for the school's trivia teams. If 17 of them didn't get picked for the team and the rest were put into 8 groups, how many students would be in each group?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",6.0,6.0,1,0.8,-0.07016068026155733,-0.00705003299701953,0.14672938214194775,0.028385832795363188,0.8931361885977463,0.9992983118749,1.0,142,3.6109283169110618,0,1,1,5,
+multiarith:67,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Isabel uploaded 25 pictures to Facebook. She put 10 pics into one album and put the rest into 5 different albums. How many pictures were in each album?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.1378186035450355,-0.04833038782673883,0.29239507633635586,0.1051232879100488,0.813570419200381,0.9978925711230228,1.0,133,3.6109283169110618,0,1,1,5,
+multiarith:68,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Mike made 14 dollars mowing lawns and 26 dollars weed eating. If he only spent 5 dollar a week, how long would the money last him?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,0.8,-0.11064305850957401,-0.030032129594924788,0.21951619211367274,0.07723974152749438,0.8484608153594988,0.9985030154201472,1.0,107,3.6109283169110618,0,1,1,5,
+multiarith:69,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Vanessa had 16 music files and 48 video files on her flash drive. If she deleted 30 of the files, how many files were still on her flash drive?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",34.0,34.0,1,0.9,-0.11215868113493928,-0.0048783725098268905,0.21630766807861546,0.024063604835914378,0.849676584204038,0.9987321656059336,1.0,108,3.6109283169110618,0,1,1,5,
+multiarith:70,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Dave had to wash 9 short sleeve shirts and 27 long sleeve shirts before school. If he had only washed 20 of them by the time school started, how many did he not wash?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",16.0,16.0,1,0.8,-0.06411121131063068,-0.0005334527922644026,0.14491632740354096,0.004356260511826804,0.9081659087767968,0.9993045585496085,1.0,91,3.6109283169110618,0,1,1,5,
+multiarith:71,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A chef needs to cook 9 potatoes. He has already cooked 7. If each potato takes 3 minutes to cook, how long will it take him to cook the rest?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",6.0,6.0,1,0.8,-0.09680212714797909,-0.006395264529340393,0.20880417194000261,0.027298578323000453,0.8605084033573375,0.9990511385833516,1.0,170,3.6109283169110618,0,1,1,5,
+multiarith:72,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"While on vacation, Gwen took 41 pictures at the zoo and 29 at the museum. If she later deleted 15 of the pictures, how many pictures from her vacation did she still have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",55.0,55.0,1,0.9,-0.11966406196889447,-0.0016400074382220606,0.22299051596503433,0.01108998017653968,0.8521862268447876,0.9949938530013674,1.0,105,4.23502383629481,0,1,1,5,
+multiarith:73,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A pet shelter had 2 puppies when another 34 were brought in. If 4 puppies a day are adopted, how long would it take for all of them to be adopted?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.12212654520762883,-0.0014175326853731463,0.24059021613191187,0.010488139284932783,0.8401080245594327,0.9975487842834253,1.0,139,4.23502383629481,0,1,1,5,
+multiarith:74,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Will had 59 pieces of clothing to wash. He put 32 of them in one load, but decided to split the rest into 9 equal loads. How many pieces of clothing could go in each of the small loads?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.15274195658761125,-0.018162621387667905,0.3310683860715827,0.07242387440174168,0.8053152579995035,0.9947681207101322,1.0,103,4.23502383629481,0,1,1,5,
+multiarith:75,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Adam bought 2 boxes of chocolate candy and 5 boxes of caramel candy. If each box has 4 pieces inside it, how much candy did he have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",28.0,28.0,1,0.8,-0.07069722170607215,-0.0010344500010189353,0.15253063646280704,0.007448775633438994,0.9005290308789392,0.9990949531895431,1.0,199,4.23502383629481,0,1,1,5,
+multiarith:76,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"April's discount flowers was having a sale where each flower was 6 dollars. If Katie bought 5 roses and 5 daisies, how much did she spend?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",60.0,60.0,1,0.8,-0.08530640245456542,-0.017366057122314617,0.1783156144593883,0.07304181638132182,0.8744332042769489,0.9988217379292871,1.0,117,4.23502383629481,0,1,1,5,
+multiarith:77,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"At the schools book fair Victor bought 32 adventure books and 37 mystery books. If 16 of the books were used, how many new books did he buy?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",53.0,53.0,1,0.9,-0.11197814154860401,-0.016285444091989478,0.23576733563176244,0.06851681432047892,0.850348008377058,0.9972052466761958,1.0,111,4.23502383629481,0,1,1,5,
+multiarith:78,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Maria picked 48 carrots from her garden. If she threw out 11 of them and then picked 15 more the next day, how many carrots would she have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",52.0,52.0,1,0.9,-0.10799591206678184,-0.0323787004343704,0.2237629172609059,0.08939544980138894,0.8514867572339027,0.9972934965248946,1.0,91,4.23502383629481,0,1,1,5,
+multiarith:79,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A florist had 50 roses. If she sold 15 of them and then later picked 21 more, how many roses would she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",56.0,56.0,1,0.9,-0.11007736881074513,-0.016992895151441343,0.23280771934232816,0.06181617473453116,0.85399645600054,0.9973948564794328,1.0,90,4.23502383629481,0,1,1,5,
+multiarith:80,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Isabel had 2 pages of math homework and 4 pages of reading homework. If each page had 5 problems on it, how many problems did she have to complete total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",30.0,30.0,1,0.9,-0.07694875421311545,-0.0009080351815252843,0.16187912374779,0.006532847646959843,0.8848743752853291,0.9994850525179425,1.0,148,4.23502383629481,0,1,1,5,
+multiarith:81,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"There were 4 friends playing a video game online when 5 more players joined the game. If each player had 3 lives, how many lives did they have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",27.0,27.0,1,1.0,-0.12117529860265264,-0.0014688848623620743,0.25152972592848205,0.011442674665139358,0.8470321142372965,0.9971745119375341,1.0,119,4.23502383629481,0,1,1,5,
+multiarith:82,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Kaleb had 12 dollars. If he spent 8 bucks on a new game, how many 2 dollar toys could he buy with the money he had left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.8,-0.1366373169505033,-0.003636927050000135,0.2843899298035673,0.02141385436435225,0.8139620147806277,0.9979503858003685,1.0,139,4.23502383629481,0,1,1,5,
+multiarith:83,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Katie had 7 pages of math homework and 3 pages of reading homework. If each page had 9 problems on it, how many problems did she have to complete total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",90.0,90.0,1,0.8,-0.10705970276834528,-0.04649980079606004,0.2038107893622864,0.10837073384668981,0.8572820516506044,0.9994669285151038,1.0,101,4.23502383629481,0,1,1,5,
+multiarith:84,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"While shopping for music online, Janet bought 6 country albums and 2 pop albums. Each album came with a lyric sheet and had 9 songs. How many songs did Janet buy total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",72.0,72.0,1,0.9,-0.07633637077362956,-0.0008649768242301141,0.16163070945360294,0.006224475385961016,0.8872108255441372,0.9983228623867035,1.0,130,3.442329247792562,0,1,1,5,
+multiarith:85,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Jerry made 14 dollars mowing lawns and 31 dollars weed eating. If he only spent 5 dollar a week, how long would the money last him?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.11482880014107369,-0.03391628585527785,0.2239790857999224,0.0840398190503525,0.8445838621565115,0.998373410969137,1.0,107,3.442329247792562,0,1,1,5,
+multiarith:86,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Adam had 33 books. If he sold 11 of them and used the money he earned to buy 23 new books, how many books would Adam have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",45.0,45.0,1,0.8,-0.11052547384591446,-0.0015008088099120545,0.24851175383680385,0.009391268382192461,0.8558762082197133,0.9982568905191515,1.0,103,3.442329247792562,0,1,1,5,
+multiarith:87,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Kaleb was collecting cans for recycling. On Saturday he filled 5 bags up and on Sunday he filled 5 more bags. If each bag had 4 cans in it, how many cans did he pick up total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",40.0,40.0,1,0.8,-0.0813103853420824,-0.007899516404742306,0.17989479119175392,0.034149781141552794,0.881436464595206,0.9994467978860125,1.0,162,3.442329247792562,0,1,1,5,
+multiarith:88,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Nancy was organizing her book case making sure each of the shelves had exactly 6 books on it. If she had 2 shelves of mystery books and 6 shelves of picture books, how many books did she have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",48.0,48.0,1,0.8,-0.10908828389303434,-0.001011470172539727,0.20858102521658958,0.007098787932103993,0.8507540584892355,0.9970110667649136,1.0,93,3.442329247792562,0,1,1,5,
+multiarith:89,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Paul had saved up 3 dollars. If he received another 7 dollars for his allowance, how many 5 dollar toys could he buy?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.8,-0.14042881147074301,-0.1889709028768891,0.27308268909093003,0.2574149014594046,0.8251216816797591,0.9982705550235614,1.0,114,3.442329247792562,0,1,1,5,
+multiarith:90,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Wendy was playing a video game and had 43 lives. In a hard part of the game she lost 8 lives. If she got 39 more lives in the next level, how many lives would she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",74.0,74.0,1,1.0,-0.1253840458678146,-0.008747138719934964,0.25962167378587725,0.03971473100935847,0.8248987200980386,0.9973215535283089,1.0,96,3.442329247792562,0,1,1,5,
+multiarith:91,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Katie had 85 files on her computer. She deleted 40 of them and put the rest into folders with 5 files in each one. How many folders did Katie end up with?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.1271994063573715,-0.026129469071455396,0.2598270940963242,0.06792168794420052,0.8338221761173216,0.9965510537912106,1.0,116,3.442329247792562,0,1,1,5,
+multiarith:92,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Will was working as a sacker at a grocery store where he made 8 dollars an hour. On Monday he worked 8 hours and on Tuesday he worked 2 hours. How much money did Will make in those two days?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",80.0,80.0,1,0.8,-0.08771990240731872,-0.007441309895999179,0.17923525362585652,0.03380316347982314,0.868395425090494,0.9992513236149337,1.0,129,3.442329247792562,0,1,1,5,
+multiarith:93,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"For the school bake sale Carol made 19 cupcakes. If she sold 6 of them and then made 27 more, how many cupcakes would she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",40.0,40.0,1,0.8,-0.11218840427665117,-0.0408142910129387,0.242415723737781,0.11139179008195502,0.8445632379840721,0.9964495274153623,1.0,88,3.442329247792562,0,1,1,5,
+multiarith:94,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A trivia team had 14 members total, but during a game 7 members didn't show up. If each member that did show up scored 5 points, how many points were scored total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",35.0,35.0,1,0.8,-0.10171713604339282,-0.004453413015470785,0.19302098337947454,0.020842953298841036,0.8552202404469482,0.9977799977443015,1.0,129,3.442329247792562,0,1,1,5,
+multiarith:95,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A trivia team had 5 members total, but during a game 2 members didn't show up. If each member that did show up scored 6 points, how many points were scored total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",18.0,18.0,1,0.8,-0.11831924468006055,-0.012342943181464656,0.227771716828845,0.046511163531964224,0.8382624948981905,0.9977853815921032,1.0,137,3.442329247792562,0,1,1,5,
+multiarith:96,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Oliver is at the library helping put away books. There are 46 book to put away total but a librarian takes 10 of them and leaves Oliver with the rest. If he can fit 4 books on a shelf, how many shelves will he need?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.10836513891636637,-0.021097301804355238,0.23670062793226831,0.0883421653842171,0.8339994386599882,0.9994446639596981,1.0,137,4.910122791926066,0,1,1,5,
+multiarith:97,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Luke was putting his spare change into piles. He had 5 piles of quarters and 5 piles of dimes. If each pile had 3 coins in it, how many coins did he have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",30.0,30.0,1,0.8,-0.07626743259473795,-0.0009886191632883115,0.15911677448851616,0.007917941566899702,0.887772023783508,0.999162643091053,1.0,141,4.910122791926066,0,1,1,5,
+multiarith:98,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Gwen and her friends were recycling paper for their class. For every 3 pounds they recycled they earned one point. If Gwen recycled 5 pounds and her friends recycled 13 pounds, how many points did they earn?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",5.0,6.0,0,0.8,-0.09200776209529783,-0.022270519170419334,0.1910001313890965,0.07799576346941706,0.8694777725297108,0.9989264973422938,1.0,228,4.910122791926066,0,1,1,5,
+multiarith:99,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Haley's favorite band was holding a concert where tickets were 4 dollars each. Haley bought 3 tickets for herself and her friends and 5 extra tickets in case anyone else wanted to go. How much did she spend?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",32.0,32.0,1,0.8,-0.0900876903967727,-0.0010565063534215824,0.1950886804096399,0.007880123333149771,0.8776583018302917,0.998201726436615,1.0,125,4.910122791926066,0,1,1,5,
+multiarith:100,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"George had 30 dollars. For his birthday he got 16 more dollars but spent 38 on a new game. How much money does he have now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,0.8,-0.07628161419045308,-0.01177205890616051,0.15589820202973215,0.05425752155792907,0.9072724929765651,0.9991554006149894,1.0,76,4.910122791926066,0,1,1,5,
+multiarith:101,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A pet store has 4 bird cages. If each cage has 8 parrots and 2 parakeets in it, how many birds does the pet store have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",40.0,40.0,1,0.8,-0.0713946811402005,-0.002768988712098519,0.15757587297083206,0.01598574889054102,0.8893437589469709,0.9996159531568226,1.0,114,4.910122791926066,0,1,1,5,
+multiarith:102,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Kaleb bought 14 boxes of chocolate candy and gave 5 to his little brother. If each box has 6 pieces inside it, how many pieces did Kaleb still have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",54.0,54.0,1,0.8,-0.12185842278344716,-0.07353955957918044,0.2543442761544362,0.14647235606755007,0.8345591480843723,0.9981568925082683,1.0,160,4.910122791926066,0,1,1,5,
+multiarith:103,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Robin uploaded 31 pictures from her phone and 5 from her camera to facebook. If she sorted the pics into 9 different albums with the same amount of pics in each album, how many pictures were in each of the albums?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.11379861017854422,-0.04790320689373674,0.21246943093364376,0.10063858967818565,0.8455037380359611,0.9986415055333352,1.0,98,4.910122791926066,0,1,1,5,
+multiarith:104,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Mike made 69 dollars mowing lawns over the summer. If he spent 24 dollars buying new mower blades, how many 5 dollar games could he buy with the money he had left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.12927766997792636,-0.004242472248470059,0.25849658835474315,0.023890054202606086,0.8316800884074635,0.9977794228092073,1.0,126,4.910122791926066,0,1,1,5,
+multiarith:105,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Maria bought 2 new chairs and 2 new tables for her house. If she spent 8 minutes on each piece furniture putting it together, how many minutes did it take her to finish?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",32.0,32.0,1,0.8,-0.12211729848999554,-0.021373826253003308,0.22983629708686507,0.06931674231551758,0.8386541615369953,0.9974593169327024,1.0,158,4.910122791926066,0,1,1,5,
+multiarith:106,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"While on vacation, Rachel took 6 pictures at the zoo and 9 at the museum. If she later deleted 11 of the pictures, how many pictures from her vacation did she still have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.11488263787808309,-0.009681822566163996,0.23832028422518456,0.03917342914110934,0.8538209714515265,0.9950059659259264,1.0,86,4.910122791926066,0,1,1,5,
+multiarith:107,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Maria was making baggies of cookies with 8 cookies in each bag. If she had 5 chocolate chip cookies and 19 oatmeal cookies, how many baggies could she make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.12179551717382413,-0.027558105980914554,0.24053546888123212,0.10430964669715845,0.8386436531356737,0.9975180082461413,0.8,102,4.910122791926066,0,1,1,5,
+multiarith:108,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"April's discount flowers was having a sale where each flower was 3 dollars. If Zoe bought 8 roses and 2 daisies, how much did she spend?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",30.0,30.0,1,0.8,-0.08070898938882808,-0.03297893903346351,0.17590913298148791,0.11317223149295128,0.8794671097504241,0.998750876635313,1.0,112,3.9726792573928833,0,1,1,5,
+multiarith:109,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Bianca was organizing her book case making sure each of the shelves had exactly 8 books on it. If she had 5 shelves of mystery books and 4 shelves of picture books, how many books did she have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",72.0,72.0,1,0.8,-0.08167144655172742,-0.004393035479929657,0.15892215464591283,0.02246671544516435,0.8799044127975192,0.9985630748763917,1.0,126,3.9726792573928833,0,1,1,5,
+multiarith:110,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"John was organizing his baseball cards in a binder with 3 on each page. If he had 8 new cards and 16 old cards to put in the binder, how many pages would he use?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,0.8,-0.17059567352369723,-0.004494860785012885,0.31597342115406996,0.025171777531097308,0.770743415141717,0.9983170781380091,1.0,117,3.9726792573928833,0,1,1,5,
+multiarith:111,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Isabel baked 3 brownies, but needed 5 total for her party. If she used 5 cups of flour on each one, how much cups of flour does she still need?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",10.0,10.0,1,0.8,-0.17575937500819683,-0.0862582908669164,0.3658369022372431,0.14498426823300697,0.7845082982413231,0.9928928309230394,1.0,186,3.9726792573928833,0,1,1,5,
+multiarith:112,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"For the school bake sale Maria made 19 cupcakes. If she sold 5 of them and then made 10 more, how many cupcakes would she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",24.0,24.0,1,0.8,-0.10917490688444835,-0.04153757400665877,0.23039047558956852,0.10532959457571321,0.8509836501773747,0.9966504176457723,1.0,87,3.9726792573928833,0,1,1,5,
+multiarith:113,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Tom bought 40 tickets at the state fair. He spent 28 tickets at the 'dunk a clown' booth and decided to use the rest on rides. If each ride cost 4 tickets, how many rides could he go on?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.07109690171859626,-0.0063601762483429525,0.16279395453953754,0.029804700203125582,0.8899824088251831,0.9990334974839383,1.0,149,3.9726792573928833,0,1,1,5,
+multiarith:114,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"In fourth grade there were 31 students at the start of the year. During the year 5 students left and 11 new students came to school. How many students were in fourth grade at the end?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",37.0,37.0,1,0.9,-0.07582423413015602,-0.06993798818887496,0.15936592099350536,0.15803812801199715,0.8898802652245477,0.9982075498217629,1.0,105,3.9726792573928833,0,1,1,5,
+multiarith:115,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"While shopping, Maria bought 35 green towels and 21 white towels. If she gave her mother 34 of them, how many towels did Maria end up with?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",22.0,22.0,1,0.8,-0.1045436100975446,-0.04531765119658563,0.2030922776728546,0.12294388733710093,0.8664223553286385,0.9986397587146956,1.0,97,3.9726792573928833,0,1,1,5,
+multiarith:116,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"While playing a trivia game, Adam answered 8 questions correct in the first half and 2 questions correct in the second half. If each question was worth 8 points, what was his final score?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",80.0,80.0,1,1.0,-0.11156205210588625,-0.07184407845122413,0.20934336264899991,0.1187510066839731,0.8447310995597106,0.9989767941144797,1.0,130,3.9726792573928833,0,1,1,5,
+multiarith:117,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Paul was collecting cans for recycling. On Saturday he filled 6 bags up and on Sunday he filled 3 more bags. If each bag had 8 cans in it, how many cans did he pick up total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",72.0,72.0,1,0.9,-0.09087002482965202,-0.0018780727892817595,0.1930684518312006,0.01141466305742662,0.8707736471072346,0.9984862228640082,1.0,147,3.9726792573928833,0,1,1,5,
+multiarith:118,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Bianca and her friends were recycling paper for their class. For every 3 pounds they recycled they earned one point. If Bianca recycled 24 pounds and her friends recycled 3 pounds, how many points did they earn?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.13191361969461407,-0.03696508942475215,0.26423432502294053,0.11678776766975066,0.8208066771716572,0.9962796170351117,1.0,172,3.9726792573928833,0,1,1,5,
+multiarith:119,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A group of 3 friends went into a restaurant. The chef already had 8 chicken wings cooked but cooked 10 more for the group. If they each got the same amount how many would each person get?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",6.0,6.0,1,0.9,-0.12459255553680482,-0.033118332336158574,0.26847786027801135,0.09723140541648588,0.8372044138610363,0.9957832634449005,1.0,120,3.9726792573928833,0,1,1,5,
+multiarith:120,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"John had 33 socks. If he threw away 19 old ones that didn't fit and bought 13 new ones, how many socks would he have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",27.0,27.0,1,0.9,-0.13133532962823574,-0.020737988419779998,0.24821504380483655,0.06737692642283426,0.8316645498933464,0.9972674738744209,1.0,116,3.0831110874811807,0,1,1,5,
+multiarith:121,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"There school's baseball team had 2 new players and 6 returning players. If the coach put them into groups with 4 players in each group, how many groups would there be?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.8,-0.08667596520919055,-0.028092288858568435,0.18338477337783843,0.09889763881022061,0.8728303450345993,0.9992482823133468,0.8,100,3.0831110874811807,0,1,1,5,
+multiarith:122,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A painter needed to paint 6 rooms in a building. Each room takes 5 hours to paint. If he already painted 2 rooms, how much longer will he take to paint the rest?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",20.0,20.0,1,0.8,-0.11155721984551602,-0.004509768907411171,0.22842873628080915,0.02583826566166993,0.846178239521881,0.9981694391204251,1.0,144,3.0831110874811807,0,1,1,5,
+multiarith:123,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A waiter had 22 customers in his section. If 14 of them left and the rest of his tables had 4 people at each table, how many tables did he have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.8,-0.12193833143293961,-0.06167465365784303,0.2500336531055499,0.1623854188438177,0.8339582987521824,0.9964363559296257,1.0,114,3.0831110874811807,0,1,1,5,
+multiarith:124,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Roger had 120 pieces of clothing to wash. He put 48 of them in one load, but decided to split the rest into 9 equal loads. How many pieces of clothing could go in each of the small loads?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,0.8,-0.10885718023136907,-0.0023298213831129794,0.2258760748176292,0.014117994693703752,0.8522190120968506,0.9979413260508628,1.0,137,3.0831110874811807,0,1,1,5,
+multiarith:125,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"In fourth grade there were 10 students at the start of the year. During the year 4 students left and 42 new students came to school. How many students were in fourth grade at the end?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",48.0,48.0,1,0.8,-0.09365535011155744,-0.0463939702973773,0.19377809497710746,0.13160231279523163,0.8748302065274295,0.9951765936963698,1.0,85,3.0831110874811807,0,1,1,5,
+multiarith:126,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Roger is at the library helping put away books. There are 14 book to put away total but a librarian takes 2 of them and leaves Roger with the rest. If he can fit 3 books on a shelf, how many shelves will he need?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.13599759749672735,-0.015201486556885056,0.27520021081145196,0.07252361101404858,0.8036191826065381,0.9993356903394063,1.0,120,3.0831110874811807,0,1,1,5,
+multiarith:127,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Bianca picked 39 tulips and 49 roses to make flower bouquets. If she only used 81 of the flowers though, how many extra flowers did Bianca pick?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.8,-0.12045011939141931,-0.016152913068737007,0.22709875301273202,0.07260025630374198,0.8368502026924522,0.9972490411932751,1.0,93,3.0831110874811807,0,1,1,5,
+multiarith:128,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Emily bought 4 new chairs and 2 new tables for her house. If she spent 8 minutes on each piece furniture putting it together, how many minutes did it take her to finish?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",48.0,48.0,1,0.8,-0.1478609844461501,-0.06572883216098344,0.30236999107335644,0.11751380306543524,0.7993695984284083,0.9976908385753631,1.0,120,3.0831110874811807,0,1,1,5,
+multiarith:129,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A pet store has 6 bird cages. If each cage has 2 parrots and 7 parakeets in it, how many birds does the pet store have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",54.0,54.0,1,0.8,-0.06959446925259415,-0.002731785606389029,0.15257810528045443,0.015721607717750885,0.8918652273060983,0.9996082944828167,1.0,114,3.0831110874811807,0,1,1,5,
+multiarith:130,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Dave had to wash 9 short sleeve shirts and 27 long sleeve shirts before school. If he had only washed 20 of them by the time school started, how many did he not wash?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",16.0,16.0,1,0.8,-0.0642078020909192,-0.0005881753006714721,0.14554956466009786,0.004704407778798928,0.9077189233931866,0.9992989046233041,1.0,91,3.0831110874811807,0,1,1,5,
+multiarith:131,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"While on vacation, Haley took 50 pictures at the zoo and 8 at the museum. If she later deleted 38 of the pictures, how many pictures from her vacation did she still have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",20.0,20.0,1,0.8,-0.11806288989263888,-0.008500343852996852,0.23311779393291232,0.04252531560801539,0.8582371430979534,0.9941603046926585,1.0,88,3.0831110874811807,0,1,1,5,
+multiarith:132,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A florist had 5 roses. If she sold 3 of them and then later picked 34 more, how many roses would she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",36.0,36.0,1,0.9,-0.12182780865538516,-0.010162303239081691,0.24347854520254128,0.04478039669564688,0.8348248984132495,0.9972445231217605,1.0,91,3.6058602531751,0,1,1,5,
+multiarith:133,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"For a birthday party Cody bought 4 regular sodas and 44 diet sodas. If his fridge would only hold 6 on each shelf, how many shelves would he fill up?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,0.8,-0.1317886664481477,-0.05686447562373636,0.2555316526103985,0.16931938665506355,0.8240623265024154,0.9981025164165804,1.0,124,3.6058602531751,0,1,1,5,
+multiarith:134,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"The schools debate team had 26 boys and 46 girls on it. If they were split into groups of 9 how many groups could they make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,0.8,-0.15531135410908584,-0.15152384187704776,0.28117559792613134,0.26357309300845244,0.8061641787781435,0.9960448610432008,1.0,68,3.6058602531751,0,1,1,5,
+multiarith:135,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"The school cafeteria ordered 6 red apples and 15 green apples for students lunches. But, if only 5 students wanted fruit, how many extra did the cafeteria end up with?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",16.0,16.0,1,0.8,-0.1478824777764565,-0.009631184339594614,0.28668709368258205,0.043199596185851466,0.8221906758114403,0.9955231769412172,1.0,102,3.6058602531751,0,1,1,5,
+multiarith:136,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"At a company picnic 9 managers and 15 employees decided to start a game of volleyball. If they split into 8 teams how many people would be on each team?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.1046621942285455,-0.006911229422513543,0.20633521834500482,0.035560577634831655,0.8584732973705167,0.9987721514442692,1.0,92,3.6058602531751,0,1,1,5,
+multiarith:137,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A book store had 4 books in the bargin bin. If they sold 3 books, but then put 10 more in the bin, how many books would be in the bin?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",11.0,11.0,1,0.8,-0.11452351164569034,-0.01247442083636636,0.23518627943861267,0.05576962594860951,0.8511223361516992,0.9967609420418739,1.0,96,3.6058602531751,0,1,1,5,
+multiarith:138,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Mike made 42 dollars mowing lawns over the summer. If he spent 10 dollars buying new mower blades, how many 8 dollar games could he buy with the money he had left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,0.8,-0.11587161002423096,-0.0019812157871480656,0.2531672686661364,0.013879225110209907,0.8405023008584976,0.9978085367575936,1.0,115,3.6058602531751,0,1,1,5,
+multiarith:139,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A chef needs to cook 13 potatoes. He has already cooked 5. If each potato takes 6 minutes to cook, how long will it take him to cook the rest?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",48.0,48.0,1,0.8,-0.09437186150038687,-0.00639255580784034,0.20660635923567336,0.027244833102031407,0.861389923972242,0.9991498456281774,1.0,170,3.6058602531751,0,1,1,5,
+multiarith:140,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Paige had 43 math problems and 12 science problems for homework. If she finished 44 of the problems at school, how many problems did she have to do for homework?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",11.0,11.0,1,0.8,-0.12691483085998023,-0.0035679811899161757,0.2649243102882926,0.02544719604851967,0.8399065218719781,0.995947341708576,1.0,102,3.6058602531751,0,1,1,5,
+multiarith:141,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"April's discount flowers was having a sale where each flower was 8 dollars. If Vanessa bought 3 roses and 3 daisies, how much did she spend?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",48.0,48.0,1,0.8,-0.08576514236237139,-0.015869751222782367,0.17470987226750018,0.06598462388222158,0.8740279776339205,0.9992322977285207,1.0,161,3.6058602531751,0,1,1,5,
+multiarith:142,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Olivia uploaded 5 pictures from her phone and 35 from her camera to facebook. If she sorted the pics into 8 different albums with the same amount of pics in each album, how many pictures were in each of the albums?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",5.0,5.0,1,0.8,-0.08013716196709361,-0.004607083009593639,0.1625774921021436,0.02219269532679391,0.8842424678391424,0.9985982508494936,1.0,116,3.6058602531751,0,1,1,5,
+multiarith:143,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Robin was making baggies of cookies with 6 cookies in each bag. If she had 23 chocolate chip cookies and 25 oatmeal cookies, how many baggies could she make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",8.0,8.0,1,0.8,-0.1328079363252016,-0.015519722995772358,0.26429343393914556,0.0652433731564445,0.8302748679286904,0.9969575471348233,0.6,108,3.6058602531751,0,1,1,5,
+multiarith:144,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Cody had 45 dollars. For his birthday he got 9 more dollars but spent 19 on a new game. How much money does he have now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",35.0,35.0,1,0.9,-0.0646565204646388,-0.0010243137596960747,0.14168769289864988,0.007606031286156524,0.9213262049433513,0.9992646353367047,1.0,78,3.28758305311203,0,1,1,5,
+multiarith:145,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Wendy uploaded 22 pictures from her phone and 2 from her camera to facebook. If she sorted the pics into 4 different albums with the same amount of pics in each album, how many pictures were in each of the albums?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",6.0,6.0,1,0.8,-0.11026253030412107,-0.025781644761836326,0.22882365654613324,0.07543565789173304,0.8479296897227565,0.9984600947548946,1.0,96,3.28758305311203,0,1,1,5,
+multiarith:146,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"For Halloween Katie and her sister combined the candy they received. Katie had 8 pieces of candy while her sister had 23. If they ate 8 pieces the first night, how many pieces do they have left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",23.0,23.0,1,0.8,-0.10386679541893036,-0.009821506603518262,0.23569835202479794,0.04858717729432881,0.8593393672878543,0.9977120993038019,1.0,96,3.28758305311203,0,1,1,5,
+multiarith:147,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A pet store had 88 puppies. In one day they sold 34 of them and put the rest into cages with 6 in each cage. How many cages did they use?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.1268801380756023,-0.09082011766856368,0.26573444447211514,0.1713688584810679,0.8235969750777535,0.9983034921729046,1.0,115,3.28758305311203,0,1,1,5,
+multiarith:148,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Jerry was helping the cafeteria workers pick up lunch trays, but he could only carry 8 trays at a time. If he had to pick up 9 trays from one table and 7 trays from another, how many trips will he make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.9,-0.15254201865006198,-0.010272008986914574,0.30976548212653193,0.053223876067932,0.8029260112867727,0.9949745926764104,0.6,154,3.28758305311203,0,1,1,5,
+multiarith:149,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Faye was playing a video game where she scores 7 points for each treasure she finds. If she found 2 treasures on the first level and 6 on the second, what would her score be?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",56.0,56.0,1,1.0,-0.10209603384734638,-0.09441485026604417,0.20832414882968683,0.12094796238989147,0.8555613773564498,0.9988112226128578,1.0,120,3.28758305311203,0,1,1,5,
+multiarith:150,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Megan picked 19 carrots from her garden. If she threw out 4 of them and then picked 46 more the next day, how many carrots would she have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",61.0,61.0,1,0.9,-0.11209361273272372,-0.06121594138697312,0.22791549049118504,0.12037891634957175,0.8484055331120124,0.9971425664293897,1.0,91,3.28758305311203,0,1,1,5,
+multiarith:151,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Wendy had 82 files on her computer. She deleted 37 of them and put the rest into folders with 5 files in each one. How many folders did Wendy end up with?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.9,-0.15860334183762362,-0.04398676549664872,0.31839393211819467,0.12672898967402293,0.7963550739235931,0.9945823465074811,1.0,91,3.28758305311203,0,1,1,5,
+multiarith:152,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"There school's baseball team had 12 new players and 44 returning players. If the coach put them into groups with 8 players in each group, how many groups would there be?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.8,-0.07851452515919667,-0.011936276301505748,0.16880360299739336,0.05270553708607752,0.881173731065264,0.999564167915606,1.0,102,3.28758305311203,0,1,1,5,
+multiarith:153,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Will made 104 dollars mowing lawns over the summer. If he spent 41 dollars buying new mower blades, how many 9 dollar games could he buy with the money he had left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.8,-0.13226483919043094,-0.0038045722696996415,0.2637581106827469,0.0228124018406431,0.8223620569846761,0.9979308327351968,1.0,127,3.28758305311203,0,1,1,5,
+multiarith:154,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Nancy picked 12 carrots from her garden. If she threw out 2 of them and then picked 21 more the next day, how many carrots would she have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",31.0,31.0,1,0.9,-0.11499260186424289,-0.07189484974564055,0.23536510141489897,0.13846768144111365,0.8500731934591667,0.9975619365259544,1.0,97,3.28758305311203,0,1,1,5,
+multiarith:155,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Roger had 16 dollars. For his birthday he got 28 more dollars but spent 25 on a new game. How much money does he have now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",19.0,19.0,1,0.9,-0.06546257951099613,-0.002065628307779629,0.14004595626833038,0.012850039451206743,0.9212217854383664,0.999228312419011,1.0,78,3.28758305311203,0,1,1,5,
+multiarith:156,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Sam was collecting cans for recycling. On Saturday he filled 3 bags up and on Sunday he filled 4 more bags. If each bag had 9 cans in it, how many cans did he pick up total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",63.0,63.0,1,0.9,-0.08803501932082654,-0.005634511749591857,0.18357296920619093,0.026964746061740437,0.8703510371843973,0.9994793045520782,1.0,150,3.596648355325063,0,1,1,5,
+multiarith:157,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A worksheet had 4 problems on it. If a teacher had 16 worksheets to grade and had already graded 8 of them, how many more problems does she have to grade?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",32.0,32.0,1,0.8,-0.16878243982438057,-0.004193697602723034,0.341430009668549,0.021304944694341948,0.785117861979148,0.9946766920826015,1.0,136,3.596648355325063,0,1,1,5,
+multiarith:158,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Paige was unboxing some of her old winter clothes. She found 6 boxes of clothing and inside each box there were 5 scarves and 5 mittens. How many pieces of winter clothing did Paige have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",60.0,60.0,1,0.8,-0.08032146691432353,-0.0009510248450145095,0.15546359071396743,0.007921926525471332,0.8952189359594794,0.9972880477664852,1.0,119,3.596648355325063,0,1,1,5,
+multiarith:159,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A chef needs to cook 12 potatoes. He has already cooked 6. If each potato takes 6 minutes to cook, how long will it take him to cook the rest?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",36.0,36.0,1,0.8,-0.09589932974978317,-0.007204247910910867,0.20667512484963416,0.029649797457035935,0.8589332847905582,0.9991259186930911,1.0,169,3.596648355325063,0,1,1,5,
+multiarith:160,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Luke was selling his old games. He started out with 57 but sold 39 of them. He packed the rest up putting 2 games into each box. How many boxes did he have to use?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.13211949638568915,-0.08359762108693758,0.2694614758621906,0.10634822168283822,0.8283024890422821,0.9980391969680786,1.0,125,3.596648355325063,0,1,1,5,
+multiarith:161,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"April's discount flowers was having a sale where each flower was 3 dollars. If Emily bought 2 roses and 2 daisies, how much did she spend?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",12.0,12.0,1,0.8,-0.08177371349638829,-0.0098266484439234,0.1724181214254846,0.04726981161314013,0.8833669227249218,0.9987383364881359,1.0,159,3.596648355325063,0,1,1,5,
+multiarith:162,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A pet store had 13 puppies. In one day they sold 7 of them and put the rest into cages with 2 in each cage. How many cages did they use?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.14838668685780246,-0.09614491476621063,0.30700825027527334,0.14371849574823564,0.7945811654840197,0.9972719186828249,1.0,105,3.596648355325063,0,1,1,5,
+multiarith:163,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Faye and her mom were picking carrots from their garden. Faye picked 23 and her mother picked 5. If only 12 of the carrots were good, how many bad carrots did they have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",16.0,16.0,1,0.8,-0.14138740815416326,-0.006776543243887545,0.24731563936000492,0.03958316326354959,0.8108945532676277,0.9980360264078193,1.0,109,3.596648355325063,0,1,1,5,
+multiarith:164,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Isabel picked 66 flowers for her friend’s wedding. She was making bouquets with 8 flowers in each one. If 10 of the flowers wilted before the wedding, how many bouquets could she still make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.8,-0.08634411856518488,-0.02271300873948182,0.1817941480327222,0.08739936693135471,0.8736261162757873,0.9984147434234619,1.0,125,3.596648355325063,0,1,1,5,
+multiarith:165,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"At the town carnival Oliver rode the ferris wheel 5 times and the bumper cars 4 times. If each ride cost 7 tickets, how many tickets did he use?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",63.0,63.0,1,0.8,-0.07859915837214995,-0.0060050423664271034,0.15237563126103032,0.027559703030647142,0.8824126324120988,0.9990361645712075,1.0,141,3.596648355325063,0,1,1,5,
+multiarith:166,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Wendy bought 4 new chairs and 4 new tables for her house. If she spent 6 minutes on each piece furniture putting it together, how many minutes did it take her to finish?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",48.0,48.0,1,0.8,-0.15143618583216298,-0.10698003771279982,0.3155785725897194,0.14878821260759065,0.792274851076029,0.9980414984402833,1.0,108,3.596648355325063,0,1,1,5,
+multiarith:167,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Ned was trying to expand his game collection. He bought 50 games from a friend and bought 27 more at a garage sale. If 74 of the games didn't work, how many good games did he end up with?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,0.8,-0.1404108086656314,-0.0033574224861143065,0.252840812375096,0.020982388389784643,0.8110766309372922,0.9985743767403542,1.0,94,3.596648355325063,0,1,1,5,
+multiarith:168,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A pet store had 38 siamese cats and 25 house cats. During a sale they sold 45 cats. How many cats do they have left?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",18.0,18.0,1,0.8,-0.1100860561970181,-0.005923957499296607,0.2092055200585061,0.028887424223934692,0.8459843530299815,0.9990062859464199,1.0,94,3.576328694820404,0,1,1,5,
+multiarith:169,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Carol was playing a trivia game. In the first round she scored 17 points and in the second round she scored 6 points. In the last round she lost 16 points. How many points did she have at the end of the game?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",7.0,7.0,1,0.8,-0.10035111987530493,-0.0013053373573208254,0.19655596186470453,0.009033613443323572,0.8633327456536116,0.9980606348426254,1.0,108,3.576328694820404,0,1,1,5,
+multiarith:170,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Dave bought 12 boxes of chocolate candy and gave 5 to his little brother. If each box has 3 pieces inside it, how many pieces did Dave still have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",21.0,21.0,1,0.8,-0.16662750299558596,-0.02174349903725568,0.3278801882045362,0.07312143684316652,0.7899629861498491,0.9952940929394501,1.0,156,3.576328694820404,0,1,1,5,
+multiarith:171,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A waiter at 'The Greasy Spoon' restaurant had 39 customers to wait on. During the lunch rush he added another 12 customers. If 49 of the customers didn't leave him a tip, how many customers did leave a tip?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",2.0,2.0,1,0.8,-0.15599922783231282,-0.0239840308597802,0.2949438164787865,0.08830397341513876,0.8017648316797663,0.9952558767600138,1.0,122,3.576328694820404,0,1,1,5,
+multiarith:172,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"The cafeteria had 50 apples. For lunch they handed out 5 to students and decided to use the rest to make pies. If each pie takes 5 apples, how many pies could they make?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,0.8,-0.1196935760395981,-0.014301407588971773,0.23891316996149944,0.06226998120765919,0.8285166890724845,0.9982965785524119,1.0,115,3.576328694820404,0,1,1,5,
+multiarith:173,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Oliver had 33 dollars in January. By March he had spent 4 dollars. If he got another 32 dollars from his mom, how much money would he have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",61.0,61.0,1,1.0,-0.07580698593793626,-0.0003394717575691938,0.17419311362116835,0.0029650866918018437,0.8967272797962288,0.9985953104960454,1.0,77,3.576328694820404,0,1,1,5,
+multiarith:174,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"The school cafeteria had 14 apples. If they used 13 to make lunch for the students and then bought 49 more, how many apples would they have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",50.0,50.0,1,0.8,-0.13106479293883408,-0.03180848238394215,0.24892645420712073,0.10107987255910952,0.8330950891816771,0.9967241906500482,1.0,77,3.576328694820404,0,1,1,5,
+multiarith:175,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"While playing a trivia game, Frank answered 3 questions correct in the first half and 2 questions correct in the second half. If each question was worth 3 points, what was his final score?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",15.0,15.0,1,1.0,-0.0988397359159642,-0.055679167309498165,0.197125566793361,0.11738611270715994,0.8617988336355167,0.9992189192234125,1.0,133,3.576328694820404,0,1,1,5,
+multiarith:176,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Zoe was unboxing some of her old winter clothes. She found 8 boxes of clothing and inside each box there were 4 scarves and 6 mittens. How many pieces of winter clothing did Zoe have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",80.0,80.0,1,0.8,-0.05582680989423702,-0.0002142038692574439,0.12518432976301308,0.0019023149405857762,0.9189410416665905,0.9986559127619167,1.0,167,3.576328694820404,0,1,1,5,
+multiarith:177,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Frank and his friend were buying trick decks from the magic shop for 7 dollars each. How much did they spend if Frank bought 3 decks and his friend bought 2 decks?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",35.0,35.0,1,0.9,-0.08588202864459146,-0.0002783960100184605,0.18881934639572084,0.0027137485964366143,0.8728627340085264,0.9994472960631052,1.0,138,3.576328694820404,0,1,1,5,
+multiarith:178,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"Sam had to wash 40 short sleeve shirts and 23 long sleeve shirts before school. If he had only washed 29 of them by the time school started, how many did he not wash?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",34.0,34.0,1,0.9,-0.05656316269492256,-0.0005206478412357488,0.1404088143873498,0.004204529422833859,0.9174629174746,0.9992881253525451,1.0,91,3.576328694820404,0,1,1,5,
+multiarith:179,multiarith,arithmetic,,,Llama-3.2-3B-Instruct,"A waiter had 47 customers to wait on. If 41 customers left and he got another 20 customers, how many customers would he have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",26.0,26.0,1,0.8,-0.09430060460772491,-0.029818859275922347,0.20976211996647484,0.0953873797435725,0.8703997645665098,0.9975693352796413,1.0,108,3.576328694820404,0,1,1,5,
