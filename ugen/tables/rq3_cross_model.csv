@@ -1,1 +1,9 @@
-
+signal,model_a,model_b,n_bench,spearman
+selfconf,Llama-3.2-3B-Instruct,Qwen2.5-3B-Instruct,13,0.2145806706734845
+consistency,Llama-3.2-3B-Instruct,Qwen2.5-3B-Instruct,13,0.6813186813186813
+logprob,Llama-3.2-3B-Instruct,Qwen2.5-3B-Instruct,13,0.31868131868131866
+logprob_answer,Llama-3.2-3B-Instruct,Qwen2.5-3B-Instruct,11,-0.38181818181818183
+entropy,Llama-3.2-3B-Instruct,Qwen2.5-3B-Instruct,13,0.35714285714285715
+entropy_answer,Llama-3.2-3B-Instruct,Qwen2.5-3B-Instruct,11,-0.3090909090909091
+token_margin,Llama-3.2-3B-Instruct,Qwen2.5-3B-Instruct,13,0.34065934065934067
+topk_mass,Llama-3.2-3B-Instruct,Qwen2.5-3B-Instruct,13,0.6318681318681318

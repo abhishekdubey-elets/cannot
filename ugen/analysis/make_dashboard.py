@@ -39,17 +39,18 @@ def main():
     verd = pd.read_csv(PROJECT / "tables" / "prediction_verdicts.csv")
     df, _ = attach_free_features(load_rows(PROJECT / "outputs"), PROJECT / "datasets")
 
-    lines = ["# M1 dashboard — Qwen2.5-3B-Instruct (n per cell in rq1 table)", "",
+    lines = ["# Signal dashboard — per model (n per cell in rq1 table)", "",
              "AUROC vs correctness per benchmark. `sat` = saturation-excluded (acc outside "
              "[0.10, 0.90]); `QC` = >10% extraction failure, excluded from primary "
-             "contrasts. Signals: higher = better discrimination; 0.5 = chance.", "",
-             "| Benchmark | Domain | Acc | flags | Self-conf | Consistency | Logprob | "
-             "Logprob(ans) | Entropy | Best free feat |",
-             "|---|---|---:|---|---:|---:|---:|---:|---:|---:|"]
+             "contrasts. Signals: higher = better discrimination; 0.5 = chance.", ""]
     order = ["mmlu", "mmlu_pro", "truthfulqa", "gsm8k", "svamp", "multiarith",
              "commonsenseqa", "arc_challenge", "strategyqa", "bbh", "musr",
              "humaneval", "mbpp"]
     for model, mt in rq1.groupby("model"):
+        lines += [f"## {model}", "",
+                  "| Benchmark | Domain | Acc | flags | Self-conf | Consistency | Logprob | "
+                  "Logprob(ans) | Entropy | Best free feat |",
+                  "|---|---|---:|---|---:|---:|---:|---:|---:|---:|"]
         for b in order:
             bt = mt[mt.benchmark == b]
             if not len(bt):
@@ -64,12 +65,13 @@ def main():
                 f"| {b} | {r0.domain} | {r0.accuracy:.3f} | {flags} | {fmt['selfconf']} | "
                 f"{fmt['consistency']} | {fmt['logprob']} | {fmt['logprob_answer']} | "
                 f"{fmt['entropy']} | {fa:.3f} ({fn}) |")
-    lines += ["", "## Preregistered prediction verdicts", "",
-              "| Prediction | Statistic | 95% CI / falsifiers | Verdict |",
-              "|---|---|---|---|"]
+        lines.append("")
+    lines += ["## Preregistered prediction verdicts", "",
+              "| Model | Prediction | Statistic | 95% CI / falsifiers | Verdict |",
+              "|---|---|---|---|---|"]
     for _, r in verd.iterrows():
-        lines.append(f"| {r.prediction} | {r.statistic} | {r.ci if pd.notna(r.ci) else ''} "
-                     f"| **{r.verdict}** |")
+        lines.append(f"| {r.model} | {r.prediction} | {r.statistic} | "
+                     f"{r.ci if pd.notna(r.ci) else ''} | **{r.verdict}** |")
     out = PROJECT / "tables" / "m1_dashboard.md"
     out.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"wrote {out}")
