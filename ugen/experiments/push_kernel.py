@@ -98,6 +98,25 @@ main(model_hint={hint!r}, model_name={model_name!r},
 '''
 
 
+# Preregistered seed sensitivity (PLAN 3 "Seeds"): one benchmark per domain, M1 only,
+# seeds 1 and 2. Separate work_dirs per seed — rows filenames don't encode the seed, and
+# the resume keys (sample_id, seed) make cross-seed restores impossible but same-file
+# overwrites very possible.
+SEED_BENCHMARKS = ["mmlu", "gsm8k", "commonsenseqa", "bbh", "humaneval"]
+
+SEEDS_TEMPLATE = KERNEL_TEMPLATE.replace(
+    """main(model_hint={hint!r}, model_name={model_name!r},
+     benchmarks={benchmarks!r},
+     data_dir=data_dir,
+     seed=0, limit={limit!r})""",
+    """for sd in (1, 2):
+    wd = f"/kaggle/working/seed{{sd}}"
+    os.makedirs(wd, exist_ok=True)
+    main(model_hint={hint!r}, model_name={model_name!r},
+         benchmarks={benchmarks!r},
+         data_dir=data_dir, work_dir=wd,
+         seed=sd, limit={limit!r})""")
+
 PROBE_WORDING_TEMPLATE = KERNEL_TEMPLATE.replace(
     "from ugen.pipeline.runner import main",
     "from ugen.pipeline.probe_wording import main").replace(
@@ -137,13 +156,19 @@ def upload_prev():
     """Carry completed rows forward as a DATASET — kernel-source attachment only exposes
     successfully-completed versions, so cancelled sessions (the 12 h cap) cannot be resumed
     that way. The runner's resume scan finds rows_*.csv anywhere under /kaggle/input."""
+    import re
     rows = {}
     for f in sorted((PROJECT / "outputs").rglob("rows_*.csv")):
         if "ugen-s0-" in str(f) or f.name.endswith("_ALL.csv"):
             continue              # smoke runs (8-row files) never carry forward
+        # seed-sensitivity outputs live in seed<N>/ dirs and share basenames with the
+        # main (seed 0) sweep — disambiguate so neither displaces the other. The suffixed
+        # name still matches the runner's resume glob rows_{model}_*.csv.
+        seed_tag = next((p for p in f.parts if re.fullmatch(r"seed\d+", p)), None)
+        name = f.name if seed_tag is None else f"{f.stem}__{seed_tag}.csv"
         n = sum(1 for _ in open(f, encoding="utf-8")) - 1
-        if f.name not in rows or n > rows[f.name][0]:
-            rows[f.name] = (n, f)    # keep the fullest version of each benchmark
+        if name not in rows or n > rows[name][0]:
+            rows[name] = (n, f)    # keep the fullest version of each benchmark
     rows = {name: f for name, (n, f) in rows.items()}
     if not rows:
         raise SystemExit("no rows CSVs under outputs/")
@@ -200,6 +225,31 @@ def push_run(run, limit=None, resume_from=None, suffix=""):
             kernel_sources=[],
             competition_sources=[], model_sources=[model_source],
             docker_image=DOCKER_IMAGE, machine_shape="NvidiaTeslaT4")
+        (Path(td) / "kernel-metadata.json").write_text(json.dumps(meta, indent=1),
+                                                       encoding="utf-8")
+        sh("kaggle", "kernels", "push", "-p", td)
+    print(f"pushed -> https://www.kaggle.com/code/{USER}/{slug}")
+    return slug
+
+
+def push_seeds():
+    """Preregistered seed-sensitivity run: M1, seeds 1+2, one benchmark per domain.
+    ~21 GPU-h -> expect one 12h-cap resume (prev carry-forward is seed-aware)."""
+    kname, model_source, hint, model_name = MODELS["m1"]
+    slug = f"ugen-{kname}-seeds"
+    script = SEEDS_TEMPLATE.format(hint=hint, model_name=model_name,
+                                   benchmarks=SEED_BENCHMARKS, limit=None)
+    pushed = HERE / "pushed"
+    pushed.mkdir(exist_ok=True)
+    (pushed / f"{slug}.py").write_text(script, encoding="utf-8")   # audit trail
+    with tempfile.TemporaryDirectory() as td:
+        (Path(td) / f"{slug}.py").write_text(script, encoding="utf-8")
+        meta = dict(
+            id=f"{USER}/{slug}", title=slug, code_file=f"{slug}.py",
+            language="python", kernel_type="script", is_private=True,
+            enable_gpu=True, enable_tpu=False, enable_internet=False,
+            dataset_sources=[SRC_DS, DATA_DS, PREV_DS], kernel_sources=[],
+            competition_sources=[], model_sources=[model_source])
         (Path(td) / "kernel-metadata.json").write_text(json.dumps(meta, indent=1),
                                                        encoding="utf-8")
         sh("kaggle", "kernels", "push", "-p", td)
@@ -285,6 +335,8 @@ def main():
         push_probe(a.arg)
     elif a.cmd == "probe-wording":
         push_probe_wording(a.arg or "m1")
+    elif a.cmd == "seeds":
+        push_seeds()
     elif a.cmd == "status":
         sh("kaggle", "kernels", "status", f"{USER}/{a.arg}")
     elif a.cmd == "fetch":
