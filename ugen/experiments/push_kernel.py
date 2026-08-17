@@ -25,7 +25,9 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parent          # .../ugen
 REPO = PROJECT.parent          # .../abhi
-USER = "abhishekrajdhardubey"
+# Account routing (token in ~/.kaggle/kaggle.json decides): G1/G2/seeds/probes ran on
+# abhishekrajdhardubey; M3 (Gemma) runs on abhishekakgec (separate 30 h/week GPU quota).
+USER = "abhishekakgec"
 
 SRC_DS = f"{USER}/ugen-src"
 DATA_DS = f"{USER}/ugen-data"
