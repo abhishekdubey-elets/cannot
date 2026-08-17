@@ -319,17 +319,35 @@ def write_rows(path, rows):
 
 def _greedy_with_oom_ladder(lm, batch, seed, bench):
     """Greedy pass; on GPU OOM halve the batch and recurse (PLAN 6) — never collapses
-    straight to singles, which would forfeit the batching throughput."""
-    try:
-        return lm.greedy_with_stats([it["prompt"] for it in batch], seed)
-    except RuntimeError as e:
-        if "out of memory" not in str(e).lower() or len(batch) == 1:
-            raise
+    straight to singles, which would forfeit the batching throughput.
+
+    The recursion MUST happen outside the except block: an exception's traceback holds
+    the dead generate() frames — including the multi-GB scores list — so retrying inside
+    the handler carries every failed attempt's memory into the retry (this is what killed
+    the Gemma smoke: batch 1 prefill OOMed with 13.7 GiB of zombie allocations).
+
+    A discovered working size is remembered (_LADDER_CAP) so later batches pre-split
+    instead of re-paying a doomed full-size attempt every 12 items (Gemma: 9.4 GB weights
+    + 262k-vocab scores never fit at 12 on a 16 GB T4)."""
+    cap = _LADDER_CAP[0]
+    if not (cap is not None and len(batch) > cap):
+        try:
+            return lm.greedy_with_stats([it["prompt"] for it in batch], seed)
+        except RuntimeError as e:
+            if "out of memory" not in str(e).lower() or len(batch) == 1:
+                raise
+        # out of the except scope: the OOM's traceback (and its tensor refs) is dropped
+        import gc
+        gc.collect()
         lm.torch.cuda.empty_cache()
-        mid = len(batch) // 2
+        _LADDER_CAP[0] = max(1, len(batch) // 2)
         log(f"[{bench}] OOM at batch of {len(batch)}; splitting")
-        return (_greedy_with_oom_ladder(lm, batch[:mid], seed, bench) +
-                _greedy_with_oom_ladder(lm, batch[mid:], seed, bench))
+    mid = len(batch) // 2
+    return (_greedy_with_oom_ladder(lm, batch[:mid], seed, bench) +
+            _greedy_with_oom_ladder(lm, batch[mid:], seed, bench))
+
+
+_LADDER_CAP = [None]
 
 
 def run_benchmark(lm, items, model_name, seed, work_dir, prev_done, limit=None):
@@ -352,23 +370,35 @@ def run_benchmark(lm, items, model_name, seed, work_dir, prev_done, limit=None):
         all_samples = []
         for s0 in range(0, len(batch), SAMPLE_ITEMS):
             chunk = batch[s0:s0 + SAMPLE_ITEMS]
+            # retry OUTSIDE the except block — the exception traceback pins the failed
+            # generate()'s tensors, so retrying inside the handler re-OOMs (Gemma smoke)
+            oom = False
             try:
                 all_samples += lm.sample_k_multi([it["prompt"] for it in chunk],
                                                  K_SAMPLES, seed * 7919 + 13)
             except RuntimeError as e:
                 if "out of memory" not in str(e).lower():
                     raise
+                oom = True
+            if oom:
+                import gc
+                gc.collect()
                 lm.torch.cuda.empty_cache()
                 for it in chunk:
                     all_samples.append(lm.sample_k(it["prompt"], K_SAMPLES,
                                                    seed * 7919 + 13))
         # batched frozen elicitation
+        confs, oom = None, False
         try:
             confs = lm.elicit_confidence_multi(
                 [(it["prompt"], res["text"]) for it, res in zip(batch, greedy)], seed)
         except RuntimeError as e:
             if "out of memory" not in str(e).lower():
                 raise
+            oom = True
+        if oom:
+            import gc
+            gc.collect()
             lm.torch.cuda.empty_cache()
             confs = [lm.elicit_confidence(it["prompt"], res["text"], seed)
                      for it, res in zip(batch, greedy)]
