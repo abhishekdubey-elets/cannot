@@ -100,7 +100,44 @@ main(model_hint={hint!r}, model_name={model_name!r},
 '''
 
 
-# Preregistered seed sensitivity (PLAN 3 "Seeds"): one benchmark per domain, M1 only,
+# Dual-GPU data parallelism for slow models (Gemma ~50 GPU-h single-GPU): T4 x2 kernels
+# expose two GPUs but the runner pins to device 0 — so run TWO full pipeline processes,
+# one per GPU, on disjoint benchmark halves balanced by the smoke-measured hours. Byte-
+# identical protocol per item; parallelism is an engineering change only (PLAN 6 spirit).
+MGPU_SPLIT = {
+    0: ["musr", "mmlu", "bbh", "commonsenseqa", "mbpp"],                      # ~25.2 h
+    1: ["mmlu_pro", "truthfulqa", "strategyqa", "gsm8k", "svamp",             # ~24.9 h
+        "arc_challenge", "humaneval", "multiarith", "gpqa"],
+}
+
+MGPU_TEMPLATE = KERNEL_TEMPLATE.replace(
+    """from ugen.pipeline.runner import main
+
+main(model_hint={hint!r}, model_name={model_name!r},
+     benchmarks={benchmarks!r},
+     data_dir=data_dir,
+     seed=0, limit={limit!r})""",
+    """import subprocess
+import time
+
+SPLIT = {split!r}
+procs = []
+for gpu, benches in sorted(SPLIT.items()):
+    wd = f"/kaggle/working/gpu{{gpu}}"
+    os.makedirs(wd, exist_ok=True)
+    env = dict(os.environ, CUDA_VISIBLE_DEVICES=str(gpu))
+    code = (
+        "import sys; sys.path.insert(0, '/kaggle/working/pkg')\\n"
+        "from ugen.pipeline.runner import main\\n"
+        f"main(model_hint={hint!r}, model_name={model_name!r}, "
+        f"benchmarks={{benches!r}}, data_dir={{data_dir!r}}, work_dir={{wd!r}}, "
+        "seed=0, limit={limit!r})\\n")
+    procs.append(subprocess.Popen([sys.executable, "-c", code], env=env))
+    time.sleep(60)      # stagger model loads
+rcs = [p.wait() for p in procs]
+print(f"worker exit codes: {{rcs}}", flush=True)
+if any(rcs):
+    raise SystemExit(f"a GPU worker failed: {{rcs}}")""")
 # seeds 1 and 2. Separate work_dirs per seed — rows filenames don't encode the seed, and
 # the resume keys (sample_id, seed) make cross-seed restores impossible but same-file
 # overwrites very possible.
@@ -234,6 +271,31 @@ def push_run(run, limit=None, resume_from=None, suffix=""):
     return slug
 
 
+def push_mgpu(run):
+    """Full sweep split across both T4s (see MGPU_SPLIT). Same slug as the single-GPU
+    kernel — resume data flows through ugen-prev either way."""
+    kname, model_source, hint, model_name = MODELS[run]
+    slug = f"ugen-{kname}"
+    script = MGPU_TEMPLATE.format(hint=hint, model_name=model_name, benchmarks=[],
+                                  limit=None, split=MGPU_SPLIT)
+    pushed = HERE / "pushed"
+    pushed.mkdir(exist_ok=True)
+    (pushed / f"{slug}-mgpu.py").write_text(script, encoding="utf-8")   # audit trail
+    with tempfile.TemporaryDirectory() as td:
+        (Path(td) / f"{slug}.py").write_text(script, encoding="utf-8")
+        meta = dict(
+            id=f"{USER}/{slug}", title=slug, code_file=f"{slug}.py",
+            language="python", kernel_type="script", is_private=True,
+            enable_gpu=True, enable_tpu=False, enable_internet=False,
+            dataset_sources=[SRC_DS, DATA_DS, PREV_DS], kernel_sources=[],
+            competition_sources=[], model_sources=[model_source])
+        (Path(td) / "kernel-metadata.json").write_text(json.dumps(meta, indent=1),
+                                                       encoding="utf-8")
+        sh("kaggle", "kernels", "push", "-p", td)
+    print(f"pushed -> https://www.kaggle.com/code/{USER}/{slug}")
+    return slug
+
+
 def push_seeds():
     """Preregistered seed-sensitivity run: M1, seeds 1+2, one benchmark per domain.
     ~21 GPU-h -> expect one 12h-cap resume (prev carry-forward is seed-aware)."""
@@ -339,6 +401,8 @@ def main():
         push_probe_wording(a.arg or "m1")
     elif a.cmd == "seeds":
         push_seeds()
+    elif a.cmd == "mgpu":
+        push_mgpu(a.arg or "m3")
     elif a.cmd == "status":
         sh("kaggle", "kernels", "status", f"{USER}/{a.arg}")
     elif a.cmd == "fetch":
