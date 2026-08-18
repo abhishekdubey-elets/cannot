@@ -1,0 +1,25 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+svamp:1,svamp,arithmetic,Subtraction,,Gemma-3-4B-IT,"Paige raised 7 goldfish and 12 catfish in the pond but stray cats loved eating them. Now she has 15 left. How many fishes disappeared?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",4.0,4.0,1,1.0,-12.010100545263581,-23.9824623312176,0.374064150291566,0.6668903912165262,0.9334926940500736,0.9685370237674824,1.0,172,10.872527122497559,0,1,1,5,
+svamp:2,svamp,arithmetic,Addition,,Gemma-3-4B-IT,"Marco and his dad went strawberry picking. Together they collected strawberries that weighed 22 pounds. On the way back Marco ' dad found 30 more pounds of strawberries. Marco's strawberries now weighed 36 pounds. How much did his dad's strawberries weigh now?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",30.0,16.0,0,1.0,-0.12631925270024263,-0.007751744765477575,0.30608023984318095,0.04679567127661244,0.8363463701896889,0.9919739982416463,0.4,172,10.872527122497559,0,1,1,5,
+svamp:3,svamp,arithmetic,Common-Division,,Gemma-3-4B-IT,"Debby bought 200 water bottles and 256 soda bottles when they were on sale. If she drank 312 water bottles and 4 soda bottles a day How many days would the soda bottles last?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",64.0,64.0,1,0.95,-13.396440955732455,-21.31211303302013,1.542908050043407,2.402584765344894,0.7895557586168653,0.8441412092814612,1.0,172,10.872527122497559,0,1,1,5,
+svamp:4,svamp,arithmetic,Subtraction,,Gemma-3-4B-IT,"There were 106 dollars in Olivia's wallet. After she visited a supermarket and a showroom there were 26 dollars left. If she spent 49 dollars at the showroom How much did she spend at the supermarket?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",31.0,31.0,1,0.95,-10.215448375120097,-23.40734394868211,0.12405190959795181,0.22969528220477717,0.9754916912941045,0.9924578871144805,1.0,172,10.872527122497559,0,1,1,5,
+svamp:5,svamp,arithmetic,Multiplication,,Gemma-3-4B-IT,"Faye was placing her pencils and crayons into 30 rows with 71 crayons and 24 pencils in each row. How many pencils does she have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",720.0,720.0,1,1.0,-18.22996816317836,-25.680002422309496,0.9132670221925124,1.2572061682271096,0.8617096334836393,0.9125536240496726,0.8,265,16.690601229667664,0,1,1,5,
+svamp:6,svamp,arithmetic,Addition,,Gemma-3-4B-IT,"Ed had 10 more marbles than Doug. Doug lost 11 of his marbles at the playground. If Ed had 45 marbles How many more marbles did Ed have than Doug then?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",21.0,21.0,1,0.95,-10.832467379035334,-25.151478448447417,0.3000068774075426,0.632125166198506,0.9323595410529173,0.975190369925409,1.0,265,16.690601229667664,0,1,1,5,
+svamp:10,svamp,arithmetic,Common-Division,,Gemma-3-4B-IT,"An industrial machine made 9 shirts yesterday and 44 shirts today. It can make 3 shirts a minute. How many minutes did the machine work yesterday?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",3.0,3.0,1,1.0,-0.031843367489581775,-0.001292943601064118,0.0709843016874848,0.007689672533067039,0.9501572107369045,0.9998293694460167,1.0,265,16.690601229667664,0,1,1,5,
+svamp:11,svamp,arithmetic,Multiplication,,Gemma-3-4B-IT,"Bryan took a look at his books and magazines. If he has 9 books and 46 magazines in each of his 10 bookshelves How many magazines does he have in total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",460.0,460.0,1,1.0,-17.57818416604432,-25.876296010928613,0.5357069342257992,0.7770392801991084,0.9279672127568497,0.950538221845087,1.0,265,16.690601229667664,0,1,1,5,

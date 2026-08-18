@@ -1,0 +1,73 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+mmlu:39,mmlu,knowledge,abstract_algebra,,Gemma-3-4B-IT,"Statement 1 | Every permutation is a cycle. Statement 2 | Every cycle is a permutation.
+
+Options:
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,D,0,0.95,-9.19921141954913,-24.29064485138137,0.26708952718278495,0.18825405632457196,0.8819008733262308,0.989901032531634,0.4,512,33.197126507759094,0,1,1,5,
+mmlu:54,mmlu,knowledge,abstract_algebra,,Gemma-3-4B-IT,"Find the degree for the given field extension Q(sqrt(2)) over Q.
+
+Options:
+A. 0
+B. 2
+C. 1
+D. 3
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-5.5186554309283355,-23.52734016658988,0.14574642643347296,0.14513390349056854,0.9291020246455446,0.9963714791228995,1.0,512,33.197126507759094,0,1,1,5,
+mmlu:64,mmlu,knowledge,abstract_algebra,,Gemma-3-4B-IT,"How many homomorphisms are there of Z into Z_2?
+
+Options:
+A. 1
+B. 2
+C. infinitely many
+D. 0
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,B,0,0.95,-0.09795369927495114,nan,0.1952827200419088,nan,0.8753903919714503,0.9957871441729367,0.0,512,33.197126507759094,0,0,1,0,
+mmlu:86,mmlu,knowledge,abstract_algebra,,Gemma-3-4B-IT,"Statement 1 | If H and K are subgroups of a group G, then |HK| = |H||K|/|H intersection K|. Statement 2 | A group of order 2p where p is an odd prime is cyclic or isomorphic to D_p.
+
+Options:
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.99,-0.9250848127618294,-25.135921597360152,0.1924981795454832,0.009158471595404453,0.8807558543339837,0.9966819781111553,0.6,512,33.197126507759094,0,1,1,4,
+mmlu:213,mmlu,knowledge,anatomy,,Gemma-3-4B-IT,"Which of the following allows gas exchange in the lungs?
+
+Options:
+A. Alveoli
+B. Bronchi
+C. Bronchioles
+D. Capillaries
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.99,-12.953050876054458,-25.997499236635704,0.3568970127343581,0.5079592635052989,0.8695406002728531,0.9791215135313361,1.0,391,25.41821163892746,0,1,1,5,
+mmlu:318,mmlu,knowledge,astronomy,,Gemma-3-4B-IT,"How do scientists know that the majority of meteorites come from the asteroid belt?
+
+Options:
+A. The spectra of some meteorites are similar to the spectra of asteroids in the asteroid belt.
+B. The asteroid belt is the only possible source of meteorites therefore they must originate there.
+C. Collisions are common in the asteroid belt and we can track the fragments from their source asteroid to the Earth where they become meteorites.
+D. High levels of Iridum have been detected in both asteroids and meteorites therefore meteorites come from the asteroid belt.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-0.15935049137890644,-0.0021810434330582495,0.3516744940887693,0.015658052723281912,0.8003725095097062,0.9909765523717836,1.0,391,25.41821163892746,0,1,1,5,
+mmlu:334,mmlu,knowledge,astronomy,,Gemma-3-4B-IT,"The constellation ... is a bright W-shaped constellation in the northern sky.
+
+Options:
+A. Centaurus
+B. Cygnus
+C. Cassiopeia
+D. Cepheus
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-15.533811063195499,-26.67095933484147,1.0763630194129976,1.6729692560371137,0.7380961683171484,0.9015802154150765,1.0,391,25.41821163892746,0,1,1,5,
+mmlu:530,mmlu,knowledge,clinical_knowledge,,Gemma-3-4B-IT,"How much toothpaste is recommended for cleaning teeth?
+
+Options:
+A. A smear.
+B. A pea-sized amount.
+C. The length of the toothbrush.
+D. Half an inch.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,B,0,0.95,-11.554404724756955,-27.356126636377724,0.425120190653654,0.5919486146354956,0.8553409041346186,0.9756466263090559,1.0,391,25.41821163892746,0,1,1,5,

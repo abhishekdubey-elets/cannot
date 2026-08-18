@@ -1,0 +1,121 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+mmlu_pro:46,mmlu_pro,knowledge,business,,Gemma-3-4B-IT,"Which of the following would yield the greatest net return to acorporation in the 50% tax bracket A) 5% certificate of deposit B) 5% government bond C) 5% corporate bond D) 5%treasurybond E) 4% municipal bond
+
+Options:
+A. 4.5% treasury bond with lower liquidity
+B. 3.5% municipal bond with additional state taxes
+C. 5% government bond
+D. 6% corporate bond with a high risk of default
+E. 6% certificate of deposit with a 2% penalty for early withdrawal
+F. 5% corporate bond
+G. 5.5% government bond with additional state taxes
+H. 5% certificate of deposit
+I. 3% corporate bond with tax-deductible expenses
+J. 4% municipal bond
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",H,J,0,0.95,-0.11181329272839356,nan,0.24961269253009433,nan,0.8692902395268902,0.9910984731977805,0.4,512,35.170902371406555,0,0,1,4,
+mmlu_pro:182,mmlu_pro,knowledge,business,,Gemma-3-4B-IT,"A typewriter is priced at $80, less series discounts of 20%, 10%, 5%. What is the net price?
+
+Options:
+A. $46.08
+B. $56.00
+C. $65.00
+D. $60.00
+E. $54.72
+F. $62.40
+G. $52.00
+H. $58.40
+I. $50.00
+J. $48.00
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,0.95,-14.095918448708096,-22.409301085593597,0.42764623691455433,0.6702703983482824,0.9448021880816668,0.9655964553821832,1.0,512,35.170902371406555,0,1,1,5,
+mmlu_pro:210,mmlu_pro,knowledge,business,,Gemma-3-4B-IT,"Ms. Edwards' disposable income (that is, her income after taxes have been paid) has risen from $19,000 to $20,000. Her expenditures have risen from $15,200 to $15,950. 1) What is her marginal propensity to consume? 2) What is her marginal propensity to save?
+
+Options:
+A. Marginal propensity to consume is .70, marginal propensity to save is .30
+B. Marginal propensity to consume is .80, marginal propensity to save is .20
+C. Marginal propensity to consume is .95, marginal propensity to save is .05
+D. Marginal propensity to consume is .85, marginal propensity to save is .15
+E. Marginal propensity to consume is .75, marginal propensity to save is .25
+F. Marginal propensity to consume is .50, marginal propensity to save is .50
+G. Marginal propensity to consume is .55, marginal propensity to save is .45
+H. Marginal propensity to consume is .60, marginal propensity to save is .40
+I. Marginal propensity to consume is .65, marginal propensity to save is .35
+J. Marginal propensity to consume is 1.00, marginal propensity to save is 0.00
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",E,E,1,0.95,-12.373995086440843,-24.413102327654677,0.12626726095888985,0.1352021218862812,0.9596113980514929,0.9946197037352249,0.8,512,35.170902371406555,0,1,1,5,
+mmlu_pro:322,mmlu_pro,knowledge,business,,Gemma-3-4B-IT,"What is the tax on a house with a market value of $18,400, if theassessed value is at 65% and the tax rate is $4.57 per $100.
+
+Options:
+A. $580.99
+B. $400.55
+C. $300.25
+D. $450.67
+E. $625.44
+F. $489.30
+G. $735.60
+H. $650.75
+I. $700.90
+J. $546.57
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",J,J,1,0.95,-17.42401002036021,-21.968599294246676,1.8244729874783696,2.2904198475505937,0.7479353092494421,0.8203528212907258,1.0,512,35.170902371406555,0,1,1,5,
+mmlu_pro:369,mmlu_pro,knowledge,business,,Gemma-3-4B-IT,"What do you call a style of leadership that takes account of others' views, opinions and ideas?
+
+Options:
+A. Task-oriented
+B. Servant
+C. Transactional
+D. Laissez-faire
+E. Bureaucratic
+F. Democratic
+G. Charismatic
+H. People-oriented
+I. Autocratic
+J. Transformational
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",F,F,1,0.95,-5.837382467234295,-27.27852671335209,0.33660880270070437,0.1577332861905249,0.8333105242345482,0.9879698603181168,0.8,512,34.037609338760376,0,1,1,5,
+mmlu_pro:521,mmlu_pro,knowledge,business,,Gemma-3-4B-IT,"A manufacturer is currently selling 2000 units each month of a product at $2 per unit. The manufacturer estimates that for every 1-cent increase there will be a drop in sales by 10 units. If the fixed costs are $500 and the material and labor costs total 40 cents a unit, at what price will the manufacturer maximize the profit?
+
+Options:
+A. $2.50
+B. $1.90
+C. $2.70
+D. $2.60
+E. $1.80
+F. $2.20
+G. $2.00
+H. $2.40
+I. $2.10
+J. $2.30
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",I,F,0,0.85,-0.023580977993952423,nan,0.0489725055232602,nan,0.9652999415411614,0.9999497897224501,0.2,512,34.037609338760376,0,0,1,1,
+mmlu_pro:544,mmlu_pro,knowledge,business,,Gemma-3-4B-IT,"_______ working practices refer to working patterns which involve temporal, spatial and task related fluidity.
+
+Options:
+A. Agile
+B. Transformative
+C. Progressive
+D. Adaptable
+E. Innovative
+F. Contemporary
+G. Modern
+H. Fluid
+I. Flexible
+J. Dynamic
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",H,I,0,0.95,-8.485387003561119,-27.42088399440605,0.2902002928586826,0.02899970421613885,0.8437901169236284,0.9911166587844491,1.0,512,34.037609338760376,0,1,1,5,
+mmlu_pro:578,mmlu_pro,knowledge,business,,Gemma-3-4B-IT,"Find the total earnings of an employee who worked 43 hours and earns $3.00 per hour with time and a half for more than 40 hours per week.
+
+Options:
+A. $133.50
+B. $140.50
+C. $126.00
+D. $129.00
+E. $123.00
+F. $136.00
+G. $150.00
+H. $137.50
+I. $145.00
+J. $119.50
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-11.979293922752897,-22.120215368180673,1.072539124521976,1.939513324265715,0.8334435932338238,0.8968855693237856,1.0,512,34.037609338760376,0,1,1,5,

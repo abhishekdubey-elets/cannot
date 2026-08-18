@@ -1,0 +1,25 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+strategyqa:3,strategyqa,commonsense,,,Gemma-3-4B-IT,"Are eagles and young bears both used as labels for skills-training youth groups?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,0.95,-8.552929034342828,-24.830375743283042,0.761618605867399,1.2463763715381537,0.7591150111301028,0.9482070828106866,1.0,402,25.48549860715866,0,1,1,5,
+strategyqa:5,strategyqa,commonsense,,,Gemma-3-4B-IT,"Would a goblin shark eat at Crossroads Kitchen?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.95,-6.390218260980269,-25.811044556676297,0.3756032153134095,0.0630672738782353,0.807489514536229,0.9858395854632059,1.0,402,25.48549860715866,0,1,1,5,
+strategyqa:8,strategyqa,commonsense,,,Gemma-3-4B-IT,"Is Guitar Hero Beatles inappropriate for a US third grader?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,no,0,0.85,-0.2528148821636318,-0.0025339075312148887,0.5519519060842926,0.018028131263553366,0.711271853403962,0.9794158231263137,1.0,402,25.48549860715866,0,1,1,5,
+strategyqa:12,strategyqa,commonsense,,,Gemma-3-4B-IT,"Is it unusual to play Happy hardcore music at a funeral?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,0.98,-3.2066128150832958,-20.73779112974115,0.7248995311394024,1.720570895962573,0.7162221483700905,0.9557742922756802,1.0,402,25.48549860715866,0,1,1,5,
+strategyqa:13,strategyqa,commonsense,,,Gemma-3-4B-IT,"Could every citizen of Samoa send a letter to a unique JPMorgan Chase employee?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,yes,0,0.95,-0.26035819202835103,-0.16742326812616662,0.571797283347438,0.2888477925575863,0.7156502765883443,0.9743414780621423,1.0,409,25.945168495178223,0,1,1,5,
+strategyqa:15,strategyqa,commonsense,,,Gemma-3-4B-IT,"Will a Holstein cow and the Liberty Bell balance out a giant scale?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.95,-11.781562508903415,-23.677192918115853,0.7625204641133786,1.4205273655932227,0.8680920000837018,0.9330135951852448,1.0,409,25.945168495178223,0,1,1,5,
+strategyqa:17,strategyqa,commonsense,,,Gemma-3-4B-IT,"Are most mall Santa Claus actors white?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",yes,yes,1,0.85,-2.0006181918836003,-21.504389478883184,0.5300832357311742,0.8061854459707338,0.7220822557770535,0.982665948296526,1.0,409,25.945168495178223,0,1,1,5,
+strategyqa:28,strategyqa,commonsense,,,Gemma-3-4B-IT,"Is lunch on the beach a good activity to spot the full circle of a rainbow?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: Yes"" or ""Final answer: No"".",no,no,1,0.95,-6.110630961901881,-26.358241076928458,0.5205290916643478,0.4989616393889327,0.7713340497905876,0.9733539180679834,0.8,409,25.945168495178223,0,1,1,5,

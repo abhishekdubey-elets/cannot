@@ -1,0 +1,25 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+multiarith:0,multiarith,arithmetic,,,Gemma-3-4B-IT,"Paige had 11 songs on her mp3 player. If she deleted 9 old songs from it and then added 8 new songs, how many songs does she have on her mp3 player?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",10.0,10.0,1,1.0,-9.196148743525416,-24.98991814047789,0.036227595601311585,0.03104833993356363,0.9790409765182397,0.9995465115604237,1.0,117,7.348129689693451,0,1,1,5,
+multiarith:1,multiarith,arithmetic,,,Gemma-3-4B-IT,"There were 39 girls and 4 boys trying out for the schools basketball team. If only 26 of them got called back, how many students didn't make the cut?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",17.0,17.0,1,0.95,-9.378543863303658,-25.46415479271402,0.04559096138794021,0.017305023379535683,0.9678770527880416,0.9997469176594008,1.0,117,7.348129689693451,0,1,1,5,
+multiarith:2,multiarith,arithmetic,,,Gemma-3-4B-IT,"Faye had 34 coloring books. If she gave away 3 of them, but then bought 48 more, how many would she have total?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",79.0,79.0,1,1.0,-0.024866582341899097,-2.22025866403186e-06,0.05319070348180684,2.8853823928237475e-05,0.9611830502493769,0.9999783645328294,1.0,117,7.348129689693451,0,1,1,5,
+multiarith:3,multiarith,arithmetic,,,Gemma-3-4B-IT,"The school cafeteria had 23 apples. If they used 20 to make lunch for the students and then bought 6 more, how many apples would they have?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",9.0,9.0,1,1.0,-4.1673970456449405,-23.048912025632685,0.05323668216058238,0.002225160936515804,0.9573285582228603,0.9999517767857282,1.0,117,7.348129689693451,0,1,1,5,
+multiarith:4,multiarith,arithmetic,,,Gemma-3-4B-IT,"In a video game, each enemy defeated gives you 9 points. If a level has 11 enemies total and you destroy all but 3 of them, how many points would you earn?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",72.0,72.0,1,1.0,-0.0280221622056178,-3.1292418611883477e-07,0.06255871188383956,4.930567504991427e-06,0.9546250641936123,0.9999634712049277,0.8,101,6.350817918777466,0,1,1,5,
+multiarith:5,multiarith,arithmetic,,,Gemma-3-4B-IT,"Megan earned 8 points for each bag of cans she recycled. If she had 14 bags, but didn't recycle 5 of them, how many points would she have earned?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",72.0,72.0,1,1.0,-3.290375668097528,-22.065204461415576,0.035131324889091396,0.0007559497938162772,0.977705714726212,0.9999976435510238,1.0,101,6.350817918777466,0,1,1,5,
+multiarith:6,multiarith,arithmetic,,,Gemma-3-4B-IT,"April's discount flowers was having a sale where each rose was 4 dollars. If April started with 13 roses and had 4 roses left, how much money did she earn?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",36.0,36.0,1,1.0,-2.084785479181286,-16.14186698656791,0.02111263650170998,0.0005259661193490243,0.9877086166698154,0.999996822659332,1.0,101,6.350817918777466,0,1,1,5,
+multiarith:7,multiarith,arithmetic,,,Gemma-3-4B-IT,"Ned had to wash 9 short sleeve shirts and 21 long sleeve shirts before school. If he had only washed 29 of them by the time school started, how many did he not wash?
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <number>"".",1.0,1.0,1,0.95,-2.3126220441653835,-19.231122970577413,0.05813559242805348,4.671116463172859e-05,0.9574946923421161,0.9999988480369644,1.0,101,6.350817918777466,0,1,1,5,

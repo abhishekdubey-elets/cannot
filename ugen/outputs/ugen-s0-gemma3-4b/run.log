@@ -1,0 +1,46 @@
+stats self-test passed in-kernel
+loading model from /kaggle/input/models/google/gemma-3/transformers/gemma-3-4b-it/1
+model loaded
+restored 0 previously-completed rows
+[mmlu] 8 to run, 0 restored
+[mmlu] OOM at batch of 8; splitting
+[mmlu] 8 rows (partial saved)
+[mmlu] DONE n=8 acc=0.625
+[mmlu_pro] 8 to run, 0 restored
+[mmlu_pro] 8 rows (partial saved)
+[mmlu_pro] DONE n=8 acc=0.625
+[truthfulqa] 8 to run, 0 restored
+[truthfulqa] 8 rows (partial saved)
+[truthfulqa] DONE n=8 acc=0.250
+[gpqa] no frozen data — skipped
+[gsm8k] 8 to run, 0 restored
+[gsm8k] 8 rows (partial saved)
+[gsm8k] DONE n=8 acc=1.000
+[svamp] 8 to run, 0 restored
+[svamp] 8 rows (partial saved)
+[svamp] DONE n=8 acc=0.875
+[multiarith] 8 to run, 0 restored
+[multiarith] 8 rows (partial saved)
+[multiarith] DONE n=8 acc=1.000
+[commonsenseqa] 8 to run, 0 restored
+[commonsenseqa] 8 rows (partial saved)
+[commonsenseqa] DONE n=8 acc=0.750
+[arc_challenge] 8 to run, 0 restored
+[arc_challenge] 8 rows (partial saved)
+[arc_challenge] DONE n=8 acc=0.625
+[strategyqa] 8 to run, 0 restored
+[strategyqa] 8 rows (partial saved)
+[strategyqa] DONE n=8 acc=0.750
+[bbh] 8 to run, 0 restored
+[bbh] 8 rows (partial saved)
+[bbh] DONE n=8 acc=0.875
+[musr] 8 to run, 0 restored
+[musr] 8 rows (partial saved)
+[musr] DONE n=8 acc=0.500
+[humaneval] 8 to run, 0 restored
+[humaneval] 8 rows (partial saved)
+[humaneval] DONE n=8 acc=0.875
+[mbpp] 8 to run, 0 restored
+[mbpp] 8 rows (partial saved)
+[mbpp] DONE n=8 acc=0.875
+TOTAL rows: 104
