@@ -1,0 +1,36 @@
+stats self-test passed in-kernel
+loading model from /kaggle/input/models/google/gemma-3/transformers/gemma-3-4b-it/1
+model loaded
+restored 0 previously-completed rows
+[mmlu_pro] 200 to run, 0 restored
+[mmlu_pro] OOM at batch of 12; splitting
+[mmlu_pro] 12 rows (partial saved)
+[mmlu_pro] 36 rows (partial saved)
+[mmlu_pro] 60 rows (partial saved)
+[mmlu_pro] 84 rows (partial saved)
+[mmlu_pro] 108 rows (partial saved)
+[mmlu_pro] 132 rows (partial saved)
+[mmlu_pro] 156 rows (partial saved)
+[mmlu_pro] 180 rows (partial saved)
+[mmlu_pro] 200 rows (partial saved)
+[mmlu_pro] DONE n=200 acc=0.300
+[truthfulqa] 200 to run, 0 restored
+[truthfulqa] 12 rows (partial saved)
+[truthfulqa] 36 rows (partial saved)
+[truthfulqa] 60 rows (partial saved)
+[truthfulqa] 84 rows (partial saved)
+[truthfulqa] 108 rows (partial saved)
+[truthfulqa] 132 rows (partial saved)
+[truthfulqa] 156 rows (partial saved)
+[truthfulqa] 180 rows (partial saved)
+[truthfulqa] 200 rows (partial saved)
+[truthfulqa] DONE n=200 acc=0.455
+[strategyqa] 200 to run, 0 restored
+[strategyqa] 12 rows (partial saved)
+[strategyqa] 36 rows (partial saved)
+[strategyqa] 60 rows (partial saved)
+[strategyqa] 84 rows (partial saved)
+[strategyqa] 108 rows (partial saved)
+[strategyqa] 132 rows (partial saved)
+[strategyqa] 156 rows (partial saved)
+[strategyqa] 180 rows (partial saved)

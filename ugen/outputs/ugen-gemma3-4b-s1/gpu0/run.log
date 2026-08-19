@@ -1,0 +1,24 @@
+stats self-test passed in-kernel
+loading model from /kaggle/input/models/google/gemma-3/transformers/gemma-3-4b-it/1
+model loaded
+restored 0 previously-completed rows
+[musr] 198 to run, 0 restored
+[musr] OOM at batch of 12; splitting
+[musr] OOM at batch of 6; splitting
+[musr] 12 rows (partial saved)
+[musr] 36 rows (partial saved)
+[musr] 60 rows (partial saved)
+[musr] 84 rows (partial saved)
+[musr] 108 rows (partial saved)
+[musr] 132 rows (partial saved)
+[musr] 156 rows (partial saved)
+[musr] 180 rows (partial saved)
+[musr] 198 rows (partial saved)
+[musr] DONE n=198 acc=0.419
+[mmlu] 200 to run, 0 restored
+[mmlu] 12 rows (partial saved)
+[mmlu] 36 rows (partial saved)
+[mmlu] 60 rows (partial saved)
+[mmlu] 84 rows (partial saved)
+[mmlu] 108 rows (partial saved)
+[mmlu] 132 rows (partial saved)
