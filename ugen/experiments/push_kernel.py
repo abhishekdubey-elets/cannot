@@ -105,9 +105,12 @@ main(model_hint={hint!r}, model_name={model_name!r},
 # one per GPU, on disjoint benchmark halves balanced by the smoke-measured hours. Byte-
 # identical protocol per item; parallelism is an engineering change only (PLAN 6 spirit).
 MGPU_SPLIT = {
-    0: ["musr", "mmlu", "bbh", "commonsenseqa", "mbpp"],                      # ~25.2 h
-    1: ["mmlu_pro", "truthfulqa", "strategyqa", "gsm8k", "svamp",             # ~24.9 h
-        "arc_challenge", "humaneval", "multiarith", "gpqa"],
+    # rebalanced after session 1 (musr/mmlu_pro/truthfulqa done, mmlu+strategyqa partial):
+    # remaining-work estimate ~10.4 h vs ~11.7 h -> both fit one 12 h session. Completed
+    # benchmarks cost nothing wherever they sit (restored from ugen-prev by sample_id).
+    0: ["musr", "mmlu", "bbh", "commonsenseqa", "mbpp", "multiarith"],
+    1: ["mmlu_pro", "truthfulqa", "strategyqa", "gsm8k", "svamp",
+        "arc_challenge", "humaneval", "gpqa"],
 }
 
 MGPU_TEMPLATE = KERNEL_TEMPLATE.replace(

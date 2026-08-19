@@ -31,7 +31,7 @@ print(f"pipe={pipe_dir} data={data_dir}", flush=True)
 import subprocess
 import time
 
-SPLIT = {0: ['musr', 'mmlu', 'bbh', 'commonsenseqa', 'mbpp'], 1: ['mmlu_pro', 'truthfulqa', 'strategyqa', 'gsm8k', 'svamp', 'arc_challenge', 'humaneval', 'multiarith', 'gpqa']}
+SPLIT = {0: ['musr', 'mmlu', 'bbh', 'commonsenseqa', 'mbpp', 'multiarith'], 1: ['mmlu_pro', 'truthfulqa', 'strategyqa', 'gsm8k', 'svamp', 'arc_challenge', 'humaneval', 'gpqa']}
 procs = []
 for gpu, benches in sorted(SPLIT.items()):
     wd = f"/kaggle/working/gpu{gpu}"
