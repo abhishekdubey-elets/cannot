@@ -1,0 +1,33 @@
+{
+ "created": "2026-08-20",
+ "frozen": true,
+ "note": "M1+M2+M3 master rows. NEVER modify; downstream analyses read this dir.",
+ "git_commit": "2d99b8290b271412d1283169ab9e2f3cb041c2e5",
+ "files": {
+  "rows_Qwen2.5-3B-Instruct_ALL.csv": {
+   "sha256": "334a26429d64a3a1b19e1ad66c1eb7e810f49a46754197f99ac3d44bb6f1ef43",
+   "rows": 2540,
+   "benchmarks": 13,
+   "sources": [
+    "outputs/ugen-qwen25-3b-r5/rows_Qwen2.5-3B-Instruct_ALL.csv"
+   ]
+  },
+  "rows_Llama-3.2-3B-Instruct_ALL.csv": {
+   "sha256": "f4197007db12ec2c02baefeb461e3e2ef0c3a825f76d805321003e1c584ee228",
+   "rows": 2540,
+   "benchmarks": 13,
+   "sources": [
+    "outputs/ugen-llama32-3b-s3/rows_Llama-3.2-3B-Instruct_ALL.csv"
+   ]
+  },
+  "rows_Gemma-3-4B-IT_ALL.csv": {
+   "sha256": "b2d2341f6d566fd397cfa614b4bfedf3d148e1a729dbf2b0b5b83f7b28cf1aa2",
+   "rows": 2540,
+   "benchmarks": 13,
+   "sources": [
+    "outputs/ugen-gemma3-4b-s2/gpu0/rows_Gemma-3-4B-IT_ALL.csv",
+    "outputs/ugen-gemma3-4b-s2/gpu1/rows_Gemma-3-4B-IT_ALL.csv"
+   ]
+  }
+ }
+}
