@@ -128,21 +128,25 @@ def rq1_tables(df, tables_dir, ext_flags):
     return t
 
 
-def domain_pooled(df, model, ext_flags=None):
+def domain_pooled(df, model, ext_flags=None, include_saturated=False):
     """Per-signal per-domain pooled scores, excluding saturated benchmarks (PLAN 7) and,
     when ext_flags is given, extraction-flagged benchmarks (PLAN 9.2)."""
     sub = df[df["model"] == model]
     acc = sub.groupby("benchmark")["correct"].mean()
-    ok_bench = set(acc[(acc >= SATURATION[0]) & (acc <= SATURATION[1])].index)
+    if include_saturated:
+        ok_bench = set(acc.index)
+    else:
+        ok_bench = set(acc[(acc >= SATURATION[0]) & (acc <= SATURATION[1])].index)
     if ext_flags:
         ok_bench -= {b for (m, b), f in ext_flags.items() if m == model and f}
     return sub[sub["benchmark"].isin(ok_bench)]
 
 
-def rq2_contrasts(df, tables_dir, ext_flags=None, name="rq2_domain_contrasts"):
+def rq2_contrasts(df, tables_dir, ext_flags=None, name="rq2_domain_contrasts",
+                  include_saturated=False):
     rows, pvals = [], []
     for model in df["model"].unique():
-        pooled = domain_pooled(df, model, ext_flags)
+        pooled = domain_pooled(df, model, ext_flags, include_saturated)
         for sig, (col, orient) in SIGNALS.items():
             for da, db in PRIMARY_CONTRASTS:
                 A = pooled[(pooled["domain"] == da)].dropna(subset=[col])
@@ -497,6 +501,8 @@ def main():
     rq2 = rq2_contrasts(df, a.tables, ext_flags)
     rq2_sens = rq2_contrasts(df, a.tables, None,
                              name="rq2_domain_contrasts_sensitivity") if flagged else None
+    rq2_contrasts(df, a.tables, ext_flags, include_saturated=True,
+                  name="rq2_domain_contrasts_saturation_sensitivity")
     rq2_transfer_matrix(df, a.tables)
     rq3_cross_model(rq1, a.tables)
     rq4_disagreement(df, a.tables, a.outputs)
