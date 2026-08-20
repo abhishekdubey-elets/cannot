@@ -1,0 +1,4 @@
+model,n_wrong_consistent,pct_of_all,precision_at_C1,extraction_ok_share,top_benchmarks,mean_prompt_words_vs_all
+Gemma-3-4B-IT,263,0.10354330708661418,0.8403157255616271,0.9657794676806084,truthfulqa:46; musr:44; commonsenseqa:42; mbpp:29,1.5634362836563072
+Llama-3.2-3B-Instruct,163,0.0641732283464567,0.8696,0.9141104294478528,musr:39; strategyqa:21; commonsenseqa:20; truthfulqa:20,1.8549285907453876
+Qwen2.5-3B-Instruct,160,0.06299212598425197,0.8810408921933086,0.9625,strategyqa:33; truthfulqa:30; musr:22; mmlu:20,1.4506682770732682
