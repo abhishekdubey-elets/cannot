@@ -1,4 +1,9 @@
 model,prediction,statistic,ci,verdict
+Gemma-3-4B-IT,P1,dAUROC=-0.124,"[-0.194,-0.046]",FALSIFIED
+Gemma-3-4B-IT,P2,d_cons=-0.109 vs d_self=-0.124,,FALSIFIED
+Gemma-3-4B-IT,P3,"logprob_full=0.297, answer=0.528",,SUPPORTED
+Gemma-3-4B-IT,P4,min_rho=-0.197,,FALSIFIED
+Gemma-3-4B-IT,P5,gsm8k: ff=0.627 best_int=0.823; svamp: ff=0.616 best_int=0.831; mmlu: ff=0.709 selfconf=0.589; truthfulqa: ff=0.574 selfconf=0.596,internal>ff on gsm8k; internal>ff on svamp; ff>selfconf on mmlu,FALSIFIED
 Llama-3.2-3B-Instruct,P1,dAUROC=-0.083,"[-0.143,-0.022]",FALSIFIED
 Llama-3.2-3B-Instruct,P2,d_cons=-0.170 vs d_self=-0.083,,SUPPORTED
 Llama-3.2-3B-Instruct,P3,"logprob_full=0.800, answer=0.637",,FALSIFIED

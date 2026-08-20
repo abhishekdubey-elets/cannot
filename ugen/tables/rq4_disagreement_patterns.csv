@@ -1,6 +1,6 @@
 pattern,n,frac,acc,top_domains
-selfconf_hi_logprob_lo,21,0.004133858267716535,0.6190476190476191,reasoning;arithmetic;knowledge
-consist_hi_entropy_hi,60,0.011811023622047244,0.7666666666666667,reasoning;knowledge
-entropy_lo_wrong,353,0.06948818897637796,0.0,knowledge;reasoning;coding
-logprob_hi_wrong,185,0.03641732283464567,0.0,knowledge;reasoning;commonsense
-selfconf_lo_correct,144,0.028346456692913385,1.0,commonsense;knowledge;reasoning
+selfconf_hi_logprob_lo,67,0.00879265091863517,0.8059701492537313,commonsense;reasoning;coding
+consist_hi_entropy_hi,60,0.007874015748031496,0.7666666666666667,reasoning;knowledge
+entropy_lo_wrong,415,0.05446194225721785,0.0,knowledge;reasoning;commonsense
+logprob_hi_wrong,380,0.049868766404199474,0.0,knowledge;commonsense;reasoning
+selfconf_lo_correct,198,0.025984251968503937,1.0,commonsense;reasoning;knowledge

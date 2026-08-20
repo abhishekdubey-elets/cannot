@@ -2,6 +2,24 @@
 
 AUROC vs correctness per benchmark. `sat` = saturation-excluded (acc outside [0.10, 0.90]); `QC` = >10% extraction failure, excluded from primary contrasts. Signals: higher = better discrimination; 0.5 = chance.
 
+## Gemma-3-4B-IT
+
+| Benchmark | Domain | Acc | flags | Self-conf | Consistency | Logprob | Logprob(ans) | Entropy | Best free feat |
+|---|---|---:|---|---:|---:|---:|---:|---:|---:|
+| mmlu | knowledge | 0.665 |  | 0.589 | 0.759 | 0.423 | 0.529 | 0.582 | 0.709 (question_words) |
+| mmlu_pro | knowledge | 0.300 | QC | 0.715 | 0.809 | 0.185 | 0.480 | 0.435 | 0.689 (question_words) |
+| truthfulqa | knowledge | 0.455 |  | 0.596 | 0.693 | 0.482 | 0.450 | 0.566 | 0.574 (n_options) |
+| gsm8k | arithmetic | 0.835 |  | 0.709 | 0.823 | 0.298 | 0.503 | 0.394 | 0.627 (prompt_words) |
+| svamp | arithmetic | 0.840 |  | 0.746 | 0.831 | 0.296 | 0.553 | 0.410 | 0.616 (n_numbers) |
+| multiarith | arithmetic | 0.972 | sat | 0.446 | 0.879 | 0.439 | 0.472 | 0.456 | 0.688 (max_num_log10) |
+| commonsenseqa | commonsense | 0.615 |  | 0.536 | 0.613 | 0.435 | 0.494 | 0.605 | 0.579 (prompt_chars) |
+| arc_challenge | commonsense | 0.845 |  | 0.615 | 0.807 | 0.356 | 0.419 | 0.672 | 0.607 (question_words) |
+| strategyqa | commonsense | 0.610 | QC | 0.669 | 0.723 | 0.302 | 0.413 | 0.513 | 0.599 (prompt_chars) |
+| bbh | reasoning | 0.848 |  | 0.573 | 0.802 | 0.457 | 0.537 | 0.737 | 0.739 (prompt_chars) |
+| musr | reasoning | 0.419 | QC | 0.479 | 0.616 | 0.382 | 0.385 | 0.648 | 0.634 (prompt_chars) |
+| humaneval | coding | 0.701 |  | 0.500 | 0.780 | 0.384 | — | 0.495 | 0.673 (prompt_words) |
+| mbpp | coding | 0.730 |  | 0.581 | 0.694 | 0.388 | — | 0.430 | 0.577 (prompt_words) |
+
 ## Llama-3.2-3B-Instruct
 
 | Benchmark | Domain | Acc | flags | Self-conf | Consistency | Logprob | Logprob(ans) | Entropy | Best free feat |
@@ -42,6 +60,11 @@ AUROC vs correctness per benchmark. `sat` = saturation-excluded (acc outside [0.
 
 | Model | Prediction | Statistic | 95% CI / falsifiers | Verdict |
 |---|---|---|---|---|
+| Gemma-3-4B-IT | P1 | dAUROC=-0.124 | [-0.194,-0.046] | **FALSIFIED** |
+| Gemma-3-4B-IT | P2 | d_cons=-0.109 vs d_self=-0.124 |  | **FALSIFIED** |
+| Gemma-3-4B-IT | P3 | logprob_full=0.297, answer=0.528 |  | **SUPPORTED** |
+| Gemma-3-4B-IT | P4 | min_rho=-0.197 |  | **FALSIFIED** |
+| Gemma-3-4B-IT | P5 | gsm8k: ff=0.627 best_int=0.823; svamp: ff=0.616 best_int=0.831; mmlu: ff=0.709 selfconf=0.589; truthfulqa: ff=0.574 selfconf=0.596 | internal>ff on gsm8k; internal>ff on svamp; ff>selfconf on mmlu | **FALSIFIED** |
 | Llama-3.2-3B-Instruct | P1 | dAUROC=-0.083 | [-0.143,-0.022] | **FALSIFIED** |
 | Llama-3.2-3B-Instruct | P2 | d_cons=-0.170 vs d_self=-0.083 |  | **SUPPORTED** |
 | Llama-3.2-3B-Instruct | P3 | logprob_full=0.800, answer=0.637 |  | **FALSIFIED** |
