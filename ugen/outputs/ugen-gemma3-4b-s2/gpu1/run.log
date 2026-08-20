@@ -1,0 +1,56 @@
+stats self-test passed in-kernel
+loading model from /kaggle/input/models/google/gemma-3/transformers/gemma-3-4b-it/1
+model loaded
+restored 910 previously-completed rows
+[mmlu_pro] 0 to run, 200 restored
+[mmlu_pro] DONE n=200 acc=0.300
+[truthfulqa] 0 to run, 200 restored
+[truthfulqa] DONE n=200 acc=0.455
+[strategyqa] 20 to run, 180 restored
+[strategyqa] OOM at batch of 12; splitting
+[strategyqa] 192 rows (partial saved)
+[strategyqa] DONE n=200 acc=0.610
+[gsm8k] 200 to run, 0 restored
+[gsm8k] 12 rows (partial saved)
+[gsm8k] 36 rows (partial saved)
+[gsm8k] 60 rows (partial saved)
+[gsm8k] 84 rows (partial saved)
+[gsm8k] 108 rows (partial saved)
+[gsm8k] 132 rows (partial saved)
+[gsm8k] 156 rows (partial saved)
+[gsm8k] 180 rows (partial saved)
+[gsm8k] 200 rows (partial saved)
+[gsm8k] DONE n=200 acc=0.835
+[svamp] 200 to run, 0 restored
+[svamp] 12 rows (partial saved)
+[svamp] 36 rows (partial saved)
+[svamp] 60 rows (partial saved)
+[svamp] 84 rows (partial saved)
+[svamp] 108 rows (partial saved)
+[svamp] 132 rows (partial saved)
+[svamp] 156 rows (partial saved)
+[svamp] 180 rows (partial saved)
+[svamp] 200 rows (partial saved)
+[svamp] DONE n=200 acc=0.840
+[arc_challenge] 200 to run, 0 restored
+[arc_challenge] 12 rows (partial saved)
+[arc_challenge] 36 rows (partial saved)
+[arc_challenge] 60 rows (partial saved)
+[arc_challenge] 84 rows (partial saved)
+[arc_challenge] 108 rows (partial saved)
+[arc_challenge] 132 rows (partial saved)
+[arc_challenge] 156 rows (partial saved)
+[arc_challenge] 180 rows (partial saved)
+[arc_challenge] 200 rows (partial saved)
+[arc_challenge] DONE n=200 acc=0.845
+[humaneval] 164 to run, 0 restored
+[humaneval] 12 rows (partial saved)
+[humaneval] 36 rows (partial saved)
+[humaneval] 60 rows (partial saved)
+[humaneval] 84 rows (partial saved)
+[humaneval] 108 rows (partial saved)
+[humaneval] 132 rows (partial saved)
+[humaneval] 156 rows (partial saved)
+[humaneval] DONE n=164 acc=0.701
+[gpqa] no frozen data — skipped
+TOTAL rows: 1364

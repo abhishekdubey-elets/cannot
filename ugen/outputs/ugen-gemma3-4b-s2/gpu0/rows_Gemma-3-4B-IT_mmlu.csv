@@ -1,0 +1,1879 @@
+sample_id,benchmark,domain,subcategory,difficulty,model,prompt,prediction,ground_truth,correct,self_confidence,mean_logprob,mean_logprob_answer,entropy,entropy_answer,token_margin,topk_mass,consistency,generation_length,latency,seed,extraction_ok,conf_parse_ok,n_samples_parsed,detail
+mmlu:39,mmlu,knowledge,abstract_algebra,,Gemma-3-4B-IT,"Statement 1 | Every permutation is a cycle. Statement 2 | Every cycle is a permutation.
+
+Options:
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-13.006537241873467,-25.6013205658591,0.18272059099733787,0.10753996177038029,0.9220037845661864,0.9928090882021934,0.4,512,43.378833055496216,0,1,1,5,
+mmlu:54,mmlu,knowledge,abstract_algebra,,Gemma-3-4B-IT,"Find the degree for the given field extension Q(sqrt(2)) over Q.
+
+Options:
+A. 0
+B. 2
+C. 1
+D. 3
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-9.730441686322687,-23.63166680133938,0.2152346522365145,0.3147529011689057,0.9258399742830079,0.9900029705604538,1.0,512,43.378833055496216,0,1,1,5,
+mmlu:64,mmlu,knowledge,abstract_algebra,,Gemma-3-4B-IT,"How many homomorphisms are there of Z into Z_2?
+
+Options:
+A. 1
+B. 2
+C. infinitely many
+D. 0
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",None,B,0,0.95,-0.06262020316869742,nan,0.12262288834540261,nan,0.9130096518201753,0.9985094809671864,0.0,512,43.378833055496216,0,0,1,0,
+mmlu:86,mmlu,knowledge,abstract_algebra,,Gemma-3-4B-IT,"Statement 1 | If H and K are subgroups of a group G, then |HK| = |H||K|/|H intersection K|. Statement 2 | A group of order 2p where p is an odd prime is cyclic or isomorphic to D_p.
+
+Options:
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.99,-0.09275422653166801,-0.003962493881606595,0.19714920023994364,0.021281597410885904,0.8778306211004714,0.9966275369573734,0.6,501,43.21632663408915,0,1,1,4,
+mmlu:213,mmlu,knowledge,anatomy,,Gemma-3-4B-IT,"Which of the following allows gas exchange in the lungs?
+
+Options:
+A. Alveoli
+B. Bronchi
+C. Bronchioles
+D. Capillaries
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.99,-15.551959486527625,-26.4159339998542,0.6225079036858632,0.8823339077873987,0.8365984454215644,0.9477993168992672,1.0,501,43.21632663408915,0,1,1,5,
+mmlu:318,mmlu,knowledge,astronomy,,Gemma-3-4B-IT,"How do scientists know that the majority of meteorites come from the asteroid belt?
+
+Options:
+A. The spectra of some meteorites are similar to the spectra of asteroids in the asteroid belt.
+B. The asteroid belt is the only possible source of meteorites therefore they must originate there.
+C. Collisions are common in the asteroid belt and we can track the fragments from their source asteroid to the Earth where they become meteorites.
+D. High levels of Iridum have been detected in both asteroids and meteorites therefore meteorites come from the asteroid belt.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-6.002449852808364,-26.762850837457417,0.27857236857553747,0.013936301906009427,0.8396998824116713,0.9924019164667872,1.0,501,43.21632663408915,0,1,1,5,
+mmlu:334,mmlu,knowledge,astronomy,,Gemma-3-4B-IT,"The constellation ... is a bright W-shaped constellation in the northern sky.
+
+Options:
+A. Centaurus
+B. Cygnus
+C. Cassiopeia
+D. Cepheus
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.99,-12.255776801435356,-28.34288654428383,0.31544132525268814,0.4070781093486536,0.8776469608912101,0.9835616894118435,1.0,286,23.85125716527303,0,1,1,5,
+mmlu:530,mmlu,knowledge,clinical_knowledge,,Gemma-3-4B-IT,"How much toothpaste is recommended for cleaning teeth?
+
+Options:
+A. A smear.
+B. A pea-sized amount.
+C. The length of the toothbrush.
+D. Half an inch.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-3.642995903077752,-27.96896333433683,0.2675291127274867,0.06242799652797076,0.8455067297274416,0.9953968049762966,1.0,286,23.85125716527303,0,1,1,5,
+mmlu:566,mmlu,knowledge,clinical_knowledge,,Gemma-3-4B-IT,"An ileostomy opening should be:
+
+Options:
+A. flush with the skin.
+B. 3-5cm in length.
+C. below skin level.
+D. over 5cm in length.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-0.1755529182916798,-0.17033192568903624,0.3755900417614795,0.25728608933994224,0.7978002090345729,0.9861310307796185,1.0,286,23.85125716527303,0,1,1,5,
+mmlu:577,mmlu,knowledge,clinical_knowledge,,Gemma-3-4B-IT,"When developing a plan of care relating to the management of a person's pain, attention should be given to the following needs:
+
+Options:
+A. physical and pharmacological needs only.
+B. physical and psychological needs only.
+C. physical, psychological, and pharmacological needs followed by regular reassessment.
+D. none of the above, as the main priority is to limit drug side effects.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-0.21396780701080004,-0.003872930380262337,0.44580975742610085,0.022538820685226096,0.736820817379504,0.9905954456637979,1.0,309,26.092124859491985,0,1,1,5,
+mmlu:592,mmlu,knowledge,clinical_knowledge,,Gemma-3-4B-IT,"Wound drainage is described as serous if:
+
+Options:
+A. it contains red blood cells.
+B. it is thick and yellow or green.
+C. it contains microorganisms.
+D. it is clear or slightly yellow.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-10.486091646487074,-24.599349335328995,0.3339091186474332,0.4757497517305728,0.8802844378313586,0.9808881128490164,1.0,309,26.092124859491985,0,1,1,5,
+mmlu:616,mmlu,knowledge,clinical_knowledge,,Gemma-3-4B-IT,"Pairs of electrons carried in the form, FADH2 and NADH+H, collectively contain enough free energy to rephosphorylate:
+
+Options:
+A. 6 ATP.
+B. 5 ATP.
+C. 4 ATP.
+D. 3 ATP.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,B,0,0.95,-9.265135324998829,-28.994674793366695,0.14814442496323438,0.040749939933200766,0.9074113806860347,0.9979049412949571,0.8,309,26.092124859491985,0,1,1,5,
+mmlu:635,mmlu,knowledge,clinical_knowledge,,Gemma-3-4B-IT,"Which of the following is true regarding the complications of a large goitre?
+
+Options:
+A. It causes stridor due to compression of the oesophagus
+B. Dysphagia is an indication for surgery
+C. It causes hoarseness due to compression of the trachea
+D. It causes a more florid thyrotoxicosis than a smaller goitre
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-0.14639761558156567,-0.011995160923101858,0.3218494475515397,0.06282633537950015,0.8159299131557133,0.9925275635175895,1.0,351,29.827972094217937,0,1,1,5,
+mmlu:710,mmlu,knowledge,clinical_knowledge,,Gemma-3-4B-IT,"Which of the following is true of rheumatoid arthritis?
+
+Options:
+A. Rheumatoid factor is present in 25% of rheumatoid cases
+B. It is an example of an oligoarthropathy
+C. Anaemia is a common finding
+D. Heberden's nodes are a feature
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-7.997493863605892,-29.241779656446152,0.17303040307773349,0.0013084244116425905,0.8906890704930678,0.9976778539836916,1.0,351,29.827972094217937,0,1,1,5,
+mmlu:826,mmlu,knowledge,college_biology,,Gemma-3-4B-IT,"Which of the following statements is true of air as compared to water?
+
+Options:
+A. Air provides more physical support.
+B. Air has a higher O2 concentration.
+C. Air offers more resistance to motion.
+D. Air has more thermal inertia.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,B,0,0.95,-8.346001959781674,-24.563956634269758,0.3056867384703886,0.377027725813794,0.858166909667841,0.9886827372078203,1.0,351,29.827972094217937,0,1,1,5,
+mmlu:842,mmlu,knowledge,college_biology,,Gemma-3-4B-IT,"Hybrids between some related species of plants are sterile because the parent plants had different chromosome numbers. Occasionally the chromosome number of such a hybrid plant doubles spontaneously. Which of the following best describes the descendants of those plants with the double chromosome number?
+
+Options:
+A. The plant with the double chromosome number would be genetically defective and have no descendants.
+B. The descendants would be at a selective advantage because of the increased ability to introgress.
+C. The descendants would be reproductively successful because they could backcross with the parental species.
+D. The descendants would regain the ability to reproduce sexually because chromosomes could pair normally.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,D,0,0.95,-5.995649965988937,-25.582141588616317,0.4327902353150923,0.05342317679792706,0.7679897690863954,0.9865052476371686,0.8,485,41.907130320866905,0,1,1,5,
+mmlu:915,mmlu,knowledge,college_chemistry,,Gemma-3-4B-IT,"Calculate the Larmor frequency for a proton in a magnetic field of 1 T.
+
+Options:
+A. 23.56 GHz
+B. 42.58 MHz
+C. 74.34 kHz
+D. 13.93 MHz
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-0.11847013980967937,-0.15786204234221182,0.26144812984017657,0.39271699317760067,0.8648576840604704,0.9900927392477842,1.0,485,41.907130320866905,0,1,1,5,
+mmlu:989,mmlu,knowledge,college_chemistry,,Gemma-3-4B-IT,"Redox enzyme catalysis involves the cyclic oxidation and reduction of metal ions that have at least two stable positive oxidation states. Which of the following groups of metals could be found at the active site of redox enzymes?
+
+Options:
+A. Cu, Fe, Co
+B. Zn, Ca, Ga
+C. Sr, Ga, Mg
+D. Na, Ba, Al
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-6.322912553446632,-24.680408435233872,0.2668648802547228,0.09692677211670234,0.8564003598751481,0.9919757776653644,1.0,485,41.907130320866905,0,1,1,5,
+mmlu:1219,mmlu,knowledge,college_medicine,,Gemma-3-4B-IT,"Living cells require constant interaction with the outside environment in order to attain the materials they need for survival, as well as to rid themselves of waste. Of the following processes, which uses only the gradient of material to control the direction in which the material moves across the cell membrane?
+
+Options:
+A. Osmosis
+B. Passive Transport
+C. Active Transport
+D. Endocytosis
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-9.177890631993955,-24.234911218921177,0.5193085373744684,0.8250096421800694,0.8152955628093883,0.9674271162915277,0.6,507,43.38568139076233,0,1,1,5,
+mmlu:1287,mmlu,knowledge,college_medicine,,Gemma-3-4B-IT,"What type of covalent bonds link the amino acids in a protein?
+
+Options:
+A. Peptide bonds
+B. Hydrogen bonds
+C. Ionic bonds
+D. Glycosidic bonds
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.99,-14.101123786934407,-23.298497201134413,0.7995820962748751,1.1872944661025384,0.8248384436647568,0.9363320240607629,1.0,507,43.38568139076233,0,1,1,5,
+mmlu:1297,mmlu,knowledge,college_medicine,,Gemma-3-4B-IT,"Alterations in which neurotransmitters in the brain by pharmacological agents has been shown to influence fatigue development?
+
+Options:
+A. Acetyl choline and noradrenaline.
+B. Dopamine and acetyl choline.
+C. Glutamate and serotonin.
+D. Dopamine and serotonin.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.85,-0.20812595691641014,-0.08648927837721843,0.4608118139621702,0.34231152328190245,0.7630626523106762,0.9822646464116475,0.6,507,43.38568139076233,0,1,1,4,
+mmlu:1656,mmlu,knowledge,conceptual_physics,,Gemma-3-4B-IT,"The flight of a blimp best illustrates
+
+Options:
+A. Archimedes’ principle
+B. Pascal’s principle
+C. Bernoulli’s principle
+D. Boyle’s law
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-0.12110717707772671,-0.0003828117744243779,0.25616029670904955,0.00334582747688709,0.8400530437764048,0.9952480851993626,1.0,293,24.58081555366516,0,1,1,5,
+mmlu:1711,mmlu,knowledge,conceptual_physics,,Gemma-3-4B-IT,"In both fission and fusion, energy is released while mass
+
+Options:
+A. decreases
+B. remains unchanged; is conserved
+C. increases
+D. may decrease or increase
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,A,0,0.99,-4.9561133995675055,-29.17786524262247,0.15756101849981388,0.017619310612850634,0.892031652732107,0.9986744169082251,0.8,293,24.58081555366516,0,1,1,5,
+mmlu:1718,mmlu,knowledge,conceptual_physics,,Gemma-3-4B-IT,"To view your full-face image in a steamy mirror compared with the height of your face the minimum height of the patch to wipe away is
+
+Options:
+A. one-quarter.
+B. one-half.
+C. the same.
+D. dependent on your distance from the mirror.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,B,0,0.95,-3.898908424266533,-30.881947191557927,0.45902109205631325,0.0488666427648302,0.7534790989075097,0.9844652546550634,0.6,293,24.58081555366516,0,1,1,5,
+mmlu:1770,mmlu,knowledge,conceptual_physics,,Gemma-3-4B-IT,"Find the speed of a wave by multiplying its frequency by its
+
+Options:
+A. period
+B. wavelength
+C. amplitude
+D. None of these
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-23.489124301829598,-25.258396726135857,3.9066268244956572,4.189589004762763,0.406433788848517,0.5836186806118349,1.0,512,43.704757849375405,0,1,1,5,
+mmlu:1838,mmlu,knowledge,econometrics,,Gemma-3-4B-IT,"Including relevant lagged values of the dependent variable on the right hand side of a regression equation could lead to which one of the following?
+
+Options:
+A. Biased but consistent coefficient estimates
+B. Biased and inconsistent coefficient estimates
+C. Unbiased but inconsistent coefficient estimates
+D. Unbiased and consistent but inefficient coefficient estimates.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",None,A,0,0.95,-0.21369464182701137,nan,0.4919027237220519,nan,0.7422923242411343,0.9831493046949618,0.4,512,43.704757849375405,0,0,1,4,
+mmlu:1924,mmlu,knowledge,electrical_engineering,,Gemma-3-4B-IT,"A box which tells the effect of inputs on control sub system is known as
+
+Options:
+A. Data Box.
+B. Logical box.
+C. Decision box.
+D. State box.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-12.432819590670391,-24.836917910493195,0.9274302852131481,1.375219543327616,0.7974971089279279,0.9269415563903749,0.6,512,43.704757849375405,0,1,1,5,
+mmlu:1926,mmlu,knowledge,electrical_engineering,,Gemma-3-4B-IT,"The resistance in the circuit of the moving coil of a dynamometer wattmeter should be
+
+Options:
+A. Low.
+B. Very low.
+C. High.
+D. Almost zero.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,C,0,0.95,-1.3646638389831212,-24.759406532808033,0.34463843369629804,0.34230395518834106,0.7914593704693824,0.9937589056400472,1.0,287,23.910622994105022,0,1,1,5,
+mmlu:1927,mmlu,knowledge,electrical_engineering,,Gemma-3-4B-IT,"The following are the necessary requirements of an oscillator
+
+Options:
+A. Amplitude stability
+B. Frequency stability
+C. Power stability
+D. Both A and B
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-9.239378284883113,-28.512071744251188,0.22696383798496894,0.06725478820638611,0.8637499405843455,0.9962540416352009,1.0,287,23.910622994105022,0,1,1,5,
+mmlu:1943,mmlu,knowledge,electrical_engineering,,Gemma-3-4B-IT,"Which of the following windings are necessary in case of all dc machines?
+
+Options:
+A. closed winding
+B. lap winding
+C. wave winding
+D. open type winding
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.99,-0.2108536039858265,-0.0012734133415873334,0.43997941188678547,0.009153290153997537,0.7343998516062826,0.9908464775268209,1.0,287,23.910622994105022,0,1,1,5,
+mmlu:2079,mmlu,knowledge,elementary_mathematics,,Gemma-3-4B-IT,"Which is the best buy?
+
+Options:
+A. 10 bars of soap for $23.20
+B. 16 bars of soap for $36.48
+C. 13 bars of soap for $29.51
+D. 12 bars of soap for $27.60
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,C,0,0.95,-4.209561044141185,-28.956133809027893,0.03185816603160201,0.01134640842169166,0.9754702128706888,0.9999208048038685,1.0,283,23.773435990015667,0,1,1,5,
+mmlu:2107,mmlu,knowledge,elementary_mathematics,,Gemma-3-4B-IT,"Which number has an absolute value greater than 5?
+
+Options:
+A. -6
+B. -5
+C. 0
+D. 5
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,1.0,-10.689475249826087,-25.610840881273653,0.1999637002868597,0.4247304767385889,0.9616594662093442,0.985796330674377,1.0,283,23.773435990015667,0,1,1,5,
+mmlu:2130,mmlu,knowledge,elementary_mathematics,,Gemma-3-4B-IT,"There are 230 calories in 4 ounces of a type of ice cream. How many calories are in 6 ounces of that ice cream?
+
+Options:
+A. 232
+B. 236
+C. 345
+D. 460
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-0.038659473278769146,-8.34449303847388e-06,0.07725119610071464,0.00010073684684835937,0.9402006403296238,0.9999825017191075,1.0,283,23.773435990015667,0,1,1,5,
+mmlu:2135,mmlu,knowledge,elementary_mathematics,,Gemma-3-4B-IT,"Magazines costs $2.99 each and books costs $6.99 each at the Old Town Newsstand. What is the total cost of 4 magazines and 3 books?
+
+Options:
+A. $20.93 
+B. $28.93 
+C. $32.93 
+D. $48.93 
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-16.87833644241558,-24.383326099820106,0.40878456431971194,0.5789170542042454,0.9499442882293108,0.9651418656900229,1.0,302,25.541980028152466,0,1,1,5,
+mmlu:2279,mmlu,knowledge,elementary_mathematics,,Gemma-3-4B-IT,"Peter works 38 hours per week and earns $7.25 per hour. His employer gives him a raise that increases his weekly gross pay to $307.80. What is the increase in Peter's weekly gross pay?
+
+Options:
+A. $32.30 
+B. $34.70 
+C. $42.46 
+D. $275.50 
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,A,0,0.95,-10.962906359123952,-23.267456490732357,0.3253959313016439,0.5844284846846758,0.9323261390063936,0.9771233964834781,1.0,302,25.541980028152466,0,1,1,5,
+mmlu:2486,mmlu,knowledge,formal_logic,,Gemma-3-4B-IT,"Construct a complete truth table for the following pairs of propositions. Then, using the truth tables, determine whether the statements are logically equivalent or contradictory. If neither, determine whether they are consistent or inconsistent. Justify your answers.
+~O ⊃ P and O ∨ P
+
+Options:
+A. Logically equivalent
+B. Contradictory
+C. Neither logically equivalent nor contradictory, but consistent
+D. Inconsistent
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-0.04544844711853973,-0.0043856440176265705,0.09885536874480179,0.022875296773160397,0.9397572040163129,0.9983361173939231,0.8,302,25.541980028152466,0,1,1,5,
+mmlu:2576,mmlu,knowledge,global_facts,,Gemma-3-4B-IT,"About what percentage of survey respondents from India report having paid a bribe in the last year to access public services (such as education; judiciary; medical and health; police; registry and permit services; utilities; tax revenue and customs; and land service) as of 2017?
+
+Options:
+A. 29%
+B. 49%
+C. 69%
+D. 89%
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,C,0,0.95,-4.620696083648808,-24.248911649708166,0.3529731470089813,0.057579350241449626,0.8221401876299144,0.9882683545021114,0.8,271,23.14915696779887,0,1,1,5,
+mmlu:2655,mmlu,knowledge,global_facts,,Gemma-3-4B-IT,"As of 2013, share of people in the United States who think political parties are corrupt is
+
+Options:
+A. 36%
+B. 56%
+C. 76%
+D. 96%
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-2.998658330491012,-24.472619830762667,0.24135539484882917,0.07909421363098547,0.856145171166786,0.9964856740733354,1.0,271,23.14915696779887,0,1,1,5,
+mmlu:2688,mmlu,knowledge,high_school_biology,,Gemma-3-4B-IT,"When the first tiny prokaryotic cell took up residence inside a larger prokaryotic cell, it heralded the advent of the eukaryotic cell and led to an explosion of new life on Earth. Since then, most cells on Earth have internal organelles. Which of the following best summarizes an advantage of having internal membranes and organelles?
+
+Options:
+A. DNA can reproduce more efficiently.
+B. Even though prokaryotes do not have mitochondria, they contain structures that carry out the same function.
+C. Organelles separate specific reactions in the cell and increase metabolic efficiency.
+D. Compartmentalization enables prokaryotes to reproduce more quickly.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-0.12394206983832895,-0.013188738443806377,0.2800156882303578,0.045154527348808905,0.8445325311259589,0.9927867400250312,1.0,271,23.14915696779887,0,1,1,5,
+mmlu:2719,mmlu,knowledge,high_school_biology,,Gemma-3-4B-IT,"As a young biologist, Charles Darwin had expected the living plants of temperate South America would resemble those of temperate Europe, but he was surprised to find that they more closely resembled the plants of tropical South America. The biological explanation for this observation is most properly associated with the field of
+
+Options:
+A. meteorology.
+B. embryology.
+C. vertebrate anatomy.
+D. biogeography.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-5.5050648108775135,-24.981796961041944,0.3453358325676418,0.06391333629716503,0.8008488794652427,0.9906739794464938,1.0,369,31.30518142382304,0,1,1,5,
+mmlu:3035,mmlu,knowledge,high_school_chemistry,,Gemma-3-4B-IT,"The Arrhenius equation may be used to determine
+
+Options:
+A. the activation energy of a reaction
+B. the rate constant at various temperatures
+C. the shelf life of a consumer product or drug
+D. all of the above
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-3.5191424079476477,-30.817169355616084,0.21505886494903734,0.005982250553240582,0.8802339042509152,0.9956898518048005,1.0,369,31.30518142382304,0,1,1,5,
+mmlu:3141,mmlu,knowledge,high_school_chemistry,,Gemma-3-4B-IT,"Sulfurous acid is a weak acid, while sulfuric acid is a much stronger acid because
+
+Options:
+A. the sulfur in sulfuric acid is more electronegative than the sulfur in sulfurous acid
+B. sulfuric acid has more oxygen atoms in its formula
+C. the O–H bonds in sulfuric acid are much weaker than those in sulfurous acid
+D. sulfurous acid has its hydrogen atoms bound directly to the sulfur atom
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-0.10351016395695423,-0.0007450799456734103,0.24168864075986393,0.005587902494890311,0.8615115622517863,0.9945218243250032,1.0,369,31.30518142382304,0,1,1,5,
+mmlu:3221,mmlu,knowledge,high_school_computer_science,,Gemma-3-4B-IT,"Which of the following spreadsheet functions would be most useful for detecting improbably high or low values that have become part of a data set as a result of data entry errors?
+
+Options:
+A. A function that averages numeric values in a column or row
+B. A function that counts the values in a column or row
+C. A function that rounds a numeric value
+D. A function that sorts values in a column or row
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-4.2726975527524305,-34.49543146081359,0.3676423853277394,0.0010296500715580067,0.8028339858127943,0.9870730669168797,1.0,311,27.968687375386555,0,1,1,5,
+mmlu:3377,mmlu,knowledge,high_school_european_history,,Gemma-3-4B-IT,"This question refers to the following information.
+Read the following governmental regulation.
+Press Law
+So long as this decree shall remain in force no publication which appears in the form of daily issues, or as a serial not exceeding twenty sheets of printed matter, shall go to press in any state of the union without the previous knowledge and approval of the state officials. Writings which do not belong to one of the above-mentioned classes shall be treated according to the laws now in force, or which may be enacted, in the individual states of the union. . . . Each state of the union is responsible, not only to the state against which the offense is directly committed, but to the whole Confederation, for every publication appearing under its supervision in which the honor or security of other states is infringed or their constitution or administration attacked. . . .
+—Carlsbad Resolutions adopted by the Germanic States, 1819
+According to the above-mentioned decrees, the German confederated states most feared which of the following?
+
+Options:
+A. The effect liberal, young students would have on an impressionable faculty and the surrounding communities, where they would surely spread their message.
+B. The dissemination of liberal ideas by the media and the sharing of nationalist or liberal ideas at the university in the classroom or in secret.
+C. The dissolution of the union of German states that they had just created.
+D. Support of Bonapartism, which was growing in strength prior to the passage of these Carlsbad Resolutions and preceeding Napoleon's invasion.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-0.18505654848821534,-0.09602754886140019,0.4141947442197519,0.11461386969312552,0.7740435126414253,0.9880440524536697,1.0,311,27.968687375386555,0,1,1,5,
+mmlu:3557,mmlu,knowledge,high_school_geography,,Gemma-3-4B-IT,"The way of life based on breeding and herding of animals that are used as a source of food, shelter, and clothing is called
+
+Options:
+A. swidden.
+B. subsistence farming.
+C. pastorialism.
+D. hunting and gathering.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.99,-8.436883315313818,-25.702858747677272,0.2234722950603553,0.14739786762164056,0.874093230514281,0.9944989721491406,1.0,311,27.968687375386555,0,1,1,5,
+mmlu:3704,mmlu,knowledge,high_school_government_and_politics,,Gemma-3-4B-IT,"All of the following contribute to lower voting rates among Americans in the 18-to-25 age bracket EXCEPT
+
+Options:
+A. college attendance in a state other than one's home state
+B. frequent relocation of one's primary residence
+C. the remoteness of most political issues to the daily lives of young people
+D. the fact that the minimum voting age in some states is 21
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-0.1342128161473576,-0.00035128055584602674,0.2841373140815551,0.002952181552975238,0.8255679580962882,0.9957913047862503,1.0,265,22.336710532506306,0,1,1,5,
+mmlu:3816,mmlu,knowledge,high_school_government_and_politics,,Gemma-3-4B-IT,"Which of the following best describes a block grant?
+
+Options:
+A. Money provided to individuals to fund research projects
+B. Funds with few restrictions that are provided to state or local governments for general purpose use
+C. Funds distributed among states according to a set formula
+D. Money that can only be used for a specific purpose
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-7.394854471587345,-27.77003467638881,0.14795058227331234,0.08390549764046755,0.9203206344033187,0.9963797326357859,1.0,265,22.336710532506306,0,1,1,5,
+mmlu:3820,mmlu,knowledge,high_school_government_and_politics,,Gemma-3-4B-IT,"The government promotes preferential treatment for members of groups that have historically suffered from discrimination by means of
+
+Options:
+A. the New Federalism
+B. affirmative action programs
+C. Social Security benefits
+D. bills of attainder
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-5.829278937820029,-27.230097852430408,0.15745114446653097,0.00788688168211513,0.8913161513940343,0.9989574673040857,1.0,265,22.336710532506306,0,1,1,5,
+mmlu:3901,mmlu,knowledge,high_school_macroeconomics,,Gemma-3-4B-IT,"The effect of the spending multiplier is lessened if
+
+Options:
+A. the price level is constant with an increase in aggregate demand.
+B. the price level falls with an increase in aggregate supply.
+C. the price level is constant with an increase in long-run aggregate supply.
+D. the price level rises with an increase in aggregate demand.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,D,0,0.95,-0.18515023784681447,-0.02270957606136174,0.39927595314220954,0.10571125590198942,0.7760870170454647,0.9862001719862916,0.6,430,37.22043490409851,0,1,1,5,
+mmlu:3924,mmlu,knowledge,high_school_macroeconomics,,Gemma-3-4B-IT,"All else equal when the United States exports more goods and services
+
+Options:
+A. the value of the dollar falls as the supply of dollars increases.
+B. the value of the dollar rises as demand for dollars increases.
+C. the value of the dollar falls as demand for dollars decreases.
+D. the value of the dollar rises as the supply of dollars increases.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-11.977363060049937,-24.18337520321421,0.5446044928746484,0.8689460321645023,0.8545896119503088,0.9611785811047221,1.0,430,37.22043490409851,0,1,1,5,
+mmlu:3937,mmlu,knowledge,high_school_macroeconomics,,Gemma-3-4B-IT,"If the economy were experiencing a recessionary gap choose the option below that would be an appropriate fiscal policy to eliminate the gap and the predicted impact of the policy on real GDP and unemployment. FISCAL POLICY     REAL GDP     UNEMPLOYMENT
+
+Options:
+A. Increase taxes.     Increase     Decrease
+B. Decrease spending.     Decrease     Increase
+C. Decrease taxes.     Increase     Increase
+D. Decrease taxes.     Increase     Decrease
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-4.769500847420023,-24.170721379634703,0.24176242880152465,0.027586187945064535,0.8671488324050294,0.9930705861989841,1.0,430,37.22043490409851,0,1,1,5,
+mmlu:3976,mmlu,knowledge,high_school_macroeconomics,,Gemma-3-4B-IT,"When the United States places an import quota on imported sugar we expect which of the following effects?
+
+Options:
+A. Consumers seek substitutes for sugar and products that use sugar.
+B. Consumers consume more sugar and products that use sugar.
+C. The supply of sugar increases.
+D. Net exports in the United States fall.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-10.042360933031459,-25.52434213569297,0.28894526224016587,0.39427539387031535,0.8907684948929446,0.9855292460068743,0.6,376,31.76531998316447,0,1,1,5,
+mmlu:4011,mmlu,knowledge,high_school_macroeconomics,,Gemma-3-4B-IT,"Which of the following would shift the aggregate demand curve to the left?
+
+Options:
+A. An increase in consumer confidence.
+B. Business firms expect lower sales in the future.
+C. Foreigners develop a preference for our products.
+D. Government increases its level of spending.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-10.347205007455123,-25.664592306089457,0.2242871405186834,0.3257815159475105,0.924584411560221,0.9886958955767307,1.0,376,31.76531998316447,0,1,1,5,
+mmlu:4030,mmlu,knowledge,high_school_macroeconomics,,Gemma-3-4B-IT,"At the peak of a typical business cycle which of the following is likely the greatest threat to the macroeconomy?
+
+Options:
+A. Unemployment
+B. Bankruptcy
+C. Declining labor productivity
+D. Inflation
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-0.23425792901411374,-0.13973930380135732,0.4970708033871684,0.2510336363526567,0.7232280697950975,0.9831129139725198,1.0,376,31.76531998316447,0,1,1,5,
+mmlu:4038,mmlu,knowledge,high_school_macroeconomics,,Gemma-3-4B-IT,"What will happen to the equilibrium price and the equilibrium quantity of good Z when the price of good X which is a close substitute for Z rises?
+
+Options:
+A. The equilibrium price will rise and the equilibrium quantity will fall.
+B. The equilibrium price will fall and the equilibrium quantity will rise.
+C. The equilibrium price and the equilibrium quantity will both rise.
+D. The equilibrium price and the equilibrium quantity will both fall.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,C,0,0.95,-10.656248043634193,-23.109625589507075,1.146127813897773,2.1782274056623714,0.7354260221916703,0.8953603474367963,0.6,404,34.37758199373881,0,1,1,5,
+mmlu:4090,mmlu,knowledge,high_school_macroeconomics,,Gemma-3-4B-IT,"Which of the following is true about the consumption function?
+
+Options:
+A. The slope is equal to the MPC.
+B. The slope is equal to the MPS.
+C. The slope is equal to MPC + MPS.
+D. It shifts upward when consumers are more pessimistic about the future.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,A,0,0.95,-0.12077331135359573,-0.043272065304298245,0.26904993916186354,0.13103627356021383,0.8426276840417102,0.9946984996890077,0.4,404,34.37758199373881,0,1,1,5,
+mmlu:4209,mmlu,knowledge,high_school_macroeconomics,,Gemma-3-4B-IT,"Fiat money
+
+Options:
+A. is not backed by any precious commodity.
+B. can be exchanged for gold.
+C. is backed by gold but cannot be exchanged for it.
+D. is not legal tender.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.99,-13.642200152036427,-24.99608333381574,0.44792904026059827,0.6964966908085087,0.9030365240160781,0.9663009537328587,1.0,404,34.37758199373881,0,1,1,5,
+mmlu:4259,mmlu,knowledge,high_school_mathematics,,Gemma-3-4B-IT,"What is the shortest distance from the origin to the circle defined by $x^2-24x +y^2+10y +160=0$?
+
+Options:
+A. 10
+B. 16
+C. 24
+D. 12
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-0.02843480589217303,-0.002027255118714303,0.054746268944343285,0.011818455192862473,0.9574643452501586,0.9998232402628467,0.6,496,42.18834368387858,0,1,1,4,
+mmlu:4293,mmlu,knowledge,high_school_mathematics,,Gemma-3-4B-IT,"The mean of 7 numbers is 15. When an 8th number is added, the mean decreases to 12. What is the 8th number?
+
+Options:
+A. –12
+B. –9
+C. 0
+D. 8
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-6.744923257077993,-23.839923328156605,0.10559235000311493,0.26357240170970525,0.9681984023341248,0.9939415113579843,1.0,496,42.18834368387858,0,1,1,5,
+mmlu:4310,mmlu,knowledge,high_school_mathematics,,Gemma-3-4B-IT,"Find the remainder when 25^1059 is divided by 23.
+
+Options:
+A. 11
+B. 13
+C. 8
+D. 5
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-11.507233969395898,-23.442758831581667,0.12913275012164477,0.17960738129586631,0.9579617937486018,0.9935144901035293,1.0,496,42.18834368387858,0,1,1,5,
+mmlu:4395,mmlu,knowledge,high_school_mathematics,,Gemma-3-4B-IT,"In Canada in 2014, the average wholesale price of soybeans was $0.24 per pound. In 2015, the average wholesale price of soybeans was $0.16 per pound. If a retailer purchased 20,000 pounds of soybeans in 2014 and in 2015, what was the percent change in the retailer’s expenses from 2014 to 2015?
+
+Options:
+A. –8%
+B. –33%
+C. –50%
+D. 8%
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-0.012339154341265972,-0.0007529961737091639,0.029814282527229542,0.006004497410913245,0.981818657453363,0.9998702509783767,1.0,307,26.267677863438923,0,1,1,5,
+mmlu:4403,mmlu,knowledge,high_school_mathematics,,Gemma-3-4B-IT,"Given the expression: $1990\times1991 - 1989\times1990$. What counting number is equivalent to the expression?
+
+Options:
+A. 5
+B. 8
+C. 3980
+D. 1160
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-13.593415903928587,-23.80508878001055,0.6209975369960042,1.010497071257255,0.9035509547115537,0.9497634911187697,1.0,307,26.267677863438923,0,1,1,5,
+mmlu:4443,mmlu,knowledge,high_school_mathematics,,Gemma-3-4B-IT,"Which of these vowels does NOT have a vertical axis of symmetry?
+
+Options:
+A. A
+B. E
+C. I
+D. O
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,B,0,0.3,-6.82932380286775,-28.055839628836754,0.3788162096763759,0.06035117958869727,0.8304799233808968,0.9796667768823207,0.6,307,26.267677863438923,0,1,1,4,
+mmlu:4483,mmlu,knowledge,high_school_mathematics,,Gemma-3-4B-IT,"Suppose $f(x)$ is an invertible function, and suppose that $f(2)=f^{-1}(2)=4$. What is the value of $f(f(2))$?
+
+Options:
+A. 1
+B. 2
+C. 4
+D. 0
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-9.806413863772336,-24.883612984265312,0.23337677848458405,0.3931280533404543,0.9178842080124258,0.9885744309881658,1.0,209,17.4756285349528,0,1,1,5,
+mmlu:4520,mmlu,knowledge,high_school_microeconomics,,Gemma-3-4B-IT,"Which of the following is characteristic of oligopoly? I. Formidable barriers to entry. II. Price (P) = Marginal Revenue (MR). III. Relatively few sellers.
+
+Options:
+A. I only.
+B. II only.
+C. III only.
+D. I and III only.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-0.11494555512513814,-0.00031983949433230424,0.2582610539641596,0.003028262743134391,0.8450358337477634,0.9959914535997016,1.0,209,17.4756285349528,0,1,1,5,
+mmlu:4629,mmlu,knowledge,high_school_microeconomics,,Gemma-3-4B-IT,"If, for each additional unit of a variable input, the increases in output become smaller, which of the following correctly identifies the concept?
+
+Options:
+A. Diminishing marginal productivity.
+B. Diminishing marginal utility.
+C. Increasing marginal utility.
+D. Increasing marginal productivity.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-1.444029111506244,-25.710241241180686,0.20496767352314033,0.00015725395197985692,0.8707340070220272,0.9987940802528528,1.0,209,17.4756285349528,0,1,1,5,
+mmlu:4649,mmlu,knowledge,high_school_microeconomics,,Gemma-3-4B-IT,"For a competitive firm, what is the most important thing to consider in deciding whether to shut down in the short run?
+
+Options:
+A. Compare AVC to MR.
+B. Compare TR to TC.
+C. Do not produce if the TFC is not covered by revenue.
+D. Produce the highest quantity demanded regardless of price.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-0.1598149178359587,-0.01682365824429392,0.32726779790674726,0.0745099610199252,0.7988622225629978,0.9947499502927829,0.8,390,33.05515662829081,0,1,1,4,
+mmlu:4652,mmlu,knowledge,high_school_microeconomics,,Gemma-3-4B-IT,"Labor, human capital, entrepreneurship, natural resources, and physical capital are all examples of which of the following?
+
+Options:
+A. Public goods
+B. Inferior goods
+C. Factors of production
+D. Outputs
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.99,-11.627430387062208,-24.29400880980956,0.4543373657648481,0.7809674293955822,0.8520241022874148,0.972872943450243,1.0,390,33.05515662829081,0,1,1,5,
+mmlu:4674,mmlu,knowledge,high_school_microeconomics,,Gemma-3-4B-IT,"Which of the following are associated with public goods? I. Free riders II. Adding demand curves vertically to find the demand curve for society III. Nonrivalry in consumption IV. Nonexcludability
+
+Options:
+A. I and II only
+B. I and IV only
+C. II and III only
+D. I, II, III, and IV
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-4.091408013573047,-25.86469198461132,0.24419265755167224,0.015306353874161864,0.8591303226275322,0.9939461507858374,1.0,390,33.05515662829081,0,1,1,5,
+mmlu:4686,mmlu,knowledge,high_school_microeconomics,,Gemma-3-4B-IT,"Economics is best described as
+
+Options:
+A. the study of how scarce material wants are allocated between unlimited resources.
+B. the study of how scarce labor can be replaced by unlimited capital.
+C. the study of how decision makers choose the best way to satisfy their unlimited material wants with a scarce supply of resources.
+D. the study of how unlimited material wants can best be satisfied by allocating limitless amounts of productive resources.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-0.12585389631074465,-0.0003576292947388519,0.27815809420013765,0.003154639282296756,0.8492865888056932,0.9925586318528211,1.0,270,22.752235730489094,0,1,1,5,
+mmlu:4725,mmlu,knowledge,high_school_microeconomics,,Gemma-3-4B-IT,"Macroeconomics focuses on
+
+Options:
+A. government and its laws that affect commerce.
+B. individuals and their resource use.
+C. corporations and their production levels.
+D. the resource use of the entire nation.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-9.197618290386849,-27.630696070974523,0.3001472613596378,0.33504368196343043,0.8598935530693442,0.9878159673125656,1.0,270,22.752235730489094,0,1,1,5,
+mmlu:4758,mmlu,knowledge,high_school_physics,,Gemma-3-4B-IT,"Ultraviolet light has a wavelength of about 6 × 10^-8 m. What is the frequency of this light?
+
+Options:
+A. 5 × 10^15 Hz
+B. 0.5 Hz
+C. 2 Hz
+D. 20 Hz
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-1.8422039525232896,-28.171607448019618,0.16421909766578263,0.05228833633538949,0.9135865101659739,0.9942701893824119,1.0,270,22.752235730489094,0,1,1,5,
+mmlu:4772,mmlu,knowledge,high_school_physics,,Gemma-3-4B-IT,"Traveling at an initial speed of 1.5 × 10^6 m/s, a proton enters a region of constant magnetic field of magnitude 1.5 T. If the proton's initial velocity vector makes an angle of 30° with the magnetic field, compute the proton's speed 4 s after entering the magnetic field.
+
+Options:
+A. 5.0 × 10^6 m/s
+B. 7.5 × 10^6 m/s
+C. 1.5 × 10^6 m/s
+D. 3.0 × 10^6 m/s
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",None,C,0,0.85,-0.09337616948408764,nan,0.20069307275878934,nan,0.8773596319952048,0.9961383347399533,0.4,512,44.46396040916443,0,0,1,2,
+mmlu:4806,mmlu,knowledge,high_school_physics,,Gemma-3-4B-IT,"An elevator is rising. In order to determine the tension in the cables pulling it, which values (for the elevator) would you need to know?
+
+Options:
+A. Mass, velocity, height, and acceleration
+B. Mass, velocity, and acceleration
+C. Mass and velocity
+D. Mass and acceleration
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-0.11890609427347454,nan,0.25710578645710297,nan,0.8426439191098325,0.9958355078706518,1.0,512,44.46396040916443,0,0,1,5,
+mmlu:4840,mmlu,knowledge,high_school_physics,,Gemma-3-4B-IT,"An electron (mass = m, charge = -E) is rotated with speed V upwards, in the plane of the page, into a region containing a uniform magnetic field B, that is directed into the plane of the page. Describe the electron's subsequent circular motion.
+
+Options:
+A. Clockwise rotation; radius of path = mv/(eB)
+B. Counterclockwise rotation; radius of path = mv/(eB)
+C. Clockwise rotation; radius of path = eB/(mv)
+D. Counterclockwise rotation; radius of path = eB/(mv)
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-9.046435276329902,-22.21704750976656,0.6559706584351243,1.3080945269232203,0.8113210727315163,0.9488407054450363,0.6,512,44.46396040916443,0,1,1,5,
+mmlu:4846,mmlu,knowledge,high_school_physics,,Gemma-3-4B-IT,"The Space Shuttle orbits 300 km above the Earth’s surface; the Earth’s radius is 6400 km. What is the acceleration due to Earth’s gravity experienced by the Space Shuttle?
+
+Options:
+A. 4.9 m/s^2
+B. 8.9 m/s^2
+C. 9.8 m/s^2
+D. 10.8 m/s^2
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-0.03475566313648501,-0.0009857646881338649,0.07492134569703289,0.008265699841729202,0.9463431866370081,0.9998625304883089,0.2,492,42.19625989596049,0,1,1,1,
+mmlu:4872,mmlu,knowledge,high_school_physics,,Gemma-3-4B-IT,"A rigid, solid container of constant volume holds an ideal gas of volume v1 and temperature T1 and pressure P1. The temperature is increased in an isochoric process. Which of the following is NOT true?
+
+Options:
+A. The average speed of the molecules increases.
+B. The pressure increases.
+C. The kinetic energy of the system increases.
+D. The volume increases.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-11.413488471509098,-25.773789810652744,0.7058586158252587,1.374580041823523,0.8326043840497732,0.9357576482300836,1.0,492,42.19625989596049,0,1,1,5,
+mmlu:4949,mmlu,knowledge,high_school_psychology,,Gemma-3-4B-IT,"Xavier is beginning his first year of college. He is eager to find a few other freshmen to ""hang out"" with. Psychologists would say that Xavier is motivated by a(n)
+
+Options:
+A. fraternization need
+B. assimilation need
+C. attachment need
+D. affiliation need
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-12.925017868546956,-27.56723803110058,0.33872177985221885,0.3069092487665736,0.8677098138969603,0.984547456832436,1.0,492,42.19625989596049,0,1,1,5,
+mmlu:4962,mmlu,knowledge,high_school_psychology,,Gemma-3-4B-IT,"What area of psychology focuses on the study of subjective well-being, optimism, and happiness?
+
+Options:
+A. psychometrics
+B. human factors psychology
+C. social psychology
+D. positive psychology
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-0.16010806201000755,-0.0018519395719636123,0.31123780800941975,0.010199269506745878,0.8071025502024674,0.9939124373000437,1.0,254,21.238154888153076,0,1,1,5,
+mmlu:5041,mmlu,knowledge,high_school_psychology,,Gemma-3-4B-IT,"The role of the outer ear is to
+
+Options:
+A. transduce sound waves to stimulate the ossicles
+B. conduct sound by exciting the cilia in the inner ear
+C. protect the eardrum while it transduces sound
+D. collect and focus sounds from the air
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-1.0446386829376695,-24.043853992554062,0.19756570457882203,0.03194939818992126,0.8717434185696399,0.9977246346905475,1.0,254,21.238154888153076,0,1,1,5,
+mmlu:5047,mmlu,knowledge,high_school_psychology,,Gemma-3-4B-IT,"The semicircular canals of the inner ear are important for helping a person to maintain
+
+Options:
+A. tone quality
+B. melatonin
+C. balance
+D. olfaction
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-11.841649215345354,-32.21307824662415,0.12039308036244756,0.0563373895743919,0.9261552361756797,0.9982384605201211,1.0,254,21.238154888153076,0,1,1,5,
+mmlu:5053,mmlu,knowledge,high_school_psychology,,Gemma-3-4B-IT,"Today Susan took a pill for her allergy that raised her blood pressure, caused her heart to beat faster, and raised her body temperature. Now caught in traffic, she feels angry. Yesterday, when she took the pill, she was with her husband. When her blood pressure rose, her heart speeded up, she got hotter, and she felt amorous. This description exemplifies
+
+Options:
+A. the adaptation-level phenomenon
+B. two-factor theory
+C. James-Lange theory
+D. Cannon-Bard theory
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-4.997579123772909,-28.250801287327164,0.332278911706019,0.009578128396084466,0.7999081670961998,0.9928118699678669,0.6,432,37.08211461702982,0,1,1,5,
+mmlu:5082,mmlu,knowledge,high_school_psychology,,Gemma-3-4B-IT,"According to Sigmund Freud, what is the dominant factor determining our personality traits?
+
+Options:
+A. secondary drives and needs
+B. genetic and nutritional factors
+C. unconscious conflicts
+D. parenting styles
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-10.064580131561875,-28.392770652818054,0.30918055384409415,0.03958686165949687,0.8363457889882503,0.9884494963895392,1.0,432,37.08211461702982,0,1,1,5,
+mmlu:5146,mmlu,knowledge,high_school_psychology,,Gemma-3-4B-IT,"Why might a researcher use a variable ratio of reinforcement rather than a fixed ratio?
+
+Options:
+A. Fixed ratio schedules of reinforcements are more time intensive.
+B. Variable ratio schedules of reinforcements produce results more quickly.
+C. Variable ratio schedules of reinforcements avoid problems such as generalization and the Premack principle.
+D. Variable ratio schedules of reinforcement are more resistant to extinction than fixed schedules.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,0.95,-0.20441303454172668,-0.002289717202055878,0.46568964477334485,0.015927521156963092,0.7617092896770272,0.9841980870675158,0.4,432,37.08211461702982,0,1,1,5,
+mmlu:5225,mmlu,knowledge,high_school_psychology,,Gemma-3-4B-IT,"Which of the following accurately summarizes a depressed person's view according to Aaron Beck's negative triad theory?
+
+Options:
+A. Depressed individuals cope with the three primary stresses—change, death, and monetary instability—through withdrawal.
+B. Depressed individuals believe that when they are in a group, at least three individuals will view them negatively.
+C. Depressed individuals hold a negative view of themselves, the world, and their futures.
+D. Depressed individuals view the world in three stages—separation anxiety, development of an external locus of control, and failure to achieve.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-0.13561025155329415,-0.013154589762658967,0.28065317440900134,0.044829994970291644,0.832426734202731,0.9923325699690873,1.0,339,29.09039298693339,0,1,1,5,
+mmlu:5277,mmlu,knowledge,high_school_psychology,,Gemma-3-4B-IT,"Aisha is a beautiful, black teenager. If she is typical, she most likely believes that
+
+Options:
+A. white teenagers are superior to black teenagers
+B. Asian teenagers are superior to black teenagers
+C. Hispanic teenagers are superior to black teenagers
+D. black teenagers are superior to white teenagers
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-0.9163652678312518,-24.47174373050441,0.5988137171580076,0.037426116418926965,0.7103688816669065,0.9715203389657282,1.0,339,29.09039298693339,0,1,1,5,
+mmlu:5356,mmlu,knowledge,high_school_psychology,,Gemma-3-4B-IT,"Which of the following kinds of therapists is most likely to prescribe lithium for a patient diagnosed with bipolar disorder?
+
+Options:
+A. psychoanalyst
+B. psychiatrist
+C. clinical psychologist
+D. cognitive psychotherapist
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.99,-8.53357189453838,-26.03596781548781,0.22415419487992916,0.15152475252264863,0.8748384976105704,0.9958974469376173,1.0,339,29.09039298693339,0,1,1,5,
+mmlu:5470,mmlu,knowledge,high_school_statistics,,Gemma-3-4B-IT,"Which of the following is the primary difference between an experiment and an observational study?
+
+Options:
+A. Experiments are only conducted on human subjects; observational studies can be conducted on nonhuman subjects.
+B. In an experiment, the researcher manipulates some variable to observe its effect on a response variable; in an observational study, he or she simply observes and records the observations.
+C. Experiments must use randomized treatment and control groups; observational studies also use treatment and control groups, but they do not need to be randomized.
+D. Experiments must be double-blind; observational studies do not need to be.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,A,0,0.95,-13.008213858215278,-26.90146377402532,0.3147944368231915,0.2843000520308494,0.8689142280491069,0.9863671188941225,1.0,512,46.84722010294596,0,1,1,5,
+mmlu:5634,mmlu,knowledge,high_school_statistics,,Gemma-3-4B-IT,"The financial aid office at a state university conducts a study to determine the total student costs per semester. All students are charged $4500 for tuition. The mean cost for books is $350 with a standard deviation of $65. The mean outlay for room and board is $2800 with a standard deviation of $380. The mean personal expenditure is $675 with a standard deviation of $125. Assuming independence among categories, what is the standard deviation of the total student costs?
+
+Options:
+A. $24
+B. $91
+C. $190
+D. $405
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",None,D,0,0.95,-0.03849800183181268,nan,0.07098427131546985,nan,0.9434367657231633,0.9997374643571675,1.0,512,46.84722010294596,0,0,1,5,
+mmlu:5707,mmlu,knowledge,high_school_us_history,,Gemma-3-4B-IT,"This question refers to the following information.
+""Those whose condition is such that their function is the use of their bodies and nothing better can be expected of them, those, I say, are slaves of nature. It is better for them to be ruled thus.""
+Juan de Sepulveda, Politics, 1522
+""When Latin American nations gained independence in the 19th century, those two strains converged, and merged with an older, more universalist, natural law tradition. The result was a distinctively Latin American form of rights discourse. Paolo Carozza traces the roots of that discourse to a distinctive application, and extension, of Thomistic moral philosophy to the injustices of Spanish conquests in the New World. The key figure in that development seems to have been Bartolomé de Las Casas, a 16th-century Spanish bishop who condemned slavery and championed the cause of Indians on the basis of a natural right to liberty grounded in their membership in a single common humanity. 'All the peoples of the world are humans,' Las Casas wrote, and 'all the races of humankind are one.' According to Brian Tierney, Las Casas and other Spanish Dominican philosophers laid the groundwork for a doctrine of natural rights that was independent of religious revelation 'by drawing on a juridical tradition that derived natural rights and natural law from human rationality and free will, and by appealing to Aristotelian philosophy.'""
+Mary Ann Glendon, ""The Forgotten Crucible: The Latin American Influence on the Universal Human Rights Idea,” 2003
+Which one of the following statements about the Spanish conquest of the Americas is most accurate?
+
+Options:
+A. African slavery was a direct result of Spanish settlements in Florida.
+B. Early native civilizations in Mexico introduced Spanish explorers to cattle ranching and wheat cultivation.
+C. Christopher Columbus was not the first European to have explored North America.
+D. Due to racial prejudice, Spanish explorers shunned intermarriage with native people.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,C,0,0.9,-4.389453184973711,-25.792272403566948,0.45153408482912555,0.01936476718949141,0.7702976871078135,0.9797563599422574,1.0,512,46.84722010294596,0,1,1,5,
+mmlu:5732,mmlu,knowledge,high_school_us_history,,Gemma-3-4B-IT,"This question refers to the following information.
+""We found that not only was it a civil war, an effort by a people who had for years been seeking their liberation from any colonial influence whatsoever, but also we found that the Vietnamese whom we had enthusiastically molded after our own image were hard put to take up the fight against the threat we were supposedly saving them from.
+""We found most people didn't even know the difference between communism and democracy. They only wanted to work in rice paddies without helicopters strafing them and bombs with napalm burning their villages and tearing their country apart. They wanted everything to do with the war, particularly with this foreign presence of the United States of America, to leave them alone in peace, and they practiced the art of survival by siding with whichever military force was present at a particular time, be it Viet Cong, North Vietnamese or American.""
+John Kerry, 1971
+The two political issues that most concerned the Counterculture Movement of the 1960s were
+
+Options:
+A. U.S. involvement in Vietnam and flag burning
+B. the civil rights movement and censorship
+C. U.S. involvement in Vietnam and the civil rights movement
+D. censorship and the draft
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-5.032046206621201,-26.730205590242534,0.2067399521938091,0.004644302435764341,0.8918302073859825,0.9946867453937347,1.0,416,37.73945061365763,0,1,1,5,
+mmlu:5813,mmlu,knowledge,high_school_us_history,,Gemma-3-4B-IT,"This question refers to the following information.
+""The conscience of the people, in a time of grave national problems, has called into being a new party, born of the nation's sense of justice. We of the Progressive party here dedicate ourselves to the fulfillment of the duty laid upon us by our fathers to maintain the government of the people, by the people and for the people whose foundations they laid. We hold with Thomas Jefferson and Abraham Lincoln that the people are the masters of their Constitution, to fulfill its purposes and to safeguard it from those who, by perversion of its intent, would convert it into an instrument of injustice. In accordance with the needs of each generation the people must use their sovereign powers to establish and maintain equal opportunity and industrial justice, to secure which this Government was founded and without which no republic can endure.
+""This country belongs to the people who inhabit it. Its resources, its business, its institutions and its laws should be utilized, maintained or altered in whatever manner will best promote the general interest. It is time to set the public welfare in the first place.""
+Progressive Party Platform, 1912
+""Muckraking"" author Jacob A. Riis's How the Other Half Lives best exemplifies which of the following quotes from the excerpt above?
+
+Options:
+A. the duty laid upon us by our fathers
+B. masters of their Constitution
+C. an instrument of injustice
+D. without which no republic can endure
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,C,0,0.95,-0.25132487428548694,-0.04403289096808294,0.5231811156307711,0.1020184427479857,0.7229559800515954,0.9792048302120887,0.8,416,37.73945061365763,0,1,1,5,
+mmlu:5845,mmlu,knowledge,high_school_us_history,,Gemma-3-4B-IT,"This question refers to the following information.
+""If you analyze it I believe the very heart and soul of conservatism is libertarianism. I think conservatism is really a misnomer just as liberalism is a misnomer for the liberals—if we were back in the days of the Revolution, so-called conservatives today would be the Liberals and the liberals would be the Tories. The basis of conservatism is a desire for less government interference or less centralized authority or more individual freedom and this is a pretty general description also of what libertarianism is. Now, I can't say that I will agree with all the things that the present group who call themselves Libertarians in the sense of a party say, because I think that like in any political movement there are shades, and there are libertarians who are almost over at the point of wanting no government at all or anarchy. I believe there are legitimate government functions. There is a legitimate need in an orderly society for some government to maintain freedom or we will have tyranny by individuals. The strongest man on the block will run the neighborhood. We have government to ensure that we don't each one of us have to carry a club to defend ourselves. But again, I stand on my statement that I think that libertarianism and conservatism are traveling the same path.""
+Ronald Reagan, Interview published in Reason magazine, 1975
+All of the following are factors that contributed to the prominence of conservatism in the late 1970s and 1980s EXCEPT
+
+Options:
+A. the success of the Libertarian party in national elections
+B. the growth of religious fundamentalism
+C. perceived economic and foreign policy failures under President Carter
+D. social changes following the Civil Rights movement and Vietnam War
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-4.330556215989889,-25.648927759279854,0.3248400228460173,0.008818963477283165,0.8292188609305483,0.9897560136249433,1.0,416,37.73945061365763,0,1,1,5,
+mmlu:5869,mmlu,knowledge,high_school_world_history,,Gemma-3-4B-IT,"This question refers to the following information.
+This ruler of Syria made me spend many years as commander of his army,
+Every land to which I turned
+I overcame.
+I destroyed its green fields and its wells,
+I captured its cattle, I took captive its inhabitants, I deprived them of their provisions,
+and I slew [many] people…by my sword, my bow, my marchings, and my good devices.
+Thus my excellence was in his heart; he loved me and he knew my valor;
+…he set me at the head of his sons, when he saw the success of my handiwork.
+There came a champion of Syria
+to defy me in my tent;
+a bold man without equal, for he had vanquished all his rivals.
+He said, ""Let Sanehat fight with me.""
+He thought to overcome me; he designed to take my cattle, thus being counseled by his tribe.
+The Tale of Sanehat, Egyptian poem written during the Middle Kingdom, ca.1800 B.C.E.
+The text of this passage is best seen as evidence of which of the following in Egyptian society?
+
+Options:
+A. Meritocratic appointments by rulers to their bureaucracies
+B. Long-distance contact between Egypt and other lands
+C. The clan as the basic political unit
+D. A lack of emphasis on martial ability
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-5.290925373987897,-25.830272711099894,0.3911463579476608,0.009984097773015194,0.7933994097373799,0.9867016846990266,0.6,449,40.7753259340922,0,1,1,5,
+mmlu:5892,mmlu,knowledge,high_school_world_history,,Gemma-3-4B-IT,"This question refers to the following information.
+""Let a woman retire late to bed, but rise early to duties; let her nor dread tasks by day or by night. Let her not refuse to perform domestic duties whether easy or difficult. That which must be done, let her finish completely, tidily, and systematically, When a woman follows such rules as these, then she may be said to be industrious.
+Let a woman be correct in manner and upright in character in order to serve her husband. Let her live in purity and quietness of spirit, and attend to her own affairs. Let her love not gossip and silly laughter. Let her cleanse and purify and arrange in order the wine and the food for the offerings to the ancestors. When a woman observes such principles as these, then she may be said to continue ancestral worship.
+No woman who observes these three fundamentals of life has ever had a bad reputation or has fallen into disgrace. If a woman fail to observe them, how can her name be honored; how can she but bring disgrace upon herself?""
+© The East Asian Library and the Gest Collection, Princeton University.
+Ban Zhao, Lessons for a Woman, ca. 80 C.E.
+In what way were women's lives in the period 600 B.C.E. to 600 C.E. generally more restricted than women's lives had been globally before the advent of sedentary societies?
+
+Options:
+A. Women were increasingly thought of as primary earners for the family.
+B. Women were increasingly responsible for the care of their children.
+C. Women's power increasingly fell within the private sphere.
+D. Women's power increasingly fell within the public sphere.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-7.325885222571415,-25.038700089993633,0.4083692106061258,0.05420556584016545,0.7841274977427283,0.983265687867103,1.0,449,40.7753259340922,0,1,1,5,
+mmlu:5975,mmlu,knowledge,high_school_world_history,,Gemma-3-4B-IT,"This question refers to the following information.
+Seizing me, he led me down to the House of Darkness…
+To the house where those who enter do not come out,
+Along the road of no return,
+To the house where those who dwell, do without light,
+Where dirt is their drink, their food is of clay…
+Where light cannot be seen. They dwell in the dark,
+And upon the door and bolt, there lies dust.
+from Tablet VII, The Epic of Gilgamesh, Sumeria, ca. 2100 B.C.E.
+Truth is good and its worth is lasting.
+It has not been disturbed since the day of its creator,
+Whereas he who transgresses its ordinances is punished.
+It lies as a path in front of even him who knows nothing.
+Wrongdoing has never yet brought its venture to port…
+Those whom the gods guide cannot lose themselves.
+Those to whom they forbid passage will not be able to cross the river of life.
+from The Maxims of Ptahhotep, Egypt, ca. 2400 B.C.E.
+The above texts are best understood in the context of which of the following?
+
+Options:
+A. The use of religion to justify gender relations
+B. The use of religion to enforce legal norms
+C. The use of religion to ponder conceptions of the afterlife
+D. The use of religion to explain social hierarchy
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,C,0,0.95,-0.2549660042250335,-0.11388177656528715,0.5955114781214434,0.19879249110398214,0.7299302507249974,0.9676648248941171,1.0,449,40.7753259340922,0,1,1,5,
+mmlu:6005,mmlu,knowledge,high_school_world_history,,Gemma-3-4B-IT,"This question refers to the following information.
+Oh, shame on you, poor Winter King!
+What's this that you have done?
+Is 't not a very naughty thing
+To snatch the kaiser's crown?
+Now you will have to stay away
+Alike from Rhine and Prague,
+And more than that-shame and dismay
+Your days and nights will plague.
+Right well you knew, and all the world,
+Right well they know this thing,
+That Ferdinand alone can be
+Bohemia's lawful king.
+So come, dear Fritz, rouse up and go
+To Ferdinand, your king,
+And beg him graciously to show
+Full pardon for your sin.
+""Poor Winter King,"" seventeenth-century song
+The narrator of the song would most likely identify as which of the following?
+
+Options:
+A. Roman Catholic
+B. Eastern Orthodox
+C. Protestant
+D. Muslim
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,A,0,0.95,-0.19398962800947628,-0.02847488652961753,0.46002020624872064,0.12023787922498978,0.7744564179550198,0.9797950741122751,0.6,340,29.664517402648926,0,1,1,4,
+mmlu:6236,mmlu,knowledge,human_aging,,Gemma-3-4B-IT,"Which of the following appears to remain relatively stable over the adult years?
+
+Options:
+A. Sensory memories
+B. Personal concerns
+C. Marital strain
+D. Job satisfaction
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-9.305169716712818,-26.824282224920225,0.5782543469825361,0.6499176953455943,0.7786510947434341,0.9682879076284521,1.0,340,29.664517402648926,0,1,1,5,
+mmlu:6376,mmlu,knowledge,human_sexuality,,Gemma-3-4B-IT,"At about _________ months after conception, the gender of the fetus is clear from the appearance of external genitals.
+
+Options:
+A. 2
+B. 4
+C. 6
+D. 8
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,B,0,0.95,-12.670328042894184,-25.73880378560705,0.4296530286083139,0.4185495600092186,0.8471739465261207,0.9752949823351468,0.4,340,29.664517402648926,0,1,1,5,
+mmlu:6416,mmlu,knowledge,human_sexuality,,Gemma-3-4B-IT,"How do girls most frequently learn about masturbation?
+
+Options:
+A. through reading about it
+B. being told by peers
+C. self-discovery
+D. observing others doing it.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,C,0,0.85,-10.716733805779809,-29.31562477402844,0.33111223809721513,0.10403949219889659,0.83074438658135,0.9895219036041869,0.4,363,30.803584496180218,0,1,1,5,
+mmlu:6437,mmlu,knowledge,human_sexuality,,Gemma-3-4B-IT,"The zona pellucida is...
+
+Options:
+A. ...a protective layer surrounding the egg
+B. ...the fertilized egg
+C. ...an enzyme secreted by sperm to break down the protective coating on the egg.
+D. ...the area where sperm collect before attempting to fertilize the egg.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.99,-11.205892623350126,-23.436440480190004,0.5145086996592703,0.926632875902685,0.8791435910978922,0.9590254760149753,1.0,363,30.803584496180218,0,1,1,5,
+mmlu:6454,mmlu,knowledge,international_law,,Gemma-3-4B-IT,"What is the principal source of immunity in respect of international organisations (IOs)?
+
+Options:
+A. The principal source of immunity for IOs is the UN Charter
+B. The principal sources of immunity for IOs are headquarters agreements and multilateral treaties providing specific immunities
+C. The principal source of immunity for IOs is customary law
+D. The principal source of immunity for IOs is the Vienna Convention on Diplomatic Immunities
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-0.20391501779722712,-0.05371589513376218,0.44350942689836825,0.1420687049602245,0.7702670846719387,0.9838121218129623,1.0,363,30.803584496180218,0,1,1,5,
+mmlu:6509,mmlu,knowledge,international_law,,Gemma-3-4B-IT,"Which philosopher called the idea of natural rights 'nonsense on stilts'?
+
+Options:
+A. Alan Gerwith
+B. Emmanuel Kant
+C. John Locke
+D. Jeremy Bentham
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-7.532575388637498,-24.889349588774195,0.4085738613275232,0.12997301633804612,0.7977146753006511,0.9839544702900781,1.0,450,38.62527847290039,0,1,1,5,
+mmlu:6518,mmlu,knowledge,international_law,,Gemma-3-4B-IT,"What is an 'internationally wrongful conduct'?
+
+Options:
+A. An international wrongful conduct is an action or omission which is in breach of a rule of international criminal law
+B. An international wrongful conduct is every breach of an international obligation of the State, whether attributable to it or not
+C. An internationally wrongful conduct consists of an action or omission attributable to the State, which constitutes a breach of an international obligation of the State
+D. An internationally wrongful conduct is the conduct that cannot be excused on grounds of necessity, force majeure etc.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-0.13606572134893932,-0.2824169347683565,0.28405014245025173,0.4505295372033397,0.8248465522461468,0.9959900540775722,1.0,450,38.62527847290039,0,1,1,5,
+mmlu:6521,mmlu,knowledge,international_law,,Gemma-3-4B-IT,"What is the fundamental prerequisite for the incorporation of custom under English law?
+
+Options:
+A. Custom is incorporated if it is not in conflict with existing legislation
+B. Custom is superior to English law and is always incorporated
+C. Custom must first be recognised by Parliament before the courts can bring it into the domestic sphere
+D. Custom is incorporated with the passing of implementing legislation
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-5.996261535248896,-24.98260494073,0.3596595665851474,0.058449498672787384,0.8011960273649957,0.9903117224905226,0.8,450,38.62527847290039,0,1,1,5,
+mmlu:6598,mmlu,knowledge,jurisprudence,,Gemma-3-4B-IT,"Donny threw a knife at Sally, intending to injure her severely. However, Donny missed Sally. Sally saw the knife just as it whizzed by her head, missing it by about one inch. As a result, Sally was very scared. Sally sued Donny for assault and battery. Which of the following is most correct?
+
+Options:
+A. Donny will be liable for battery, but not assault.
+B. Donny will be liable for assault, but not battery.
+C. Donny will be liable for assault and for battery.
+D. Donny will not be liable for either assault or battery because this is only a criminal matter.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,B,0,0.95,-3.6340461592083404,-28.652187913133425,0.2798640268072233,0.046783759189892415,0.8467128680052365,0.9913721322216807,1.0,449,38.81168301900228,0,1,1,5,
+mmlu:6799,mmlu,knowledge,logical_fallacies,,Gemma-3-4B-IT,"We must assume that he is a Communist, because he says that he is not, and we know that Communists are taught always to deny party membership.
+
+Options:
+A. Argument from Ignorance
+B. Affirming the Consequent
+C. Denying the Antecedent
+D. Begging the Question
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,B,0,0.95,-0.11610872085083787,-0.14921479299659643,0.23798540792081901,0.20095657879097453,0.8500900106599973,0.9958583897099994,1.0,449,38.81168301900228,0,1,1,5,
+mmlu:6961,mmlu,knowledge,management,,Gemma-3-4B-IT,"What is not an assumption underpinning the rational decision making model?
+
+Options:
+A. Incomplete information
+B. An agreed goal
+C. A structured problem
+D. High level of certainty regarding the environment
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-7.934012741844748,-27.65145107500746,0.3283531204779553,0.3232838036938739,0.8448723326281609,0.9876352600371652,0.6,449,38.81168301900228,0,1,1,5,
+mmlu:7001,mmlu,knowledge,management,,Gemma-3-4B-IT,"As what are key factors that reflect the situation of an organisation referred to?
+
+Options:
+A. Administrations
+B. Processes
+C. Activities
+D. Contingencies
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-0.2576502562874786,-0.04213850398033969,0.5562665072084814,0.09392389746588238,0.7160931601674257,0.97618655922884,0.6,334,27.88173500696818,0,1,1,5,
+mmlu:7005,mmlu,knowledge,management,,Gemma-3-4B-IT,"Which writer was concerned with the reaction of workers to key characteristics of bureaucracies?
+
+Options:
+A. Merton
+B. Weber
+C. Gouldner
+D. Mayo
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,C,0,0.95,-3.272216267415288,-29.33827480375489,0.43116428476116125,0.02606809678992538,0.7609685770051922,0.986461930646154,0.8,334,27.88173500696818,0,1,1,5,
+mmlu:7049,mmlu,knowledge,management,,Gemma-3-4B-IT,"What is not one of the layers of cultural influence?
+
+Options:
+A. Social
+B. Business
+C. Organisational
+D. Company
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-10.833991368378843,-26.531506003522054,0.6004076266376105,0.8951396873561555,0.7787930033208724,0.9627162343013786,1.0,334,27.88173500696818,0,1,1,5,
+mmlu:7255,mmlu,knowledge,marketing,,Gemma-3-4B-IT,"The importance and significance of customer experience to both individuals and society is referred to as:
+
+Options:
+A. Knowledge economy.
+B. Service economy.
+C. Experience economy.
+D. Customer economy.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-5.447573494517928,-28.77375444426157,0.4152134147306622,0.05367603808338789,0.7780150471390157,0.9842734972635905,1.0,345,28.86811908086141,0,1,1,5,
+mmlu:7297,mmlu,knowledge,medical_genetics,,Gemma-3-4B-IT,"The mutation in sickle-cell disease consists of:
+
+Options:
+A. a deletion.
+B. a duplication.
+C. an insertion.
+D. a point mutation.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.99,-14.416840396242664,-22.681180052581905,0.7992081669601202,1.0058783615350015,0.8044701586167018,0.9433484054130057,1.0,345,28.86811908086141,0,1,1,5,
+mmlu:7352,mmlu,knowledge,medical_genetics,,Gemma-3-4B-IT,"The most common chromosome abnormality in first trimester spontaneous miscarriages is:
+
+Options:
+A. trisomy.
+B. monosomy.
+C. triploidy.
+D. tetrasomy.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,A,0,0.95,-0.16632793960318848,-0.08041234005181745,0.35800590305818797,0.1766780170024731,0.797849470636119,0.99162096199782,1.0,345,28.86811908086141,0,1,1,5,
+mmlu:7363,mmlu,knowledge,medical_genetics,,Gemma-3-4B-IT,"Which of the following is not a recognized complication of cystic fibrosis?
+
+Options:
+A. Cancer of the oesophagus
+B. Congenital absence of the vas deferens
+C. Diabetes mellitus
+D. Liver cirrhosis
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,A,0,0.95,-0.15081977861977264,-0.009215680537327131,0.34089964189896493,0.046206029774992885,0.8218498581222126,0.988979898127062,0.6,224,18.584260940551758,0,1,1,5,
+mmlu:7488,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"In what sport do you find 'steel cage' matches?
+
+Options:
+A. boxing
+B. fencing
+C. pro wrestling
+D. college basketball
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.99,-11.901926733629477,-28.468982217130215,0.19237068999102264,0.026873905354127217,0.8926649907204721,0.9962119651692254,1.0,224,18.584260940551758,0,1,1,5,
+mmlu:7606,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"What organelle is primarily responsible for photosynthesis?
+
+Options:
+A. Nucleus
+B. Chloroplast
+C. Mitochondria
+D. Golgi Apparatus
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.99,-9.210816975517597,-28.904170069069814,0.10464272775387648,0.014995821018829427,0.9274550306477717,0.9994185636086124,1.0,224,18.584260940551758,0,1,1,5,
+mmlu:7621,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"Who originally proposed the idea of daylight-saving time?
+
+Options:
+A. Benjamin Franklin
+B. Henry David Thoreau
+C. Galileo
+D. Albert Einstein
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-5.889993546617413,-32.429980384558434,0.29871749998914165,0.015677332014317542,0.8258491296928825,0.9933710692199409,1.0,282,23.776853958765667,0,1,1,5,
+mmlu:7688,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"How many spikes are on the Statue of Liberty's crown?
+
+Options:
+A. five
+B. seven
+C. nine
+D. thirteen
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.99,-21.401815294360315,-23.936184591003872,4.2031118581118845,4.676889958089129,0.44575992391068253,0.536926048972928,1.0,282,23.776853958765667,0,1,1,5,
+mmlu:7701,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"The principles of xeriscaping are best exemplified by a homeowner who
+
+Options:
+A. installs an in-ground sprinkler system that operates on a timer
+B. lowers the cutting height on the lawn mower to reduce the surface area in contact with the cutting blade
+C. increases the use of fertilizer on the turfgrass to promote growth
+D. replaces nonnative ornamentals with native shrubs that do not require irrigation
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-0.09961332859789444,-0.11554672174192622,0.20546867009913933,0.11575891874218769,0.8722805366554158,0.9964538155295325,1.0,282,23.776853958765667,0,1,1,5,
+mmlu:7706,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"Which one of these world leaders was assassinated?
+
+Options:
+A. Indira Gandhi
+B. Ferdinand Marcos
+C. Golda Meir
+D. Neville Chamberlain
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.99,-0.04623239322456457,-1.1642382142203663e-05,0.11799667331343633,0.00013340718208117627,0.9269522244383575,0.9995459948375727,1.0,157,13.090100844701132,0,1,1,5,
+mmlu:7753,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"In the movie 'Star Wars' what kind of creature is Chewbacca?
+
+Options:
+A. Woolie
+B. Woobie
+C. Wookiee
+D. Klingon
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-3.7337339740066784,-35.82747301427253,0.20001352780943984,0.01315450745717897,0.8815642367502686,0.9980007725156796,1.0,157,13.090100844701132,0,1,1,5,
+mmlu:7782,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"What is the more common name for the disease 'pertussis'?
+
+Options:
+A. whooping cough
+B. tennis elbow
+C. black lung
+D. German measles
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.99,-4.058544976386463,-34.80949240260038,0.15164511884161347,0.0002952690031842201,0.9049875648917666,0.9990413014296513,1.0,157,13.090100844701132,0,1,1,5,
+mmlu:7846,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"In the movie Austin Powers: The Spy Who Shagged Me what is the name of Dr Evil's diminutive clone?
+
+Options:
+A. Little Buddy
+B. Mini-Me
+C. Small Fry
+D. Dr Evil Jr
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,1.0,-0.107242770688333,-0.001751132557690956,0.25247326121420444,0.01241593155258395,0.8589953696299456,0.9932556384337876,1.0,167,13.827839295069376,0,1,1,5,
+mmlu:7877,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"Which one of the following instruments is used to measure humidity?
+
+Options:
+A. anemometer
+B. ammeter
+C. hygrometer
+D. barometer
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.99,-11.865881552241708,-27.446701885636596,0.1231978258399265,0.15228535878788071,0.9428492513245451,0.9951514451803561,1.0,167,13.827839295069376,0,1,1,5,
+mmlu:7881,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"In the card game blackjack how much are a queen and a king worth-together?
+
+Options:
+A. 11
+B. 15
+C. 20
+D. 21
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,1.0,-15.369749341407267,-24.655424661287043,1.209334975316849,1.8805994396376382,0.8147604292158238,0.879392001532509,1.0,167,13.827839295069376,0,1,1,5,
+mmlu:7976,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"Which of the following concepts in Robert's Rules of Order requires that motions be dealt with in order of importance?
+
+Options:
+A. Order of business
+B. Orders of the day
+C. Order of precedence
+D. Point of order
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-0.17370118543919524,-0.0009419758568978883,0.3971344730384158,0.00773143464167229,0.7945575533059677,0.986474991455013,1.0,293,24.483450015385944,0,1,1,5,
+mmlu:8059,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"If you are watching a Shavian play who is the author?
+
+Options:
+A. Shakespeare
+B. Aeschylus
+C. George Bernard Shaw
+D. Anton Chekhov
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.99,-9.537693235439376,-28.202288998540375,0.2776513496408384,0.10252642171912818,0.8679796070775888,0.989754005300307,1.0,293,24.483450015385944,0,1,1,5,
+mmlu:8077,mmlu,knowledge,miscellaneous,,Gemma-3-4B-IT,"Which of the following must be obtained by foreigners wishing to permanently reside in the US?
+
+Options:
+A. visa
+B. bill of landing
+C. driver's license
+D. carte blanche
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-4.244116220945403,-26.149798135933136,0.3153452635974363,0.15215580245091248,0.8102396244990541,0.9944629500343531,1.0,293,24.483450015385944,0,1,1,5,
+mmlu:8325,mmlu,knowledge,moral_disputes,,Gemma-3-4B-IT,"What is wrong with a conservation system based wholly on economic motives according to Leopold?
+
+Options:
+A. It assumes that the economic parts of the biotic system will function without the uneconomic parts.
+B. It assumes that economic motives are morally relevant.
+C. It implies that nonhuman creatures are necessarily without any moral standing.
+D. none of the above
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-0.21616358626824436,-0.0024041713548825783,0.47539403113229683,0.01662467923867439,0.740876212086476,0.984642543927045,1.0,355,30.131956656773884,0,1,1,5,
+mmlu:8372,mmlu,knowledge,moral_disputes,,Gemma-3-4B-IT,"The second premise in Singer's main argument is: ""If it is in your power to prevent something bad from happening, without sacrificing anything nearly as important, it is wrong not to do so."" Which phrase in this premise is deliberately left vague?
+
+Options:
+A. ""something bad""
+B. ""it is wrong""
+C. ""nearly as important""
+D. ""in your power""
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-3.9831988233915223,-30.37896015580786,0.4735224852367974,0.009138074478749252,0.7477636376107243,0.9840156916161658,1.0,355,30.131956656773884,0,1,1,5,
+mmlu:8391,mmlu,knowledge,moral_disputes,,Gemma-3-4B-IT,"One kind of externality imposed on the world's poor by the economic activity of wealthy nation is
+
+Options:
+A. unequal social order.
+B. authoritarian regimes.
+C. crime.
+D. pollution.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-6.621079605116468,-24.44013207331002,0.44880430107816427,0.47032863238837497,0.7693666200402757,0.9842880292677544,1.0,355,30.131956656773884,0,1,1,5,
+mmlu:8719,mmlu,knowledge,moral_scenarios,,Gemma-3-4B-IT,"For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I tore out the page of the library book that I needed for my report and returned the book to the shelf. Scenario 2 | The party next door was so loud, I had to drown the partygoers.
+
+Options:
+A. Wrong, Wrong
+B. Wrong, Not wrong
+C. Not wrong, Wrong
+D. Not wrong, Not wrong
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,A,0,0.98,-3.2248103919665656,-26.94852271336111,0.3835239041928381,0.027652033400466555,0.8026239391167959,0.9854542456070582,0.6,300,14.156768480936686,0,1,1,5,
+mmlu:8749,mmlu,knowledge,moral_scenarios,,Gemma-3-4B-IT,"For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | The city bomb shelter only had room for two, so I insisted on spots for my son and daughter. Scenario 2 | I called the cops on my ex lover because he is gay
+
+Options:
+A. Wrong, Wrong
+B. Wrong, Not wrong
+C. Not wrong, Wrong
+D. Not wrong, Not wrong
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,C,0,0.95,-0.20402327754572264,-0.00827146270118225,0.44276786770711124,0.046711329788384624,0.7678043412168821,0.9816777241230011,0.8,300,14.156768480936686,0,1,1,5,
+mmlu:8769,mmlu,knowledge,moral_scenarios,,Gemma-3-4B-IT,"For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I put on my roller skates in the skating rink. Scenario 2 | I attacked the home invader.
+
+Options:
+A. Wrong, Wrong
+B. Wrong, Not wrong
+C. Not wrong, Wrong
+D. Not wrong, Not wrong
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,D,0,0.95,-11.89813354982379,-25.47058245811053,0.33827446355709767,0.3204887693584746,0.8655394334594408,0.9844500176111857,0.6,300,14.156768480936686,0,1,1,5,
+mmlu:8939,mmlu,knowledge,moral_scenarios,,Gemma-3-4B-IT,"For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | When I went to the bank, I covered my face with a mask to prevent catching a virus. Scenario 2 | When I went through the road block I gave the policeman my ID.
+
+Options:
+A. Wrong, Wrong
+B. Wrong, Not wrong
+C. Not wrong, Wrong
+D. Not wrong, Not wrong
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,D,0,0.95,-2.598122464649589,-27.62345840741098,0.4365953848117148,0.0053717556800122294,0.7690642484029134,0.9841780078411102,0.4,300,14.156768480936686,0,1,1,5,
+mmlu:8995,mmlu,knowledge,moral_scenarios,,Gemma-3-4B-IT,"For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I feel so nervous when I pass by a car accident. Scenario 2 | I set the baby down after I was done feeding it.
+
+Options:
+A. Wrong, Wrong
+B. Wrong, Not wrong
+C. Not wrong, Wrong
+D. Not wrong, Not wrong
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,D,0,0.95,-10.235126053643514,-23.22419783328702,0.4458543102958592,0.5705650865987649,0.8503135377665361,0.9732489738861719,1.0,300,14.156768480936686,0,1,1,5,
+mmlu:9042,mmlu,knowledge,moral_scenarios,,Gemma-3-4B-IT,"For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I gave the animal two pain pills when I saw he was hurting. Scenario 2 | I gave my teething infant a biscuit to chew on.
+
+Options:
+A. Wrong, Wrong
+B. Wrong, Not wrong
+C. Not wrong, Wrong
+D. Not wrong, Not wrong
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,D,0,0.95,-5.036045650907094,-25.66957293876964,0.35094286548553566,0.00832418798355333,0.8103208920856317,0.9905688502391179,1.0,300,14.156768480936686,0,1,1,5,
+mmlu:9088,mmlu,knowledge,moral_scenarios,,Gemma-3-4B-IT,"For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I dropped the baby after I was done feeding it. Scenario 2 | I drove through the red light
+
+Options:
+A. Wrong, Wrong
+B. Wrong, Not wrong
+C. Not wrong, Wrong
+D. Not wrong, Not wrong
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.98,-6.543864549157231,-24.56324083340647,0.3209927197297355,0.05434238176406353,0.83220857665217,0.990356310562122,1.0,326,15.487343390782675,0,1,1,5,
+mmlu:9125,mmlu,knowledge,moral_scenarios,,Gemma-3-4B-IT,"For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I hid the love note in the teenager's locker. Scenario 2 | I gripped the woman's hand because she was falling.
+
+Options:
+A. Wrong, Wrong
+B. Wrong, Not wrong
+C. Not wrong, Wrong
+D. Not wrong, Not wrong
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,D,0,0.95,-10.883757726199033,-25.132269637093895,0.24500160192062306,0.10473025181725205,0.8812924553097391,0.9916716947511661,0.6,326,15.487343390782675,0,1,1,5,
+mmlu:9277,mmlu,knowledge,moral_scenarios,,Gemma-3-4B-IT,"For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I was careful to overfeed the baby and so he got sick. Scenario 2 | I helped an old lady across the road.
+
+Options:
+A. Wrong, Wrong
+B. Wrong, Not wrong
+C. Not wrong, Wrong
+D. Not wrong, Not wrong
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,B,0,0.95,-8.348873867751857,-22.4116361132405,0.29901871388950524,0.24949382056419897,0.8668353772419362,0.9880740311613844,1.0,326,15.487343390782675,0,1,1,5,
+mmlu:9311,mmlu,knowledge,moral_scenarios,,Gemma-3-4B-IT,"For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | My neighbor finds a letter containing my paycheck in their mailbox and tries to cash it at the local bank. Scenario 2 | When I lost my stepmom's pearl necklace, I replaced it with another strung with clay pearls.
+
+Options:
+A. Wrong, Wrong
+B. Wrong, Not wrong
+C. Not wrong, Wrong
+D. Not wrong, Not wrong
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,C,0,0.95,-9.42620292793849,-27.617794304203066,0.2536959134754341,0.02549792991630966,0.8680579954861132,0.9920563571657871,1.0,326,15.487343390782675,0,1,1,5,
+mmlu:9323,mmlu,knowledge,moral_scenarios,,Gemma-3-4B-IT,"For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I play video games instead of reading Twitter. Scenario 2 | I moaned when making love to a corpse.
+
+Options:
+A. Wrong, Wrong
+B. Wrong, Not wrong
+C. Not wrong, Wrong
+D. Not wrong, Not wrong
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,C,0,0.99,-9.539917407615146,-25.430582542606125,0.2339812665741299,0.06504748910192949,0.8693122611455391,0.9938237763986997,0.6,326,15.487343390782675,0,1,1,5,
+mmlu:9344,mmlu,knowledge,moral_scenarios,,Gemma-3-4B-IT,"For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | My friends insisted that I was too drunk to drive home so I didn't. Scenario 2 | I couldn't help but laugh hysterically while watching a funeral session.
+
+Options:
+A. Wrong, Wrong
+B. Wrong, Not wrong
+C. Not wrong, Wrong
+D. Not wrong, Not wrong
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,C,0,0.95,-0.2320369609624228,-0.04289459696640089,0.4949410180327817,0.18637636142597577,0.729093580021083,0.9836121843270729,0.8,326,15.487343390782675,0,1,1,5,
+mmlu:9384,mmlu,knowledge,moral_scenarios,,Gemma-3-4B-IT,"For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I charged the father for surgery that I did perform. Scenario 2 | I proposed that my school celebrate the KKK's founding date.
+
+Options:
+A. Wrong, Wrong
+B. Wrong, Not wrong
+C. Not wrong, Wrong
+D. Not wrong, Not wrong
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,C,0,0.98,-10.640012845038106,-23.85003678751389,0.34206013427387516,0.31361653811843015,0.8653141654406985,0.9829847605692016,1.0,432,20.47020709514618,0,1,1,5,
+mmlu:9421,mmlu,knowledge,nutrition,,Gemma-3-4B-IT,"The following amino acids are all essential components of the diet:
+
+Options:
+A. leucine, methionine and threonine
+B. proline, tyrosine and serine
+C. valine, glycine and arginine
+D. leucine, cysteine and glycine
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-14.008771544921533,-27.140490419577365,0.25348338926766206,0.2486136430923785,0.9031166702991834,0.9874244183991794,0.6,432,20.47020709514618,0,1,1,5,
+mmlu:9424,mmlu,knowledge,nutrition,,Gemma-3-4B-IT,"Crohn's disease:
+
+Options:
+A. Always affects the colon
+B. May lead to intestinal obstruction
+C. Is best treated surgically
+D. Requires a gluten free diet
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-14.09724097871963,-28.765859711376347,0.20599884987478778,0.23642549944978553,0.9128782137176367,0.989240334196775,1.0,432,20.47020709514618,0,1,1,5,
+mmlu:9633,mmlu,knowledge,nutrition,,Gemma-3-4B-IT,"What caused the food-price spike of 2007-2008?
+
+Options:
+A. Long-term neglect of agricultural and rural development caused the spike.
+B. The use of food crops to produce biofuel caused food prices to rise.
+C. It was caused by commodity price speculation.
+D. All of the above were among the causes.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-6.877545344123522,-21.920749562351325,0.6764318594785012,1.275314608092113,0.8041879628888435,0.9522421703570418,1.0,432,20.47020709514618,0,1,1,5,
+mmlu:9679,mmlu,knowledge,nutrition,,Gemma-3-4B-IT,"The thermic effect of food
+
+Options:
+A. is substantially higher for carbohydrate than for protein
+B. is accompanied by a slight decrease in body core temperature.
+C. is partly related to sympathetic activity stimulation in the postprandial phase
+D. is not attenuated by food malabsorption.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-0.14023361239191431,-0.038891732043471926,0.3002264529509895,0.10971732775169585,0.8194385778365864,0.9937458217695907,0.6,432,20.47020709514618,0,1,1,5,
+mmlu:9722,mmlu,knowledge,philosophy,,Gemma-3-4B-IT,"For Socrates, the soul is harmed by lack of _____.
+
+Options:
+A. knowledge
+B. wealth
+C. community
+D. courage
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-11.253454943098506,-24.978835259635698,0.6267618333773615,0.9606697339528433,0.7889754425872255,0.9646198110034069,1.0,432,20.47020709514618,0,1,1,5,
+mmlu:9764,mmlu,knowledge,philosophy,,Gemma-3-4B-IT,"In Aquinas’s view, man’s ultimate happiness consists in:
+
+Options:
+A. pleasure
+B. acts of the moral virtues.
+C. loving God.
+D. contemplating God.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,0.95,-0.2269299621870922,-0.024133209347684925,0.4856657750706317,0.07766590973836666,0.7203146094741585,0.986450722894153,0.6,444,21.671570618947346,0,1,1,5,
+mmlu:9927,mmlu,knowledge,philosophy,,Gemma-3-4B-IT,"Wolf claims that morality:
+
+Options:
+A. is merely a cultural artifact.
+B. is not really relevant to our lives.
+C. provides a comprehensive guide to conduct.
+D. none of the above.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,D,0,0.95,-11.07599308882756,-24.965126629304276,0.5005879416638719,0.5859736282171505,0.8219355171932293,0.973271360671198,1.0,444,21.671570618947346,0,1,1,5,
+mmlu:10410,mmlu,knowledge,professional_accounting,,Gemma-3-4B-IT,"Which of the following procedures does a CPA usually perform when reviewing the financial statements of a nonissuer?
+
+Options:
+A. Make inquiries of management concerning restrictions on the availability of cash balances.
+B. Communicate deficiencies in the design of internal control to the entity's audit committee.
+C. Examine trend analysis to determine the appropriateness of the CPA's assessment of detection risk.
+D. Evaluate management's plans for dealing with negative trends and financial difficulties.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-8.772620172161853,-26.112730035158407,0.2817016853127269,0.05067128000311626,0.8368821993872926,0.9925751823025781,1.0,444,21.671570618947346,0,1,1,5,
+mmlu:10482,mmlu,knowledge,professional_accounting,,Gemma-3-4B-IT,"Large City does not use the modified approach to account for roads. At the beginning of the current year the city spent $800000 on new roads. The roads have a 20-year useful life. What amount should Large City report as an expense related to the new roads in the statement of activities for the current year?
+
+Options:
+A. $0
+B. $20,000
+C. $40,000
+D. 800000
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-10.57134047499639,-22.357476708223132,0.6049364802374491,1.070489022960052,0.8712169695645571,0.9494281418890029,0.6,444,21.671570618947346,0,1,1,5,
+mmlu:10592,mmlu,knowledge,professional_accounting,,Gemma-3-4B-IT,"The following information pertains to Baxter Co: Inventory at beginning of year $200000 Inventory at year end $300000 Cost of goods sold during the year $500000 What was Baxter's inventory turnover for the year?
+
+Options:
+A. 1
+B. 1.5
+C. 2
+D. 2.5
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-15.568420424423431,-22.282120497379285,1.3165903985362235,1.8518289321099293,0.821685463055834,0.8755472427955618,1.0,444,21.671570618947346,0,1,1,5,
+mmlu:10594,mmlu,knowledge,professional_accounting,,Gemma-3-4B-IT,"Prime Corp. is an accrual-basis calendar-year C corporation. Its current-year reported book income before federal income taxes was $300000 which included $17000 corporate bond interest income. A $20000 expense for term life insurance premiums on corporate officers was incurred. Prime was the policy owner and beneficiary. What was Prime's current-year taxable income as reconciled on Prime's Schedule M-1 Reconciliation of Income (Loss) per Books With Income per Return of Form 1120 U.S. Corporation Income Tax Return?
+
+Options:
+A. $320,000
+B. $300,000
+C. $283,000
+D. 280000
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,A,0,0.95,-3.3073024855514546,-27.097356821286805,0.4393278641663839,0.03261843915890293,0.7906957943462305,0.9758331154112343,0.4,444,21.671570618947346,0,1,1,4,
+mmlu:10670,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"A landlord leased an apartment to a tenant on a month-to-month basis beginning on the first of the month, with rent payable monthly. Five months into the lease, the tenant failed to pay rent. The landlord then sued the tenant for possession for nonpayment of rent. The tenant successfully defended this suit on the ground that the apartment was uninhabitable and that, accordingly, no rent was properly payable. On May 7, immediately following the court order in the tenant's favor, the landlord served the tenant with a written but not notarized notice to terminate the tenancy and to vacate the apartment on or before June 30. On July 1, the tenant was still in possession, nothing had changed, and the landlord brought an appropriate action for possession. The tenant prevailed. What is the most likely reason for the court's decision?
+
+Options:
+A. A six-month notice was required to terminate this periodic tenancy.
+B. The landlord did not give the tenant a notarized notice of termination.
+C. The landlord was attempting to terminate the tenancy as a reaction to the tenant's defense in the previous lawsuit.
+D. The landlord's notice to terminate was improper, because it was given to the tenant more than one month before the required termination date.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,C,0,0.95,-1.079869874458885,-27.305319372276884,0.38153492521694354,0.07642354303862288,0.7867126473574899,0.9880234316224232,0.4,512,26.713767886161804,0,1,1,3,
+mmlu:10691,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"An employee had been employed by a hotel as a window cleaner for eight years when the hotel issued to him and other employees the following certificate:""In appreciation of the faithful service hitherto rendered by you as an employee of this hotel, there will be paid in the event of your death, if still an employee of this hotel, to the party designated by you below as your beneficiary, the sum of $5,000. The issuance of this certificate is understood to be purely gratuitous. ""Upon receipt of the certificate, the employee designated his wife as beneficiary, signed it, and returned the form to the hotel. One year later, while still employed by the hotel, the employee died. In an action by the employee's widow against the hotel to recover the sum of $5,000, which of the following, if established, is the strongest argument against enforcement of the certificate agreement?
+
+Options:
+A. The widow was unaware of the certificate agreement until after the employee died.
+B. There was no privity of contract between the widow and the hotel.
+C. The widowin no way relied on the hotel's promise to pay the $5,000.
+D. There was insufficient consideration to support the certificate agreement.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,0.95,-4.818187998222739,-25.32565447924896,0.3872279949028119,0.0355426364157688,0.8002873562509194,0.9852126281475648,0.8,512,26.713767886161804,0,1,1,5,
+mmlu:10700,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"A man and a woman who were friends decided to buy a car together. The man put $5,000 down and the woman's father co-signed on the loan of $10,000. The title was put in the woman's name and the man made the loan payments. They orally agreed that it was a shared ownership, with equal rights. After several months, their relationship deteriorated. They argued over ownership and use of the car. One day, the man attempted to leave with the car, but the woman climbed in and kept arguing as he was driving away. He then crashed into a pole and destroyed the car just to spite her, saying that if he couldn't have it no one would have it. The authorities arrested the man for auto larceny (stealing a car from the owner) and criminal mischief (damaging property of another or property shared with another). Assuming the accuracy of the foregoing facts beyond a reasonable doubt, which crime or crimes alleged can likely result in a sustainable conviction?
+
+Options:
+A. He can be convicted of larceny but he cannot be convicted of criminal mischief.
+B. He cannot be convicted of any crime.
+C. He can be convicted of criminal mischief only.
+D. He can be convicted of both larceny and criminal mischief.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,C,0,0.95,-7.27415995165942,-24.282443613609022,0.3892049844257179,0.12840655898365455,0.8068461409129668,0.9857511692680418,1.0,512,26.713767886161804,0,1,1,5,
+mmlu:10752,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"On December 30, a restaurant entered into a written contract with a bakery to supply the restaurant with all of its bread needs for the next calendar year. The contract contained a provision wherein the restaurant promised to purchase ""a minimum of 100 loaves per month at $1 per loaf. "" On a separate sheet, there was a note stating that any modifications must be in writing. The parties signed each sheet. Both sides performed fully under the contract for the first four months. On May 1, the president of the bakery telephoned the manager of the restaurant and told him that, because of an increase in the cost of wheat, the bakery would be forced to raise its prices to $1. 20 per loaf. The manager said he understood and agreed to the price increase. The bakery then shipped 100 loaves (the amount ordered by the restaurant) to the restaurant, along with a bill for $120. The restaurant sent the bakery a check for$100 and refused to pay any more. Is the restaurant obligated to pay the additional $20?
+
+Options:
+A. Yes, because the May 1 modification was enforceable even though it was not supported by new consideration.
+B. Yes, because the bakery detrimentally relied on the modification by making the May shipment to the restaurant.
+C. No, because there was no consideration to support the modification.
+D. No, because the modifying contract was not in writing; it was, therefore, unenforceable under the UCC.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",None,D,0,0.95,-0.2256024330500609,nan,0.486250724595193,nan,0.7399762834829744,0.9816210783319548,0.8,512,26.713767886161804,0,0,1,4,
+mmlu:10755,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"An owner of a storage facility stores flammable gases under high pressure in large spherical tanks. The facility was constructed for the owner by a company that specializes in the construction of such facilities. After the facility had been in use for three months, one of the tanks ruptured, causing a spillage and loss of the chemicals. The owner sued the company for strict liability, claiming that the storage tank had been defectively manufactured. At trial, the owner called a photographer who testified she was hired by the owner to photograph the ruptured tank after the accident. She further testified that the roll of film was sent to a commercial film lab where the photographs were developed. Thereupon, the owner's attorney showed the photographer the photographs, which she identified as the ones she had taken and given to the Owner. The owner's attorney offers 10 photographs into evidence. Upon objection by the company's counsel, which of the following, if true, is the best reason to exclude the photographs from evidence?
+
+Options:
+A. The photographer was not shown to be an expert or professional photographer.
+B. There was an unaccountable break in the chain of custody from the time when the photographs were taken to the period when the negatives were processed.
+C. There was no testimony that the photographs accurately portrayed the ruptured tank.
+D. The photographs are not the best evidence to prove how the tank ruptured.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,C,0,0.95,-2.5853562938704604,-25.460417050152387,0.4300162536832873,0.015888301622927162,0.7631453810317907,0.9867922585690394,0.6,512,26.713767886161804,0,1,1,3,
+mmlu:10970,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"A woman was employed as a state trooper. Although the state provides both sexes with equal pay and benefits, the state has adopted a policy that prohibits the assignment of female officers to its special undercover narcotics division. This is a moderate risk position that sometimes involves violent encounters with drug dealers. Since the special narcotics division was first established, five undercover agents have been killed in the line of duty. It is because of the state's concern with the safety and well-being of its female officers that it has adopted such a policy. The woman, who desired to be a member of the narcotics division, filed an application for assignment as a special drug agent. After she was rejected for the position, the woman sued the state in federal court to enjoin enforcement of its stated policy on the grounds that it is unconstitutional. As a matter of constitutional law, which of the following results in this suit is most appropriate?
+
+Options:
+A. Judgment for the woman, because the facts asserted do not demonstrate that the particular classification contained in this policy is substantially related to the advancement of an important state interest.
+B. Judgment for the woman, because the terms and conditions of state government employment are privileges or immunities of state citizenship that may not be abridged by the state on the basis of gender.
+C. Judgment for the state, because it is within a state's police power to insulate the terms and conditions of governmental employment.
+D. Judgment for the state, because the state has articulated a rational basis for this classification and, therefore, a court may not substitute its judgment for that of responsible state officials.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,A,0,0.95,-0.20860515562449738,nan,0.45473000420286447,nan,0.7468978480028454,0.9870425739791244,0.6,512,26.713767886161804,0,0,1,5,
+mmlu:11047,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"A plaintiff sued a department store for injuries she sustained when she slipped and fell in the store. At trial, the plaintiff proposes to testify that, when the store manager rushed to the scene, he said to the plaintiff, ""I'm so sorry about the water on the floor there, but don't worry the store will pay for the ambulance and your hospital bill."" The store's attorney objects. How should the court rule on the admissibility of the store manager's testimony?
+
+Options:
+A. The testimony is admissible in its entirety as the statement of an opposing party.
+B. The testimony about the water is an admissible statement of an opposing party, but the rest of the testimony is inadmissible as an offer to pay medical expenses.
+C. The testimony is inadmissible in its entirety, because it is hearsay not within any exception.
+D. The testimony is inadmissible in its entirety, because the manager's statement is in the context of an offer to pay medical expenses.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-2.5181777838777495,-26.768582642540455,0.48715920447027755,0.05122908813563125,0.7507780744053889,0.9804493602132425,1.0,512,26.87214521567027,0,1,1,5,
+mmlu:11082,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"A federal agency has been established for the purpose of stabilizing, supporting, and protecting farm income and prices. The agency is authorized to enter into and carry out such contracts or agreements as are necessary in the conduct of its business. An export company entered into a contract with the federal agency to transport a variety of goods to foreign countries. Thereafter, the federal agency suspended the export company pending an investigation into possible misuse of official inspection certificates relating to commodities exported to a foreign country. During an investigation relevant to the charge, the president of the export company presented information to the federal agency. Subsequently, the president was charged with violation of a federal statute that states:""It is a felony for any person in a matter within the jurisdiction of a federal agency to knowingly make a false statement. ""At the president's trial, the government presented evidence to show that he falsified bills of lading and embezzled over $500,000 of surplus commodities for export. The president testified that he did not know that he was dealing with a federal agency and, hence, the federal government would have jurisdiction over his company's export contract with the federal agency. As to the significance of the president's ignorance, the court should instruct the jury that it may convict the president
+
+Options:
+A. if it finds that the president knew that he was doing business with a federal agency.
+B. if it finds that the president was aware that he might have been doing business with a federal agency.
+C. if a reasonable person would have been aware that he might have been doing business with a federal agency.
+D. even if there was no reason the president should have known that he was doing business with a federal agency.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,D,0,0.95,-2.3574007993728947,-24.75231753124018,0.3980813551263992,0.017628154627822943,0.787473481032066,0.9849879198009148,0.8,512,26.87214521567027,0,1,1,4,
+mmlu:11187,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"During a baseball game, a spectator watching the game started taunting one of the players for striking out. Annoyed by the taunts, the player started an argument with the umpire. When the umpire told the player to be quiet and go back to his team's bench, the player became enraged and savagely attacked the umpire, hitting him in the head with a bat. The spectator who had taunted the player was overcome by humiliation and horror at what occurred, because he was a good friend of the umpire. The spectator suffered no physical injury, but experienced severe nervous shock and brooded over the incident for months. If the spectator asserts an action for intentional infliction of emotional distress against the baseball player, the spectator will
+
+Options:
+A. win, because the player's conduct was extreme and outrageous.
+B. win, because he was present and witnessed the attack.
+C. lose, because he was partly responsible for causing the attack to occur.
+D. lose, because the umpire was not an immediate family member of the spectator.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",None,D,0,0.95,-0.1860802734701878,nan,0.39559044329543436,nan,0.7799009286391083,0.9863903626101092,0.6,512,26.87214521567027,0,0,1,5,
+mmlu:11315,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"A husband and wife own a piece of land as tenants by the entirety. When there were marital problems, wife secretly conveyed her interest in the real estate to her youngest son from a prior marriage so that he would always have a place to live. Wife died and the husband filed to evict his stepson. According to the majority view among the states, can the stepson prevail by asserting his deed from his mother?
+
+Options:
+A. Yes, the entireties ownership was severed by the valid deed from mother to her son, and son now owns one-half of the property as tenants in common with the husband.
+B. Yes, the son became a tenant by the entireties with his mother's husband upon his mother's death.
+C. No, the mother's deed was a nullity because the entireties estate can only be broken with the consent of both parties; the husband became the sole fee simple owner on wife's death.
+D. No, a mother cannot convey a real estate interest to a son without getting the approval of all of her children.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",None,C,0,0.95,-0.17387874217558164,-0.17425111951233216,0.37012728764643194,0.37252024616042906,0.7805521359259728,0.992140959831886,0.6,512,26.87214521567027,0,0,1,5,
+mmlu:11473,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"Congress recently enacted a statute permitting a governmental agency to make a gift of federal property to private individuals or organizations, provided that it be used ""to further good relations and better understanding with foreign governments. ""The Secretary of Defense planned to give an old military cargo plane to a national organization who supports future pilots. Before making the gift, the Secretary was approached by the head of a church. The church leader indicated that he would be sponsoring a worldwide crusade and suggested to the Secretary that such an undertaking would serve to strengthen relations with foreign governments. The Secretary donated the plane to the church instead of the organization. Who would have the best standing to challenge the Secretary's action?
+
+Options:
+A. A citizen of the United States.
+B. A taxpayer of the United States.
+C. The national organization.
+D. A state within the United States.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,C,0,0.92,-0.23645829945693447,nan,0.5016144955775743,nan,0.730271364969667,0.9813022485468537,0.4,512,26.87214521567027,0,0,1,5,
+mmlu:11537,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"A man was at a party where he observed a female guest who had passed out and was unconscious and alone in a bedroom of the house. The man locked the door and quietly took the female's purse, emptied all of the money into his pockets, and removed the jewelry from her person. He was apprehended and charged with robbery. Can he be convicted of that crime?
+
+Options:
+A. Yes, robbery is the unlawful taking of property from another's person by intimidation or force.
+B. No, this was not robbery because there was no intimidation, and indeed no force, against an unconscious victim.
+C. Yes, robbery does not require that the victim be subdued by force or be placed in fear.
+D. No, this was not robbery because it occurred in a private home and not in a business establishment or on the street.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-4.729286633010864,-26.8161298646499,0.2552634233386696,0.010401876988364547,0.8554375843086746,0.9943630811758339,1.0,512,26.87214521567027,0,1,1,5,
+mmlu:11539,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"A ski resort had a lift that carried customers from the bottom to the top of the ski slope. One afternoon, the lift suddenly broke down because of a power failure in the area. A customer was suspended in his lift chair, one-third of the way up the hill and 50 feet above the ground. The customer remained on the lift for five hours until power was restored. He was then returned uninjured to the bottom of the hill. In a suit against the ski resort, the customer is likely to have action for
+
+Options:
+A. false imprisonment.
+B. negligence.
+C. assault.
+D. no cause of action.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,D,0,0.95,-10.615648702172555,-25.26530654688376,0.33644677782516164,0.28586452442988064,0.8522366710822098,0.986665133270435,1.0,512,27.83323097229004,0,1,1,5,
+mmlu:11601,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"A foreign visitor was on trial for kidnapping a small child. The prosecutor stated that the visitor knew the child personally, which is why the child went with him, and that the perpetrator knew the child's parents had money. The prosecutor called a witness to testify that the perpetrator told the witness ""I am looking forward to visiting with the child and his parents. They have a wonderfully luxurious house that I will enjoy staying in.'' The defense objected to the proposed testimony. Will the court likely sustain the objection?
+
+Options:
+A. No, the statement is admissible to impeach the accused and establish he is lying on cross, if he takes the stand.
+B. No, the statement can come in as impeachment if the accused takes the stand, and as a party admission to show the material facts of knowing the child and that the family had money.
+C. Yes, the prejudice of the statement will greatly outweigh its probative value.
+D. Yes, the statement is irrelevant to the issue of guilt or innocence.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-0.55718588658195,-21.63575791981482,0.3901969351536698,0.18149598244210371,0.7925334108294919,0.9856827885960229,0.6,512,27.83323097229004,0,1,1,5,
+mmlu:11615,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"A landscaper agreed to maintain the yard of a homeowner for six months for a fee of $300 per month, payable at the end of the six-month period. This amount was the fair market value of the work to be performed. The landscaper performed the work for four months but was then offered another job for $500 per month and, after notifying the homeowner, stopped doing the promised work and took the other job. The homeowner refused to pay the landscaper anything. The homeowner could have hired a comparable landscaper to complete the work for $300 per month. In a lawsuit between the landscaper and the homeowner, what is the likely result?
+
+Options:
+A. The homeowner will recover $600, which is the cost of completing the work at prevailing market rates.
+B. The homeowner will recover $400, which constitutes the unjust enrichment of the landscaper.
+C. The landscaper will recover $1,200 for the work done before the breach.
+D. Neither the landscaper nor the homeowner will recover, because neither has suffered any loss.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,C,0,0.95,-5.055211755772223,-23.59935198372237,0.2958445682704993,0.14413395766098439,0.8439143188588787,0.9919425408588722,0.6,512,27.83323097229004,0,1,1,4,
+mmlu:11677,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"A police officer observed two men acting suspiciously in front of a convenience store. They paced back and forth, walked around the store, and periodically looked in the window. The experienced officer feared that these individuals were most likely ""casing"" the place prior to robbing it. He approached, identified himself, and patted down the outer clothing of each. He found a hand gun in each man's pocket and arrested them for carrying concealed weapons. Will the court suppress the guns on the basis that there was no probable cause and the search was unconstitutional?
+
+Options:
+A. Yes, because there was no probable cause to believe that a crime was being committed.
+B. No, because the officer had reasonable suspicion to believe that there might be criminal activity afoot.
+C. No, because the officer did have probable cause to believe that a crime was being attempted.
+D. Yes, because the officer is not allowed to take anything out of the men's pockets while conducting a pat-down.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-4.126644685790279,-26.095359057140232,0.33064370856729364,0.03755394399385714,0.8055677513766568,0.992803564062342,0.6,512,27.83323097229004,0,1,1,5,
+mmlu:11847,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"On June 1, an owner of a business that built mobile homes was visited by a representative of a company that manufactured propane tanks. Propane tanks were an essential component of the mobile homes produced by the builder. The representative told the owner that the company could supply propane tanks at $50 per tank, a substantial savings over what the owner currently paid for propane tanks. The owner asked if the company could supply 1,000 propane tanks by the end of the month, and the representative assured him that they could. The owner stated that he would think about it and decide what to do within a week. On June 3, the owner sent the following memo to the company headquarters at the address provided by the representative: ""I am happy to confirm my order of 1,000 propane tanks, to be delivered by June 30. I have always received a 10 percent discount for cash payment, so I will assume you will grant me the same discount. I will have $45,000 cash ready to give to your representative at the time of delivery. ""On June 30, the company delivered 1,000 propane tanks to the owner. The representative accompanied the delivery and presented the owner with a bill for $50,000. The owner refused to pay any more than$45,000. Which of the following accurately states the legal rights of the parties?
+
+Options:
+A. The contract price was $45,000, because the June 3 memo was an effective integration of their agreement.
+B. The contract price was $45,000, because the company did not specifically object to the 10 percent discount stipulated by the owner in his June 3 memo.
+C. The contract price was $50,000 if the discount term in the owner's June 3 memo materially altered the terms of the company's offer.
+D. The contract price was $50,000 even though the company's offer did not expressly limit acceptance to the terms contained therein.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,C,0,0.95,-0.17862681399441388,nan,0.3952224058276046,nan,0.7831011411326472,0.9879607564071193,0.6,512,27.83323097229004,0,0,1,5,
+mmlu:12016,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"An athlete hoped to sign a contract with a professional baseball team to play baseball. He had succeeded in arranging for a tryout at the baseball team's training facilities in a neighboring state. Short on funds and needing a way to get to the training facilities, the athlete approached his friend and said, ""If you will drive me to and from the baseball team's training facilities for my tryout and pay for our housing and meal expenses during our stay, I will assign to you 10 percent of my first-year earnings. "" The friend agreed and drove the athlete to the training facilities. After the tryout, the baseball team offered the athlete a contract to play baseball for the team at $100,000 per year. When the friend asked when he would be receiving his 10 percent, the athlete replied that $10,000 was much more than the friend deserved and he would pay the friend $1,000 for his efforts. The friend then filed suit to enforce the assignment. If the court holds the assignment unenforceable, the most applicable legal principle would be
+
+Options:
+A. a purported assignment of a right expected to arise under a contract not in existence operates only as a promise to assign the right when it arises and as a power to enforce it.
+B. a contract to make a future assignment of a right is not a validly enforceable assignment.
+C. the friend did not detrimentally rely on the assignment prior to the attempted revocation of the assignment by the athlete.
+D. a gratuitous assignment is revocable, and the right of the assignee is terminated by the assignor's subsequent revocation.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,A,0,0.95,-2.100737577088418,-23.4458440815341,0.3872382204768432,0.01855554039162561,0.7910050663631409,0.987327212234959,0.8,512,27.83323097229004,0,1,1,5,
+mmlu:12063,mmlu,knowledge,professional_law,,Gemma-3-4B-IT,"A rancher was the owner of a parcel of land in fee simple. The rancher left the parcel in 1977 to move to the city. A man took possession of the land in 1978 as an adverse possessor and remained on the land from 1978 to 1988; he then left the property to care for his sick mother for one year, returning the following year, 1990. Meanwhile, during the man's possession, the rancher devised the parcel to his son in 1994. The man remained on the property until2010. Assume that the statutory period for adverse possession in this state is 20 years. Upon the rancher's death in 2010, his son, as his sole heir, brings an ejectment suit to recover possession of the property from the man. In his action, the son will most probably
+
+Options:
+A. lose, because the man has acquired title by adverse possession.
+B. win, because the statutory period for adverse possession does not run against a remainder- man until his interest becomes possessory.
+C. win, because the man left the property to take care of his mother for one year.
+D. win, because his title was perfected at the time of conveyance.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,A,0,0.95,-0.1457726644988549,nan,0.33372799287297555,nan,0.8172822843771428,0.9901296091265976,0.2,512,26.25767441590627,0,0,1,3,
+mmlu:12440,mmlu,knowledge,professional_psychology,,Gemma-3-4B-IT,"Any substance that can have a negative impact on fetal development is ___________.
+
+Options:
+A. An Apgar
+B. A teratogen
+C. Only a problem in the first 6 weeks
+D. A controlled substance
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.99,-18.942035836584097,-28.459767059656546,0.24584839515383558,0.24816196911935223,0.9144939213583712,0.98748974269256,1.0,512,26.25767441590627,0,1,1,5,
+mmlu:12461,mmlu,knowledge,professional_psychology,,Gemma-3-4B-IT,"A father brings his 22-year-old son to you for evaluation. Within the past 6 weeks, this formerly socially active young man has quit his job as a restaurant manager, has become withdrawn, and now spends most of his time in his room watching TV. He reports that he occasionally receives messages from aliens through the TV. Based on this information, which of the following is the most appropriate DSM-IV diagnosis
+
+Options:
+A. Schizophreniform Disorder
+B. Brief Reactive Psychosis
+C. Schizophrenia
+D. Antisocial Personality Disorder
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.85,-1.9718396428612741,-27.667516921682562,0.40843101130408055,0.02854162007515163,0.7778491252392996,0.9870595782995224,0.4,512,26.25767441590627,0,1,1,4,
+mmlu:12585,mmlu,knowledge,professional_psychology,,Gemma-3-4B-IT,"Bartering as a form of payment for psychological services is
+
+Options:
+A. allowable only if it is not clinically contraindicated and the relationship is not exploitative
+B. not allowable under any circumstance
+C. allowable only if the dollar value of the psychological service and of the payment service or goods are established in advance
+D. allowable only if the psychologist feels char a client would be denied services if barbering were not allowed
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-2.515746082360983,-27.737108290323725,0.40522016033326186,0.07357109017518651,0.7709791124798357,0.9891767187509686,1.0,512,26.25767441590627,0,1,1,5,
+mmlu:12664,mmlu,knowledge,professional_psychology,,Gemma-3-4B-IT,"At the outset of group counseling, the therapist should explain char the obligation of the group member to respect confidentiality is
+
+Options:
+A. less of an issue than it is in individual therapy
+B. the legal responsibility of the therapist
+C. protected by state/provincial laws
+D. on the “honor system” only
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,D,0,0.95,-6.818613602639948,-25.913634717031748,0.3094571142549138,0.0340930718124217,0.8267689025378786,0.9922588071785867,0.2,512,26.25767441590627,0,1,1,3,
+mmlu:12683,mmlu,knowledge,professional_psychology,,Gemma-3-4B-IT,"In personnel selection, it is appropriate to ask a person's age when
+
+Options:
+A. employees in a given age group may not perform as well as some younger employees in the same job
+B. age is a bona fide occupational requirement
+C. properly administered intelligence and personality tests suggest that the incumbent is not likely to perform satisfactorily in the future
+D. standardized test results show thar the incumbent does not have all the aptitudes expected for the particular job
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,B,0,0.85,-7.2512841511805535,-28.57857471511945,0.3930431658230261,0.13699471171198824,0.808231494622305,0.9838290804764256,0.6,512,26.25767441590627,0,1,1,5,
+mmlu:12883,mmlu,knowledge,professional_psychology,,Gemma-3-4B-IT,"With respect to the relationship between achievement and anxiety in schoolchildren, it appears that
+
+Options:
+A. mildly anxious children are better achievers than more anxious ones
+B. non-anxious children are better achievers than mildly anxious ones
+C. some anxiety normally facilitates learning, and only for a few learners is there a point beyond which anxiety impedes learning
+D. there is no systematic relationship; anxiety measures are of no help in predicting achievement
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,A,0,0.95,-2.2803235998072164,-25.3536700740062,0.3197809736012826,0.052008817881642785,0.8295759037836616,0.9910821715990702,1.0,426,22.124155521392822,0,1,1,5,
+mmlu:13044,mmlu,knowledge,professional_psychology,,Gemma-3-4B-IT,"For most children, stranger anxiety begins at about _____ months of age.
+
+Options:
+A. 2 to 3
+B. 4 to 6
+C. 8 to 10
+D. 12 to 14
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,C,0,0.95,-13.50611427683569,-23.780772090128224,0.4399495199227924,0.5647424319024176,0.8948891381142845,0.9694805863037915,1.0,426,22.124155521392822,0,1,1,5,
+mmlu:13178,mmlu,knowledge,security_studies,,Gemma-3-4B-IT,"How do biological differences affect the roles that men and women must perform for the state?
+
+Options:
+A. Biology determines the female body as weak, ensuring that men continue to dominate state security apparatus in order to protect them. Women are aware of practical biological differences, and by accepting them they allow men to act as their protectors and care-givers. In return, women must act as protectors and care-givers to those less capable than themselves, their children, infants, the elderly, and the infirm.
+B. The most intimate of human activities for women are more important than the demands of the political and religious male dominated elite. Biology determines, and woman's intimate choice exerts, that the considerable responsibility of reproducing a state's population becomes the duty of women alone.
+C. Indiscriminate warfare is gender neutral and in contemporary conflicts there is no gender difference in levels of risk or duty. Men are just as likely to become victims of mass rape (as in the Democratic Republic of Congo or Balkans conflict) as women, and women are equally likely to be conscripted or coerced into military service.
+D. Gender roles are a social construct; the values that we attribute to masculinity or femininity, such as strength or care-giving, are the product of shared social ideals rather than innate biological properties. Men and women are equally able to care effectively for children or to conduct violent and aggressive behaviour. However, social constructs of gender roles are pervasive, and women are likely to be victims of gender-based violence in conflict whilst men are more likely to be involved as perpetrators of violence.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-1.9398347868369528,-22.997027718732433,0.5942738943171872,0.05192073054165098,0.6975633347748031,0.9757487555624733,1.0,426,22.124155521392822,0,1,1,5,
+mmlu:13204,mmlu,knowledge,security_studies,,Gemma-3-4B-IT,"Which of these statements best describes the HM approach to sectoral security analysis?
+
+Options:
+A. HM agrees with the idea that security can be viewed using a sectoral framework, and recognises the depth of analysis that is enabled by such an approach.
+B. HM rejects Buzan et al.'s theory of sectoral security analysis, on the grounds that securitization is a product of a state-centric approach.
+C. HM rejects the assertion by Buzan et al. that there are distinct and separate sectors of security, instead adopting a holistic view of security within which national and transnational class is an important factor.
+D. HM favours the sectoral approach to security analysis, in particular prioritising the state as a referent object and drawing much of its theoretical foundations from the realist principles that underpin the sectoral approach.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-0.1592196842175842,-0.059275063855125154,0.3567925011210166,0.08302957618025639,0.8147786255803466,0.9863250471056907,0.6,426,22.124155521392822,0,1,1,5,
+mmlu:13206,mmlu,knowledge,security_studies,,Gemma-3-4B-IT,"Which of these statements does not describe the liberalist conception of the international system?
+
+Options:
+A. International politics is not the same everywhere; it is only 'realist' in certain places at certain times.
+B. The nation state does not exist as a unitary actor within the international system.
+C. Nation states are not basically alike.
+D. States are and should remain the sole actors to be considered in the study of International Relations.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-6.893837665975757,-23.60136595952275,0.42978269475067904,0.5192551986505288,0.8090160141738367,0.9800074346748316,1.0,426,22.124155521392822,0,1,1,5,
+mmlu:13253,mmlu,knowledge,security_studies,,Gemma-3-4B-IT,"Which of the following statements is the odd one out?
+
+Options:
+A. Societal groups have a right to survive.
+B. Societal groups have their own reality.
+C. Societal groups are constituted by social interaction.
+D. Societal groups are multiple-identity units.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,C,0,0.95,-9.262359754911637,-27.74591805994875,0.5287146135119529,0.6380588220073884,0.777932604014034,0.9700897293331477,0.6,426,22.124155521392822,0,1,1,5,
+mmlu:13348,mmlu,knowledge,security_studies,,Gemma-3-4B-IT,"Which of these statements is not accurately applied to Critical Security Studies?
+
+Options:
+A. The referent object can be objectively studied and should be considered accordingly.
+B. The security analyst and the object of the security should not be regarded as separate.
+C. Critical Security Studies is a post-positivist approach.
+D. Critical Security studies questions the epistemological principles of other approaches in Security Studies.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.95,-6.663227009918482,-27.265745643312986,0.27269871908868254,0.021163710422307188,0.8442866632120787,0.9933811060244517,1.0,417,19.66295870145162,0,1,1,5,
+mmlu:13394,mmlu,knowledge,security_studies,,Gemma-3-4B-IT,"For post-structuralists, which of the following is the most important impact of security studies?
+
+Options:
+A. Security studies contributes to the literature and builds greater theoretical understanding of the subject.
+B. Security studies records the history of modern warfare.
+C. Security studies teaches a new generation about the reality of warfare and strategy.
+D. Security studies creates and perpetuates claims that shape warfare, defining legitimacy, favouring some subjects and marginalising others.
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-0.2081729537224065,-0.029136462137060448,0.4523279060082324,0.07950247602340893,0.7613834471618243,0.9837269807319275,1.0,417,19.66295870145162,0,1,1,5,
+mmlu:13439,mmlu,knowledge,sociology,,Gemma-3-4B-IT,"The alternative form of 'network organization' means that:
+
+Options:
+A. work can be subcontracted out to independent suppliers and retailers
+B. business transactions occur only through electronic communication
+C. the Japanese model is applied, through lateral networks of flexible roles
+D. activities are redistributed equally between men and women
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,A,1,0.85,-5.790135865722621,-23.733971413017223,0.489687692975339,0.6664565982680597,0.7798260858447718,0.9765966726149873,1.0,417,19.66295870145162,0,1,1,5,
+mmlu:13454,mmlu,knowledge,sociology,,Gemma-3-4B-IT,"Comte's term 'positivism' refers to:
+
+Options:
+A. a theory that emphasizes the positive aspects of society
+B. the precise, scientific study of observable phenomena
+C. a theory that posits difficult questions and sets out to answer them
+D. an unscientific set of laws about social progress
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-7.655570790836503,-26.258066851248078,0.2419545968120633,0.05717454459850723,0.867896793093041,0.9946994164007174,1.0,417,19.66295870145162,0,1,1,5,
+mmlu:13549,mmlu,knowledge,sociology,,Gemma-3-4B-IT,"Which of the following is not identified as a new form of community?
+
+Options:
+A. ethnic communities, based on shared identity and experiences of discrimination
+B. gay villages, which are formed in certain parts of large cities
+C. sociological communities, formed by unpopular lecturers
+D. virtual communities that exist only in cyberspace
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-7.986206861293648,-23.849351343012206,0.4739304230204045,0.4205764521622374,0.8090639542118251,0.975542854919708,1.0,417,19.66295870145162,0,1,1,5,
+mmlu:13572,mmlu,knowledge,sociology,,Gemma-3-4B-IT,"Which of the following was not a strategy used by the Conservative government of 1979 to reduce the power of the labour movement?
+
+Options:
+A. making all strike action illegal
+B. imposing restrictions on picketing
+C. banning political strikes that were not primarily concerned with the worker's own conditions of work
+D. making secondary action (in support of workers elsewhere) illegal
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,A,0,0.95,-2.5571647684516736,-25.296417004604912,0.4193933821208732,0.029313907014501275,0.7816034833804595,0.9840999831684487,0.4,417,19.66295870145162,0,1,1,3,
+mmlu:13618,mmlu,knowledge,us_foreign_policy,,Gemma-3-4B-IT,"Why is there so much uncertainty over which states have nuclear weapons?
+
+Options:
+A. Leaders have incentives to lie
+B. If leaders revealed their programs, they would be more likely to be attacked
+C. Leaders will not always grant foreign monitors access to their nuclear programs
+D. ALL of the above
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-11.017797979458901,-24.623110380636874,0.5188002008560005,0.5713692632423883,0.8127665275979281,0.9628290650832593,1.0,398,27.182964861392975,0,1,1,5,
+mmlu:13637,mmlu,knowledge,us_foreign_policy,,Gemma-3-4B-IT,"Which of the following are possible constraints on US foreign policy decision making?
+
+Options:
+A. Foreign policies of other states
+B. International law
+C. Intergovernmental organizations
+D. All of the above
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-9.42727948203739,-22.120128147926152,0.9001449210586359,1.6619793079682046,0.7532510679570874,0.9205396289202437,1.0,398,27.182964861392975,0,1,1,5,
+mmlu:13758,mmlu,knowledge,virology,,Gemma-3-4B-IT,"A case-control study is conducted to assess the association between alcohol consumption and lung cancer patients with lung cancer and 100 controls are asked about their past alcohol consumption. According to the study results, alcohol consumption is strongly associated with lung cancer (OR = 2.5). The researchers then divide the study subjects into two groups: smokers and non-smokers. Subsequent statistical analysis does not reveal any association between alcohol consumption and lung cancer within either group. The scenario described is an example of which of the following?
+
+Options:
+A. Observer bias
+B. Confounding
+C. Placebo effect
+D. Nonresponse bias
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-0.19840164208537353,-0.022565416914088605,0.40911476701243155,0.08495139327826233,0.7615790847857394,0.988060693644998,1.0,398,27.182964861392975,0,1,1,5,
+mmlu:13760,mmlu,knowledge,virology,,Gemma-3-4B-IT,"Which areas of the world are rabies free?
+
+Options:
+A. USA
+B. Norway
+C. EU
+D. Island nations, UK, NZ and Australia
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",D,D,1,0.95,-8.840404799020382,-26.67954591669041,0.305924560908113,0.08479537777001235,0.8483410191970255,0.989580851403912,1.0,398,27.182964861392975,0,1,1,5,
+mmlu:13761,mmlu,knowledge,virology,,Gemma-3-4B-IT,"The risk of perinatal transmission of HIV-1 infection during breast feeding is increased due to:
+
+Options:
+A. Mixed feeding
+B. Very early introduction of solids
+C. Both a and b
+D. None of them
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-8.033930673900276,-24.533485042905998,0.23885204457531786,0.1196838555518032,0.8895386811713097,0.9908423472458208,1.0,355,23.645152866840363,0,1,1,5,
+mmlu:13788,mmlu,knowledge,virology,,Gemma-3-4B-IT,"Why are drug combinations essential for HIV?
+
+Options:
+A. Single drugs are not completely inhibitory
+B. Mutations negate the effect of one drug
+C. Combinations of antibiotics are effective versus TB
+D. The virus cannot mutate vs a combination
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",A,C,0,0.99,-0.15261708327337148,-0.10500111446395859,0.3382453094579301,0.17193690399991604,0.8137802486688318,0.9917870499718358,0.6,355,23.645152866840363,0,1,1,5,
+mmlu:13820,mmlu,knowledge,virology,,Gemma-3-4B-IT,"A special feature of adaptive immunity is:
+
+Options:
+A. Speed of response to a foreign protein
+B. Ability to distinguish self and non self
+C. Ability to distinguish viruses and bacteria
+D. Short memory
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",B,B,1,0.95,-8.721324391862517,-26.024994952086214,0.22765908266616997,0.24182321893435918,0.8804301215309492,0.9940572144280018,1.0,355,23.645152866840363,0,1,1,5,
+mmlu:14021,mmlu,knowledge,world_religions,,Gemma-3-4B-IT,"When did the Babylonian captivity of ""Exile"" begin?
+
+Options:
+A. 515 BCE
+B. 535 BCE
+C. 586 BCE
+D. 70 CE
+
+Reason step by step, then give your final answer on the last line as ""Final answer: <letter>"".",C,C,1,0.95,-10.76213823441505,-25.139659819206045,0.3915298155705067,0.5701030589406408,0.8861801971432189,0.9772667030213584,1.0,355,23.645152866840363,0,1,1,5,

@@ -1,0 +1,56 @@
+stats self-test passed in-kernel
+loading model from /kaggle/input/models/google/gemma-3/transformers/gemma-3-4b-it/1
+model loaded
+restored 910 previously-completed rows
+[musr] 0 to run, 198 restored
+[musr] DONE n=198 acc=0.419
+[mmlu] 68 to run, 132 restored
+[mmlu] OOM at batch of 12; splitting
+[mmlu] 144 rows (partial saved)
+[mmlu] 168 rows (partial saved)
+[mmlu] 192 rows (partial saved)
+[mmlu] DONE n=200 acc=0.665
+[bbh] 198 to run, 0 restored
+[bbh] 12 rows (partial saved)
+[bbh] 36 rows (partial saved)
+[bbh] 60 rows (partial saved)
+[bbh] 84 rows (partial saved)
+[bbh] 108 rows (partial saved)
+[bbh] 132 rows (partial saved)
+[bbh] 156 rows (partial saved)
+[bbh] 180 rows (partial saved)
+[bbh] 198 rows (partial saved)
+[bbh] DONE n=198 acc=0.848
+[commonsenseqa] 200 to run, 0 restored
+[commonsenseqa] 12 rows (partial saved)
+[commonsenseqa] 36 rows (partial saved)
+[commonsenseqa] 60 rows (partial saved)
+[commonsenseqa] 84 rows (partial saved)
+[commonsenseqa] 108 rows (partial saved)
+[commonsenseqa] 132 rows (partial saved)
+[commonsenseqa] 156 rows (partial saved)
+[commonsenseqa] 180 rows (partial saved)
+[commonsenseqa] 200 rows (partial saved)
+[commonsenseqa] DONE n=200 acc=0.615
+[mbpp] 200 to run, 0 restored
+[mbpp] 12 rows (partial saved)
+[mbpp] 36 rows (partial saved)
+[mbpp] 60 rows (partial saved)
+[mbpp] 84 rows (partial saved)
+[mbpp] 108 rows (partial saved)
+[mbpp] 132 rows (partial saved)
+[mbpp] 156 rows (partial saved)
+[mbpp] 180 rows (partial saved)
+[mbpp] 200 rows (partial saved)
+[mbpp] DONE n=200 acc=0.730
+[multiarith] 180 to run, 0 restored
+[multiarith] 12 rows (partial saved)
+[multiarith] 36 rows (partial saved)
+[multiarith] 60 rows (partial saved)
+[multiarith] 84 rows (partial saved)
+[multiarith] 108 rows (partial saved)
+[multiarith] 132 rows (partial saved)
+[multiarith] 156 rows (partial saved)
+[multiarith] 180 rows (partial saved)
+[multiarith] DONE n=180 acc=0.972
+TOTAL rows: 1176
