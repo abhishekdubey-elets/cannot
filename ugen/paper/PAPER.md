@@ -176,10 +176,10 @@ produces a graded distribution (modal 80) at .615; Gemma a compressed-high distr
 
 ### 4.2 Preregistered verdicts
 
-Under strict QC, P1 is falsified in Llama (ΔAUROC = −.083, 95% CI [−.143, −.022] —
+Under strict QC, P1 is falsified in Llama (ΔAUROC = −.083, 95% CI [−.152, −.019] —
 *sign-reversed*: arithmetic confidence discriminates better than knowledge) and Gemma
-(−.124), and not evaluable in Qwen (the arithmetic pool empties after exclusions; the
-labelled sensitivity variant gives +.008 [−.033, +.039], falsified). P2 is supported in
+(−.124, [−.192, −.052]), and not evaluable in Qwen (the arithmetic pool empties after
+exclusions; the labelled sensitivity variant gives +.008 [−.040, +.040], falsified). P2 is supported in
 Qwen and Llama, falsified in Gemma. P4 is falsified in all three lineages
 (min ρ = .001 / .009 / −.197 against a predicted > .95). P5's preregistered falsifiers
 fire in all three. Full grid: `tables/prediction_verdicts.csv`.
@@ -205,13 +205,22 @@ Y = correctness (`tables/rq_cmi_decomposition.csv`):
 - ρ(C,E) ranges −.20 to +.27 across cells.
 
 The asymmetry — consistency subsumes entropy's correctness information but not
-conversely — replicates in all three lineages. A direct comparison of the two "entropies"
-on the sidecar subset sharpens it: the entropy of the K-sample *answer distribution*
-discriminates at .695–.731 in all three models, while *token-level* entropy ranges
-.494–.706, and the two are nearly uncorrelated (ρ = −.05 / .24 / .31)
-(`tables/mechanism_entropy_variants.csv`). Conditioning on the best zero-cost input
-feature (P5 machinery) removes consistency's information in only 2/15 cells, both in the
-reasoning domain (`tables/rq5_consistency_after_ff.csv`).
+conversely — replicates in all three lineages (Figure 6). A direct comparison of the two
+"entropies" on the sidecar subset sharpens it: the entropy of the K-sample *answer
+distribution* discriminates at .695–.731 in all three models, while *token-level* entropy
+ranges .494–.706, and the two are nearly uncorrelated (ρ = −.05 / .24 / .31)
+(`tables/mechanism_entropy_variants.csv`, Figure 6A,C). Conditioning on the best zero-cost
+input feature (P5 machinery) removes consistency's information in only 2/15 cells, both in
+the reasoning domain (`tables/rq5_consistency_after_ff.csv`).
+
+An independent re-implementation of the estimators, reading the same frozen rows without
+touching the analysis code (`analysis/audit.py`, `paper/AUDIT.md`), reproduces this
+asymmetry: with a multi-permutation bias floor it finds I(C;Y|E) clearing in 10/12 cells
+and I(E;Y|C) in 0/12. The two cells where consistency's margin does not clear the floor
+under the stricter floor are both the *reasoning* domain — the domain where every signal
+is weakest (§4.4, §4.6) and the free-feature gate also fails. The direction of the
+asymmetry (C ≫ E) is estimator-robust; the exact "12/12" is not, and should be read as
+"in every domain except the weakest."
 
 ### 4.5 Mechanism: basin depth and convergent misconceptions
 
@@ -294,7 +303,12 @@ protocol (`pipeline/`), audited by a smoke test per model before any full run; r
 committed per session with an append-only kernel audit trail; a SHA256-manifested master
 dataset (`outputs/master_v1`); analyses (`analysis/`) that read only frozen rows and emit
 every table/figure cited here; and a timestamped deviations log. The preregistration
-(PLAN.md) predates all data.
+(PLAN.md) predates all data. As an internal check, every headline number was recomputed by
+an independent second implementation that shares no code with the analysis pipeline
+(`analysis/audit.py` → `paper/AUDIT.md`): data integrity (SHA256), the signal map
+(reproduced to ±0.000 AUROC), the P4 falsification, and the C-over-E information asymmetry
+all reproduce; the one caveat surfaced (reasoning-domain sensitivity of the exact CMI
+cell count) is disclosed in §4.4.
 
 ## References
 

@@ -33,5 +33,20 @@ Every post-freeze change to design or protocol is logged here with timestamp and
   computation byte-identical to single-GPU runs.
 - 2026-08-20: master dataset frozen (outputs/master_v1, SHA256 manifest). All analyses
   read it; raw rows immutable.
-- OPEN: seed-sensitivity run (PLAN 3) built and pushed but not yet executed (GPU quota);
-  M4/Phi-3.5 not run — model grid is 3/4. Both flagged in RESULTS.md 9.
+- 2026-08-24 (analysis-side): independent statistical audit added (`analysis/audit.py` →
+  `paper/AUDIT.md`) — a from-scratch second implementation of AUROC/MI/CMI/Spearman that
+  shares no code with the analysis pipeline, reading only the frozen master rows. Confirms
+  SHA256 integrity, the §2 signal map (±0.000 AUROC), P4 falsification, and the C-over-E
+  information asymmetry. Surfaced one caveat now disclosed in PAPER §4.4 / RESULTS §4: with
+  a multi-permutation bias floor the CMI cell count is 10/12 (not 12/12) for I(C;Y|E), the
+  two shortfalls confined to the reasoning domain. No data or protocol change.
+- 2026-08-24 (figures): main-text entropy figure F6 built
+  (`analysis/make_entropy_figure.py` → `figures/entropy_vs_consistency_main.{png,pdf}`)
+  from frozen tables only; registered in FIGURES.md. Consolidates the "entropy is not one
+  quantity" result (outcome vs token entropy AUROC; CMI asymmetry; ρ≈0 between the two).
+- 2026-08-24 (references): all 21 PAPER.md references verified against primary sources
+  (`paper/REFERENCES_VERIFIED.md`) — no errors. Recommendation logged there: add the three
+  model technical reports (Qwen2.5 / Llama 3 / Gemma 3) for camera-ready.
+- OPEN: seed-sensitivity run (PLAN 3) built and pushed but not yet executed (GPU quota,
+  runs on Kaggle — not locally); M4/Phi-3.5 not run — model grid is 3/4. Both flagged in
+  RESULTS.md 9.

@@ -9,7 +9,7 @@ Nothing is hand-computed. Data: 3 models × 13 benchmarks × ~200 items = 2,540 
 
 | | Qwen2.5-3B | Llama-3.2-3B | Gemma-3-4B |
 |---|---|---|---|
-| P1 domain gap in selfconf (≥ .15) | INCONCLUSIVE (QC) / FALSIFIED (sens.: Δ=+.008 [−.033,+.039]) | FALSIFIED (Δ=−.083 [−.143,−.022] — *reversed sign*) | FALSIFIED (Δ=−.124) |
+| P1 domain gap in selfconf (≥ .15) | INCONCLUSIVE (QC) / FALSIFIED (sens.: Δ=+.008 [−.040,+.040]) | FALSIFIED (Δ=−.083 [−.152,−.019] — *reversed sign*) | FALSIFIED (Δ=−.124 [−.192,−.052]) |
 | P2 consistency transfers better | SUPPORTED (sens.) | SUPPORTED | FALSIFIED (d_cons −.109 vs d_self −.124) |
 | P3 full-chain logprob weak on arithmetic | FALSIFIED (.725) | FALSIFIED (.800) | **SUPPORTED** (.297) |
 | P4 consistency ≈ answer-entropy (ρ > .95) | FALSIFIED (min ρ ≈ .001) | FALSIFIED (.009) | FALSIFIED (−.197) |
@@ -59,6 +59,12 @@ Per model × domain, plug-in MI with shuffled-control floors and joint-bootstrap
 
 Consistency contains what answer-entropy knows about correctness, plus a large unique
 component; the converse is false. Replicated in three independent lineages.
+
+Independent audit (`analysis/audit.py`, `paper/AUDIT.md`; no shared code with the analysis
+pipeline) reproduces the asymmetry: with a multi-permutation bias floor, I(C;Y|E) clears in
+10/12 cells and I(E;Y|C) in 0/12. The two non-clearing C cells are both the reasoning
+domain (weakest signal). The direction C ≫ E is estimator-robust; the exact "12/12" count
+is sensitive to the floor estimator only in the reasoning domain.
 
 ## 5. Free-feature gate (tables/rq5_consistency_after_ff.csv)
 
